@@ -27,7 +27,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="adminHomePage">
      <widget class="QFrame" name="userHomeHelloBar">
@@ -1283,7 +1283,7 @@ border-radius: 25px;</string>
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="vaccine1TypeLabel_5">
+        <widget class="QLabel" name="show1stDoseName">
          <property name="geometry">
           <rect>
            <x>70</x>
@@ -1314,7 +1314,7 @@ color:#2B528C;
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="dose1Text_5">
+        <widget class="QLabel" name="show1stDoseBatch">
          <property name="geometry">
           <rect>
            <x>70</x>
@@ -1342,7 +1342,7 @@ color:#2B528C;
           <string>Dose 1</string>
          </property>
         </widget>
-        <widget class="QLabel" name="vaccine1DateRecieved_5">
+        <widget class="QLabel" name="show1stDoseDate">
          <property name="geometry">
           <rect>
            <x>121</x>
@@ -1439,7 +1439,7 @@ border-radius: 25px;</string>
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="vaccine1TypeLabel_6">
+        <widget class="QLabel" name="show2ndDoseName">
          <property name="geometry">
           <rect>
            <x>70</x>
@@ -1470,7 +1470,7 @@ color:#2B528C;
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="dose1Text_6">
+        <widget class="QLabel" name="show2ndDoseBatch">
          <property name="geometry">
           <rect>
            <x>70</x>
@@ -1498,7 +1498,7 @@ color:#2B528C;
           <string>Dose 1</string>
          </property>
         </widget>
-        <widget class="QLabel" name="vaccine1DateRecieved_6">
+        <widget class="QLabel" name="show2ndDoseDate">
          <property name="geometry">
           <rect>
            <x>121</x>
@@ -2007,7 +2007,14 @@ border: 3px solid rgba(104, 160, 229, 0.88);
        </property>
        <property name="styleSheet">
         <string notr="true">background: #F2F8FC;
-border-radius: 40px;</string>
+border-radius: 20px;
+font-weight: 200;
+font-size: 14px;
+color: #2B528C;
+padding-left: 8px;
+padding-right: 8px;
+padding-top: 10px;
+</string>
        </property>
       </widget>
       <zorder>listAllUsersNew</zorder>
@@ -2564,37 +2571,6 @@ border-radius: 40px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="addUserName">
-        <property name="geometry">
-         <rect>
-          <x>120</x>
-          <y>20</y>
-          <width>331</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial Rounded MT Bold</family>
-          <pointsize>-1</pointsize>
-          <weight>37</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font-weight: 300;
-font-size: 23px;
-color:#2B528C;
-background: rgba(254, 206, 103, 0.00);
-</string>
-        </property>
-        <property name="text">
-         <string>User Full Name</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
        <widget class="QLabel" name="userDOBHeading_5">
         <property name="geometry">
          <rect>
@@ -3081,7 +3057,7 @@ background: rgba(254, 206, 103, 0.00);
 {background: rgba(104, 160, 229, 0.55);
 border-radius: 15;
 border-color: rgba(104, 160, 229, 0.33);
-color: #F8FBFF;
+color:#2B528C;
 font-size: 15px; 
 padding-left: 3px;}</string>
         </property>
@@ -3100,7 +3076,7 @@ padding-left: 3px;}</string>
 {background: rgba(104, 160, 229, 0.55);
 border-radius: 15;
 border-color: rgba(104, 160, 229, 0.33);
-color: #F8FBFF;
+color:#2B528C;
 font-size: 15px; 
 padding-left: 3px;}</string>
         </property>
@@ -3138,11 +3114,11 @@ padding-left: 3px;}</string>
         </property>
         <property name="styleSheet">
          <string notr="true">background: #F8FBFF;
-border-radius: 45;
+border-radius: 15;
 border-color: rgba(104, 160, 229, 0.33);
-color: #F8FBFF;
-font-size: 16px; 
-padding-left: 3px;</string>
+color:#2B528C;
+font-size: 15px; 
+padding-left: 5px;</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="addUserDOB">
@@ -3150,7 +3126,7 @@ padding-left: 3px;</string>
          <rect>
           <x>120</x>
           <y>60</y>
-          <width>101</width>
+          <width>121</width>
           <height>31</height>
          </rect>
         </property>
@@ -3172,7 +3148,7 @@ padding-left: 3px;}</string>
          <rect>
           <x>247</x>
           <y>60</y>
-          <width>111</width>
+          <width>121</width>
           <height>31</height>
          </rect>
         </property>
@@ -3607,9 +3583,51 @@ padding-left: 3px;}
 
 </string>
         </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+        <item>
+         <property name="text">
+          <string>Not Vaccinated</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Partially Vaccinated</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Vaccinated</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLineEdit" name="addUserName">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>20</y>
+          <width>301</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit
+{background: #F8FBFF;
+border-radius: 15;
+border-color: rgba(104, 160, 229, 0.33);
+color: #2B528C;
+font-size: 12px; 
+padding-left: 3px;}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>Add User Name</string>
+        </property>
        </widget>
        <zorder>vaccineDose1Frame_7</zorder>
-       <zorder>addUserName</zorder>
        <zorder>userDOBHeading_5</zorder>
        <zorder>userNumberHeading_2</zorder>
        <zorder>userEmailHeading_2</zorder>
@@ -3637,6 +3655,7 @@ padding-left: 3px;}
        <zorder>userEmailHeading_16</zorder>
        <zorder>pbAddUserPicture</zorder>
        <zorder>addVaccStatus</zorder>
+       <zorder>addUserName</zorder>
       </widget>
       <widget class="QPushButton" name="pbSearch_AddUser">
        <property name="geometry">
@@ -3711,7 +3730,7 @@ border: 3px solid rgba(104, 160, 229, 0.88);
         <string>Click to start typing</string>
        </property>
       </widget>
-      <widget class="QListWidget" name="listAllUsers_AddUser">
+      <widget class="QListWidget" name="listAllUsersNew_AddUser">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -3722,7 +3741,14 @@ border: 3px solid rgba(104, 160, 229, 0.88);
        </property>
        <property name="styleSheet">
         <string notr="true">background: #F2F8FC;
-border-radius: 40px;</string>
+border-radius: 20px;
+font-weight: 200;
+font-size: 14px;
+color: #2B528C;
+padding-left: 8px;
+padding-top: 10px;
+padding-right: 8px;
+</string>
        </property>
       </widget>
      </widget>
@@ -4573,7 +4599,14 @@ background: rgba(254, 206, 103, 0.00);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">background: #F2F8FC;
-border-radius: 40px;</string>
+border-radius: 20px;
+font-weight: 200;
+font-size: 18px;
+color: #2B528C;
+padding-left: 8px;
+padding-top: 10px;
+padding-right: 8px;
+</string>
        </property>
       </widget>
       <widget class="QPushButton" name="pbSearchCategory">
@@ -5568,11 +5601,11 @@ padding-left: 3px;}</string>
         </property>
         <property name="styleSheet">
          <string notr="true">background: #F8FBFF;
-border-radius: 45;
+border-radius: 15;
 border-color: rgba(104, 160, 229, 0.33);
-color: #F8FBFF;
-font-size: 16px; 
-padding-left: 3px;</string>
+color:#2B528C;
+font-size: 15px; 
+padding-left: 5px;</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="editUserDOB">
@@ -6329,7 +6362,7 @@ border: 3px solid rgba(104, 160, 229, 0.88);
         <string>Click to start typing</string>
        </property>
       </widget>
-      <widget class="QFrame" name="listAllUsersNew_Edit">
+      <widget class="QListWidget" name="listAllUsersNew_Edit">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -6340,13 +6373,14 @@ border: 3px solid rgba(104, 160, 229, 0.88);
        </property>
        <property name="styleSheet">
         <string notr="true">background: #F2F8FC;
-border-radius: 40px;</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+border-radius: 20px;
+font-weight: 200;
+font-size: 14px;
+color: #2B528C;
+padding-left: 8px;
+padding-top: 10px;
+padding-right: 8px;
+</string>
        </property>
       </widget>
      </widget>

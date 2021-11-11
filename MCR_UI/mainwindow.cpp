@@ -45,6 +45,14 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     connect(ui->pbAddUser3, &QPushButton::clicked, this, &MainWindow::addNewUser);
     connect(ui->pbAddUser4, &QPushButton::clicked, this, &MainWindow::addNewUser);
 
+    // All User Buttons
+    connect(ui->pbAllUsers, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
+    connect(ui->pbAllUsers1, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
+    connect(ui->pbAllUsers2, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
+    connect(ui->pbAllUsers3, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
+    connect(ui->pbAllUsers4, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
+
+
     // Report Buttons
     connect(ui->pbReports, &QPushButton::clicked, this, &MainWindow::pbReports);
     connect(ui->pbReports1, &QPushButton::clicked, this, &MainWindow::pbReports);
@@ -88,11 +96,12 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     connect(ui->pbLogout, &QPushButton::clicked, this, &MainWindow::logout);
 
    //Mac Create Directory
-   /*QDir pathDir("/Users/raghiiboiibaxtor/Documents/MyCOVIDRecord_New/files");
+   QDir pathDir("/Users/raghiiboiibaxtor/Documents/MyCOVIDRecord_New/files");
        if(!pathDir.exists())
        {
            QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MyCOVIDRecord_New/files");
-       }*/
+       }
+
 }
 
 // Second constructor passing double pointer for classCitizen ptrNewCitizen.
@@ -102,35 +111,40 @@ MainWindow::MainWindow(classCitizen*& ptrNewCitizen, QWidget *parent) : QMainWin
     this->ptrNewCitizen = &ptrNewCitizen;
 
     // File path for Vaccine Certificates
-    QDir pathDir("./VaccineCertificates");
+    QDir pathDir("/Users/raghiiboiibaxtor/Documents/MCR_Final/MCR_UI/files/VaccineCertificates.txt");
     if(!pathDir.exists())
     {
         //create it!
-        QDir().mkdir("./VaccineCertificates");
+        QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_Final/MCR_UI/files/VaccineCertificates.txt");
     }
 
     // File path for QRCodes
-    QDir pathDir1("./QRCodes");
+    QDir pathDir1("/Users/raghiiboiibaxtor/Documents/MCR_Final/MCR_UI/files/QRCodes.txt");
     if(!pathDir1.exists())
     {
         //create it!
-        QDir().mkdir("./QRCodes");
+       // QDir().mkdir("./QRCodes");
+        QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_Final/MCR_UI/files/QRCodes.txt");
     }
 
     // File path for Test Results
-    QDir pathDir2("./TestResults");
+    //QDir pathDir2("./TestResults");
+    QDir pathDir2("/Users/raghiiboiibaxtor/Documents/MCR_Final/MCR_UI/files/TestResults.txt");
     if(!pathDir2.exists())
     {
         //create it!
-        QDir().mkdir("./TestResults");
+        //QDir().mkdir("./TestResults");
+        QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_Final/MCR_UI/files/TestResults.txt");
     }
 
     // File path for User Profile Pictures
-    QDir pathDir3("./UserProfilePictures");
+   // QDir pathDir3("./UserProfilePictures");
+    QDir pathDir3("/Users/raghiiboiibaxtor/Documents/MCR_Final/MCR_UI/files/UserProfilePictures.txt");
     if(!pathDir3.exists())
     {
         //create it!
-        QDir().mkdir("./UserProfilePictures");
+        //QDir().mkdir("./UserProfilePictures");
+        QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_Final/MCR_UI/files/TestResults.txt");
     }
 }
 
@@ -175,6 +189,9 @@ void MainWindow::addNewUser()
     {
          userList.push_back(newCitizen);
          ui->listAllUsersNew->addItem(newCitizen->getName());
+         ui->listAllUsersNew_Edit->addItem(newCitizen->getName());
+         ui->listAllUsersNew_AddUser->addItem(newCitizen->getName());
+
     }
 } /// End of addNewUser()
 
@@ -300,7 +317,7 @@ void MainWindow::saveUser()
         /// Windows File Path
         QFile outputFile("Citizens.txt");
         /// Mac File Path
-        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MyCOVIDRecord_New/files/Citizens.txt");
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -385,6 +402,8 @@ void MainWindow::pbAllUsers()
    // Clearing ui
     userList.clear();
     ui->listAllUsersNew->clear();
+    ui->listAllUsersNew_Edit->clear();
+    ui->listAllUsersNew_AddUser->clear();
 
 
    while(!read.atEnd()) // Start while loop to read file and push info to vec
@@ -395,6 +414,8 @@ void MainWindow::pbAllUsers()
 
        // Add read information to ui
        ui->listAllUsersNew->addItem(info.at(4));
+       ui->listAllUsersNew_Edit->addItem(info.at(4));
+       ui->listAllUsersNew_AddUser->addItem(info.at(4));
 
        // Adding file information to vector
        classCitizen* temp = new classCitizen(info.at(0), info.at(1), info.at(2), info.at(3), info.at(4), info.at(5), info.at(6), info.at(7), info.at(8), info.at(9),
@@ -412,8 +433,10 @@ void MainWindow::pbAllUsers()
 void MainWindow::selectUserDetails()
 {
     int index = ui->listAllUsersNew->currentRow();
+    int index2 = ui->listAllUsersNew_Edit->currentRow();
+    int index3 = ui->listAllUsersNew_AddUser->currentRow();
 
-    if (index >= 0)
+    if (index >= 0 || index2 >= 0 || index3 >= 0)
     {
         classCitizen *selectedUser = userList.at(index);
         ui->showUserName->setText(selectedUser->getName());
@@ -428,6 +451,20 @@ void MainWindow::selectUserDetails()
         QPixmap pixmap3(selectedUser->getCitizenImage());
         ui->showUserPicture->setPixmap(pixmap3);
         ui->showUserPicture->setScaledContents(true);
+        ui->show1stDoseName->setText(selectedUser->getVaccineName1());
+        ui->show1stDoseBatch->setText(selectedUser->getBatchNumber1());
+        ui->show1stDoseDate->setText(selectedUser->getDateGiven1());
+        ui->show2ndDoseName->setText(selectedUser->getVaccineName2());
+        ui->show2ndDoseBatch->setText(selectedUser->getBatchNumber2());
+        ui->show2ndDoseDate->setText(selectedUser->getDateGiven2());
+        QPixmap pixmap4(selectedUser->getCertificate());
+        ui->showCertificate->setPixmap(pixmap4);
+        QPixmap pixmap5(selectedUser->getTestResult());
+        ui->showTestResults->setPixmap(pixmap5);
+        QPixmap pixmap6(selectedUser->getQRCode());
+        ui->showQRCode->setPixmap(pixmap6);
+
+
     }
 } /// End of selectUserDetails()
 
@@ -444,13 +481,37 @@ void MainWindow::searchUser()
             QListWidgetItem* user = ui->listAllUsersNew->item(i);
             user->setBackground(Qt::transparent);
         }
+        for (int i=0; i < ui->listAllUsersNew_AddUser->count(); i++)
+        {
+            QListWidgetItem* user = ui->listAllUsersNew_AddUser->item(i);
+            user->setBackground(Qt::transparent);
+        }
+        for (int i=0; i < ui->listAllUsersNew_Edit->count(); i++)
+        {
+            QListWidgetItem* user = ui->listAllUsersNew_Edit->item(i);
+            user->setBackground(Qt::transparent);
+        }
 
         QList<QListWidgetItem*> list = ui->listAllUsersNew->findItems(search, Qt::MatchContains);
+        QList<QListWidgetItem*> addList = ui->listAllUsersNew_AddUser->findItems(search, Qt::MatchContains);
+        QList<QListWidgetItem*> editList = ui->listAllUsersNew_Edit->findItems(search, Qt::MatchContains);
 
         // Loop to highlight matching users
         for (int i = 0; i <list.count(); i++)
         {
             QListWidgetItem* item = list.at(i);
+            item->setBackground(Qt::cyan);
+        }
+
+        for (int i = 0; i <addList.count(); i++)
+        {
+            QListWidgetItem* item = addList.at(i);
+            item->setBackground(Qt::cyan);
+        }
+
+        for (int i = 0; i <editList.count(); i++)
+        {
+            QListWidgetItem* item = editList.at(i);
             item->setBackground(Qt::cyan);
         }
     }
@@ -464,6 +525,18 @@ void MainWindow::searchUser()
             QListWidgetItem* item = ui->listAllUsersNew->item(i);
             item->setBackground(Qt::transparent);
         }
+
+        for (int i = 0; i < ui->listAllUsersNew_AddUser->count(); i++)
+        {
+            QListWidgetItem* item = ui->listAllUsersNew_AddUser->item(i);
+            item->setBackground(Qt::transparent);
+        }
+
+        for (int i = 0; i < ui->listAllUsersNew_Edit->count(); i++)
+        {
+            QListWidgetItem* item = ui->listAllUsersNew_Edit->item(i);
+            item->setBackground(Qt::transparent);
+        }
     }
 } /// End of searchUser()
 
@@ -475,17 +548,15 @@ void MainWindow::searchUser()
 void MainWindow:: editUser()
 {
     int listNum = ui->listAllUsersNew->currentRow();
-    ui->stackedWidget->setCurrentIndex(3);
+    // Changing UI page
+    ui->stackedWidget->setCurrentIndex(4);
 
     if (listNum != -1)
     {
         ptrCurrentCitizen = userList.at(listNum);
 
             if (ptrCurrentCitizen != nullptr)
-           {
-                // Changing UI page
-                ui->stackedWidget->setCurrentIndex(3);
-
+           {          
                 // Populating labels with existing info
                 ui->editUserName->setText(ptrCurrentCitizen->getName());
                 ui->editUserPhone->setText(ptrCurrentCitizen->getContactNumber());
@@ -640,7 +711,7 @@ void MainWindow::saveEdit()
     QPixmap pixmap2(ptrCurrentCitizen->getTestResult());
     ui->displayTestResults->setPixmap(pixmap2);
     QPixmap pixmap3(ptrCurrentCitizen->getCitizenImage());
-    ui->displayUserPicture->setPixmap(pixmap2);
+    ui->displayUserPicture->setPixmap(pixmap3);
 
 
     if(editName.trimmed() != "" && editEmail.trimmed() != "")
@@ -752,7 +823,7 @@ void MainWindow::saveEdit()
 // Display Reports Page
 void MainWindow::pbReports()
 {
-    ui->stackedWidget->setCurrentIndex(4);
+    ui->stackedWidget->setCurrentIndex(3);
 
     // Open file for reading
     //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MyCOVIDRecord_New/files/UserReports.txt");
