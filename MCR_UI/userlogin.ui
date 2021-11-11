@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>UserLogin</class>
+ <widget class="QMainWindow" name="UserLogin">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -27,7 +27,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="loginPage">
      <widget class="QLabel" name="loginWhiteBackground">
@@ -3020,17 +3020,17 @@ font-size: 16px;
 padding-left: 3px;}</string>
         </property>
        </widget>
-       <widget class="QSpinBox" name="spinBox">
+       <widget class="QComboBox" name="cbReportCategory">
         <property name="geometry">
          <rect>
-          <x>20</x>
+          <x>21</x>
           <y>90</y>
           <width>421</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">QSpinBox
+         <string notr="true">QComboBox
 {background: #F8FBFF;
 border-radius: 15;
 border-color: rgba(104, 160, 229, 0.33);
@@ -3045,7 +3045,7 @@ padding-left: 3px;}</string>
        <zorder>userDOBHeading_3</zorder>
        <zorder>userNumberHeading_3</zorder>
        <zorder>userNumberHeading_4</zorder>
-       <zorder>spinBox</zorder>
+       <zorder>cbReportCategory</zorder>
       </widget>
       <widget class="QLabel" name="myVaccinesHeading_2">
        <property name="geometry">

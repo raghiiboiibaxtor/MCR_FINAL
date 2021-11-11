@@ -22,24 +22,24 @@ UserLogin::UserLogin(QWidget *parent):QMainWindow(parent), ui(new Ui::UserLogin)
     ui->stackedWidget->setCurrentIndex(0);
 
     // Hidden UI Elements
-    ui->labelConfirmation->hide();
+   /* ui->labelConfirmation->hide();
     ui->showLargeCertificate->hide();
     ui->showLargeQR->hide();
     ui->showLargeResults->hide();
-    ui->pbCloseImage->hide();
+    ui->pbCloseImage->hide(); */
 
     // Manual Connections
     connect(ui->pbLogin, &QPushButton::clicked, this, &UserLogin::login);
 
     connect(ui->pbHome, &QPushButton::clicked, this, &UserLogin::pbHome);
 
-    connect(ui->pbMyDetails, &QPushButton::clicked, this, &UserLogin::pbMyDetails);
-    connect(ui->pbEnlargeCertificate, &QPushButton::clicked, this, &UserLogin::pbShowCertificate);
+    connect(ui->pbProfile, &QPushButton::clicked, this, &UserLogin::pbMyDetails);
+    /*connect(ui->pbEnlargeCertificate, &QPushButton::clicked, this, &UserLogin::pbShowCertificate);
     connect(ui->pbEnlargeQR, &QPushButton::clicked, this, &UserLogin::pbShowQRCode);
     connect(ui->pbEnlargeResults, &QPushButton::clicked, this, &UserLogin::pbShowTestResult);
-    connect(ui->pbCloseImage, &QPushButton::clicked, this, &UserLogin::pbClose);
+    connect(ui->pbCloseImage, &QPushButton::clicked, this, &UserLogin::pbClose);*/
 
-    connect(ui->pbContactUs, &QPushButton::clicked, this, &UserLogin::pbContactUs);
+    connect(ui->pbContact, &QPushButton::clicked, this, &UserLogin::pbContactUs);
     connect(ui->pbSendMessage, &QPushButton::clicked, this, &UserLogin::submitReport);
 
     connect(ui->pbLogout, &QPushButton::clicked, this, &UserLogin::logout);
@@ -203,7 +203,7 @@ void UserLogin::login()
 // Function to display Home Page
 void UserLogin::pbHome()
 {
-    ui->stackedWidget2->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(1);
 } /// End of pbHome()
 
 
@@ -213,10 +213,10 @@ void UserLogin::pbHome()
 // Function to display User Profile page
 void UserLogin::pbMyDetails()
 {
-    ui->stackedWidget2->setCurrentIndex(1);
+    ui->stackedWidget->setCurrentIndex(2);
 } /// End of pbMyDetails()
 
-// Function to show Enlarged Certificate Image
+/*// Function to show Enlarged Certificate Image
 void UserLogin::pbShowCertificate()
 {
     ui->showLargeCertificate->show();
@@ -245,7 +245,7 @@ void UserLogin::pbClose()
     ui->showLargeQR->hide();
     ui->showLargeResults->hide();
     ui->pbCloseImage->hide();
-} /// End of pbClose()
+} /// End of pbClose() */
 
 
 /// Report Functions
@@ -254,7 +254,7 @@ void UserLogin::pbClose()
 // Function to display Contact Us page
 void UserLogin::pbContactUs()
 {
-    ui->stackedWidget2->setCurrentIndex(2);
+    ui->stackedWidget->setCurrentIndex(3);
 
     citizenReport* ptrNewReport = nullptr;
 
@@ -299,7 +299,7 @@ void UserLogin::submitReport()
         out << reportList.at(i)->getContact() << ",";
         out << reportList.at(i)->getCategory() << ",";
         out << reportList.at(i)->getSubject() << ",";
-        out << reportList.at(i)->getDetails()<< Qt::endl;
+        out << reportList.at(i)->getDetails()<< endl; //Qt::endl;
        }
 
 
@@ -312,7 +312,7 @@ void UserLogin::submitReport()
     ui->editReportDetails->clear();
 
     // Displaying saved message for admin user
-    ui->labelConfirmation->show();
+    //ui->labelConfirmation->show();
 } /// End of submitReport()
 
 
