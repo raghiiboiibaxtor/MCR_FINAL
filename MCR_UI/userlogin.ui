@@ -108,7 +108,7 @@ color: #2B528C;
         <string>My COVID-19 Record</string>
        </property>
       </widget>
-      <widget class="QLabel" name="loginImage">
+      <widget class="QLabel" name="imgHome">
        <property name="geometry">
         <rect>
          <x>300</x>
@@ -279,7 +279,7 @@ border-radius: 80px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLineEdit" name="enterNHI">
+      <widget class="QLineEdit" name="editNHI">
        <property name="geometry">
         <rect>
          <x>24</x>
@@ -320,11 +320,11 @@ padding-left: 3px;
         <string> My NHI Number</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="enterEmail">
+      <widget class="QLineEdit" name="editEmail">
        <property name="geometry">
         <rect>
          <x>24</x>
-         <y>230</y>
+         <y>210</y>
          <width>361</width>
          <height>51</height>
         </rect>
@@ -361,11 +361,11 @@ padding-left: 3px;
         <string> My Email Address</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="enterAccess">
+      <widget class="QLineEdit" name="editAccessNumber">
        <property name="geometry">
         <rect>
          <x>24</x>
-         <y>320</y>
+         <y>280</y>
          <width>361</width>
          <height>51</height>
         </rect>
@@ -452,6 +452,32 @@ font-size: 33px;</string>
        </property>
        <property name="text">
         <string>My Account</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelError">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>350</y>
+         <width>331</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Quicksand</family>
+         <pointsize>-1</pointsize>
+         <weight>12</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #F8FBFF;
+font-weight: 100;
+font-size: 18px;</string>
+       </property>
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </widget>
@@ -696,7 +722,7 @@ border-radius: 105px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLabel" name="displayPicture_2">
+      <widget class="QLabel" name="showUserPicture">
        <property name="geometry">
         <rect>
          <x>25</x>
@@ -713,7 +739,7 @@ border-radius: 80px;</string>
         <string>displayPicture</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_9">
+      <widget class="QLabel" name="labelUserName">
        <property name="geometry">
         <rect>
          <x>18</x>
@@ -804,10 +830,10 @@ color: #2B528C;
         <string>Logout</string>
        </property>
       </widget>
-      <zorder>label_9</zorder>
+      <zorder>labelUserName</zorder>
       <zorder>label_17</zorder>
       <zorder>pbLogout</zorder>
-      <zorder>displayPicture_2</zorder>
+      <zorder>showUserPicture</zorder>
      </widget>
      <widget class="QFrame" name="userHomeDisplayFrame">
       <property name="geometry">
@@ -1586,7 +1612,7 @@ color:#2B528C;
          <string>Email Address</string>
         </property>
        </widget>
-       <widget class="QLabel" name="showUserEmergencyContact">
+       <widget class="QLabel" name="showUserEmergency">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -1676,7 +1702,7 @@ border-radius: 50px;</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="vaccine1TypeLabel">
+       <widget class="QLabel" name="showDose1Name">
         <property name="geometry">
          <rect>
           <x>160</x>
@@ -1707,7 +1733,7 @@ color:#2B528C;
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="dose1Text">
+       <widget class="QLabel" name="showDose1Batch">
         <property name="geometry">
          <rect>
           <x>160</x>
@@ -1735,7 +1761,7 @@ color:#2B528C;
          <string>Dose 1</string>
         </property>
        </widget>
-       <widget class="QLabel" name="vaccine1DateRecieved">
+       <widget class="QLabel" name="showDose1Date">
         <property name="geometry">
          <rect>
           <x>250</x>
@@ -1891,7 +1917,7 @@ border-radius: 50px;</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="dose2Text">
+       <widget class="QLabel" name="showDose2Batch">
         <property name="geometry">
          <rect>
           <x>160</x>
@@ -1919,7 +1945,7 @@ color:#2B528C;
          <string>Dose 2</string>
         </property>
        </widget>
-       <widget class="QLabel" name="vaccine2TypeLabel">
+       <widget class="QLabel" name="showDose2Name">
         <property name="geometry">
          <rect>
           <x>160</x>
@@ -1950,7 +1976,7 @@ color:#2B528C;
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="vaccine2DateRecieved">
+       <widget class="QLabel" name="showDose2Date">
         <property name="geometry">
          <rect>
           <x>240</x>
@@ -2236,7 +2262,7 @@ border-radius: 50px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="imgTestResults">
+       <widget class="QLabel" name="showTestResults">
         <property name="geometry">
          <rect>
           <x>9</x>
@@ -2278,7 +2304,7 @@ border-radius: 50px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="imgQRCode">
+       <widget class="QLabel" name="showQRCode">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -2320,7 +2346,7 @@ border-radius: 50px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="imgCertificate">
+       <widget class="QLabel" name="showCertificate">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -2989,7 +3015,7 @@ background: rgba(254, 206, 103, 0.00);
           <x>20</x>
           <y>220</y>
           <width>421</width>
-          <height>411</height>
+          <height>351</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -3039,6 +3065,41 @@ font-size: 16px;
 padding-left: 3px;}</string>
         </property>
        </widget>
+       <widget class="QPushButton" name="pbSendMessage">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>584</y>
+          <width>181</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial Rounded MT Bold</family>
+          <pointsize>-1</pointsize>
+          <weight>62</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background: #2B528C;
+font-weight: 500;
+border-radius: 25px;
+color:  rgba(248, 251, 255, 0.99);
+border-color: rgba(104, 160, 229, 0.33);
+font-size: 16px; 
+}
+QPushButton:hover
+{
+font-size: 18px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Send Message</string>
+        </property>
+       </widget>
        <zorder>editReportSubject</zorder>
        <zorder>editReportDetails</zorder>
        <zorder>medicalInfoHeading_4</zorder>
@@ -3046,6 +3107,7 @@ padding-left: 3px;}</string>
        <zorder>userNumberHeading_3</zorder>
        <zorder>userNumberHeading_4</zorder>
        <zorder>cbReportCategory</zorder>
+       <zorder>pbSendMessage</zorder>
       </widget>
       <widget class="QLabel" name="myVaccinesHeading_2">
        <property name="geometry">

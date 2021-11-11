@@ -138,7 +138,7 @@ void UserLogin::login()
                     ui->showUserEmail->setText(temp->getEmailAddress());
                     ui->showUserDOB->setText(temp->getDateOfBirth());
                     ui->showUserNHI->setText(temp->getNHI());
-                    ui->showUserCV->setText(temp->getCVN());
+                    ui->showUserCVN->setText(temp->getCVN());
                     ui->showUserEmergency->setText(temp->getEmergencyContact());
                     ui->showUserVaccStatus->setText(temp->getVaccineStatus());
                     ui->showDose1Name->setText(temp->getVaccineName1());
@@ -150,18 +150,18 @@ void UserLogin::login()
                     QPixmap pixmap(temp->getCertificate());
                     ui->showCertificate->setPixmap(pixmap);
                     ui->showCertificate->setScaledContents(true);
-                    ui->showLargeCertificate->setPixmap(pixmap);
-                    ui->showLargeCertificate->setScaledContents(true);
+                   // ui->showLargeCertificate->setPixmap(pixmap);
+                  //  ui->showLargeCertificate->setScaledContents(true);
                     QPixmap pixmap1(temp->getQRCode());
                     ui->showQRCode->setPixmap(pixmap1);
                     ui->showQRCode->setScaledContents(true);
-                    ui->showLargeQR->setPixmap(pixmap1);
-                    ui->showLargeQR->setScaledContents(true);
+                 //   ui->showLargeQR->setPixmap(pixmap1);
+                   // ui->showLargeQR->setScaledContents(true);
                     QPixmap pixmap2(temp->getTestResult());
                     ui->showTestResults->setPixmap(pixmap2);
                     ui->showTestResults->setScaledContents(true);
-                    ui->showLargeResults->setPixmap(pixmap2);
-                    ui->showLargeResults->setScaledContents(true);
+                 //   ui->showLargeResults->setPixmap(pixmap2);
+                  //  ui->showLargeResults->setScaledContents(true);
 
                     // Populating labels on Contact Us page
                     ui->editPreferredName->setText(temp->getName());

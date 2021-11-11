@@ -27,7 +27,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="adminHomePage">
      <widget class="QFrame" name="userHomeHelloBar">
@@ -906,7 +906,7 @@ font-size: 12px;
 padding-left: 3px;}</string>
         </property>
         <property name="text">
-         <string>TextLabel</string>
+         <string/>
         </property>
        </widget>
        <widget class="QLabel" name="showUserEmergency">
@@ -928,7 +928,7 @@ font-size: 12px;
 padding-left: 3px;}</string>
         </property>
         <property name="text">
-         <string>TextLabel</string>
+         <string/>
         </property>
        </widget>
        <widget class="QLabel" name="userNumberHeading_6">
@@ -978,7 +978,7 @@ font-size: 12px;
 padding-left: 3px;}</string>
         </property>
         <property name="text">
-         <string>TextLabel</string>
+         <string/>
         </property>
        </widget>
        <widget class="QLabel" name="userEmailHeading_5">
@@ -1072,7 +1072,7 @@ font-size: 12px;
 padding-left: 3px;}</string>
         </property>
         <property name="text">
-         <string>TextLabel</string>
+         <string/>
         </property>
        </widget>
        <widget class="QLabel" name="showUserDOB">
