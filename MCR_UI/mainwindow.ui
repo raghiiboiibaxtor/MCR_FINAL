@@ -27,7 +27,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="adminHomePage">
      <widget class="QFrame" name="userHomeHelloBar">
@@ -594,7 +594,7 @@ border-radius: 105px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QPushButton" name="pbAdminHome_1">
+      <widget class="QPushButton" name="pbHome1">
        <property name="geometry">
         <rect>
          <x>-81</x>
@@ -629,7 +629,7 @@ font-size: 18px;
         <string>Home</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbAdminAllUsers_1">
+      <widget class="QPushButton" name="pbAllUsers1">
        <property name="geometry">
         <rect>
          <x>-50</x>
@@ -664,7 +664,7 @@ font-size: 17px;
         <string>All Users</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbAdminAddUser_1">
+      <widget class="QPushButton" name="pbAddUser1">
        <property name="geometry">
         <rect>
          <x>-40</x>
@@ -699,7 +699,7 @@ font-size: 18px;
         <string>Add User</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbAdminReports_1">
+      <widget class="QPushButton" name="pbReports1">
        <property name="geometry">
         <rect>
          <x>-40</x>
@@ -2107,7 +2107,7 @@ background: rgba(104, 160, 229, 0.00);</string>
         <string>Hey there,</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbAdminLogout_1">
+      <widget class="QPushButton" name="pbLogout1">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -2186,7 +2186,7 @@ border-radius: 105px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QPushButton" name="pbHome_13">
+      <widget class="QPushButton" name="pbHome2">
        <property name="geometry">
         <rect>
          <x>-81</x>
@@ -2221,7 +2221,7 @@ font-size: 18px;
         <string>Home</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbProfile_11">
+      <widget class="QPushButton" name="pbAllUsers2">
        <property name="geometry">
         <rect>
          <x>-50</x>
@@ -2256,7 +2256,7 @@ font-size: 18px;
         <string>All Users</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbContact_13">
+      <widget class="QPushButton" name="pbAddUser2">
        <property name="geometry">
         <rect>
          <x>-40</x>
@@ -2291,7 +2291,7 @@ font-size: 17px;
         <string>Add User</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbContact_14">
+      <widget class="QPushButton" name="pbReports2">
        <property name="geometry">
         <rect>
          <x>-40</x>
@@ -2417,7 +2417,7 @@ background: rgba(104, 160, 229, 0.00);</string>
         <string>Hey there,</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbLogout_11">
+      <widget class="QPushButton" name="pbLogout2">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -3767,7 +3767,7 @@ border-radius: 105px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QPushButton" name="pbHome_7">
+      <widget class="QPushButton" name="pbHome3">
        <property name="geometry">
         <rect>
          <x>-81</x>
@@ -3802,7 +3802,7 @@ font-size: 18px;
         <string>Home</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbProfile_7">
+      <widget class="QPushButton" name="pbAllUsers3">
        <property name="geometry">
         <rect>
          <x>-50</x>
@@ -3837,7 +3837,7 @@ font-size: 18px;
         <string>All Users</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbContact_7">
+      <widget class="QPushButton" name="pbAddUser3">
        <property name="geometry">
         <rect>
          <x>-40</x>
@@ -3872,7 +3872,7 @@ font-size: 18px;
         <string>Add User</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbProfile_8">
+      <widget class="QPushButton" name="pbReports3">
        <property name="geometry">
         <rect>
          <x>-50</x>
@@ -3998,7 +3998,7 @@ background: rgba(104, 160, 229, 0.00);</string>
         <string>Hey there,</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbLogout_7">
+      <widget class="QPushButton" name="pbLogout3">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -4737,7 +4737,7 @@ background: rgba(104, 160, 229, 0.00);</string>
         <string>Hey there,</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbLogout_3">
+      <widget class="QPushButton" name="pbLogout4">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -4794,7 +4794,7 @@ border-radius: 105px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QPushButton" name="pbHome_4">
+      <widget class="QPushButton" name="pbHome4">
        <property name="geometry">
         <rect>
          <x>-81</x>
@@ -4829,7 +4829,7 @@ font-size: 18px;
         <string>Home</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbProfile_4">
+      <widget class="QPushButton" name="pbAllUsers4">
        <property name="geometry">
         <rect>
          <x>-50</x>
@@ -4864,7 +4864,7 @@ font-size: 17px;
         <string>All Users</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbAddUser_4">
+      <widget class="QPushButton" name="pbAddUser4">
        <property name="geometry">
         <rect>
          <x>-40</x>
@@ -4899,7 +4899,7 @@ font-size: 18px;
         <string>Add User</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbContact_8">
+      <widget class="QPushButton" name="pbReports4">
        <property name="geometry">
         <rect>
          <x>-40</x>
@@ -4934,10 +4934,10 @@ font-size: 18px;
         <string>Reports</string>
        </property>
       </widget>
-      <zorder>pbHome_4</zorder>
-      <zorder>pbProfile_4</zorder>
-      <zorder>pbContact_8</zorder>
-      <zorder>pbAddUser_4</zorder>
+      <zorder>pbHome4</zorder>
+      <zorder>pbAllUsers4</zorder>
+      <zorder>pbReports4</zorder>
+      <zorder>pbAddUser4</zorder>
      </widget>
      <widget class="QFrame" name="userHomeDisplayFrame_3">
       <property name="geometry">

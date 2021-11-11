@@ -30,9 +30,38 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
    // ui->lblSavedMessage->hide();
 
     // Manual Connections
-    connect(ui->pbHome, &QPushButton::clicked, this, &MainWindow::pbHome);
 
+    // Home Buttons
+    connect(ui->pbHome, &QPushButton::clicked, this, &MainWindow::pbHome);
+    connect(ui->pbHome1, &QPushButton::clicked, this, &MainWindow::pbHome);
+    connect(ui->pbHome2, &QPushButton::clicked, this, &MainWindow::pbHome);
+    connect(ui->pbHome3, &QPushButton::clicked, this, &MainWindow::pbHome);
+    connect(ui->pbHome4, &QPushButton::clicked, this, &MainWindow::pbHome);
+
+    // Add User Buttons
     connect(ui->pbAddUser, &QPushButton::clicked, this, &MainWindow::addNewUser);
+    connect(ui->pbAddUser1, &QPushButton::clicked, this, &MainWindow::addNewUser);
+    connect(ui->pbAddUser2, &QPushButton::clicked, this, &MainWindow::addNewUser);
+    connect(ui->pbAddUser3, &QPushButton::clicked, this, &MainWindow::addNewUser);
+    connect(ui->pbAddUser4, &QPushButton::clicked, this, &MainWindow::addNewUser);
+
+    // Report Buttons
+    connect(ui->pbReports, &QPushButton::clicked, this, &MainWindow::pbReports);
+    connect(ui->pbReports1, &QPushButton::clicked, this, &MainWindow::pbReports);
+    connect(ui->pbReports2, &QPushButton::clicked, this, &MainWindow::pbReports);
+    connect(ui->pbReports3, &QPushButton::clicked, this, &MainWindow::pbReports);
+    connect(ui->pbReports4, &QPushButton::clicked, this, &MainWindow::pbReports);
+
+    // Logout Buttons
+     connect(ui->pbLogout, &QPushButton::clicked, this, &MainWindow::logout);
+     connect(ui->pbLogout1, &QPushButton::clicked, this, &MainWindow::logout);
+     connect(ui->pbLogout2, &QPushButton::clicked, this, &MainWindow::logout);
+     connect(ui->pbLogout3, &QPushButton::clicked, this, &MainWindow::logout);
+     connect(ui->pbLogout4, &QPushButton::clicked, this, &MainWindow::logout);
+
+
+
+
     connect(ui->pbAddCertificate, &QPushButton::clicked, this, &MainWindow::addCertificateImage);
     connect(ui->pbAddQRCode, &QPushButton::clicked, this, &MainWindow::addQRCodeImage);
     connect(ui->pbAddTestResults, &QPushButton::clicked, this, &MainWindow::addTestResultImage);
@@ -51,7 +80,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     connect(ui->pbEditUserPicture, &QPushButton::clicked, this, &MainWindow::editUserPicture);
     connect(ui->pbSaveEdit, &QPushButton::clicked, this, &MainWindow::saveEdit);
 
-    connect(ui->pbReports, &QPushButton::clicked, this, &MainWindow::pbReports);
+
     //connect(ui->pbLoadReports, &QPushButton::clicked, this, &MainWindow::loadReports);
     connect(ui->listAllReports, &QListWidget::itemClicked, this, &MainWindow::selectReportDetails);
     connect(ui->pbSearchCategory, &QPushButton::clicked, this, &MainWindow::searchCategory);
