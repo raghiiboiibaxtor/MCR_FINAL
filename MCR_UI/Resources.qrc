@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>images/imgHome.png</file>
+        <file>images/iconVaccine.png</file>
+    </qresource>
+</RCC>
