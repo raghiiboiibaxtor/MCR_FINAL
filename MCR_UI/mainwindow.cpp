@@ -26,83 +26,112 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(0);
 
-    // Hidden UI Elements
-   // ui->lblSavedMessage->hide();
+    // Constructing File Path Directories
+   //Mac Create Directory
+   QDir pathDir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files");
+       if(!pathDir.exists())
+       {
+           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files");
+       }
 
-    // Manual Connections
+       // File path for Vaccine Certificates
+       QDir pathDir0("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates");
+       if(!pathDir0.exists())
+       {
+           //create it!
+           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates");
+       }
 
-    // Home Buttons
+       // File path for QRCodes
+       QDir pathDir1("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes");
+       if(!pathDir1.exists())
+       {
+           //create it!
+          // QDir().mkdir("./QRCodes");
+           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes");
+       }
+
+       // File path for Test Results
+       //QDir pathDir2("./TestResults");
+       QDir pathDir2("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
+       if(!pathDir2.exists())
+       {
+           //create it!
+           //QDir().mkdir("./TestResults");
+           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
+       }
+
+       // File path for User Profile Pictures
+      // QDir pathDir3("./UserProfilePictures");
+       QDir pathDir3("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserProfilePictures");
+       if(!pathDir3.exists())
+       {
+           //create it!
+           //QDir().mkdir("./UserProfilePictures");
+           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
+       }
+
+
+
+    // Manual UI-Function Connections
+
+    /// Home Buttons
     connect(ui->pbHome, &QPushButton::clicked, this, &MainWindow::pbHome);
     connect(ui->pbHome1, &QPushButton::clicked, this, &MainWindow::pbHome);
     connect(ui->pbHome2, &QPushButton::clicked, this, &MainWindow::pbHome);
     connect(ui->pbHome3, &QPushButton::clicked, this, &MainWindow::pbHome);
     connect(ui->pbHome4, &QPushButton::clicked, this, &MainWindow::pbHome);
 
-    // Add User Buttons
+    /// Add User Buttons
     connect(ui->pbAddUser, &QPushButton::clicked, this, &MainWindow::addNewUser);
     connect(ui->pbAddUser1, &QPushButton::clicked, this, &MainWindow::addNewUser);
     connect(ui->pbAddUser2, &QPushButton::clicked, this, &MainWindow::addNewUser);
     connect(ui->pbAddUser3, &QPushButton::clicked, this, &MainWindow::addNewUser);
     connect(ui->pbAddUser4, &QPushButton::clicked, this, &MainWindow::addNewUser);
 
-    // All User Buttons
+    /// All User Buttons
     connect(ui->pbAllUsers, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
     connect(ui->pbAllUsers1, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
     connect(ui->pbAllUsers2, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
     connect(ui->pbAllUsers3, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
     connect(ui->pbAllUsers4, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
 
-
-    // Report Buttons
+    /// Report Buttons
     connect(ui->pbReports, &QPushButton::clicked, this, &MainWindow::pbReports);
     connect(ui->pbReports1, &QPushButton::clicked, this, &MainWindow::pbReports);
     connect(ui->pbReports2, &QPushButton::clicked, this, &MainWindow::pbReports);
     connect(ui->pbReports3, &QPushButton::clicked, this, &MainWindow::pbReports);
     connect(ui->pbReports4, &QPushButton::clicked, this, &MainWindow::pbReports);
 
-    // Logout Buttons
+    /// Logout Buttons
      connect(ui->pbLogout, &QPushButton::clicked, this, &MainWindow::logout);
      connect(ui->pbLogout1, &QPushButton::clicked, this, &MainWindow::logout);
      connect(ui->pbLogout2, &QPushButton::clicked, this, &MainWindow::logout);
      connect(ui->pbLogout3, &QPushButton::clicked, this, &MainWindow::logout);
      connect(ui->pbLogout4, &QPushButton::clicked, this, &MainWindow::logout);
 
-
-
-
+    // In app buttons & connections.
     connect(ui->pbAddCertificate, &QPushButton::clicked, this, &MainWindow::addCertificateImage);
     connect(ui->pbAddQRCode, &QPushButton::clicked, this, &MainWindow::addQRCodeImage);
     connect(ui->pbAddTestResults, &QPushButton::clicked, this, &MainWindow::addTestResultImage);
     connect(ui->pbAddUserPicture, &QPushButton::clicked, this, &MainWindow::addUserPicture);
     connect(ui->pbSave, &QPushButton::clicked, this, &MainWindow::saveUser);
-
+    /// All Users connections
     connect(ui->pbAllUsers, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
-    //connect(ui->pbLoadUsers, &QPushButton::clicked, this, &MainWindow::loadUser);
     connect(ui->listAllUsersNew, &QListWidget::itemClicked, this, &MainWindow::selectUserDetails);
     connect(ui->pbSearch, &QPushButton::clicked, this, &MainWindow::searchUser);
-
+    /// Edit User connections
     connect(ui->pbEditUser, &QPushButton::clicked, this, &MainWindow::editUser);
     connect(ui->pbEditCertificate, &QPushButton::clicked, this, &MainWindow::editCertificateImage);
     connect(ui->pbEditQRCode, &QPushButton::clicked, this, &MainWindow::editQRCodeImage);
     connect(ui->pbEditTestResults, &QPushButton::clicked, this, &MainWindow::editTestResultImage);
     connect(ui->pbEditUserPicture, &QPushButton::clicked, this, &MainWindow::editUserPicture);
     connect(ui->pbSaveEdit, &QPushButton::clicked, this, &MainWindow::saveEdit);
-
-
-    //connect(ui->pbLoadReports, &QPushButton::clicked, this, &MainWindow::loadReports);
+    /// Report connections
     connect(ui->listAllReports, &QListWidget::itemClicked, this, &MainWindow::selectReportDetails);
     connect(ui->pbSearchCategory, &QPushButton::clicked, this, &MainWindow::searchCategory);
 
-    connect(ui->pbLogout, &QPushButton::clicked, this, &MainWindow::logout);
-
-   //Mac Create Directory
-   QDir pathDir("/Users/raghiiboiibaxtor/Documents/MyCOVIDRecord_New/files");
-       if(!pathDir.exists())
-       {
-           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MyCOVIDRecord_New/files");
-       }
-
-}
+} // End of default constructor.
 
 // Second constructor passing double pointer for classCitizen ptrNewCitizen.
 MainWindow::MainWindow(classCitizen*& ptrNewCitizen, QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
@@ -110,68 +139,34 @@ MainWindow::MainWindow(classCitizen*& ptrNewCitizen, QWidget *parent) : QMainWin
     ui->setupUi(this);
     this->ptrNewCitizen = &ptrNewCitizen;
 
-    // File path for Vaccine Certificates
-    QDir pathDir("/Users/raghiiboiibaxtor/Documents/MCR_Final/MCR_UI/files/VaccineCertificates.txt");
-    if(!pathDir.exists())
-    {
-        //create it!
-        QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_Final/MCR_UI/files/VaccineCertificates.txt");
-    }
-
-    // File path for QRCodes
-    QDir pathDir1("/Users/raghiiboiibaxtor/Documents/MCR_Final/MCR_UI/files/QRCodes.txt");
-    if(!pathDir1.exists())
-    {
-        //create it!
-       // QDir().mkdir("./QRCodes");
-        QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_Final/MCR_UI/files/QRCodes.txt");
-    }
-
-    // File path for Test Results
-    //QDir pathDir2("./TestResults");
-    QDir pathDir2("/Users/raghiiboiibaxtor/Documents/MCR_Final/MCR_UI/files/TestResults.txt");
-    if(!pathDir2.exists())
-    {
-        //create it!
-        //QDir().mkdir("./TestResults");
-        QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_Final/MCR_UI/files/TestResults.txt");
-    }
-
-    // File path for User Profile Pictures
-   // QDir pathDir3("./UserProfilePictures");
-    QDir pathDir3("/Users/raghiiboiibaxtor/Documents/MCR_Final/MCR_UI/files/UserProfilePictures.txt");
-    if(!pathDir3.exists())
-    {
-        //create it!
-        //QDir().mkdir("./UserProfilePictures");
-        QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_Final/MCR_UI/files/TestResults.txt");
-    }
-}
+} // End of second constructor
 
 // Third constructor passing single pointer for classCitizen ptrCurrentCitizen.
 MainWindow::MainWindow(classCitizen* ptrCurrentCitizen, QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     this->ptrCurrentCitizen = ptrCurrentCitizen;
-}
+
+} // End of third constructor
 
 // Fourth constructor passing single pointer for citizenReport ptrCurrentReport.
 MainWindow::MainWindow(citizenReport* ptrCurrentReport, QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     this->ptrCurrentReport = ptrCurrentReport;
-}
+
+} // End of fourth constructor
 // Overloading constructors ends }
 
 
 // PROGRAM FUNCTIONS
 //*********************************************************
 
-
 // Function to display Home Page
 void MainWindow::pbHome()
 {
     ui->stackedWidget->setCurrentIndex(0);
+
 } // End of pbHome()
 
 
@@ -213,6 +208,8 @@ void MainWindow::addCertificateImage()
 
         ui->showCertificate->setPixmap(pixmap);
         ui->showCertificate->setScaledContents(true);
+        ui->showCertificate2->setPixmap(pixmap);
+        ui->showCertificate2->setScaledContents(true);
 
         certificateImage = "./vaccineCertificates/" + shortName;
     }
@@ -236,6 +233,8 @@ void MainWindow::addQRCodeImage()
 
         ui->showQRCode->setPixmap(pixmap1);
         ui->showQRCode->setScaledContents(true);
+        ui->showQRCode2->setPixmap(pixmap1);
+        ui->showQRCode2->setScaledContents(true);
 
         qrCodeImage = "./qrCodes/" + shortName;
     }
@@ -259,6 +258,8 @@ void MainWindow::addTestResultImage()
 
         ui->showTestResults->setPixmap(pixmap2);
         ui->showTestResults->setScaledContents(true);
+        ui->showTestResults2->setPixmap(pixmap2);
+        ui->showTestResults2->setScaledContents(true);
 
         testResultImage = "./testResults/" + shortName;
     }
@@ -311,13 +312,16 @@ void MainWindow::saveUser()
         classCitizen *ptrNewCitizen = new classCitizen(addName, addPhone, addEmail, addDob, addNhi, addEmergencyContact, addNotes, addVaccStatus, addCvn,
                                                        add1VaccName, add1BatchNum, add1Date, add2VaccName, add2BatchNum, add2Date, certificateImage, qrCodeImage, testResultImage, userProfilePicture);
         userList.push_back(ptrNewCitizen);
-        ui->listAllUsersNew->addItem(ptrNewCitizen->getNHI()); // Displays added user name to list widget on "all users page"
 
+        // Updating ui list widgets to display added user.
+        ui->listAllUsersNew->addItem(ptrNewCitizen->getNHI());
+        ui->listAllUsersNew_Edit->addItem(ptrNewCitizen->getNHI());
+        ui->listAllUsersNew_AddUser->addItem(ptrNewCitizen->getNHI());
         // Writing to file
         /// Windows File Path
-        QFile outputFile("Citizens.txt");
+        //QFile outputFile("Citizens.txt");
         /// Mac File Path
-        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -389,8 +393,8 @@ void MainWindow::pbAllUsers()
     ui->stackedWidget->setCurrentIndex(1);
 
     // Open file for reading
-    //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MyCOVIDRecord_New/files/Citizens.txt");
-    QFile inputFile("Citizens.txt");
+    QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+   // QFile inputFile("Citizens.txt");
     inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
     QTextStream read(&inputFile);
 
@@ -574,14 +578,14 @@ void MainWindow:: editUser()
                 ui->edit2ndDoseBatch->setText(ptrCurrentCitizen->getBatchNumber2());
                 ui->edit2ndDoseDate->setText(ptrCurrentCitizen->getDateGiven2());
                 QPixmap pixmap(ptrCurrentCitizen->getCertificate());
-                ui->displayCertificate->setPixmap(pixmap);
-                ui->displayCertificate->setScaledContents(true);
+                ui->showCertificate3->setPixmap(pixmap);
+                ui->showCertificate3->setScaledContents(true);
                 QPixmap pixmap1(ptrCurrentCitizen->getQRCode());
-                ui->displayQRCode->setPixmap(pixmap1);
-                ui->displayQRCode->setScaledContents(true);
+                ui->showQRCode3->setPixmap(pixmap1);
+                ui->showQRCode3->setScaledContents(true);
                 QPixmap pixmap2(ptrCurrentCitizen->getTestResult());
-                ui->displayTestResults->setPixmap(pixmap2);
-                ui->displayTestResults->setScaledContents(true);
+                ui->showTestResults3->setPixmap(pixmap2);
+                ui->showTestResults3->setScaledContents(true);
                 QPixmap pixmap3(ptrCurrentCitizen->getCitizenImage());
                 ui->displayUserPicture->setPixmap(pixmap3);
                 ui->displayUserPicture->setScaledContents(true);
@@ -610,8 +614,8 @@ void MainWindow::editCertificateImage()
 
         QPixmap pixmap("./vaccineCertificates/"+shortName);
 
-        ui->displayCertificate->setPixmap(pixmap);
-        ui->displayCertificate->setScaledContents(true);
+        ui->showCertificate3->setPixmap(pixmap);
+        ui->showCertificate3->setScaledContents(true);
 
         certificateImage = "./vaccineCertificates/" + shortName;
     }
@@ -633,8 +637,8 @@ void MainWindow::editQRCodeImage()
 
         QPixmap pixmap1("./qrCodes/"+shortName);
 
-        ui->displayQRCode->setPixmap(pixmap1);
-        ui->displayQRCode->setScaledContents(true);
+        ui->showQRCode3->setPixmap(pixmap1);
+        ui->showQRCode3->setScaledContents(true);
 
         qrCodeImage = "./qrCodes/" + shortName;
     }
@@ -656,8 +660,8 @@ void MainWindow::editTestResultImage()
 
         QPixmap pixmap2("./testResults/"+shortName);
 
-        ui->displayTestResults->setPixmap(pixmap2);
-        ui->displayTestResults->setScaledContents(true);
+        ui->showTestResults3->setPixmap(pixmap2);
+        ui->showTestResults3->setScaledContents(true);
 
         testResultImage = "./testResults/" + shortName;
     }
@@ -705,11 +709,11 @@ void MainWindow::saveEdit()
     QString edit2Date = ui->edit2ndDoseDate->text();
 
     QPixmap pixmap(ptrCurrentCitizen->getCertificate());
-    ui->displayCertificate->setPixmap(pixmap);
+    ui->showCertificate3->setPixmap(pixmap);
     QPixmap pixmap1(ptrCurrentCitizen->getQRCode());
-    ui->displayQRCode->setPixmap(pixmap1);
+    ui->showQRCode3->setPixmap(pixmap1);
     QPixmap pixmap2(ptrCurrentCitizen->getTestResult());
-    ui->displayTestResults->setPixmap(pixmap2);
+    ui->showTestResults3->setPixmap(pixmap2);
     QPixmap pixmap3(ptrCurrentCitizen->getCitizenImage());
     ui->displayUserPicture->setPixmap(pixmap3);
 
@@ -737,9 +741,9 @@ void MainWindow::saveEdit()
 
         // Writing edit to file
         /// Windows File Path
-        QFile outputFile("Citizens.txt");
+        //QFile outputFile("Citizens.txt");
         /// Mac File Path
-        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MyCOVIDRecord_New/files/Citizens.txt");
+        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -826,8 +830,8 @@ void MainWindow::pbReports()
     ui->stackedWidget->setCurrentIndex(3);
 
     // Open file for reading
-    //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MyCOVIDRecord_New/files/UserReports.txt");
-    QFile inputFile("UserReports.txt");
+    QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+    //QFile inputFile("UserReports.txt");
     inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
     QTextStream read(&inputFile);
 

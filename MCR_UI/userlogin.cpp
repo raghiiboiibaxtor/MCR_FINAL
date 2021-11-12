@@ -21,33 +21,56 @@ UserLogin::UserLogin(QWidget *parent):QMainWindow(parent), ui(new Ui::UserLogin)
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(0);
 
-    // Hidden UI Elements
-   /* ui->labelConfirmation->hide();
-    ui->showLargeCertificate->hide();
-    ui->showLargeQR->hide();
-    ui->showLargeResults->hide();
-    ui->pbCloseImage->hide(); */
-
-    // Manual Connections
-    connect(ui->pbLogin, &QPushButton::clicked, this, &UserLogin::login);
-
-    connect(ui->pbHome, &QPushButton::clicked, this, &UserLogin::pbHome);
-
-    connect(ui->pbProfile, &QPushButton::clicked, this, &UserLogin::pbMyDetails);
-    /*connect(ui->pbEnlargeCertificate, &QPushButton::clicked, this, &UserLogin::pbShowCertificate);
-    connect(ui->pbEnlargeQR, &QPushButton::clicked, this, &UserLogin::pbShowQRCode);
-    connect(ui->pbEnlargeResults, &QPushButton::clicked, this, &UserLogin::pbShowTestResult);
-    connect(ui->pbCloseImage, &QPushButton::clicked, this, &UserLogin::pbClose);*/
-
-    connect(ui->pbContact, &QPushButton::clicked, this, &UserLogin::pbContactUs);
-    connect(ui->pbSendMessage, &QPushButton::clicked, this, &UserLogin::submitReport);
-
-    connect(ui->pbLogout, &QPushButton::clicked, this, &UserLogin::logout);
-
     // Home page display image
-    QPixmap pixmap(":/res/images/imgHome.png");
+    QPixmap pixmap(":/res/images/imgHome1.png");
     ui->imgHome->setPixmap(pixmap);
     ui->imgHome->setScaledContents(true);
+
+    // Hidden UI Elements
+    //ui->labelConfirmation->hide();
+    ui->showEnlargeTests->hide();
+    ui->pbCloseImage->hide();
+    ui->pbFullScreen->hide();
+
+    // Manual UI -> Function Connections
+    connect(ui->pbLogin, &QPushButton::clicked, this, &UserLogin::login);
+    connect(ui->pbCircleLogin, &QPushButton::clicked, this, &UserLogin::login);
+
+
+    // Home Buttons
+    connect(ui->pbHome, &QPushButton::clicked, this, &UserLogin::pbHome);
+    connect(ui->pbHome1, &QPushButton::clicked, this, &UserLogin::pbHome);
+    connect(ui->pbHome2, &QPushButton::clicked, this, &UserLogin::pbHome);
+    connect(ui->pbHome3, &QPushButton::clicked, this, &UserLogin::pbHome);
+
+    // Profile Buttons
+    connect(ui->pbProfile, &QPushButton::clicked, this, &UserLogin::pbMyDetails);
+    connect(ui->pbProfile1, &QPushButton::clicked, this, &UserLogin::pbMyDetails);
+    connect(ui->pbProfile2, &QPushButton::clicked, this, &UserLogin::pbMyDetails);
+    connect(ui->pbProfile3, &QPushButton::clicked, this, &UserLogin::pbMyDetails);
+
+
+    // Contact Buttons
+    connect(ui->pbContact, &QPushButton::clicked, this, &UserLogin::pbContactUs);
+    connect(ui->pbContact1, &QPushButton::clicked, this, &UserLogin::pbContactUs);
+    connect(ui->pbContact2, &QPushButton::clicked, this, &UserLogin::pbContactUs);
+    connect(ui->pbContact3, &QPushButton::clicked, this, &UserLogin::pbContactUs);
+
+
+    // Logout Buttons
+    connect(ui->pbLogout, &QPushButton::clicked, this, &UserLogin::logout);
+    connect(ui->pbLogout1, &QPushButton::clicked, this, &UserLogin::logout);
+    connect(ui->pbLogout2, &QPushButton::clicked, this, &UserLogin::logout);
+    connect(ui->pbLogout2, &QPushButton::clicked, this, &UserLogin::logout);
+    connect(ui->pbLogout3, &QPushButton::clicked, this, &UserLogin::logout);
+
+    // In app connections
+    connect(ui->pbEnlargeCertificate, &QPushButton::clicked, this, &UserLogin::pbShowCertificate);
+    connect(ui->pbEnlargeQR, &QPushButton::clicked, this, &UserLogin::pbShowQRCode);
+    connect(ui->pbEnlargeResults, &QPushButton::clicked, this, &UserLogin::pbShowTestResult);
+    connect(ui->pbFullScreen, &QPushButton::clicked, this, &UserLogin::pbFullScreen);
+    connect(ui->pbCloseImage, &QPushButton::clicked, this, &UserLogin::pbClose);
+    connect(ui->pbSendMessage, &QPushButton::clicked, this, &UserLogin::submitReport);
 
 }
 
@@ -102,8 +125,8 @@ void UserLogin::login()
     }
     else if(email != "1")
     {
-        //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MyCOVIDRecord_New/files/Citizens.txt");
-        QFile inputFile("Citizens.txt");
+        QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+        //QFile inputFile("Citizens.txt");
         inputFile.open(QIODevice::ReadOnly | QIODevice::Text);
         QTextStream read(&inputFile);
 
@@ -147,21 +170,21 @@ void UserLogin::login()
                     ui->showDose2Name->setText(temp->getVaccineName2());
                     ui->showDose2Batch->setText(temp->getBatchNumber2());
                     ui->showDose2Date->setText(temp->getDateGiven2());
-                    QPixmap pixmap(temp->getCertificate());
+                   /* QPixmap pixmap(temp->getCertificate());
                     ui->showCertificate->setPixmap(pixmap);
                     ui->showCertificate->setScaledContents(true);
-                   // ui->showLargeCertificate->setPixmap(pixmap);
-                  //  ui->showLargeCertificate->setScaledContents(true);
+                    ui->showEnlargeCertificate->setPixmap(pixmap);
+                    ui->showEnlargeCertificate->setScaledContents(true);
                     QPixmap pixmap1(temp->getQRCode());
                     ui->showQRCode->setPixmap(pixmap1);
                     ui->showQRCode->setScaledContents(true);
-                 //   ui->showLargeQR->setPixmap(pixmap1);
-                   // ui->showLargeQR->setScaledContents(true);
+                    ui->showLargeQR->setPixmap(pixmap1);
+                    ui->showLargeQR->setScaledContents(true);
                     QPixmap pixmap2(temp->getTestResult());
                     ui->showTestResults->setPixmap(pixmap2);
                     ui->showTestResults->setScaledContents(true);
-                 //   ui->showLargeResults->setPixmap(pixmap2);
-                  //  ui->showLargeResults->setScaledContents(true);
+                    ui->showEnlargeTests->setPixmap(pixmap2);
+                    ui->showEnlargeTests->setScaledContents(true);*/
 
                     // Populating labels on Contact Us page
                     ui->editPreferredName->setText(temp->getName());
@@ -169,6 +192,10 @@ void UserLogin::login()
 
                     // Populating labels in Welcome label
                     ui->labelUserName->setText(info.at(0));
+                    ui->labelUserName1->setText(info.at(0));
+                    ui->labelUserName2->setText(info.at(0));
+                    ui->labelUserName3->setText(info.at(0));
+
                     QPixmap pixmap3(temp->getCitizenImage());
                     ui->showUserPicture->setPixmap(pixmap3);
                     ui->showUserPicture->setScaledContents(true);
@@ -216,37 +243,60 @@ void UserLogin::pbMyDetails()
     ui->stackedWidget->setCurrentIndex(2);
 } /// End of pbMyDetails()
 
-/*// Function to show Enlarged Certificate Image
+// Function to show Enlarged Certificate Image
 void UserLogin::pbShowCertificate()
 {
-    ui->showLargeCertificate->show();
+    ui->stackedWidget->setCurrentIndex(4);
+    ui->showEnlargeTests->hide();
+    ui->showEnlargeQRCodeImage->hide();
+    ui->showLargeQR->hide();
+    ui->showEnlargeCertificate->show();
     ui->pbCloseImage->show();
+    ui->closeImageText->show();
 } /// End of pbShowCertificate()
 
 // Function to show Enlarged QR Code Image
 void UserLogin::pbShowQRCode()
 {
+    ui->stackedWidget->setCurrentIndex(4);
+    ui->showEnlargeTests->hide();
+    ui->showEnlargeCertificate->hide();
+    ui->showEnlargeQRCodeImage->show();
     ui->showLargeQR->show();
     ui->pbCloseImage->show();
+    ui->closeImageText->show();
 } /// End of pbShowQRCode
 
 // Function to show Enlarged Test Results Image
 void UserLogin::pbShowTestResult()
 {
-    ui->showLargeResults->show();
+    ui->stackedWidget->setCurrentIndex(4);
+    ui->showEnlargeCertificate->hide();
+    ui->showEnlargeQRCodeImage->hide();
+    ui->showLargeQR->hide();
+    ui->showEnlargeTests->show();
     ui->pbCloseImage->show();
+    ui->closeImageText->show();
+
 } /// End of pbShowTestResult
 
 
 // Function to close enlarged images
 void UserLogin::pbClose()
 {
-    ui->showLargeCertificate->hide();
-    ui->showLargeQR->hide();
-    ui->showLargeResults->hide();
-    ui->pbCloseImage->hide();
-} /// End of pbClose() */
+    ui->stackedWidget->setCurrentIndex(2);
+   // ui->showEnlargeImage->hide();
+   // ui->closeImageText->hide();
+   // ui->pbCloseImage->hide();
+} /// End of pbClose()
 
+// Function to make images full screen
+void UserLogin::pbFullScreen()
+{
+    ui->showEnlargeTests->showFullScreen();
+    ui->pbCloseImage->show();
+    ui->closeImageText->show();
+}
 
 /// Report Functions
 ///*********************************************************
@@ -286,9 +336,9 @@ void UserLogin::submitReport()
 
     // Writing to file
     /// Windows File Path
-    QFile outputFile("UserReports.txt");
+    //QFile outputFile("UserReports.txt");
     /// Mac File Path
-    //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MyCOVIDRecord_New/files/UserReports.txt");
+    QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
 
     QTextStream out(&outputFile);
     outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
