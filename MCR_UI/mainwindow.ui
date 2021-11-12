@@ -32,7 +32,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="adminHomePage">
      <widget class="QFrame" name="userHomeHelloBarHP">
@@ -5518,8 +5518,8 @@ background: rgba(254, 206, 103, 0.00);
 {background: rgba(254, 206, 103, 0.88);
 border-radius: 15;
 border-color: rgba(104, 160, 229, 0.33);
-color: #F8FBFF;
-font-size: 16px; 
+color: #2B528C;
+font-size: 12px; 
 padding-left: 3px;}</string>
         </property>
        </widget>
@@ -5538,7 +5538,7 @@ padding-left: 3px;}</string>
 border-radius: 15;
 border-color: rgba(104, 160, 229, 0.33);
 color: #2B528C;
-font-size: 16px; 
+font-size: 12px; 
 padding-left: 3px;}</string>
         </property>
        </widget>
@@ -6099,7 +6099,6 @@ color:#2B528C;</string>
         <property name="styleSheet">
          <string notr="true">background: #F8FBFF;
 border-radius: 15;
-border: 1px solid #C4DBF4;
 color: #2B528C;
 font-size: 12px; 
 padding-left: 3px;

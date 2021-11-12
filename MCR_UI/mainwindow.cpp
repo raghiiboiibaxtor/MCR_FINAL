@@ -28,50 +28,50 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 
     // Constructing File Path Directories
    //Mac Create Directory
-   /*QDir pathDir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files");
+   QDir pathDir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files");
        if(!pathDir.exists())
        {
            QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files");
-       }*/
+       }
 
        // File path for Vaccine Certificates
-        QDir pathDir0("./VaccineCertificates");
-       //QDir pathDir0("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates");
+        //QDir pathDir0("./VaccineCertificates");
+       QDir pathDir0("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates");
        if(!pathDir0.exists())
        {
            //create it!
-           QDir().mkdir("./VaccineCertificates");
-           //QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates");
+           //QDir().mkdir("./VaccineCertificates");
+           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates");
        }
 
        // File path for QRCodes
-       QDir pathDir1("./QRCodes");
-       //QDir pathDir1("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes");
+       //QDir pathDir1("./QRCodes");
+       QDir pathDir1("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes");
        if(!pathDir1.exists())
        {
            //create it!
-           QDir().mkdir("./QRCodes");
-           //QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes");
+           //QDir().mkdir("./QRCodes");
+           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes");
        }
 
        // File path for Test Results
-       QDir pathDir2("./TestResults");
-       //QDir pathDir2("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
+      // QDir pathDir2("./TestResults");
+       QDir pathDir2("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
        if(!pathDir2.exists())
        {
            //create it!
-           QDir().mkdir("./TestResults");
-           //QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
+           //QDir().mkdir("./TestResults");
+           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
        }
 
        // File path for User Profile Pictures
-       QDir pathDir3("./UserProfilePictures");
-       //QDir pathDir3("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserProfilePictures");
+      // QDir pathDir3("./UserProfilePictures");
+       QDir pathDir3("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserProfilePictures");
        if(!pathDir3.exists())
        {
            //create it!
-           QDir().mkdir("./UserProfilePictures");
-           //QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
+           //QDir().mkdir("./UserProfilePictures");
+             QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
        }
 
 
@@ -332,9 +332,9 @@ void MainWindow::saveUser()
         ui->listAllUsersAP->addItem(ptrNewCitizen->getNHI());
         // Writing to file
         /// Windows File Path
-        QFile outputFile("Citizens.txt");
+        //QFile outputFile("Citizens.txt");
         /// Mac File Path
-        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -406,8 +406,8 @@ void MainWindow::pbAllUsers()
     ui->stackedWidget->setCurrentIndex(1);
 
     // Open file for reading
-    //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
-    QFile inputFile("Citizens.txt");
+    QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+    //QFile inputFile("Citizens.txt");
     inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
     QTextStream read(&inputFile);
 
@@ -634,12 +634,16 @@ void MainWindow::editCertificateImage()
         ui->editCertificateEP->setScaledContents(true);
 
         certificateImage = "./vaccineCertificates/" + shortName;
+
+        ui->editCertificateEP->setPixmap(pixmap);
+        ptrCurrentCitizen->setCertificate(certificateImage);
     }
 } /// End of addQRCodeImage()
 
 // Function to add QR Code Image
 void MainWindow::editQRCodeImage()
 {
+    //ui->pbEditQRCodeEP->hide();
     QString fileName;
     fileName = QFileDialog::getOpenFileName(this, "Open Image", "./", "Image File(*.png *.jpg .*jpeg)");
 
@@ -657,6 +661,8 @@ void MainWindow::editQRCodeImage()
         ui->editQRCodeEP->setScaledContents(true);
 
         qrCodeImage = "./qrCodes/" + shortName;
+        ui->editQRCodeEP->setPixmap(pixmap1);
+        ptrCurrentCitizen->setQRCode(qrCodeImage);
     }
 } /// End of addQRCodeImage()
 
@@ -680,6 +686,8 @@ void MainWindow::editTestResultImage()
         ui->editTestResultsEP->setScaledContents(true);
 
         testResultImage = "./testResults/" + shortName;
+        ui->editTestResultsEP->setPixmap(pixmap2);
+        ptrCurrentCitizen->setTestResult(testResultImage);
     }
 } /// End of addTestResultImage()
 
@@ -725,6 +733,7 @@ void MainWindow::saveEdit()
     QString edit2BatchNum = ui->edit2ndDoseBatchEP->text();
     QString edit2Date = ui->edit2ndDoseDateEP->text();
 
+
     QPixmap pixmap(ptrCurrentCitizen->getCertificate());
     ui->editCertificateEP->setPixmap(pixmap);
     QPixmap pixmap1(ptrCurrentCitizen->getQRCode());
@@ -752,16 +761,16 @@ void MainWindow::saveEdit()
         ptrCurrentCitizen->setVaccineName2(edit2VaccName);
         ptrCurrentCitizen->setBatchNumber2(edit2BatchNum);
         ptrCurrentCitizen->setDateGiven2(edit2Date);
-        ptrCurrentCitizen->setCertificate(certificateImage);
-        ptrCurrentCitizen->setQRCode(qrCodeImage);
-        ptrCurrentCitizen->setTestResult(testResultImage);
-        ptrCurrentCitizen->setCitizenImage(userProfilePicture);
+      //  ptrCurrentCitizen->setCertificate(certificateImage);
+        //ptrCurrentCitizen->setQRCode(qrCodeImage);
+       // ptrCurrentCitizen->setTestResult(testResultImage);
+      //  ptrCurrentCitizen->setCitizenImage(userProfilePicture);
 
         // Writing edit to file
         /// Windows File Path
-        QFile outputFile("Citizens.txt");
+        //QFile outputFile("Citizens.txt");
         /// Mac File Path
-        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -857,8 +866,8 @@ void MainWindow::pbReports()
     ui->stackedWidget->setCurrentIndex(3);
 
     // Open file for reading
-    //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
-    QFile inputFile("UserReports.txt");
+    QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+    //QFile inputFile("UserReports.txt");
     inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
     QTextStream read(&inputFile);
 

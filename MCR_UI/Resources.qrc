@@ -7,5 +7,6 @@
         <file>images/testResultPositive.png</file>
         <file>images/vaccineCertificate.png</file>
         <file>images/QRCodeImage.png</file>
+        <file>images/qrCode.png</file>
     </qresource>
 </RCC>

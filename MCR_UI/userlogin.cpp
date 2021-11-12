@@ -130,8 +130,8 @@ void UserLogin::login()
     }
     else if(NHI != "1")
     {
-        //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
-        QFile inputFile("Citizens.txt");
+        QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+        //QFile inputFile("Citizens.txt");
         inputFile.open(QIODevice::ReadOnly | QIODevice::Text);
         QTextStream read(&inputFile);
 
@@ -180,11 +180,14 @@ void UserLogin::login()
                     ui->showCertificatePP->setScaledContents(true);
                     ui->showLargeCertificateFS->setPixmap(pixmap);
                     ui->showLargeCertificateFS->setScaledContents(true);
-                    QPixmap pixmap1(temp->getQRCode());
-                    ui->showQRCodePP->setPixmap(pixmap1);
-                    ui->showQRCodePP->setScaledContents(true);
+                    QPixmap pixmap1(":/res/images/QRCodeImage.png");
                     ui->showLargeQRCodeImageFS->setPixmap(pixmap1);
                     ui->showLargeQRCodeImageFS->setScaledContents(true);
+                    QPixmap pixmapQR(temp->getQRCode());
+                    ui->showQRCodePP->setPixmap(pixmapQR);
+                    ui->showQRCodePP->setScaledContents(true);
+                    ui->showLargeQRFS->setPixmap(pixmapQR);
+                    ui->showLargeQRFS->setScaledContents(true);
                     QPixmap pixmap2(temp->getTestResult());
                     ui->showTestResultsPP->setPixmap(pixmap2);
                     ui->showTestResultsPP->setScaledContents(true);
@@ -290,9 +293,6 @@ void UserLogin::pbShowTestResult()
 void UserLogin::pbClose()
 {
     ui->stackedWidget->setCurrentIndex(2);
-   // ui->showEnlargeImage->hide();
-   // ui->closeImageText->hide();
-   // ui->pbCloseImage->hide();
 } /// End of pbClose()
 
 // Function to make images full screen

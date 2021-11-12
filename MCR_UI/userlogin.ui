@@ -32,7 +32,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="loginPage">
      <widget class="QLabel" name="loginWhiteBackgroundLP">
@@ -2290,7 +2290,7 @@ background: rgba(254, 206, 103, 0.00);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">background: #F2F8FC;
-border-radius: 50px;</string>
+border-radius: 20px;</string>
        </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
@@ -2302,17 +2302,17 @@ border-radius: 50px;</string>
         <property name="geometry">
          <rect>
           <x>9</x>
-          <y>10</y>
+          <y>26</y>
           <width>111</width>
-          <height>181</height>
+          <height>151</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">background: #C4DBF4;
-border-radius: 50px;</string>
+border-radius: 20px;</string>
         </property>
         <property name="text">
-         <string>Test Image Label</string>
+         <string/>
         </property>
        </widget>
       </widget>
@@ -2332,7 +2332,7 @@ border-radius: 50px;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">background: #F2F8FC;
-border-radius: 50px;</string>
+border-radius: 20px;</string>
        </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
@@ -2340,13 +2340,36 @@ border-radius: 50px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="showQRCodePP">
+       <widget class="QLabel" name="QRCodeFramePP">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>10</y>
+          <y>27</y>
           <width>111</width>
-          <height>181</height>
+          <height>151</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #C4DBF4;
+border-radius: 20px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="Resources.qrc">:/res/images/QRCodeImage.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="showQRCodePP">
+        <property name="geometry">
+         <rect>
+          <x>41</x>
+          <y>113</y>
+          <width>51</width>
+          <height>51</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -2354,7 +2377,7 @@ border-radius: 50px;</string>
 border-radius: 50px;</string>
         </property>
         <property name="text">
-         <string>QR Code</string>
+         <string/>
         </property>
        </widget>
       </widget>
@@ -2374,7 +2397,7 @@ border-radius: 50px;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">background: #F2F8FC;
-border-radius: 50px;</string>
+border-radius: 20px;</string>
        </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
@@ -2386,17 +2409,20 @@ border-radius: 50px;</string>
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>10</y>
+          <y>26</y>
           <width>111</width>
-          <height>181</height>
+          <height>151</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">background: #C4DBF4;
-border-radius: 50px;</string>
+border-radius: 20px;</string>
         </property>
         <property name="text">
-         <string>Certificate Image</string>
+         <string/>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
         </property>
        </widget>
       </widget>
@@ -2528,7 +2554,7 @@ background: rgba(254, 206, 103, 0.00);
        <property name="geometry">
         <rect>
          <x>500</x>
-         <y>540</y>
+         <y>710</y>
          <width>31</width>
          <height>31</height>
         </rect>
@@ -2563,7 +2589,7 @@ font-size: 11px;
        <property name="geometry">
         <rect>
          <x>660</x>
-         <y>540</y>
+         <y>710</y>
          <width>31</width>
          <height>31</height>
         </rect>
@@ -2598,7 +2624,7 @@ font-size: 11px;
        <property name="geometry">
         <rect>
          <x>820</x>
-         <y>540</y>
+         <y>710</y>
          <width>31</width>
          <height>31</height>
         </rect>
