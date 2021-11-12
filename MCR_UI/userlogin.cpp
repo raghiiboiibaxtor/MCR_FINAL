@@ -9,7 +9,8 @@
 #include <QTextStream>
 #include <QString>
 #include <QMessageBox>
-
+#include <QUrl>
+#include <QDesktopServices>
 
 // Login for Admin/User & User Main Window
 //*********************************************************
@@ -23,54 +24,58 @@ UserLogin::UserLogin(QWidget *parent):QMainWindow(parent), ui(new Ui::UserLogin)
 
     // Home page display image
     QPixmap pixmap(":/res/images/imgHome1.png");
-    ui->imgHome->setPixmap(pixmap);
-    ui->imgHome->setScaledContents(true);
+    ui->imgHomeLP->setPixmap(pixmap);
+    ui->imgHomeLP->setScaledContents(true);
 
     // Hidden UI Elements
     //ui->labelConfirmation->hide();
-    ui->showEnlargeTests->hide();
-    ui->pbCloseImage->hide();
-    ui->pbFullScreen->hide();
+    ui->showLargeTestsFS->hide();
+    ui->pbCloseImageFS->hide();
+    ui->pbFullScreenFS->hide();
 
     // Manual UI -> Function Connections
-    connect(ui->pbLogin, &QPushButton::clicked, this, &UserLogin::login);
-    connect(ui->pbCircleLogin, &QPushButton::clicked, this, &UserLogin::login);
+    connect(ui->pbLoginLP, &QPushButton::clicked, this, &UserLogin::login);
+    connect(ui->pbCircleLoginLP, &QPushButton::clicked, this, &UserLogin::login);
 
 
     // Home Buttons
-    connect(ui->pbHome, &QPushButton::clicked, this, &UserLogin::pbHome);
-    connect(ui->pbHome1, &QPushButton::clicked, this, &UserLogin::pbHome);
-    connect(ui->pbHome2, &QPushButton::clicked, this, &UserLogin::pbHome);
-    connect(ui->pbHome3, &QPushButton::clicked, this, &UserLogin::pbHome);
+    connect(ui->pbHomeHP, &QPushButton::clicked, this, &UserLogin::pbHome);
+    connect(ui->pbHomePP, &QPushButton::clicked, this, &UserLogin::pbHome);
+    connect(ui->pbHomeCP, &QPushButton::clicked, this, &UserLogin::pbHome);
+    connect(ui->pbHomeFS, &QPushButton::clicked, this, &UserLogin::pbHome);
 
     // Profile Buttons
-    connect(ui->pbProfile, &QPushButton::clicked, this, &UserLogin::pbMyDetails);
-    connect(ui->pbProfile1, &QPushButton::clicked, this, &UserLogin::pbMyDetails);
-    connect(ui->pbProfile2, &QPushButton::clicked, this, &UserLogin::pbMyDetails);
-    connect(ui->pbProfile3, &QPushButton::clicked, this, &UserLogin::pbMyDetails);
+    connect(ui->pbProfileHP, &QPushButton::clicked, this, &UserLogin::pbMyDetails);
+    connect(ui->pbProfilePP, &QPushButton::clicked, this, &UserLogin::pbMyDetails);
+    connect(ui->pbProfileCP, &QPushButton::clicked, this, &UserLogin::pbMyDetails);
+    connect(ui->pbProfileFS, &QPushButton::clicked, this, &UserLogin::pbMyDetails);
 
 
     // Contact Buttons
-    connect(ui->pbContact, &QPushButton::clicked, this, &UserLogin::pbContactUs);
-    connect(ui->pbContact1, &QPushButton::clicked, this, &UserLogin::pbContactUs);
-    connect(ui->pbContact2, &QPushButton::clicked, this, &UserLogin::pbContactUs);
-    connect(ui->pbContact3, &QPushButton::clicked, this, &UserLogin::pbContactUs);
+    connect(ui->pbContactHP, &QPushButton::clicked, this, &UserLogin::pbContactUs);
+    connect(ui->pbContactPP, &QPushButton::clicked, this, &UserLogin::pbContactUs);
+    connect(ui->pbContactCP, &QPushButton::clicked, this, &UserLogin::pbContactUs);
+    connect(ui->pbContactFS, &QPushButton::clicked, this, &UserLogin::pbContactUs);
 
 
     // Logout Buttons
-    connect(ui->pbLogout, &QPushButton::clicked, this, &UserLogin::logout);
-    connect(ui->pbLogout1, &QPushButton::clicked, this, &UserLogin::logout);
-    connect(ui->pbLogout2, &QPushButton::clicked, this, &UserLogin::logout);
-    connect(ui->pbLogout2, &QPushButton::clicked, this, &UserLogin::logout);
-    connect(ui->pbLogout3, &QPushButton::clicked, this, &UserLogin::logout);
+    connect(ui->pbLogoutHP, &QPushButton::clicked, this, &UserLogin::logout);
+    connect(ui->pbLogoutPP, &QPushButton::clicked, this, &UserLogin::logout);
+    connect(ui->pbLogoutCP, &QPushButton::clicked, this, &UserLogin::logout);
+    connect(ui->pbLogoutFS, &QPushButton::clicked, this, &UserLogin::logout);
 
     // In app connections
-    connect(ui->pbEnlargeCertificate, &QPushButton::clicked, this, &UserLogin::pbShowCertificate);
-    connect(ui->pbEnlargeQR, &QPushButton::clicked, this, &UserLogin::pbShowQRCode);
-    connect(ui->pbEnlargeResults, &QPushButton::clicked, this, &UserLogin::pbShowTestResult);
-    connect(ui->pbFullScreen, &QPushButton::clicked, this, &UserLogin::pbFullScreen);
-    connect(ui->pbCloseImage, &QPushButton::clicked, this, &UserLogin::pbClose);
-    connect(ui->pbSendMessage, &QPushButton::clicked, this, &UserLogin::submitReport);
+    connect(ui->pbEnlargeCertificatePP, &QPushButton::clicked, this, &UserLogin::pbShowCertificate);
+    connect(ui->pbEnlargeQRPP, &QPushButton::clicked, this, &UserLogin::pbShowQRCode);
+    connect(ui->pbEnlargeResultsPP, &QPushButton::clicked, this, &UserLogin::pbShowTestResult);
+    connect(ui->pbFullScreenFS, &QPushButton::clicked, this, &UserLogin::pbFullScreen);
+    connect(ui->pbCloseImageFS, &QPushButton::clicked, this, &UserLogin::pbClose);
+
+    connect(ui->pbSendMessageCP, &QPushButton::clicked, this, &UserLogin::submitReport);
+    connect(ui->pbGetVaccinatedLinkCP, &QPushButton::clicked, this, &UserLogin::getVaccinatedLink);
+    connect(ui->pbGetTestedLinkCP, &QPushButton::clicked, this, &UserLogin::getTestedLink);
+    connect(ui->pbLearnMoreLinkCP, &QPushButton::clicked, this, &UserLogin::learnMoreLink);
+    connect(ui->pbMCRLinkLP, &QPushButton::clicked, this, &UserLogin::covidRecordLink);
 
 }
 
@@ -96,15 +101,15 @@ UserLogin::UserLogin(citizenReport*& ptrNewReport, QWidget *parent) : QMainWindo
 // Function to login
 void UserLogin::login()
 {
-    QString email = ui->editEmail->text();
-    QString NHI = ui->editNHI->text();
-    QString accessNumber = ui->editAccessNumber->text();
+    QString email = ui->editEmailLP->text();
+    QString NHI = ui->editNHILP->text();
+    QString accessNumber = ui->editAccessNumberLP->text();
 
     // Check if login input matches, if not, an error message will be displayed
     // If correct, directed to Home Page
-    if (email == "1") // Admin Login Check Loop
+    if (NHI == "1") // Admin Login Check Loop
     {
-        if (NHI == "1")
+        if (email == "1")
         {
             if (accessNumber == "1")
             {
@@ -115,18 +120,18 @@ void UserLogin::login()
             }
             else
             {
-                ui->labelError->setText("Incorrect Access Number Entered");
+                ui->labelErrorLP->setText("Incorrect Access Number Entered");
             }
         }
         else
         {
-            ui->labelError->setText("Incorrect NHI Number Entered");
+            ui->labelErrorLP->setText("Incorrect Email Entered");
         }
     }
-    else if(email != "1")
+    else if(NHI != "1")
     {
-        QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
-        //QFile inputFile("Citizens.txt");
+        //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+        QFile inputFile("Citizens.txt");
         inputFile.open(QIODevice::ReadOnly | QIODevice::Text);
         QTextStream read(&inputFile);
 
@@ -156,65 +161,65 @@ void UserLogin::login()
                     userList.push_back(temp);
 
                     // Populating labels on My Details page
-                    ui->showUserName->setText(temp->getName());
-                    ui->showUserNumber->setText(temp->getContactNumber());
-                    ui->showUserEmail->setText(temp->getEmailAddress());
-                    ui->showUserDOB->setText(temp->getDateOfBirth());
-                    ui->showUserNHI->setText(temp->getNHI());
-                    ui->showUserCVN->setText(temp->getCVN());
-                    ui->showUserEmergency->setText(temp->getEmergencyContact());
-                    ui->showUserVaccStatus->setText(temp->getVaccineStatus());
-                    ui->showDose1Name->setText(temp->getVaccineName1());
-                    ui->showDose1Batch->setText(temp->getBatchNumber1());
-                    ui->showDose1Date->setText(temp->getDateGiven1());
-                    ui->showDose2Name->setText(temp->getVaccineName2());
-                    ui->showDose2Batch->setText(temp->getBatchNumber2());
-                    ui->showDose2Date->setText(temp->getDateGiven2());
-                   /* QPixmap pixmap(temp->getCertificate());
-                    ui->showCertificate->setPixmap(pixmap);
-                    ui->showCertificate->setScaledContents(true);
-                    ui->showEnlargeCertificate->setPixmap(pixmap);
-                    ui->showEnlargeCertificate->setScaledContents(true);
+                    ui->showUserNamePP->setText(temp->getName());
+                    ui->showUserNumberPP->setText(temp->getContactNumber());
+                    ui->showUserEmailPP->setText(temp->getEmailAddress());
+                    ui->showUserDOBPP->setText(temp->getDateOfBirth());
+                    ui->showUserNHIPP->setText(temp->getNHI());
+                    ui->showUserCVNPP->setText(temp->getCVN());
+                    ui->showUserEmergencyPP->setText(temp->getEmergencyContact());
+                    ui->showUserVaccStatusPP->setText(temp->getVaccineStatus());
+                    ui->showDose1NamePP->setText(temp->getVaccineName1());
+                    ui->showDose1BatchPP->setText(temp->getBatchNumber1());
+                    ui->showDose1DatePP->setText(temp->getDateGiven1());
+                    ui->showDose2NamePP->setText(temp->getVaccineName2());
+                    ui->showDose2BatchPP->setText(temp->getBatchNumber2());
+                    ui->showDose2DatePP->setText(temp->getDateGiven2());
+                    QPixmap pixmap(temp->getCertificate());
+                    ui->showCertificatePP->setPixmap(pixmap);
+                    ui->showCertificatePP->setScaledContents(true);
+                    ui->showLargeCertificateFS->setPixmap(pixmap);
+                    ui->showLargeCertificateFS->setScaledContents(true);
                     QPixmap pixmap1(temp->getQRCode());
-                    ui->showQRCode->setPixmap(pixmap1);
-                    ui->showQRCode->setScaledContents(true);
-                    ui->showLargeQR->setPixmap(pixmap1);
-                    ui->showLargeQR->setScaledContents(true);
+                    ui->showQRCodePP->setPixmap(pixmap1);
+                    ui->showQRCodePP->setScaledContents(true);
+                    ui->showLargeQRCodeImageFS->setPixmap(pixmap1);
+                    ui->showLargeQRCodeImageFS->setScaledContents(true);
                     QPixmap pixmap2(temp->getTestResult());
-                    ui->showTestResults->setPixmap(pixmap2);
-                    ui->showTestResults->setScaledContents(true);
-                    ui->showEnlargeTests->setPixmap(pixmap2);
-                    ui->showEnlargeTests->setScaledContents(true);*/
+                    ui->showTestResultsPP->setPixmap(pixmap2);
+                    ui->showTestResultsPP->setScaledContents(true);
+                    ui->showLargeTestsFS->setPixmap(pixmap2);
+                    ui->showLargeTestsFS->setScaledContents(true);
 
                     // Populating labels on Contact Us page
-                    ui->editPreferredName->setText(temp->getName());
-                    ui->editPreferredContact->setText(temp->getEmailAddress());
+                    ui->editPreferredNameCP->setText(temp->getName());
+                    ui->editPreferredContactCP->setText(temp->getEmailAddress());
 
                     // Populating labels in Welcome label
-                    ui->labelUserName->setText(info.at(0));
-                    ui->labelUserName1->setText(info.at(0));
-                    ui->labelUserName2->setText(info.at(0));
-                    ui->labelUserName3->setText(info.at(0));
+                    ui->labelUserNameHP->setText(info.at(0));
+                    ui->labelUserNamePP->setText(info.at(0));
+                    ui->labelUserNameCP->setText(info.at(0));
+                    ui->labelUserNameFS->setText(info.at(0));
 
                     QPixmap pixmap3(temp->getCitizenImage());
-                    ui->showUserPicture->setPixmap(pixmap3);
-                    ui->showUserPicture->setScaledContents(true);
+                    ui->showUserPictureHP->setPixmap(pixmap3);
+                    ui->showUserPictureHP->setScaledContents(true);
 
                     // Change page index to User Home Page
                     ui->stackedWidget->setCurrentIndex(1);
                 }
                 else
                 {
-                    ui->labelError->setText("Incorrect Access Number Entered");
+                    ui->labelErrorLP->setText("Incorrect Access Number Entered");
                 }
             }
-            else if (email != fileEmail)
+            else if (NHI != fileEmail)
             {
-                ui->labelError->setText("Incorrect Email Entered");
+                ui->labelErrorLP->setText("Incorrect NHI Entered");
             }
             else
             {
-                ui->labelError->setText("Incorrect NHI Number Entered");
+                ui->labelErrorLP->setText("Incorrect Email Entered");
             }
         }
         //Flushing file and then closing.
@@ -223,7 +228,7 @@ void UserLogin::login()
     }
     else
     {
-        ui->labelError->setText("Incorrect Email Entered");
+        ui->labelErrorLP->setText("Incorrect NHI Entered");
     }
 } /// End of login()
 
@@ -247,36 +252,36 @@ void UserLogin::pbMyDetails()
 void UserLogin::pbShowCertificate()
 {
     ui->stackedWidget->setCurrentIndex(4);
-    ui->showEnlargeTests->hide();
-    ui->showEnlargeQRCodeImage->hide();
-    ui->showLargeQR->hide();
-    ui->showEnlargeCertificate->show();
-    ui->pbCloseImage->show();
-    ui->closeImageText->show();
+    ui->showLargeTestsFS->hide();
+    ui->showLargeQRCodeImageFS->hide();
+    ui->showLargeQRFS->hide();
+    ui->showLargeCertificateFS->show();
+    ui->pbCloseImageFS->show();
+    ui->closeImageTextFS->show();
 } /// End of pbShowCertificate()
 
 // Function to show Enlarged QR Code Image
 void UserLogin::pbShowQRCode()
 {
     ui->stackedWidget->setCurrentIndex(4);
-    ui->showEnlargeTests->hide();
-    ui->showEnlargeCertificate->hide();
-    ui->showEnlargeQRCodeImage->show();
-    ui->showLargeQR->show();
-    ui->pbCloseImage->show();
-    ui->closeImageText->show();
+    ui->showLargeTestsFS->hide();
+    ui->showLargeCertificateFS->hide();
+    ui->showLargeQRCodeImageFS->show();
+    ui->showLargeQRFS->show();
+    ui->pbCloseImageFS->show();
+    ui->closeImageTextFS->show();
 } /// End of pbShowQRCode
 
 // Function to show Enlarged Test Results Image
 void UserLogin::pbShowTestResult()
 {
     ui->stackedWidget->setCurrentIndex(4);
-    ui->showEnlargeCertificate->hide();
-    ui->showEnlargeQRCodeImage->hide();
-    ui->showLargeQR->hide();
-    ui->showEnlargeTests->show();
-    ui->pbCloseImage->show();
-    ui->closeImageText->show();
+    ui->showLargeCertificateFS->hide();
+    ui->showLargeQRCodeImageFS->hide();
+    ui->showLargeQRFS->hide();
+    ui->showLargeTestsFS->show();
+    ui->pbCloseImageFS->show();
+    ui->closeImageTextFS->show();
 
 } /// End of pbShowTestResult
 
@@ -293,9 +298,9 @@ void UserLogin::pbClose()
 // Function to make images full screen
 void UserLogin::pbFullScreen()
 {
-    ui->showEnlargeTests->showFullScreen();
-    ui->pbCloseImage->show();
-    ui->closeImageText->show();
+    ui->showLargeTestsFS->showFullScreen();
+    ui->pbCloseImageFS->show();
+    ui->closeImageTextFS->show();
 }
 
 /// Report Functions
@@ -317,16 +322,19 @@ void UserLogin::pbContactUs()
 // Function to submit user's report
 void UserLogin::submitReport()
 {
-    QString addName = ui->editPreferredName->text();
-    QString addContact = ui->editPreferredContact->text();
-    QString addCategory = ui->cbReportCategory->currentText();
-    QString addSubject = ui->editReportSubject->text();
-    QString addDetails = ui->editReportDetails->toPlainText();
+    QString addName = ui->editPreferredNameCP->text();
+    QString addContact = ui->editPreferredContactCP->text();
+    QString addCategory = ui->cbReportCategoryCP->currentText();
+    QString addSubject = ui->editReportSubjectCP->text();
+    QString addDetails = ui->editReportDetailsCP->toPlainText();
 
     if (addSubject.trimmed() != "" && addDetails.trimmed() != "")
     {
         citizenReport *ptrNewReport = new citizenReport(addName, addContact, addCategory, addSubject, addDetails);
         reportList.push_back(ptrNewReport);
+
+        QMessageBox::information(this, "Confirmation",
+                                       "Thank you! Your message has been sent. We'll get back to you soon.");
     }
     else
     {
@@ -336,9 +344,9 @@ void UserLogin::submitReport()
 
     // Writing to file
     /// Windows File Path
-    //QFile outputFile("UserReports.txt");
+    QFile outputFile("UserReports.txt");
     /// Mac File Path
-    QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+    //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
 
     QTextStream out(&outputFile);
     outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -358,13 +366,38 @@ void UserLogin::submitReport()
     outputFile.close();
 
     // Clear input from labels
-    ui->editReportSubject->clear();
-    ui->editReportDetails->clear();
-
-    // Displaying saved message for admin user
-    //ui->labelConfirmation->show();
+    ui->editReportSubjectCP->clear();
+    ui->editReportDetailsCP->clear();
 } /// End of submitReport()
 
+// Function to direct user to Book My Vaccine
+void UserLogin::getVaccinatedLink()
+{
+    QString link = "https://bookmyvaccine.covid19.health.nz/";
+    QDesktopServices::openUrl(QUrl(link));
+} /// End of getVaccinatedLink()
+
+// Function to direct user to COVID-19 Testing
+void UserLogin::getTestedLink()
+{
+    QString link = "https://covid19.govt.nz/health-and-wellbeing/covid-19-testing/get-tested-for-covid-19/";
+    QDesktopServices::openUrl(QUrl(link));
+}/// End of getTestLink()
+
+// Function to direct user to COVID-19.govt
+void UserLogin::learnMoreLink()
+{
+    QString link = "https://covid19.govt.nz/";
+    QDesktopServices::openUrl(QUrl(link));
+}/// End of learnMoreLink()
+
+// Function to direct user to My COVID Record
+void UserLogin::covidRecordLink()
+{
+    QString link = "https://mycovidrecord.health.nz/";
+    QDesktopServices::openUrl(QUrl(link));
+}
+/// End of covidRecordLink()
 
 // Function to logout
 void UserLogin::logout()

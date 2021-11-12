@@ -28,47 +28,50 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 
     // Constructing File Path Directories
    //Mac Create Directory
-   QDir pathDir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files");
+   /*QDir pathDir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files");
        if(!pathDir.exists())
        {
            QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files");
-       }
+       }*/
 
        // File path for Vaccine Certificates
-       QDir pathDir0("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates");
+        QDir pathDir0("./VaccineCertificates");
+       //QDir pathDir0("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates");
        if(!pathDir0.exists())
        {
            //create it!
-           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates");
+           QDir().mkdir("./VaccineCertificates");
+           //QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates");
        }
 
        // File path for QRCodes
-       QDir pathDir1("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes");
+       QDir pathDir1("./QRCodes");
+       //QDir pathDir1("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes");
        if(!pathDir1.exists())
        {
            //create it!
-          // QDir().mkdir("./QRCodes");
-           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes");
+           QDir().mkdir("./QRCodes");
+           //QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes");
        }
 
        // File path for Test Results
-       //QDir pathDir2("./TestResults");
-       QDir pathDir2("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
+       QDir pathDir2("./TestResults");
+       //QDir pathDir2("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
        if(!pathDir2.exists())
        {
            //create it!
-           //QDir().mkdir("./TestResults");
-           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
+           QDir().mkdir("./TestResults");
+           //QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
        }
 
        // File path for User Profile Pictures
-      // QDir pathDir3("./UserProfilePictures");
-       QDir pathDir3("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserProfilePictures");
+       QDir pathDir3("./UserProfilePictures");
+       //QDir pathDir3("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserProfilePictures");
        if(!pathDir3.exists())
        {
            //create it!
-           //QDir().mkdir("./UserProfilePictures");
-           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
+           QDir().mkdir("./UserProfilePictures");
+           //QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
        }
 
 
@@ -76,60 +79,60 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     // Manual UI-Function Connections
 
     /// Home Buttons
-    connect(ui->pbHome, &QPushButton::clicked, this, &MainWindow::pbHome);
-    connect(ui->pbHome1, &QPushButton::clicked, this, &MainWindow::pbHome);
-    connect(ui->pbHome2, &QPushButton::clicked, this, &MainWindow::pbHome);
-    connect(ui->pbHome3, &QPushButton::clicked, this, &MainWindow::pbHome);
-    connect(ui->pbHome4, &QPushButton::clicked, this, &MainWindow::pbHome);
+    connect(ui->pbHomeHP, &QPushButton::clicked, this, &MainWindow::pbHome);
+    connect(ui->pbHomeAUP, &QPushButton::clicked, this, &MainWindow::pbHome);
+    connect(ui->pbHomeAP, &QPushButton::clicked, this, &MainWindow::pbHome);
+    connect(ui->pbHomeRP, &QPushButton::clicked, this, &MainWindow::pbHome);
+    connect(ui->pbHomeEP, &QPushButton::clicked, this, &MainWindow::pbHome);
 
     /// Add User Buttons
-    connect(ui->pbAddUser, &QPushButton::clicked, this, &MainWindow::addNewUser);
-    connect(ui->pbAddUser1, &QPushButton::clicked, this, &MainWindow::addNewUser);
-    connect(ui->pbAddUser2, &QPushButton::clicked, this, &MainWindow::addNewUser);
-    connect(ui->pbAddUser3, &QPushButton::clicked, this, &MainWindow::addNewUser);
-    connect(ui->pbAddUser4, &QPushButton::clicked, this, &MainWindow::addNewUser);
+    connect(ui->pbAddUserHP, &QPushButton::clicked, this, &MainWindow::addNewUser);
+    connect(ui->pbAddUserAUP, &QPushButton::clicked, this, &MainWindow::addNewUser);
+    connect(ui->pbAddUserAP, &QPushButton::clicked, this, &MainWindow::addNewUser);
+    connect(ui->pbAddUserRP, &QPushButton::clicked, this, &MainWindow::addNewUser);
+    connect(ui->pbAddUserEP, &QPushButton::clicked, this, &MainWindow::addNewUser);
 
     /// All User Buttons
-    connect(ui->pbAllUsers, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
-    connect(ui->pbAllUsers1, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
-    connect(ui->pbAllUsers2, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
-    connect(ui->pbAllUsers3, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
-    connect(ui->pbAllUsers4, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
+    connect(ui->pbAllUsersHP, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
+    connect(ui->pbAllUsersAUP, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
+    connect(ui->pbAllUsersAP, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
+    connect(ui->pbAllUsersRP, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
+    connect(ui->pbAllUsersEP, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
 
     /// Report Buttons
-    connect(ui->pbReports, &QPushButton::clicked, this, &MainWindow::pbReports);
-    connect(ui->pbReports1, &QPushButton::clicked, this, &MainWindow::pbReports);
-    connect(ui->pbReports2, &QPushButton::clicked, this, &MainWindow::pbReports);
-    connect(ui->pbReports3, &QPushButton::clicked, this, &MainWindow::pbReports);
-    connect(ui->pbReports4, &QPushButton::clicked, this, &MainWindow::pbReports);
+    connect(ui->pbReportsHP, &QPushButton::clicked, this, &MainWindow::pbReports);
+    connect(ui->pbReportsAUP, &QPushButton::clicked, this, &MainWindow::pbReports);
+    connect(ui->pbReportsAP, &QPushButton::clicked, this, &MainWindow::pbReports);
+    connect(ui->pbReportsRP, &QPushButton::clicked, this, &MainWindow::pbReports);
+    connect(ui->pbReportsEP, &QPushButton::clicked, this, &MainWindow::pbReports);
 
     /// Logout Buttons
-     connect(ui->pbLogout, &QPushButton::clicked, this, &MainWindow::logout);
-     connect(ui->pbLogout1, &QPushButton::clicked, this, &MainWindow::logout);
-     connect(ui->pbLogout2, &QPushButton::clicked, this, &MainWindow::logout);
-     connect(ui->pbLogout3, &QPushButton::clicked, this, &MainWindow::logout);
-     connect(ui->pbLogout4, &QPushButton::clicked, this, &MainWindow::logout);
+     connect(ui->pbLogoutHP, &QPushButton::clicked, this, &MainWindow::logout);
+     connect(ui->pbLogoutAUP, &QPushButton::clicked, this, &MainWindow::logout);
+     connect(ui->pbLogoutAP, &QPushButton::clicked, this, &MainWindow::logout);
+     connect(ui->pbLogoutRP, &QPushButton::clicked, this, &MainWindow::logout);
+     connect(ui->pbLogoutEP, &QPushButton::clicked, this, &MainWindow::logout);
 
     // In app buttons & connections.
-    connect(ui->pbAddCertificate, &QPushButton::clicked, this, &MainWindow::addCertificateImage);
-    connect(ui->pbAddQRCode, &QPushButton::clicked, this, &MainWindow::addQRCodeImage);
-    connect(ui->pbAddTestResults, &QPushButton::clicked, this, &MainWindow::addTestResultImage);
-    connect(ui->pbAddUserPicture, &QPushButton::clicked, this, &MainWindow::addUserPicture);
-    connect(ui->pbSave, &QPushButton::clicked, this, &MainWindow::saveUser);
+    connect(ui->pbAddCertificateAP, &QPushButton::clicked, this, &MainWindow::addCertificateImage);
+    connect(ui->pbAddQRCodeAP, &QPushButton::clicked, this, &MainWindow::addQRCodeImage);
+    connect(ui->pbAddTestResultsAP, &QPushButton::clicked, this, &MainWindow::addTestResultImage);
+    connect(ui->pbAddUserPictureAP, &QPushButton::clicked, this, &MainWindow::addUserPicture);
+    connect(ui->pbSaveAP, &QPushButton::clicked, this, &MainWindow::saveUser);
     /// All Users connections
-    connect(ui->pbAllUsers, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
-    connect(ui->listAllUsersNew, &QListWidget::itemClicked, this, &MainWindow::selectUserDetails);
-    connect(ui->pbSearch, &QPushButton::clicked, this, &MainWindow::searchUser);
+    connect(ui->pbAllUsersHP, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
+    connect(ui->listAllUsersAUP, &QListWidget::itemClicked, this, &MainWindow::selectUserDetails);
+    connect(ui->pbSearchAUP, &QPushButton::clicked, this, &MainWindow::searchUser);
     /// Edit User connections
-    connect(ui->pbEditUser, &QPushButton::clicked, this, &MainWindow::editUser);
-    connect(ui->pbEditCertificate, &QPushButton::clicked, this, &MainWindow::editCertificateImage);
-    connect(ui->pbEditQRCode, &QPushButton::clicked, this, &MainWindow::editQRCodeImage);
-    connect(ui->pbEditTestResults, &QPushButton::clicked, this, &MainWindow::editTestResultImage);
-    connect(ui->pbEditUserPicture, &QPushButton::clicked, this, &MainWindow::editUserPicture);
-    connect(ui->pbSaveEdit, &QPushButton::clicked, this, &MainWindow::saveEdit);
+    connect(ui->pbEditUserAUP, &QPushButton::clicked, this, &MainWindow::editUser);
+    connect(ui->pbEditCertificateEP, &QPushButton::clicked, this, &MainWindow::editCertificateImage);
+    connect(ui->pbEditQRCodeEP, &QPushButton::clicked, this, &MainWindow::editQRCodeImage);
+    connect(ui->pbEditTestResultsEP, &QPushButton::clicked, this, &MainWindow::editTestResultImage);
+    connect(ui->pbEditUserPictureEP, &QPushButton::clicked, this, &MainWindow::editUserPicture);
+    connect(ui->pbSaveEditEP, &QPushButton::clicked, this, &MainWindow::saveEdit);
     /// Report connections
-    connect(ui->listAllReports, &QListWidget::itemClicked, this, &MainWindow::selectReportDetails);
-    connect(ui->pbSearchCategory, &QPushButton::clicked, this, &MainWindow::searchCategory);
+    connect(ui->listAllReportsRP, &QListWidget::itemClicked, this, &MainWindow::selectReportDetails);
+    connect(ui->pbSearchCategoryRP, &QPushButton::clicked, this, &MainWindow::searchCategory);
 
 } // End of default constructor.
 
@@ -183,9 +186,9 @@ void MainWindow::addNewUser()
     if (newCitizen != nullptr)
     {
          userList.push_back(newCitizen);
-         ui->listAllUsersNew->addItem(newCitizen->getName());
-         ui->listAllUsersNew_Edit->addItem(newCitizen->getName());
-         ui->listAllUsersNew_AddUser->addItem(newCitizen->getName());
+         ui->listAllUsersAUP->addItem(newCitizen->getName());
+         ui->listAllUsersEP->addItem(newCitizen->getName());
+         ui->listAllUsersAP->addItem(newCitizen->getName());
 
     }
 } /// End of addNewUser()
@@ -206,10 +209,12 @@ void MainWindow::addCertificateImage()
 
         QPixmap pixmap("./vaccineCertificates/"+shortName);
 
-        ui->showCertificate->setPixmap(pixmap);
-        ui->showCertificate->setScaledContents(true);
-        ui->showCertificate2->setPixmap(pixmap);
-        ui->showCertificate2->setScaledContents(true);
+        // Display in All User Page
+        ui->showCertificateAUP->setPixmap(pixmap);
+        ui->showCertificateAUP->setScaledContents(true);
+        // Display on Add User Page
+        ui->addCertificateAP->setPixmap(pixmap);
+        ui->addCertificateAP->setScaledContents(true);
 
         certificateImage = "./vaccineCertificates/" + shortName;
     }
@@ -231,10 +236,12 @@ void MainWindow::addQRCodeImage()
 
         QPixmap pixmap1("./qrCodes/"+shortName);
 
-        ui->showQRCode->setPixmap(pixmap1);
-        ui->showQRCode->setScaledContents(true);
-        ui->showQRCode2->setPixmap(pixmap1);
-        ui->showQRCode2->setScaledContents(true);
+        // Display in All User Page
+        ui->showQRCodeAUP->setPixmap(pixmap1);
+        ui->showQRCodeAUP->setScaledContents(true);
+        // Display on Add User Page
+        ui->addCertificateAP->setPixmap(pixmap1);
+        ui->addCertificateAP->setScaledContents(true);
 
         qrCodeImage = "./qrCodes/" + shortName;
     }
@@ -256,16 +263,18 @@ void MainWindow::addTestResultImage()
 
         QPixmap pixmap2("./testResults/"+shortName);
 
-        ui->showTestResults->setPixmap(pixmap2);
-        ui->showTestResults->setScaledContents(true);
-        ui->showTestResults2->setPixmap(pixmap2);
-        ui->showTestResults2->setScaledContents(true);
+        // Display in All User Page
+        ui->showTestResultsAUP->setPixmap(pixmap2);
+        ui->showTestResultsAUP->setScaledContents(true);
+        // Display on Add User Page
+        ui->addTestResultsAP->setPixmap(pixmap2);
+        ui->addTestResultsAP->setScaledContents(true);
 
         testResultImage = "./testResults/" + shortName;
     }
 } /// End of addTestResultImage()
 
-// Function to add QR Code
+// Function to add User Profile Picture
 void MainWindow::addUserPicture()
 {
     QString fileName;
@@ -281,31 +290,35 @@ void MainWindow::addUserPicture()
 
         QPixmap pixmap3("./userProfilePictures/"+shortName);
 
-        ui->addUserPicture->setPixmap(pixmap3);
-        ui->addUserPicture->setScaledContents(true);
+        // Display in All User Page
+        ui->showUserPictureAUP->setPixmap(pixmap3);
+        ui->showUserPictureAUP->setScaledContents(true);
+        // Display on Add User Page
+        ui->addUserPictureAP->setPixmap(pixmap3);
+        ui->addUserPictureAP->setScaledContents(true);
 
         userProfilePicture = "./userProfilePictures/" + shortName;
     }
-} /// End of addTestResultImage()
+} /// End of addUserPicture()
 
 // Saving new user information to file
 void MainWindow::saveUser()
 {
-    QString addName = ui->addUserName->text();
-    QString addPhone = ui->addUserPhone->text();
-    QString addEmail = ui->addUserEmail->text();
-    QString addDob = ui->addUserDOB->text();
-    QString addNhi = ui->addUserNHI->text();
-    QString addEmergencyContact = ui->addUserEmergency->text();
-    QString addNotes = ui->addNotes->toPlainText();
-    QString addVaccStatus = ui->addVaccStatus->currentText();
-    QString addCvn = ui->addUserCVN->text();
-    QString add1VaccName = ui->add1stDoseName->text();
-    QString add1BatchNum = ui->add1stDoseBatch->text();
-    QString add1Date = ui->add1stDoseDate->text();
-    QString add2VaccName = ui->add2ndDoseName->text();
-    QString add2BatchNum = ui->add2ndDoseBatch->text();
-    QString add2Date = ui->add2ndDoseDate->text();
+    QString addName = ui->addUserNameAP->text();
+    QString addPhone = ui->addUserPhoneAP->text();
+    QString addEmail = ui->addUserEmailAP->text();
+    QString addDob = ui->addUserDOBAP->text();
+    QString addNhi = ui->addUserNHIAP->text();
+    QString addEmergencyContact = ui->addUserEmergencyAP->text();
+    QString addNotes = ui->addNotesAP->toPlainText();
+    QString addVaccStatus = ui->addVaccStatusAP->currentText();
+    QString addCvn = ui->addUserCVNAP->text();
+    QString add1VaccName = ui->add1stDoseNameAP->text();
+    QString add1BatchNum = ui->add1stDoseBatchAP->text();
+    QString add1Date = ui->add1stDoseDateAP->text();
+    QString add2VaccName = ui->add2ndDoseNameAP->text();
+    QString add2BatchNum = ui->add2ndDoseBatchAP->text();
+    QString add2Date = ui->add2ndDoseDateAP->text();
 
     if (addName.trimmed() != "" && addNhi.trimmed() != "" && addEmail.trimmed() != "")
     {
@@ -314,14 +327,14 @@ void MainWindow::saveUser()
         userList.push_back(ptrNewCitizen);
 
         // Updating ui list widgets to display added user.
-        ui->listAllUsersNew->addItem(ptrNewCitizen->getNHI());
-        ui->listAllUsersNew_Edit->addItem(ptrNewCitizen->getNHI());
-        ui->listAllUsersNew_AddUser->addItem(ptrNewCitizen->getNHI());
+        ui->listAllUsersAUP->addItem(ptrNewCitizen->getNHI());
+        ui->listAllUsersEP->addItem(ptrNewCitizen->getNHI());
+        ui->listAllUsersAP->addItem(ptrNewCitizen->getNHI());
         // Writing to file
         /// Windows File Path
-        //QFile outputFile("Citizens.txt");
+        QFile outputFile("Citizens.txt");
         /// Mac File Path
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -353,24 +366,24 @@ void MainWindow::saveUser()
             outputFile.close();
 
             // Clear input from labels
-            ui->addUserName->clear();
-            ui->addUserPhone->clear();
-            ui->addUserEmail->clear();
-            ui->addUserDOB->clear();
-            ui->addUserNHI->clear();
-            ui->addUserEmergency->clear();
-            ui->addNotes->clear();
-            ui->addUserCVN->clear();
-            ui->add1stDoseName->clear();
-            ui->add1stDoseBatch->clear();
-            ui->add1stDoseDate->clear();
-            ui->add2ndDoseName->clear();
-            ui->add2ndDoseBatch->clear();
-            ui->add2ndDoseDate->clear();
-            ui->showCertificate->clear();
-            ui->showQRCode->clear();
-            ui->showTestResults->clear();
-            ui->showUserPicture->clear();
+            ui->addUserNameAP->clear();
+            ui->addUserPhoneAP->clear();
+            ui->addUserEmailAP->clear();
+            ui->addUserDOBAP->clear();
+            ui->addUserNHIAP->clear();
+            ui->addUserEmergencyAP->clear();
+            ui->addNotesAP->clear();
+            ui->addUserCVNAP->clear();
+            ui->add1stDoseNameAP->clear();
+            ui->add1stDoseBatchAP->clear();
+            ui->add1stDoseDateAP->clear();
+            ui->add2ndDoseNameAP->clear();
+            ui->add2ndDoseBatchAP->clear();
+            ui->add2ndDoseDateAP->clear();
+            ui->addCertificateAP->clear();
+            ui->addQRCodeAP->clear();
+            ui->addTestResultsAP->clear();
+            ui->addUserPictureAP->clear();
 
             // Displaying saved message for admin user
            // ui->lblSavedMessage->show();
@@ -393,8 +406,8 @@ void MainWindow::pbAllUsers()
     ui->stackedWidget->setCurrentIndex(1);
 
     // Open file for reading
-    QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
-   // QFile inputFile("Citizens.txt");
+    //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+    QFile inputFile("Citizens.txt");
     inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
     QTextStream read(&inputFile);
 
@@ -405,9 +418,9 @@ void MainWindow::pbAllUsers()
     }
    // Clearing ui
     userList.clear();
-    ui->listAllUsersNew->clear();
-    ui->listAllUsersNew_Edit->clear();
-    ui->listAllUsersNew_AddUser->clear();
+    ui->listAllUsersAUP->clear();
+    ui->listAllUsersEP->clear();
+    ui->listAllUsersAP->clear();
 
 
    while(!read.atEnd()) // Start while loop to read file and push info to vec
@@ -417,9 +430,9 @@ void MainWindow::pbAllUsers()
         QStringList info = text.split(",");
 
        // Add read information to ui
-       ui->listAllUsersNew->addItem(info.at(4));
-       ui->listAllUsersNew_Edit->addItem(info.at(4));
-       ui->listAllUsersNew_AddUser->addItem(info.at(4));
+       ui->listAllUsersAUP->addItem(info.at(4));
+       ui->listAllUsersEP->addItem(info.at(4));
+       ui->listAllUsersAP->addItem(info.at(4));
 
        // Adding file information to vector
        classCitizen* temp = new classCitizen(info.at(0), info.at(1), info.at(2), info.at(3), info.at(4), info.at(5), info.at(6), info.at(7), info.at(8), info.at(9),
@@ -436,37 +449,40 @@ void MainWindow::pbAllUsers()
 // Function to show user's information when selected from list widget
 void MainWindow::selectUserDetails()
 {
-    int index = ui->listAllUsersNew->currentRow();
-    int index2 = ui->listAllUsersNew_Edit->currentRow();
-    int index3 = ui->listAllUsersNew_AddUser->currentRow();
+    int index = ui->listAllUsersAUP->currentRow();
+    int index2 = ui->listAllUsersEP->currentRow();
+    int index3 = ui->listAllUsersAP->currentRow();
 
     if (index >= 0 || index2 >= 0 || index3 >= 0)
     {
         classCitizen *selectedUser = userList.at(index);
-        ui->showUserName->setText(selectedUser->getName());
-        ui->showUserPhone->setText(selectedUser->getContactNumber());
-        ui->showUserEmail->setText(selectedUser->getEmailAddress());
-        ui->showUserDOB->setText(selectedUser->getDateOfBirth());
-        ui->showUserNHI->setText(selectedUser->getNHI());
-        ui->showUserEmergency->setText(selectedUser->getEmergencyContact());
-        ui->showUserNotes->setText(selectedUser->getAdditionalNotes());
-        ui->showUserVaccStatus->setText(selectedUser->getVaccineStatus());
-        ui->showUserCVN->setText(selectedUser->getCVN());
+        ui->showUserNameAUP->setText(selectedUser->getName());
+        ui->showUserPhoneAUP->setText(selectedUser->getContactNumber());
+        ui->showUserEmailAUP->setText(selectedUser->getEmailAddress());
+        ui->showUserDOBAUP->setText(selectedUser->getDateOfBirth());
+        ui->showUserNHIAUP->setText(selectedUser->getNHI());
+        ui->showUserEmergencyAUP->setText(selectedUser->getEmergencyContact());
+        ui->showUserNotesAUP->setText(selectedUser->getAdditionalNotes());
+        ui->showUserVaccStatusAUP->setText(selectedUser->getVaccineStatus());
+        ui->showUserCVNAUP->setText(selectedUser->getCVN());
+        ui->show1stDoseNameAUP->setText(selectedUser->getVaccineName1());
+        ui->show1stDoseBatchAUP->setText(selectedUser->getBatchNumber1());
+        ui->show1stDoseDateAUP->setText(selectedUser->getDateGiven1());
+        ui->show2ndDoseNameAUP->setText(selectedUser->getVaccineName2());
+        ui->show2ndDoseBatchAUP->setText(selectedUser->getBatchNumber2());
+        ui->show2ndDoseDateAUP->setText(selectedUser->getDateGiven2());
+        QPixmap pixmap(selectedUser->getCertificate());
+        ui->showCertificateAUP->setPixmap(pixmap);
+        ui->showCertificateAUP->setScaledContents(true);
+        QPixmap pixmap1(selectedUser->getQRCode());
+        ui->showQRCodeAUP->setPixmap(pixmap1);
+        ui->showQRCodeAUP->setScaledContents(true);
+        QPixmap pixmap2(selectedUser->getTestResult());
+        ui->showTestResultsAUP->setPixmap(pixmap2);
+        ui->showTestResultsAUP->setScaledContents(true);
         QPixmap pixmap3(selectedUser->getCitizenImage());
-        ui->showUserPicture->setPixmap(pixmap3);
-        ui->showUserPicture->setScaledContents(true);
-        ui->show1stDoseName->setText(selectedUser->getVaccineName1());
-        ui->show1stDoseBatch->setText(selectedUser->getBatchNumber1());
-        ui->show1stDoseDate->setText(selectedUser->getDateGiven1());
-        ui->show2ndDoseName->setText(selectedUser->getVaccineName2());
-        ui->show2ndDoseBatch->setText(selectedUser->getBatchNumber2());
-        ui->show2ndDoseDate->setText(selectedUser->getDateGiven2());
-        QPixmap pixmap4(selectedUser->getCertificate());
-        ui->showCertificate->setPixmap(pixmap4);
-        QPixmap pixmap5(selectedUser->getTestResult());
-        ui->showTestResults->setPixmap(pixmap5);
-        QPixmap pixmap6(selectedUser->getQRCode());
-        ui->showQRCode->setPixmap(pixmap6);
+        ui->showUserPictureAUP->setPixmap(pixmap3);
+        ui->showUserPictureAUP->setScaledContents(true);
 
 
     }
@@ -475,30 +491,30 @@ void MainWindow::selectUserDetails()
 // Function to search for user in list widget
 void MainWindow::searchUser()
 {
-    QString search = ui->labelSearchUser->text();
+    QString search = ui->labelSearchUserAUP->text();
 
     if(search !="")
     {
         // Loop to remove highlight on orginal search before highlighting next search
-        for (int i=0; i < ui->listAllUsersNew->count(); i++)
+        for (int i=0; i < ui->listAllUsersAUP->count(); i++)
         {
-            QListWidgetItem* user = ui->listAllUsersNew->item(i);
+            QListWidgetItem* user = ui->listAllUsersAUP->item(i);
             user->setBackground(Qt::transparent);
         }
-        for (int i=0; i < ui->listAllUsersNew_AddUser->count(); i++)
+        for (int i=0; i < ui->listAllUsersAP->count(); i++)
         {
-            QListWidgetItem* user = ui->listAllUsersNew_AddUser->item(i);
+            QListWidgetItem* user = ui->listAllUsersAP->item(i);
             user->setBackground(Qt::transparent);
         }
-        for (int i=0; i < ui->listAllUsersNew_Edit->count(); i++)
+        for (int i=0; i < ui->listAllUsersEP->count(); i++)
         {
-            QListWidgetItem* user = ui->listAllUsersNew_Edit->item(i);
+            QListWidgetItem* user = ui->listAllUsersEP->item(i);
             user->setBackground(Qt::transparent);
         }
 
-        QList<QListWidgetItem*> list = ui->listAllUsersNew->findItems(search, Qt::MatchContains);
-        QList<QListWidgetItem*> addList = ui->listAllUsersNew_AddUser->findItems(search, Qt::MatchContains);
-        QList<QListWidgetItem*> editList = ui->listAllUsersNew_Edit->findItems(search, Qt::MatchContains);
+        QList<QListWidgetItem*> list = ui->listAllUsersAUP->findItems(search, Qt::MatchContains);
+        QList<QListWidgetItem*> addList = ui->listAllUsersAP->findItems(search, Qt::MatchContains);
+        QList<QListWidgetItem*> editList = ui->listAllUsersEP->findItems(search, Qt::MatchContains);
 
         // Loop to highlight matching users
         for (int i = 0; i <list.count(); i++)
@@ -524,21 +540,21 @@ void MainWindow::searchUser()
         QMessageBox::information(this, "Invalid Search",
                                        "Please type the National Health Index in the search bar...");
         // Loop to remove highlight
-        for (int i = 0; i < ui->listAllUsersNew->count(); i++)
+        for (int i = 0; i < ui->listAllUsersAUP->count(); i++)
         {
-            QListWidgetItem* item = ui->listAllUsersNew->item(i);
+            QListWidgetItem* item = ui->listAllUsersAUP->item(i);
             item->setBackground(Qt::transparent);
         }
 
-        for (int i = 0; i < ui->listAllUsersNew_AddUser->count(); i++)
+        for (int i = 0; i < ui->listAllUsersAP->count(); i++)
         {
-            QListWidgetItem* item = ui->listAllUsersNew_AddUser->item(i);
+            QListWidgetItem* item = ui->listAllUsersAP->item(i);
             item->setBackground(Qt::transparent);
         }
 
-        for (int i = 0; i < ui->listAllUsersNew_Edit->count(); i++)
+        for (int i = 0; i < ui->listAllUsersEP->count(); i++)
         {
-            QListWidgetItem* item = ui->listAllUsersNew_Edit->item(i);
+            QListWidgetItem* item = ui->listAllUsersEP->item(i);
             item->setBackground(Qt::transparent);
         }
     }
@@ -551,7 +567,7 @@ void MainWindow::searchUser()
 // Function to edit existing user's information
 void MainWindow:: editUser()
 {
-    int listNum = ui->listAllUsersNew->currentRow();
+    int listNum = ui->listAllUsersAUP->currentRow();
     // Changing UI page
     ui->stackedWidget->setCurrentIndex(4);
 
@@ -562,33 +578,33 @@ void MainWindow:: editUser()
             if (ptrCurrentCitizen != nullptr)
            {          
                 // Populating labels with existing info
-                ui->editUserName->setText(ptrCurrentCitizen->getName());
-                ui->editUserPhone->setText(ptrCurrentCitizen->getContactNumber());
-                ui->editUserEmail->setText(ptrCurrentCitizen->getEmailAddress());
-                ui->editUserDOB->setText(ptrCurrentCitizen->getDateOfBirth());
-                ui->NHIDisplayLabel->setText(ptrCurrentCitizen->getNHI()); // Non-editable
-                ui->editUserEmergency->setText(ptrCurrentCitizen->getEmergencyContact());
-                ui->editUserNotes->setPlainText(ptrCurrentCitizen->getAdditionalNotes());
-                ui->editUserVaccineSB->setCurrentText(ptrCurrentCitizen->getVaccineStatus());
-                ui->editUserCVN->setText(ptrCurrentCitizen->getCVN()); // Non-editable
-                ui->edit1stDoseName->setText(ptrCurrentCitizen->getVaccineName1());
-                ui->edit1stDoseBatch->setText(ptrCurrentCitizen->getBatchNumber1());
-                ui->edit1stDoseDate->setText(ptrCurrentCitizen->getDateGiven1());
-                ui->edit2ndDoseName->setText(ptrCurrentCitizen->getVaccineName2());
-                ui->edit2ndDoseBatch->setText(ptrCurrentCitizen->getBatchNumber2());
-                ui->edit2ndDoseDate->setText(ptrCurrentCitizen->getDateGiven2());
+                ui->editUserNameEP->setText(ptrCurrentCitizen->getName());
+                ui->editUserPhoneEP->setText(ptrCurrentCitizen->getContactNumber());
+                ui->editUserEmailEP->setText(ptrCurrentCitizen->getEmailAddress());
+                ui->editUserDOBEP->setText(ptrCurrentCitizen->getDateOfBirth());
+                ui->NHIDisplayLabelEP->setText(ptrCurrentCitizen->getNHI()); // Non-editable
+                ui->editUserEmergencyEP->setText(ptrCurrentCitizen->getEmergencyContact());
+                ui->editUserNotesEP->setPlainText(ptrCurrentCitizen->getAdditionalNotes());
+                ui->editUserVaccineSBEP->setCurrentText(ptrCurrentCitizen->getVaccineStatus());
+                ui->editUserCVNEP->setText(ptrCurrentCitizen->getCVN());
+                ui->edit1stDoseNameEP->setText(ptrCurrentCitizen->getVaccineName1());
+                ui->edit1stDoseBatchEP->setText(ptrCurrentCitizen->getBatchNumber1());
+                ui->edit1stDoseDateEP->setText(ptrCurrentCitizen->getDateGiven1());
+                ui->edit2ndDoseNameEP->setText(ptrCurrentCitizen->getVaccineName2());
+                ui->edit2ndDoseBatchEP->setText(ptrCurrentCitizen->getBatchNumber2());
+                ui->edit2ndDoseDateEP->setText(ptrCurrentCitizen->getDateGiven2());
                 QPixmap pixmap(ptrCurrentCitizen->getCertificate());
-                ui->showCertificate3->setPixmap(pixmap);
-                ui->showCertificate3->setScaledContents(true);
+                ui->editCertificateEP->setPixmap(pixmap);
+                ui->editCertificateEP->setScaledContents(true);
                 QPixmap pixmap1(ptrCurrentCitizen->getQRCode());
-                ui->showQRCode3->setPixmap(pixmap1);
-                ui->showQRCode3->setScaledContents(true);
+                ui->editQRCodeEP->setPixmap(pixmap1);
+                ui->editQRCodeEP->setScaledContents(true);
                 QPixmap pixmap2(ptrCurrentCitizen->getTestResult());
-                ui->showTestResults3->setPixmap(pixmap2);
-                ui->showTestResults3->setScaledContents(true);
+                ui->editTestResultsEP->setPixmap(pixmap2);
+                ui->editTestResultsEP->setScaledContents(true);
                 QPixmap pixmap3(ptrCurrentCitizen->getCitizenImage());
-                ui->displayUserPicture->setPixmap(pixmap3);
-                ui->displayUserPicture->setScaledContents(true);
+                ui->editUserPictureEP->setPixmap(pixmap3);
+                ui->editUserPictureEP->setScaledContents(true);
             }
     }
     else
@@ -614,8 +630,8 @@ void MainWindow::editCertificateImage()
 
         QPixmap pixmap("./vaccineCertificates/"+shortName);
 
-        ui->showCertificate3->setPixmap(pixmap);
-        ui->showCertificate3->setScaledContents(true);
+        ui->editCertificateEP->setPixmap(pixmap);
+        ui->editCertificateEP->setScaledContents(true);
 
         certificateImage = "./vaccineCertificates/" + shortName;
     }
@@ -637,8 +653,8 @@ void MainWindow::editQRCodeImage()
 
         QPixmap pixmap1("./qrCodes/"+shortName);
 
-        ui->showQRCode3->setPixmap(pixmap1);
-        ui->showQRCode3->setScaledContents(true);
+        ui->editQRCodeEP->setPixmap(pixmap1);
+        ui->editQRCodeEP->setScaledContents(true);
 
         qrCodeImage = "./qrCodes/" + shortName;
     }
@@ -660,8 +676,8 @@ void MainWindow::editTestResultImage()
 
         QPixmap pixmap2("./testResults/"+shortName);
 
-        ui->showTestResults3->setPixmap(pixmap2);
-        ui->showTestResults3->setScaledContents(true);
+        ui->editTestResultsEP->setPixmap(pixmap2);
+        ui->editTestResultsEP->setScaledContents(true);
 
         testResultImage = "./testResults/" + shortName;
     }
@@ -683,8 +699,8 @@ void MainWindow::editUserPicture()
 
         QPixmap pixmap2("./userProfilePictures/"+shortName);
 
-        ui->displayUserPicture->setPixmap(pixmap2);
-        ui->displayUserPicture->setScaledContents(true);
+        ui->editUserPictureEP->setPixmap(pixmap2);
+        ui->editUserPictureEP->setScaledContents(true);
 
         userProfilePicture = "./userProfilePictures/" + shortName;
     }
@@ -694,28 +710,29 @@ void MainWindow::editUserPicture()
 void MainWindow::saveEdit()
 {
     // Retrieving edited information from ui
-    QString editName = ui->editUserName->text();
-    QString editPhone = ui->editUserPhone->text();
-    QString editEmail = ui->editUserEmail->text();
-    QString editDob = ui->editUserDOB->text();
-    QString editEmergencyContact = ui->editUserEmergency->text();
-    QString editNotes = ui->editUserNotes->toPlainText();
-    QString editVaccStatus = ui->editUserVaccineSB->currentText();
-    QString edit1VaccName = ui->edit1stDoseName->text();
-    QString edit1BatchNum = ui->edit1stDoseBatch->text();
-    QString edit1Date = ui->edit1stDoseDate->text();
-    QString edit2VaccName = ui->edit2ndDoseName->text();
-    QString edit2BatchNum = ui->edit2ndDoseBatch->text();
-    QString edit2Date = ui->edit2ndDoseDate->text();
+    QString editName = ui->editUserNameEP->text();
+    QString editPhone = ui->editUserPhoneEP->text();
+    QString editEmail = ui->editUserEmailEP->text();
+    QString editDob = ui->editUserDOBEP->text();
+    QString editEmergencyContact = ui->editUserEmergencyEP->text();
+    QString editNotes = ui->editUserNotesEP->toPlainText();
+    QString editVaccStatus = ui->editUserVaccineSBEP->currentText();
+    QString editCVNum = ui->editUserCVNEP->text();
+    QString edit1VaccName = ui->edit1stDoseNameEP->text();
+    QString edit1BatchNum = ui->edit1stDoseBatchEP->text();
+    QString edit1Date = ui->edit1stDoseDateEP->text();
+    QString edit2VaccName = ui->edit2ndDoseNameEP->text();
+    QString edit2BatchNum = ui->edit2ndDoseBatchEP->text();
+    QString edit2Date = ui->edit2ndDoseDateEP->text();
 
     QPixmap pixmap(ptrCurrentCitizen->getCertificate());
-    ui->showCertificate3->setPixmap(pixmap);
+    ui->editCertificateEP->setPixmap(pixmap);
     QPixmap pixmap1(ptrCurrentCitizen->getQRCode());
-    ui->showQRCode3->setPixmap(pixmap1);
+    ui->editQRCodeEP->setPixmap(pixmap1);
     QPixmap pixmap2(ptrCurrentCitizen->getTestResult());
-    ui->showTestResults3->setPixmap(pixmap2);
+    ui->editTestResultsEP->setPixmap(pixmap2);
     QPixmap pixmap3(ptrCurrentCitizen->getCitizenImage());
-    ui->displayUserPicture->setPixmap(pixmap3);
+    ui->editUserPictureEP->setPixmap(pixmap3);
 
 
     if(editName.trimmed() != "" && editEmail.trimmed() != "")
@@ -728,6 +745,7 @@ void MainWindow::saveEdit()
         ptrCurrentCitizen->setEmergencyContact(editEmergencyContact);
         ptrCurrentCitizen->setAdditionalNotes(editNotes);
         ptrCurrentCitizen->setVaccineStatus(editVaccStatus);
+        ptrCurrentCitizen->setCVN(editCVNum);
         ptrCurrentCitizen->setVaccineName1(edit1VaccName);
         ptrCurrentCitizen->setBatchNumber1(edit1BatchNum);
         ptrCurrentCitizen->setDateGiven1(edit1Date);
@@ -741,9 +759,9 @@ void MainWindow::saveEdit()
 
         // Writing edit to file
         /// Windows File Path
-        //QFile outputFile("Citizens.txt");
+        QFile outputFile("Citizens.txt");
         /// Mac File Path
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -776,39 +794,48 @@ void MainWindow::saveEdit()
 
             /// Arranging ui to meet ux standards
             // Clear input from edit labels
-            ui->editUserName->clear();
-            ui->editUserPhone->clear();
-            ui->editUserEmail->clear();
-            ui->editUserDOB->clear();
-            ui->NHIDisplayLabel->clear();
-            ui->editUserEmergency->clear();
-            ui->editUserNotes->clear();
-            ui->editUserVaccineSB->clear();
-            ui->editUserCVN->clear();
-            ui->add1stDoseName->clear();
-            ui->add1stDoseBatch->clear();
-            ui->add1stDoseDate->clear();
-            ui->add2ndDoseName->clear();
-            ui->add2ndDoseBatch->clear();
-            ui->add2ndDoseDate->clear();
-            ui->showCertificate->clear();
-            ui->showQRCode->clear();
-            ui->showTestResults->clear();
-            ui->showUserPicture->clear();
+            ui->editUserNameEP->clear();
+            ui->editUserPhoneEP->clear();
+            ui->editUserEmailEP->clear();
+            ui->editUserDOBEP->clear();
+            ui->NHIDisplayLabelEP->clear();
+            ui->editUserEmergencyEP->clear();
+            ui->editUserNotesEP->clear();
+            ui->editUserVaccineSBEP->clear();
+            ui->editUserCVNEP->clear();
+            ui->edit1stDoseNameEP->clear();
+            ui->edit1stDoseBatchEP->clear();
+            ui->edit1stDoseDateEP->clear();
+            ui->edit2ndDoseNameEP->clear();
+            ui->edit2ndDoseBatchEP->clear();
+            ui->edit1stDoseDateEP->clear();
+            ui->editCertificateEP->clear();
+            ui->editQRCodeEP->clear();
+            ui->editTestResultsEP->clear();
+            ui->editUserPictureEP->clear();
 
             // Changing input from view user labels
-            ui->showUserName->setText(ptrCurrentCitizen->getName());
-            ui->showUserPhone->setText(ptrCurrentCitizen->getContactNumber());
-            ui->showUserEmail->setText(ptrCurrentCitizen->getEmailAddress());
-            ui->showUserDOB->setText(ptrCurrentCitizen->getDateOfBirth());
-            ui->showUserNHI->setText(ptrCurrentCitizen->getNHI());
-            ui->showUserEmergency->setText(ptrCurrentCitizen->getEmergencyContact());
-            ui->showUserNotes->setText(ptrCurrentCitizen->getAdditionalNotes());
-            ui->showUserVaccStatus->setText(ptrCurrentCitizen->getVaccineStatus());
-            ui->showUserCVN->setText(ptrCurrentCitizen->getCVN());
+            ui->showUserNameAUP->setText(ptrCurrentCitizen->getName());
+            ui->showUserPhoneAUP->setText(ptrCurrentCitizen->getContactNumber());
+            ui->showUserEmailAUP->setText(ptrCurrentCitizen->getEmailAddress());
+            ui->showUserDOBAUP->setText(ptrCurrentCitizen->getDateOfBirth());
+            ui->showUserNHIAUP->setText(ptrCurrentCitizen->getNHI());
+            ui->showUserEmergencyAUP->setText(ptrCurrentCitizen->getEmergencyContact());
+            ui->showUserNotesAUP->setText(ptrCurrentCitizen->getAdditionalNotes());
+            ui->showUserVaccStatusAUP->setText(ptrCurrentCitizen->getVaccineStatus());
+            ui->showUserCVNAUP->setText(ptrCurrentCitizen->getCVN());
+            QPixmap pixmap(ptrCurrentCitizen->getCitizenImage());
+            ui->showCertificateAUP->setPixmap(pixmap);
+            ui->showCertificateAUP->setScaledContents(true);
+            QPixmap pixmap1(ptrCurrentCitizen->getCitizenImage());
+            ui->showQRCodeAUP->setPixmap(pixmap1);
+            ui->showQRCodeAUP->setScaledContents(true);
+            QPixmap pixmap2(ptrCurrentCitizen->getCitizenImage());
+            ui->showTestResultsAUP->setPixmap(pixmap2);
+            ui->showTestResultsAUP->setScaledContents(true);
             QPixmap pixmap3(ptrCurrentCitizen->getCitizenImage());
-            ui->displayUserPicture->setPixmap(pixmap3);
-            ui->displayUserPicture->setScaledContents(true);
+            ui->showUserPictureAUP->setPixmap(pixmap3);
+            ui->showUserPictureAUP->setScaledContents(true);
 
             //Changing page back to All Users
             ui->stackedWidget->setCurrentIndex(1);
@@ -830,8 +857,8 @@ void MainWindow::pbReports()
     ui->stackedWidget->setCurrentIndex(3);
 
     // Open file for reading
-    QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
-    //QFile inputFile("UserReports.txt");
+    //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+    QFile inputFile("UserReports.txt");
     inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
     QTextStream read(&inputFile);
 
@@ -842,7 +869,7 @@ void MainWindow::pbReports()
     }
     // Clearing UI
     reportList.clear();
-    ui->listAllReports->clear();
+    ui->listAllReportsRP->clear();
 
     while(!read.atEnd())
     {
@@ -851,7 +878,7 @@ void MainWindow::pbReports()
         QStringList info = text.split(",");
 
         // Add read information to ui list widget
-        ui->listAllReports->addItem(info.at(3)); // Display subject in list widget
+        ui->listAllReportsRP->addItem(info.at(2)); // Display subject in list widget
 
         // Adding file information to vector
         citizenReport* temp = new citizenReport(info.at(0), info.at(1), info.at(2), info.at(3), info.at(4));
@@ -867,51 +894,52 @@ void MainWindow::pbReports()
 // Function to show report details when selected
 void MainWindow::selectReportDetails()
 {
-    int index = ui->listAllReports->currentRow();
+    int index = ui->listAllReportsRP->currentRow();
 
         if (index >= 0)
         {
             citizenReport *selectedReport = reportList.at(index);
-            ui->showReportSubject->setText(selectedReport->getSubject());
-            ui->showReportCategory->setText(selectedReport->getCategory());
-            ui->showReportDetails->setText(selectedReport->getDetails());
-            ui->showPreferredName->setText(selectedReport->getName());
-            ui->showContactDetails->setText(selectedReport->getContact());
+            ui->showReportSubjectRP->setText(selectedReport->getSubject());
+            ui->showReportCategoryRP->setText(selectedReport->getCategory());
+            ui->showReportDetailsRP->setText(selectedReport->getDetails());
+            ui->showPreferredNameRP->setText(selectedReport->getName());
+            ui->showContactDetailsRP->setText(selectedReport->getContact());
         }
 } /// End of selectedReportDetails()
 
 // Function to search report category in list widget
 void MainWindow::searchCategory()
 {
-    QString search = ui->cbReportCategory->currentText();
+    QString search = ui->cbReportCategoryRP->currentText();
 
     if(search !="")
     {
         // Loop to remove highlight on orginal search before highlighting next search
-        for (int i=0; i < ui->listAllReports->count(); i++)
+        for (int i=0; i < ui->listAllReportsRP->count(); i++)
         {
-            QListWidgetItem* user = ui->listAllReports->item(i);
-            user->setBackground(Qt::transparent);
+            QListWidgetItem* report = ui->listAllReportsRP->item(i);
+            report->setBackground(Qt::transparent);
         }
 
-        QList<QListWidgetItem*> list = ui->listAllReports->findItems(search, Qt::MatchContains);
+        QList<QListWidgetItem*> list = ui->listAllReportsRP->findItems(search, Qt::MatchContains);
 
         // Loop to highlight matching users
         for (int i = 0; i <list.count(); i++)
         {
-            QListWidgetItem* item = list.at(i);
-            item->setBackground(Qt::cyan);
+            QListWidgetItem* category = list.at(i);
+            category->setBackground(Qt::cyan);
         }
     }
     else
     {
         // Loop to remove highlight
-        for (int i = 0; i < ui->listAllReports->count(); i++)
+        for (int i = 0; i < ui->listAllReportsRP->count(); i++)
         {
-            QListWidgetItem* item = ui->listAllReports->item(i);
-            item->setBackground(Qt::transparent);
+            QListWidgetItem* category = ui->listAllReportsRP->item(i);
+            category->setBackground(Qt::transparent);
         }
     }
+
 } /// End of searchCategory()
 
 // Function to logout

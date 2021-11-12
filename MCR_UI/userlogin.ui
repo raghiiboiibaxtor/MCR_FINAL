@@ -11,7 +11,12 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>My COVID Record</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normalon>:/res/images/iconVaccine.png</normalon>
+   </iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QStackedWidget" name="stackedWidget">
@@ -27,10 +32,10 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="loginPage">
-     <widget class="QLabel" name="loginWhiteBackground">
+     <widget class="QLabel" name="loginWhiteBackgroundLP">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -46,7 +51,7 @@
        <string/>
       </property>
      </widget>
-     <widget class="QFrame" name="loginBlueBackground">
+     <widget class="QFrame" name="loginBlueBackgroundLP">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -70,7 +75,7 @@ border-radius: 150px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QPushButton" name="pbMCRLink">
+      <widget class="QPushButton" name="pbMCRLinkLP">
        <property name="geometry">
         <rect>
          <x>910</x>
@@ -108,7 +113,7 @@ color: #2B528C;
         <string>My COVID-19 Record</string>
        </property>
       </widget>
-      <widget class="QLabel" name="imgHome">
+      <widget class="QLabel" name="imgHomeLP">
        <property name="geometry">
         <rect>
          <x>300</x>
@@ -125,7 +130,7 @@ color: #2B528C;
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="loginTitleFrame">
+     <widget class="QFrame" name="loginTitleFrameLP">
       <property name="geometry">
        <rect>
         <x>-120</x>
@@ -144,7 +149,7 @@ border-radius: 135px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLabel" name="loginCOVIDSub">
+      <widget class="QLabel" name="loginCOVIDSubLP">
        <property name="geometry">
         <rect>
          <x>171</x>
@@ -172,7 +177,7 @@ background: rgba(104, 160, 229, 0.00);
         <string>Find all your COVID-19 records in one place.</string>
        </property>
       </widget>
-      <widget class="QLabel" name="loginSubHeading">
+      <widget class="QLabel" name="loginSubHeadingLP">
        <property name="geometry">
         <rect>
          <x>171</x>
@@ -200,7 +205,7 @@ background: rgba(104, 160, 229, 0.00);
         <string>Thank you for keeping New Zealand safe.</string>
        </property>
       </widget>
-      <widget class="QLabel" name="kiaOraTitle">
+      <widget class="QLabel" name="kiaOraTitleLP">
        <property name="geometry">
         <rect>
          <x>170</x>
@@ -228,7 +233,7 @@ background: rgba(104, 160, 229, 0.00);
         <string>Kia Ora Aotearoa!</string>
        </property>
       </widget>
-      <widget class="QLabel" name="simplyLoginSub">
+      <widget class="QLabel" name="simplyLoginSubLP">
        <property name="geometry">
         <rect>
          <x>171</x>
@@ -257,7 +262,7 @@ background: rgba(104, 160, 229, 0.00);
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="accountLoginFrame">
+     <widget class="QFrame" name="accountLoginFrameLP">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -276,7 +281,7 @@ border-radius: 80px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLineEdit" name="editNHI">
+      <widget class="QLineEdit" name="editNHILP">
        <property name="geometry">
         <rect>
          <x>24</x>
@@ -317,7 +322,7 @@ padding-left: 3px;
         <string> My NHI Number</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="editEmail">
+      <widget class="QLineEdit" name="editEmailLP">
        <property name="geometry">
         <rect>
          <x>24</x>
@@ -358,7 +363,7 @@ padding-left: 3px;
         <string> My Email Address</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="editAccessNumber">
+      <widget class="QLineEdit" name="editAccessNumberLP">
        <property name="geometry">
         <rect>
          <x>24</x>
@@ -399,7 +404,7 @@ padding-left: 3px;
         <string> My Access Code </string>
        </property>
       </widget>
-      <widget class="QLabel" name="enterDetailsText">
+      <widget class="QLabel" name="enterDetailsTextLP">
        <property name="geometry">
         <rect>
          <x>41</x>
@@ -425,7 +430,7 @@ font-size: 18px;</string>
         <string>Enter your details to continue:</string>
        </property>
       </widget>
-      <widget class="QLabel" name="myAccountTitle">
+      <widget class="QLabel" name="myAccountTitleLP">
        <property name="geometry">
         <rect>
          <x>41</x>
@@ -451,7 +456,7 @@ font-size: 33px;</string>
         <string>My Account</string>
        </property>
       </widget>
-      <widget class="QLabel" name="labelError">
+      <widget class="QLabel" name="labelErrorLP">
        <property name="geometry">
         <rect>
          <x>30</x>
@@ -478,7 +483,7 @@ font-size: 18px;</string>
        </property>
       </widget>
      </widget>
-     <widget class="QPushButton" name="pbLogin">
+     <widget class="QPushButton" name="pbLoginLP">
       <property name="geometry">
        <rect>
         <x>730</x>
@@ -520,7 +525,7 @@ color: #2B528C;
        <bool>false</bool>
       </property>
      </widget>
-     <widget class="QPushButton" name="pbCircleLogin">
+     <widget class="QPushButton" name="pbCircleLoginLP">
       <property name="geometry">
        <rect>
         <x>1014</x>
@@ -555,7 +560,7 @@ color: rgba(236, 151, 69, 0.00);
        <bool>false</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="iconArrow">
+     <widget class="QLabel" name="iconArrowLP">
       <property name="geometry">
        <rect>
         <x>990</x>
@@ -577,16 +582,16 @@ color: rgba(236, 151, 69, 0.00);
        <bool>true</bool>
       </property>
      </widget>
-     <zorder>loginWhiteBackground</zorder>
-     <zorder>loginBlueBackground</zorder>
-     <zorder>loginTitleFrame</zorder>
-     <zorder>pbLogin</zorder>
-     <zorder>accountLoginFrame</zorder>
-     <zorder>pbCircleLogin</zorder>
-     <zorder>iconArrow</zorder>
+     <zorder>loginWhiteBackgroundLP</zorder>
+     <zorder>loginBlueBackgroundLP</zorder>
+     <zorder>loginTitleFrameLP</zorder>
+     <zorder>pbLoginLP</zorder>
+     <zorder>accountLoginFrameLP</zorder>
+     <zorder>pbCircleLoginLP</zorder>
+     <zorder>iconArrowLP</zorder>
     </widget>
     <widget class="QWidget" name="userHome">
-     <widget class="QLabel" name="userHomeWhiteBackground">
+     <widget class="QLabel" name="userHomeWhiteBackgroundHP">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -602,7 +607,7 @@ color: rgba(236, 151, 69, 0.00);
        <string/>
       </property>
      </widget>
-     <widget class="QFrame" name="homeBlueMenuBar">
+     <widget class="QFrame" name="homeBlueMenuBarHP">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -621,7 +626,7 @@ border-radius: 105px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QPushButton" name="pbHome">
+      <widget class="QPushButton" name="pbHomeHP">
        <property name="geometry">
         <rect>
          <x>-81</x>
@@ -655,7 +660,7 @@ font-size: 17px;
         <string>Home</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbProfile">
+      <widget class="QPushButton" name="pbProfileHP">
        <property name="geometry">
         <rect>
          <x>-50</x>
@@ -690,7 +695,7 @@ font-size: 18px;
         <string>My Profile</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbContact">
+      <widget class="QPushButton" name="pbContactHP">
        <property name="geometry">
         <rect>
          <x>-40</x>
@@ -726,7 +731,7 @@ font-size: 18px;
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="userHomeHelloBar">
+     <widget class="QFrame" name="userHomeHelloBarHP">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -745,7 +750,7 @@ border-radius: 105px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLabel" name="showUserPicture">
+      <widget class="QLabel" name="showUserPictureHP">
        <property name="geometry">
         <rect>
          <x>25</x>
@@ -761,8 +766,11 @@ border-radius: 80px;</string>
        <property name="text">
         <string>displayPicture</string>
        </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
       </widget>
-      <widget class="QLabel" name="labelUserName">
+      <widget class="QLabel" name="labelUserNameHP">
        <property name="geometry">
         <rect>
          <x>18</x>
@@ -789,7 +797,7 @@ background: rgba(104, 160, 229, 0.00);</string>
         <string>Username!</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_17">
+      <widget class="QLabel" name="labelHeyThereHP">
        <property name="geometry">
         <rect>
          <x>18</x>
@@ -816,7 +824,7 @@ background: rgba(104, 160, 229, 0.00);</string>
         <string>Hey there,</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbLogout">
+      <widget class="QPushButton" name="pbLogoutHP">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -853,12 +861,12 @@ color: #2B528C;
         <string>Logout</string>
        </property>
       </widget>
-      <zorder>labelUserName</zorder>
-      <zorder>label_17</zorder>
-      <zorder>pbLogout</zorder>
-      <zorder>showUserPicture</zorder>
+      <zorder>labelUserNameHP</zorder>
+      <zorder>labelHeyThereHP</zorder>
+      <zorder>pbLogoutHP</zorder>
+      <zorder>showUserPictureHP</zorder>
      </widget>
-     <widget class="QFrame" name="userHomeDisplayFrame">
+     <widget class="QFrame" name="userHomeDisplayFrameHP">
       <property name="geometry">
        <rect>
         <x>220</x>
@@ -876,7 +884,7 @@ color: #2B528C;
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLabel" name="homeSubHeading">
+      <widget class="QLabel" name="homeSubHeadingHP">
        <property name="geometry">
         <rect>
          <x>21</x>
@@ -904,7 +912,7 @@ background: rgba(104, 160, 229, 0.00);
         <string>You can find all COVID-19 updates here.</string>
        </property>
       </widget>
-      <widget class="QLabel" name="homeTitle">
+      <widget class="QLabel" name="homeTitleHP">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -932,7 +940,7 @@ background: rgba(104, 160, 229, 0.00);
         <string>Home </string>
        </property>
       </widget>
-      <widget class="QFrame" name="alerLevelUpdatesFrame">
+      <widget class="QFrame" name="alerLevelUpdatesFrameHP">
        <property name="geometry">
         <rect>
          <x>19</x>
@@ -952,7 +960,7 @@ border-radius: 50px;</string>
         <enum>QFrame::Raised</enum>
        </property>
       </widget>
-      <widget class="QFrame" name="communityCasesFrame">
+      <widget class="QFrame" name="communityCasesFrameHP">
        <property name="geometry">
         <rect>
          <x>500</x>
@@ -977,7 +985,7 @@ border-radius: 50px;</string>
         <enum>QFrame::Raised</enum>
        </property>
       </widget>
-      <widget class="QFrame" name="vaccineStatsFrame">
+      <widget class="QFrame" name="vaccineStatsFrameHP">
        <property name="geometry">
         <rect>
          <x>500</x>
@@ -997,7 +1005,7 @@ border-radius: 50px;</string>
         <enum>QFrame::Raised</enum>
        </property>
       </widget>
-      <widget class="QLabel" name="alerLevelUpdatesTitle">
+      <widget class="QLabel" name="alerLevelUpdatesTitleHP">
        <property name="geometry">
         <rect>
          <x>25</x>
@@ -1025,7 +1033,7 @@ color:#2B528C;
         <string>Alert Level Updates</string>
        </property>
       </widget>
-      <widget class="QLabel" name="vaccineStatsTitle">
+      <widget class="QLabel" name="vaccineStatsTitleHP">
        <property name="geometry">
         <rect>
          <x>500</x>
@@ -1053,7 +1061,7 @@ color:#2B528C;
         <string>Vaccine Statistics</string>
        </property>
       </widget>
-      <widget class="QLabel" name="communityCasesTitle">
+      <widget class="QLabel" name="communityCasesTitleHP">
        <property name="geometry">
         <rect>
          <x>500</x>
@@ -1081,18 +1089,18 @@ color:#2B528C;
         <string>Community Cases </string>
        </property>
       </widget>
-      <zorder>homeSubHeading</zorder>
-      <zorder>homeTitle</zorder>
-      <zorder>alerLevelUpdatesTitle</zorder>
-      <zorder>alerLevelUpdatesFrame</zorder>
-      <zorder>vaccineStatsTitle</zorder>
-      <zorder>vaccineStatsFrame</zorder>
-      <zorder>communityCasesTitle</zorder>
-      <zorder>communityCasesFrame</zorder>
+      <zorder>homeSubHeadingHP</zorder>
+      <zorder>homeTitleHP</zorder>
+      <zorder>alerLevelUpdatesTitleHP</zorder>
+      <zorder>alerLevelUpdatesFrameHP</zorder>
+      <zorder>vaccineStatsTitleHP</zorder>
+      <zorder>vaccineStatsFrameHP</zorder>
+      <zorder>communityCasesTitleHP</zorder>
+      <zorder>communityCasesFrameHP</zorder>
      </widget>
     </widget>
     <widget class="QWidget" name="userProfile">
-     <widget class="QLabel" name="userHomeWhiteBackground_2">
+     <widget class="QLabel" name="userHomeWhiteBackgroundPP">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -1108,7 +1116,7 @@ color:#2B528C;
        <string/>
       </property>
      </widget>
-     <widget class="QFrame" name="userHomeHelloBar_2">
+     <widget class="QFrame" name="userHomeHelloBarPP">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -1127,7 +1135,7 @@ border-radius: 105px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLabel" name="displayPicture_4">
+      <widget class="QLabel" name="displayPicturePP">
        <property name="geometry">
         <rect>
          <x>25</x>
@@ -1143,8 +1151,11 @@ border-radius: 80px;</string>
        <property name="text">
         <string>displayPicture</string>
        </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
       </widget>
-      <widget class="QLabel" name="labelUserName1">
+      <widget class="QLabel" name="labelUserNamePP">
        <property name="geometry">
         <rect>
          <x>18</x>
@@ -1171,7 +1182,7 @@ background: rgba(104, 160, 229, 0.00);</string>
         <string>Username!</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_19">
+      <widget class="QLabel" name="labelHeyTherePP">
        <property name="geometry">
         <rect>
          <x>18</x>
@@ -1198,7 +1209,7 @@ background: rgba(104, 160, 229, 0.00);</string>
         <string>Hey there,</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbLogout1">
+      <widget class="QPushButton" name="pbLogoutPP">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -1236,7 +1247,7 @@ color: #2B528C;
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="userProfileBlueMenuBar">
+     <widget class="QFrame" name="userProfileBlueMenuBarPP">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -1255,7 +1266,7 @@ border-radius: 105px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QPushButton" name="pbHome1">
+      <widget class="QPushButton" name="pbHomePP">
        <property name="geometry">
         <rect>
          <x>-81</x>
@@ -1290,7 +1301,7 @@ font-size: 18px;
         <string>Home</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbProfile1">
+      <widget class="QPushButton" name="pbProfilePP">
        <property name="geometry">
         <rect>
          <x>-50</x>
@@ -1325,7 +1336,7 @@ font-size: 17px;
         <string>My Profile</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbContact1">
+      <widget class="QPushButton" name="pbContactPP">
        <property name="geometry">
         <rect>
          <x>-40</x>
@@ -1361,7 +1372,7 @@ font-size: 18px;
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="userHomeDisplayFrame_2">
+     <widget class="QFrame" name="userHomeDisplayFramePP">
       <property name="geometry">
        <rect>
         <x>220</x>
@@ -1379,7 +1390,7 @@ font-size: 18px;
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLabel" name="homeSubHeading_2">
+      <widget class="QLabel" name="homeSubHeadingPP">
        <property name="geometry">
         <rect>
          <x>21</x>
@@ -1407,7 +1418,7 @@ background: rgba(104, 160, 229, 0.00);
         <string>Track your COVID-19 Vaccines,  test results and more.</string>
        </property>
       </widget>
-      <widget class="QLabel" name="homeTitle_2">
+      <widget class="QLabel" name="homeTitlePP">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -1435,7 +1446,7 @@ background: rgba(104, 160, 229, 0.00);
         <string>My Profile</string>
        </property>
       </widget>
-      <widget class="QFrame" name="userInfoFrame">
+      <widget class="QFrame" name="userInfoFramePP">
        <property name="geometry">
         <rect>
          <x>19</x>
@@ -1454,7 +1465,7 @@ border-radius: 40px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="showUserName">
+       <widget class="QLabel" name="showUserNamePP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -1485,7 +1496,7 @@ color:#2B528C;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="userDOBHeading">
+       <widget class="QLabel" name="labelUserDOBPP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -1513,7 +1524,7 @@ color:#2B528C;
          <string>Birthday</string>
         </property>
        </widget>
-       <widget class="QLabel" name="showUserDOB">
+       <widget class="QLabel" name="showUserDOBPP">
         <property name="geometry">
          <rect>
           <x>15</x>
@@ -1535,7 +1546,7 @@ padding-left: 3px;}</string>
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="showUserNumber">
+       <widget class="QLabel" name="showUserNumberPP">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -1557,7 +1568,7 @@ padding-left: 3px;}</string>
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="userNumberHeading">
+       <widget class="QLabel" name="labelUserNumberPP">
         <property name="geometry">
          <rect>
           <x>15</x>
@@ -1585,7 +1596,7 @@ color:#2B528C;
          <string>Contact Number</string>
         </property>
        </widget>
-       <widget class="QLabel" name="showUserEmail">
+       <widget class="QLabel" name="showUserEmailPP">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -1607,7 +1618,7 @@ padding-left: 3px;}</string>
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="userEmailHeading">
+       <widget class="QLabel" name="labelUserEmailPP">
         <property name="geometry">
          <rect>
           <x>15</x>
@@ -1635,7 +1646,7 @@ color:#2B528C;
          <string>Email Address</string>
         </property>
        </widget>
-       <widget class="QLabel" name="showUserEmergency">
+       <widget class="QLabel" name="showUserEmergencyPP">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -1657,7 +1668,7 @@ padding-left: 3px;}</string>
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="userEmercencyContactHeading">
+       <widget class="QLabel" name="labelUserEmercencyContactPP">
         <property name="geometry">
          <rect>
           <x>15</x>
@@ -1686,7 +1697,7 @@ color:#2B528C;
         </property>
        </widget>
       </widget>
-      <widget class="QFrame" name="vaccineDose1Frame">
+      <widget class="QFrame" name="vaccineDose1FramePP">
        <property name="geometry">
         <rect>
          <x>400</x>
@@ -1705,7 +1716,7 @@ border-radius: 50px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="vaccineIcon1Frame">
+       <widget class="QLabel" name="vaccineIcon1FramePP">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -1725,7 +1736,7 @@ border-radius: 50px;</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="showDose1Name">
+       <widget class="QLabel" name="showDose1NamePP">
         <property name="geometry">
          <rect>
           <x>160</x>
@@ -1756,7 +1767,7 @@ color:#2B528C;
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="showDose1Batch">
+       <widget class="QLabel" name="showDose1BatchPP">
         <property name="geometry">
          <rect>
           <x>160</x>
@@ -1784,7 +1795,7 @@ color:#2B528C;
          <string>Dose 1</string>
         </property>
        </widget>
-       <widget class="QLabel" name="showDose1Date">
+       <widget class="QLabel" name="showDose1DatePP">
         <property name="geometry">
          <rect>
           <x>250</x>
@@ -1815,7 +1826,7 @@ color:#2B528C;
          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="imgVaccineIcon2_2">
+       <widget class="QLabel" name="imgVaccineIcon1PP">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1842,7 +1853,7 @@ border-radius: 50px;</string>
         </property>
        </widget>
       </widget>
-      <widget class="QLabel" name="myVaccinesHeading">
+      <widget class="QLabel" name="labelVaccinesPP">
        <property name="geometry">
         <rect>
          <x>400</x>
@@ -1871,7 +1882,7 @@ background: rgba(254, 206, 103, 0.00);
         <string>My Vaccines</string>
        </property>
       </widget>
-      <widget class="QLabel" name="myDocsHeading">
+      <widget class="QLabel" name="labelMyDocsPP">
        <property name="geometry">
         <rect>
          <x>400</x>
@@ -1900,7 +1911,7 @@ background: rgba(254, 206, 103, 0.00);
         <string>My Documentation</string>
        </property>
       </widget>
-      <widget class="QFrame" name="vaccineDose2Frame">
+      <widget class="QFrame" name="vaccineDose2FramePP">
        <property name="geometry">
         <rect>
          <x>400</x>
@@ -1919,7 +1930,7 @@ border-radius: 50px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="vaccineIcon2Frame">
+       <widget class="QLabel" name="vaccineIcon2FramePP">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -1942,7 +1953,7 @@ border-radius: 50px;</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="showDose2Batch">
+       <widget class="QLabel" name="showDose2BatchPP">
         <property name="geometry">
          <rect>
           <x>160</x>
@@ -1970,7 +1981,7 @@ color:#2B528C;
          <string>Dose 2</string>
         </property>
        </widget>
-       <widget class="QLabel" name="showDose2Name">
+       <widget class="QLabel" name="showDose2NamePP">
         <property name="geometry">
          <rect>
           <x>160</x>
@@ -2001,7 +2012,7 @@ color:#2B528C;
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="showDose2Date">
+       <widget class="QLabel" name="showDose2DatePP">
         <property name="geometry">
          <rect>
           <x>240</x>
@@ -2032,7 +2043,7 @@ color:#2B528C;
          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="imgVaccineIcon2_3">
+       <widget class="QLabel" name="imgVaccineIcon2PP">
         <property name="geometry">
          <rect>
           <x>51</x>
@@ -2059,7 +2070,7 @@ border-radius: 5px;</string>
         </property>
        </widget>
       </widget>
-      <widget class="QFrame" name="userMedicalFrame">
+      <widget class="QFrame" name="userMedicalFramePP">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -2083,7 +2094,7 @@ border-radius: 40px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="userNHIHeading">
+       <widget class="QLabel" name="labelUserNHIPP">
         <property name="geometry">
          <rect>
           <x>15</x>
@@ -2112,7 +2123,7 @@ background: rgba(254, 206, 103, 0.00);
          <string>My NHI</string>
         </property>
        </widget>
-       <widget class="QLabel" name="userVaccStatusHeading">
+       <widget class="QLabel" name="labelUserVaccStatusPP">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -2139,7 +2150,7 @@ background: rgba(254, 206, 103, 0.00);</string>
          <string>Vaccine Status</string>
         </property>
        </widget>
-       <widget class="QLabel" name="showUserCVN">
+       <widget class="QLabel" name="showUserCVNPP">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -2161,7 +2172,7 @@ padding-left: 3px;}</string>
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="showUserVaccStatus">
+       <widget class="QLabel" name="showUserVaccStatusPP">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -2183,7 +2194,7 @@ padding-left: 3px;}</string>
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="userCVNHeading">
+       <widget class="QLabel" name="labelUserCVNPP">
         <property name="geometry">
          <rect>
           <x>15</x>
@@ -2210,7 +2221,7 @@ background: rgba(254, 206, 103, 0.00);</string>
          <string>My CVN </string>
         </property>
        </widget>
-       <widget class="QLabel" name="showUserNHI">
+       <widget class="QLabel" name="showUserNHIPP">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -2232,7 +2243,7 @@ padding-left: 3px;}</string>
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="medicalInfoHeading">
+       <widget class="QLabel" name="labelMedicalInfoPP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -2263,7 +2274,7 @@ background: rgba(254, 206, 103, 0.00);</string>
         </property>
        </widget>
       </widget>
-      <widget class="QFrame" name="testResultFrame">
+      <widget class="QFrame" name="testResultFramePP">
        <property name="geometry">
         <rect>
          <x>400</x>
@@ -2287,7 +2298,7 @@ border-radius: 50px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="showTestResults">
+       <widget class="QLabel" name="showTestResultsPP">
         <property name="geometry">
          <rect>
           <x>9</x>
@@ -2305,7 +2316,7 @@ border-radius: 50px;</string>
         </property>
        </widget>
       </widget>
-      <widget class="QFrame" name="qrCodeFrame">
+      <widget class="QFrame" name="qrCodeFramePP">
        <property name="geometry">
         <rect>
          <x>720</x>
@@ -2329,7 +2340,7 @@ border-radius: 50px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="showQRCode">
+       <widget class="QLabel" name="showQRCodePP">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -2347,7 +2358,7 @@ border-radius: 50px;</string>
         </property>
        </widget>
       </widget>
-      <widget class="QFrame" name="certificateFrame">
+      <widget class="QFrame" name="certificateFramePP">
        <property name="geometry">
         <rect>
          <x>560</x>
@@ -2371,7 +2382,7 @@ border-radius: 50px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="showCertificate">
+       <widget class="QLabel" name="showCertificatePP">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -2389,7 +2400,7 @@ border-radius: 50px;</string>
         </property>
        </widget>
       </widget>
-      <widget class="QLabel" name="myDocsSub">
+      <widget class="QLabel" name="labelClickEnlargePP">
        <property name="geometry">
         <rect>
          <x>400</x>
@@ -2418,7 +2429,7 @@ background: rgba(254, 206, 103, 0.00);
         <string>Click to '+' enlarge your documents.</string>
        </property>
       </widget>
-      <widget class="QLabel" name="testResultText">
+      <widget class="QLabel" name="labelTestResultTextPP">
        <property name="geometry">
         <rect>
          <x>400</x>
@@ -2450,7 +2461,7 @@ background: rgba(254, 206, 103, 0.00);
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="certificateText">
+      <widget class="QLabel" name="labelCertificatePP">
        <property name="geometry">
         <rect>
          <x>560</x>
@@ -2481,7 +2492,7 @@ background: rgba(254, 206, 103, 0.00);
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="qrCodeText">
+      <widget class="QLabel" name="labelQRCodeTextPP">
        <property name="geometry">
         <rect>
          <x>720</x>
@@ -2513,7 +2524,7 @@ background: rgba(254, 206, 103, 0.00);
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbEnlargeResults">
+      <widget class="QPushButton" name="pbEnlargeResultsPP">
        <property name="geometry">
         <rect>
          <x>500</x>
@@ -2548,7 +2559,7 @@ font-size: 11px;
         <string>+</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbEnlargeCertificate">
+      <widget class="QPushButton" name="pbEnlargeCertificatePP">
        <property name="geometry">
         <rect>
          <x>660</x>
@@ -2583,7 +2594,7 @@ font-size: 11px;
         <string>+</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbEnlargeQR">
+      <widget class="QPushButton" name="pbEnlargeQRPP">
        <property name="geometry">
         <rect>
          <x>820</x>
@@ -2618,32 +2629,32 @@ font-size: 11px;
         <string>+</string>
        </property>
       </widget>
-      <zorder>homeSubHeading_2</zorder>
-      <zorder>homeTitle_2</zorder>
-      <zorder>userInfoFrame</zorder>
-      <zorder>vaccineDose1Frame</zorder>
-      <zorder>myDocsHeading</zorder>
-      <zorder>vaccineDose2Frame</zorder>
-      <zorder>userMedicalFrame</zorder>
-      <zorder>testResultFrame</zorder>
-      <zorder>qrCodeFrame</zorder>
-      <zorder>certificateFrame</zorder>
-      <zorder>myDocsSub</zorder>
-      <zorder>testResultText</zorder>
-      <zorder>certificateText</zorder>
-      <zorder>qrCodeText</zorder>
-      <zorder>myVaccinesHeading</zorder>
-      <zorder>pbEnlargeResults</zorder>
-      <zorder>pbEnlargeCertificate</zorder>
-      <zorder>pbEnlargeQR</zorder>
+      <zorder>homeSubHeadingPP</zorder>
+      <zorder>homeTitlePP</zorder>
+      <zorder>userInfoFramePP</zorder>
+      <zorder>vaccineDose1FramePP</zorder>
+      <zorder>labelMyDocsPP</zorder>
+      <zorder>vaccineDose2FramePP</zorder>
+      <zorder>userMedicalFramePP</zorder>
+      <zorder>testResultFramePP</zorder>
+      <zorder>qrCodeFramePP</zorder>
+      <zorder>certificateFramePP</zorder>
+      <zorder>labelClickEnlargePP</zorder>
+      <zorder>labelTestResultTextPP</zorder>
+      <zorder>labelCertificatePP</zorder>
+      <zorder>labelQRCodeTextPP</zorder>
+      <zorder>labelVaccinesPP</zorder>
+      <zorder>pbEnlargeResultsPP</zorder>
+      <zorder>pbEnlargeCertificatePP</zorder>
+      <zorder>pbEnlargeQRPP</zorder>
      </widget>
-     <zorder>userHomeWhiteBackground_2</zorder>
-     <zorder>userProfileBlueMenuBar</zorder>
-     <zorder>userHomeHelloBar_2</zorder>
-     <zorder>userHomeDisplayFrame_2</zorder>
+     <zorder>userHomeWhiteBackgroundPP</zorder>
+     <zorder>userProfileBlueMenuBarPP</zorder>
+     <zorder>userHomeHelloBarPP</zorder>
+     <zorder>userHomeDisplayFramePP</zorder>
     </widget>
     <widget class="QWidget" name="userContact">
-     <widget class="QFrame" name="userProfileBlueMenuBar_2">
+     <widget class="QFrame" name="userProfileBlueMenuBarCP">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -2662,7 +2673,7 @@ border-radius: 105px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QPushButton" name="pbHome2">
+      <widget class="QPushButton" name="pbHomeCP">
        <property name="geometry">
         <rect>
          <x>-81</x>
@@ -2697,7 +2708,7 @@ font-size: 18px;
         <string>Home</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbProfile2">
+      <widget class="QPushButton" name="pbProfileCP">
        <property name="geometry">
         <rect>
          <x>-50</x>
@@ -2732,7 +2743,7 @@ font-size: 18px;
         <string>My Profile</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbContact2">
+      <widget class="QPushButton" name="pbContactCP">
        <property name="geometry">
         <rect>
          <x>-40</x>
@@ -2768,7 +2779,7 @@ font-size: 17px;
        </property>
       </widget>
      </widget>
-     <widget class="QLabel" name="userHomeWhiteBackground_3">
+     <widget class="QLabel" name="userHomeWhiteBackgroundCP">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -2784,7 +2795,7 @@ font-size: 17px;
        <string/>
       </property>
      </widget>
-     <widget class="QFrame" name="userHomeDisplayFrame_3">
+     <widget class="QFrame" name="userHomeDisplayFrameCP">
       <property name="geometry">
        <rect>
         <x>220</x>
@@ -2802,7 +2813,7 @@ font-size: 17px;
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLabel" name="homeSubHeading_3">
+      <widget class="QLabel" name="homeSubHeadingCP">
        <property name="geometry">
         <rect>
          <x>21</x>
@@ -2830,7 +2841,7 @@ background: rgba(104, 160, 229, 0.00);
         <string>Fill in the form below to contact us.</string>
        </property>
       </widget>
-      <widget class="QLabel" name="homeTitle_3">
+      <widget class="QLabel" name="homeTitleCP">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -2858,7 +2869,7 @@ background: rgba(104, 160, 229, 0.00);
         <string>Contact Us</string>
        </property>
       </widget>
-      <widget class="QFrame" name="userInfoFrame_2">
+      <widget class="QFrame" name="userInfoFrameCP">
        <property name="geometry">
         <rect>
          <x>500</x>
@@ -2877,7 +2888,7 @@ border-radius: 40px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="showUserName_2">
+       <widget class="QLabel" name="labelContactCP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -2907,7 +2918,7 @@ background: rgba(254, 206, 103, 0.00);</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="userDOBHeading_2">
+       <widget class="QLabel" name="labelPreferredNameCP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -2936,7 +2947,7 @@ background: rgba(254, 206, 103, 0.00);
          <string>Preferred Name</string>
         </property>
        </widget>
-       <widget class="QLabel" name="userNumberHeading_2">
+       <widget class="QLabel" name="labelPreferredContactCP">
         <property name="geometry">
          <rect>
           <x>15</x>
@@ -2965,7 +2976,7 @@ background: rgba(254, 206, 103, 0.00);
          <string>Preferred Contact</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="editPreferredContact">
+       <widget class="QLineEdit" name="editPreferredContactCP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -2979,12 +2990,12 @@ background: rgba(254, 206, 103, 0.00);
 {background: #F8FBFF;
 border-radius: 15;
 border-color: rgba(104, 160, 229, 0.33);
-color: #F8FBFF;
+color: #2B528C;
 font-size: 16px; 
 padding-left: 3px;}</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="editPreferredName">
+       <widget class="QLineEdit" name="editPreferredNameCP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -2998,13 +3009,13 @@ padding-left: 3px;}</string>
 {background: #F8FBFF;
 border-radius: 15;
 border-color: rgba(104, 160, 229, 0.33);
-color: #F8FBFF;
+color: #2B528C;
 font-size: 16px; 
 padding-left: 3px;}</string>
         </property>
        </widget>
       </widget>
-      <widget class="QFrame" name="userMedicalFrame_3">
+      <widget class="QFrame" name="userMedicalFrameCP">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -3028,7 +3039,7 @@ border-radius: 40px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="medicalInfoHeading_4">
+       <widget class="QLabel" name="labelMedicalInfoCP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -3058,7 +3069,7 @@ background: rgba(254, 206, 103, 0.00);</string>
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="userDOBHeading_3">
+       <widget class="QLabel" name="labelAboutMessageCP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -3087,7 +3098,7 @@ background: rgba(254, 206, 103, 0.00);
          <string>What is your message about?</string>
         </property>
        </widget>
-       <widget class="QLabel" name="userNumberHeading_3">
+       <widget class="QLabel" name="labelMessageSubjectCP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -3116,7 +3127,7 @@ background: rgba(254, 206, 103, 0.00);
          <string>Message Subject</string>
         </property>
        </widget>
-       <widget class="QLabel" name="userNumberHeading_4">
+       <widget class="QLabel" name="labelMessageDetailsCP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -3145,7 +3156,7 @@ background: rgba(254, 206, 103, 0.00);
          <string>My Message</string>
         </property>
        </widget>
-       <widget class="QPlainTextEdit" name="editReportDetails">
+       <widget class="QPlainTextEdit" name="editReportDetailsCP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -3158,12 +3169,12 @@ background: rgba(254, 206, 103, 0.00);
          <string notr="true">background: #F8FBFF;
 border-radius: 20;
 border-color: rgba(104, 160, 229, 0.33);
-color: #F8FBFF;
+color: #2B528C;
 font-size: 16px; 
 padding-left: 5px;</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="editReportSubject">
+       <widget class="QLineEdit" name="editReportSubjectCP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -3177,12 +3188,12 @@ padding-left: 5px;</string>
 {background: #F8FBFF;
 border-radius: 15;
 border-color: rgba(104, 160, 229, 0.33);
-color: #F8FBFF;
+color: #2B528C;
 font-size: 16px; 
 padding-left: 3px;}</string>
         </property>
        </widget>
-       <widget class="QComboBox" name="cbReportCategory">
+       <widget class="QComboBox" name="cbReportCategoryCP">
         <property name="geometry">
          <rect>
           <x>21</x>
@@ -3196,12 +3207,37 @@ padding-left: 3px;}</string>
 {background: #F8FBFF;
 border-radius: 15;
 border-color: rgba(104, 160, 229, 0.33);
-color: #F8FBFF;
+color: #2B528C;
 font-size: 16px; 
 padding-left: 3px;}</string>
         </property>
+        <item>
+         <property name="text">
+          <string>General Enquiries</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COVID-19 Vaccine</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Change/Update Personal Details</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>My COVID Record Application</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Other</string>
+         </property>
+        </item>
        </widget>
-       <widget class="QPushButton" name="pbSendMessage">
+       <widget class="QPushButton" name="pbSendMessageCP">
         <property name="geometry">
          <rect>
           <x>260</x>
@@ -3236,16 +3272,16 @@ font-size: 18px;
          <string>Send Message</string>
         </property>
        </widget>
-       <zorder>editReportSubject</zorder>
-       <zorder>editReportDetails</zorder>
-       <zorder>medicalInfoHeading_4</zorder>
-       <zorder>userDOBHeading_3</zorder>
-       <zorder>userNumberHeading_3</zorder>
-       <zorder>userNumberHeading_4</zorder>
-       <zorder>cbReportCategory</zorder>
-       <zorder>pbSendMessage</zorder>
+       <zorder>editReportSubjectCP</zorder>
+       <zorder>editReportDetailsCP</zorder>
+       <zorder>labelMedicalInfoCP</zorder>
+       <zorder>labelAboutMessageCP</zorder>
+       <zorder>labelMessageSubjectCP</zorder>
+       <zorder>labelMessageDetailsCP</zorder>
+       <zorder>cbReportCategoryCP</zorder>
+       <zorder>pbSendMessageCP</zorder>
       </widget>
-      <widget class="QLabel" name="myVaccinesHeading_2">
+      <widget class="QLabel" name="myVaccinesHeadingCP">
        <property name="geometry">
         <rect>
          <x>500</x>
@@ -3273,7 +3309,7 @@ color:#2B528C;
         <string>Need Help?</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbMCRLink_2">
+      <widget class="QPushButton" name="pbGetVaccinatedLinkCP">
        <property name="geometry">
         <rect>
          <x>500</x>
@@ -3308,10 +3344,10 @@ color: #2B528C;
 }</string>
        </property>
        <property name="text">
-        <string>My COVID-19 Record</string>
+        <string>Get Vaccinated</string>
        </property>
       </widget>
-      <widget class="QLabel" name="homeSubHeading_4">
+      <widget class="QLabel" name="homeSubHeadingCP_2">
        <property name="geometry">
         <rect>
          <x>500</x>
@@ -3339,7 +3375,7 @@ background: rgba(104, 160, 229, 0.00);
         <string>You can find more information here.</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbMCRLink_3">
+      <widget class="QPushButton" name="pbGetTestedLinkCP">
        <property name="geometry">
         <rect>
          <x>500</x>
@@ -3374,10 +3410,10 @@ color: #2B528C;
 }</string>
        </property>
        <property name="text">
-        <string>My COVID-19 Record</string>
+        <string>Get Tested</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbMCRLink_4">
+      <widget class="QPushButton" name="pbLearnMoreLinkCP">
        <property name="geometry">
         <rect>
          <x>500</x>
@@ -3412,11 +3448,11 @@ color: #2B528C;
 }</string>
        </property>
        <property name="text">
-        <string>My COVID-19 Record</string>
+        <string>Learn More</string>
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="userHomeHelloBar_3">
+     <widget class="QFrame" name="userHomeHelloBarCP">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -3435,7 +3471,7 @@ border-radius: 105px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLabel" name="displayPicture_5">
+      <widget class="QLabel" name="displayPictureCP">
        <property name="geometry">
         <rect>
          <x>25</x>
@@ -3451,8 +3487,11 @@ border-radius: 80px;</string>
        <property name="text">
         <string>displayPicture</string>
        </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
       </widget>
-      <widget class="QLabel" name="labelUserName2">
+      <widget class="QLabel" name="labelUserNameCP">
        <property name="geometry">
         <rect>
          <x>18</x>
@@ -3479,7 +3518,7 @@ background: rgba(104, 160, 229, 0.00);</string>
         <string>Username!</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_20">
+      <widget class="QLabel" name="labelHeyThereCP">
        <property name="geometry">
         <rect>
          <x>18</x>
@@ -3506,7 +3545,7 @@ background: rgba(104, 160, 229, 0.00);</string>
         <string>Hey there,</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbLogout2">
+      <widget class="QPushButton" name="pbLogoutCP">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -3544,13 +3583,13 @@ color: #2B528C;
        </property>
       </widget>
      </widget>
-     <zorder>userHomeWhiteBackground_3</zorder>
-     <zorder>userProfileBlueMenuBar_2</zorder>
-     <zorder>userHomeDisplayFrame_3</zorder>
-     <zorder>userHomeHelloBar_3</zorder>
+     <zorder>userHomeWhiteBackgroundCP</zorder>
+     <zorder>userProfileBlueMenuBarCP</zorder>
+     <zorder>userHomeDisplayFrameCP</zorder>
+     <zorder>userHomeHelloBarCP</zorder>
     </widget>
     <widget class="QWidget" name="enlargeTestResultsPage">
-     <widget class="QFrame" name="userHomeHelloBar_4">
+     <widget class="QFrame" name="userHomeHelloBarFS">
       <property name="geometry">
        <rect>
         <x>-10</x>
@@ -3569,7 +3608,7 @@ border-radius: 105px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLabel" name="displayPicture_6">
+      <widget class="QLabel" name="displayPictureFS">
        <property name="geometry">
         <rect>
          <x>25</x>
@@ -3586,7 +3625,7 @@ border-radius: 80px;</string>
         <string>displayPicture</string>
        </property>
       </widget>
-      <widget class="QLabel" name="labelUserName3">
+      <widget class="QLabel" name="labelUserNameFS">
        <property name="geometry">
         <rect>
          <x>18</x>
@@ -3613,7 +3652,7 @@ background: rgba(104, 160, 229, 0.00);</string>
         <string>Username!</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_21">
+      <widget class="QLabel" name="labelHeyThereFS">
        <property name="geometry">
         <rect>
          <x>18</x>
@@ -3640,7 +3679,7 @@ background: rgba(104, 160, 229, 0.00);</string>
         <string>Hey there,</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbLogout3">
+      <widget class="QPushButton" name="pbLogoutFS">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -3678,7 +3717,7 @@ color: #2B528C;
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="userProfileBlueMenuBar_3">
+     <widget class="QFrame" name="userProfileBlueMenuBarFS">
       <property name="geometry">
        <rect>
         <x>-10</x>
@@ -3697,7 +3736,7 @@ border-radius: 105px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QPushButton" name="pbHome3">
+      <widget class="QPushButton" name="pbHomeFS">
        <property name="geometry">
         <rect>
          <x>-81</x>
@@ -3732,7 +3771,7 @@ font-size: 18px;
         <string>Home</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbProfile3">
+      <widget class="QPushButton" name="pbProfileFS">
        <property name="geometry">
         <rect>
          <x>-50</x>
@@ -3767,7 +3806,7 @@ font-size: 17px;
         <string>My Profile</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbContact3">
+      <widget class="QPushButton" name="pbContactFS">
        <property name="geometry">
         <rect>
          <x>-40</x>
@@ -3803,7 +3842,7 @@ font-size: 18px;
        </property>
       </widget>
      </widget>
-     <widget class="QLabel" name="userHomeWhiteBackground_4">
+     <widget class="QLabel" name="userHomeWhiteBackgroundFS">
       <property name="geometry">
        <rect>
         <x>-10</x>
@@ -3819,7 +3858,7 @@ font-size: 18px;
        <string/>
       </property>
      </widget>
-     <widget class="QFrame" name="userHomeDisplayFrame_4">
+     <widget class="QFrame" name="userHomeDisplayFrameFS">
       <property name="geometry">
        <rect>
         <x>220</x>
@@ -3837,7 +3876,7 @@ font-size: 18px;
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLabel" name="homeSubHeading_5">
+      <widget class="QLabel" name="homeSubHeadingFS">
        <property name="geometry">
         <rect>
          <x>21</x>
@@ -3865,7 +3904,7 @@ background: rgba(104, 160, 229, 0.00);
         <string>Track your COVID-19 Vaccines,  test results and more.</string>
        </property>
       </widget>
-      <widget class="QLabel" name="homeTitle_4">
+      <widget class="QLabel" name="homeTitleFS">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -3893,7 +3932,7 @@ background: rgba(104, 160, 229, 0.00);
         <string>My Profile</string>
        </property>
       </widget>
-      <widget class="QFrame" name="userInfoFrame_3">
+      <widget class="QFrame" name="userInfoFrameFS">
        <property name="geometry">
         <rect>
          <x>19</x>
@@ -3912,7 +3951,7 @@ border-radius: 40px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="showUserName_3">
+       <widget class="QLabel" name="showUserNameFS">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -3943,7 +3982,7 @@ color:#2B528C;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="userDOBHeading_4">
+       <widget class="QLabel" name="userDOBHeadingFS">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -3971,7 +4010,7 @@ color:#2B528C;
          <string>Birthday</string>
         </property>
        </widget>
-       <widget class="QLabel" name="showUserDOB_2">
+       <widget class="QLabel" name="showUserDOBFS">
         <property name="geometry">
          <rect>
           <x>15</x>
@@ -3993,7 +4032,7 @@ padding-left: 3px;}</string>
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="showUserNumber_2">
+       <widget class="QLabel" name="showUserNumberFS">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -4015,7 +4054,7 @@ padding-left: 3px;}</string>
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="userNumberHeading_5">
+       <widget class="QLabel" name="userNumberHeadingFS">
         <property name="geometry">
          <rect>
           <x>15</x>
@@ -4043,7 +4082,7 @@ color:#2B528C;
          <string>Contact Number</string>
         </property>
        </widget>
-       <widget class="QLabel" name="showUserEmail_2">
+       <widget class="QLabel" name="showUserEmailFS">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -4065,7 +4104,7 @@ padding-left: 3px;}</string>
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="userEmailHeading_2">
+       <widget class="QLabel" name="userEmailHeadingFS">
         <property name="geometry">
          <rect>
           <x>15</x>
@@ -4093,7 +4132,7 @@ color:#2B528C;
          <string>Email Address</string>
         </property>
        </widget>
-       <widget class="QLabel" name="showUserEmergency_2">
+       <widget class="QLabel" name="showUserEmergencyFS">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -4115,7 +4154,7 @@ padding-left: 3px;}</string>
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="userEmercencyContactHeading_2">
+       <widget class="QLabel" name="userEmercencyContactHeadingFS">
         <property name="geometry">
          <rect>
           <x>15</x>
@@ -4144,7 +4183,7 @@ color:#2B528C;
         </property>
        </widget>
       </widget>
-      <widget class="QFrame" name="vaccineDose1Frame_2">
+      <widget class="QFrame" name="vaccineDose1FrameFS">
        <property name="geometry">
         <rect>
          <x>400</x>
@@ -4163,7 +4202,7 @@ border-radius: 50px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="vaccineIcon1Frame_2">
+       <widget class="QLabel" name="vaccineIcon1FrameFS">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -4183,7 +4222,7 @@ border-radius: 50px;</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="showDose1Name_2">
+       <widget class="QLabel" name="showDose1NameFS">
         <property name="geometry">
          <rect>
           <x>160</x>
@@ -4214,7 +4253,7 @@ color:#2B528C;
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="showDose1Batch_2">
+       <widget class="QLabel" name="showDose1BatchFS">
         <property name="geometry">
          <rect>
           <x>160</x>
@@ -4242,7 +4281,7 @@ color:#2B528C;
          <string>Dose 1</string>
         </property>
        </widget>
-       <widget class="QLabel" name="showDose1Date_2">
+       <widget class="QLabel" name="showDose1DateFS">
         <property name="geometry">
          <rect>
           <x>250</x>
@@ -4273,7 +4312,7 @@ color:#2B528C;
          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="imgVaccineIcon2_4">
+       <widget class="QLabel" name="imgVaccineIcon2FS">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -4300,7 +4339,7 @@ border-radius: 50px;</string>
         </property>
        </widget>
       </widget>
-      <widget class="QLabel" name="myVaccinesHeading_3">
+      <widget class="QLabel" name="myVaccinesHeadingFS">
        <property name="geometry">
         <rect>
          <x>400</x>
@@ -4329,7 +4368,7 @@ background: rgba(254, 206, 103, 0.00);
         <string>My Vaccines</string>
        </property>
       </widget>
-      <widget class="QLabel" name="myDocsHeading_2">
+      <widget class="QLabel" name="myDocsHeadingFS">
        <property name="geometry">
         <rect>
          <x>400</x>
@@ -4358,7 +4397,7 @@ background: rgba(254, 206, 103, 0.00);
         <string>My Documentation</string>
        </property>
       </widget>
-      <widget class="QFrame" name="vaccineDose2Frame_2">
+      <widget class="QFrame" name="vaccineDose2FrameFS">
        <property name="geometry">
         <rect>
          <x>400</x>
@@ -4377,7 +4416,7 @@ border-radius: 50px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="vaccineIcon2Frame_2">
+       <widget class="QLabel" name="vaccineIcon2FrameFS">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -4400,7 +4439,7 @@ border-radius: 50px;</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="showDose2Batch_2">
+       <widget class="QLabel" name="showDose2BatchFS">
         <property name="geometry">
          <rect>
           <x>160</x>
@@ -4428,7 +4467,7 @@ color:#2B528C;
          <string>Dose 2</string>
         </property>
        </widget>
-       <widget class="QLabel" name="showDose2Name_2">
+       <widget class="QLabel" name="showDose2NameFS">
         <property name="geometry">
          <rect>
           <x>160</x>
@@ -4459,7 +4498,7 @@ color:#2B528C;
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="showDose2Date_2">
+       <widget class="QLabel" name="showDose2DateFS">
         <property name="geometry">
          <rect>
           <x>240</x>
@@ -4490,7 +4529,7 @@ color:#2B528C;
          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="imgVaccineIcon2_5">
+       <widget class="QLabel" name="imgVaccineIcon2FS_2">
         <property name="geometry">
          <rect>
           <x>51</x>
@@ -4517,7 +4556,7 @@ border-radius: 5px;</string>
         </property>
        </widget>
       </widget>
-      <widget class="QFrame" name="userMedicalFrame_2">
+      <widget class="QFrame" name="userMedicalFrameFS">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -4541,7 +4580,7 @@ border-radius: 40px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="userNHIHeading_2">
+       <widget class="QLabel" name="userNHIHeadingFS">
         <property name="geometry">
          <rect>
           <x>15</x>
@@ -4570,7 +4609,7 @@ background: rgba(254, 206, 103, 0.00);
          <string>My NHI</string>
         </property>
        </widget>
-       <widget class="QLabel" name="userVaccStatusHeading_2">
+       <widget class="QLabel" name="userVaccStatusHeadingFS">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -4597,7 +4636,7 @@ background: rgba(254, 206, 103, 0.00);</string>
          <string>Vaccine Status</string>
         </property>
        </widget>
-       <widget class="QLabel" name="showUserCVN_2">
+       <widget class="QLabel" name="showUserCVNFS">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -4619,7 +4658,7 @@ padding-left: 3px;}</string>
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="showUserVaccStatus_2">
+       <widget class="QLabel" name="showUserVaccStatusFS">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -4641,7 +4680,7 @@ padding-left: 3px;}</string>
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="userCVNHeading_2">
+       <widget class="QLabel" name="userCVNHeadingFS">
         <property name="geometry">
          <rect>
           <x>15</x>
@@ -4668,7 +4707,7 @@ background: rgba(254, 206, 103, 0.00);</string>
          <string>My CVN </string>
         </property>
        </widget>
-       <widget class="QLabel" name="showUserNHI_2">
+       <widget class="QLabel" name="showUserNHIFS">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -4690,7 +4729,7 @@ padding-left: 3px;}</string>
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="medicalInfoHeading_2">
+       <widget class="QLabel" name="medicalInfoHeadingFS">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -4721,7 +4760,7 @@ background: rgba(254, 206, 103, 0.00);</string>
         </property>
        </widget>
       </widget>
-      <widget class="QFrame" name="testResultFrame_2">
+      <widget class="QFrame" name="testResultFrameFS">
        <property name="geometry">
         <rect>
          <x>400</x>
@@ -4745,7 +4784,7 @@ border-radius: 50px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="showTestResults_2">
+       <widget class="QLabel" name="showTestResultsFS">
         <property name="geometry">
          <rect>
           <x>9</x>
@@ -4763,7 +4802,7 @@ border-radius: 50px;</string>
         </property>
        </widget>
       </widget>
-      <widget class="QFrame" name="qrCodeFrame_2">
+      <widget class="QFrame" name="qrCodeFrameFS">
        <property name="geometry">
         <rect>
          <x>720</x>
@@ -4787,7 +4826,7 @@ border-radius: 50px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="showQRCode_2">
+       <widget class="QLabel" name="showQRCodeFS">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -4805,7 +4844,7 @@ border-radius: 50px;</string>
         </property>
        </widget>
       </widget>
-      <widget class="QFrame" name="certificateFrame_2">
+      <widget class="QFrame" name="certificateFrameFS">
        <property name="geometry">
         <rect>
          <x>560</x>
@@ -4829,7 +4868,7 @@ border-radius: 50px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="showCertificate_2">
+       <widget class="QLabel" name="showCertificateFS">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -4847,7 +4886,7 @@ border-radius: 50px;</string>
         </property>
        </widget>
       </widget>
-      <widget class="QLabel" name="myDocsSub_2">
+      <widget class="QLabel" name="myDocsSubFS">
        <property name="geometry">
         <rect>
          <x>400</x>
@@ -4876,7 +4915,7 @@ background: rgba(254, 206, 103, 0.00);
         <string>Click to '+' enlarge your documents.</string>
        </property>
       </widget>
-      <widget class="QLabel" name="testResultText_2">
+      <widget class="QLabel" name="testResultTextFS">
        <property name="geometry">
         <rect>
          <x>400</x>
@@ -4908,7 +4947,7 @@ background: rgba(254, 206, 103, 0.00);
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="certificateText_2">
+      <widget class="QLabel" name="certificateTextFS">
        <property name="geometry">
         <rect>
          <x>560</x>
@@ -4939,7 +4978,7 @@ background: rgba(254, 206, 103, 0.00);
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="qrCodeText_2">
+      <widget class="QLabel" name="qrCodeTextFS">
        <property name="geometry">
         <rect>
          <x>720</x>
@@ -4971,7 +5010,7 @@ background: rgba(254, 206, 103, 0.00);
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbEnlargeResults_2">
+      <widget class="QPushButton" name="pbEnlargeResultsFS">
        <property name="geometry">
         <rect>
          <x>500</x>
@@ -5006,7 +5045,7 @@ font-size: 11px;
         <string>+</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbEnlargeCertificate_2">
+      <widget class="QPushButton" name="pbEnlargeCertificateFS">
        <property name="geometry">
         <rect>
          <x>660</x>
@@ -5041,7 +5080,7 @@ font-size: 11px;
         <string>+</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbEnlargeQR_2">
+      <widget class="QPushButton" name="pbEnlargeQRFS">
        <property name="geometry">
         <rect>
          <x>820</x>
@@ -5076,7 +5115,7 @@ font-size: 11px;
         <string>+</string>
        </property>
       </widget>
-      <widget class="QLabel" name="closeImageText">
+      <widget class="QLabel" name="closeImageTextFS">
        <property name="geometry">
         <rect>
          <x>812</x>
@@ -5103,7 +5142,7 @@ background: rgba(254, 206, 103, 0.00);</string>
         <string>Close</string>
        </property>
       </widget>
-      <widget class="QFrame" name="frame">
+      <widget class="QFrame" name="frameFS">
        <property name="geometry">
         <rect>
          <x>-1</x>
@@ -5122,7 +5161,7 @@ border: 0px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="showEnlargeTests">
+       <widget class="QLabel" name="showLargeTestsFS">
         <property name="geometry">
          <rect>
           <x>200</x>
@@ -5138,14 +5177,11 @@ border-radius: 25;}</string>
         <property name="text">
          <string/>
         </property>
-        <property name="pixmap">
-         <pixmap resource="Resources.qrc">:/res/images/testResultPositive.png</pixmap>
-        </property>
         <property name="scaledContents">
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QFrame" name="frame_2">
+       <widget class="QFrame" name="frameFS2">
         <property name="geometry">
          <rect>
           <x>0</x>
@@ -5164,7 +5200,7 @@ border: 0px;</string>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QPushButton" name="pbFullScreen">
+        <widget class="QPushButton" name="pbFullScreenFS">
          <property name="geometry">
           <rect>
            <x>723</x>
@@ -5199,7 +5235,7 @@ font-size: 13px;
           <string>Full Screen</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pbCloseImage">
+        <widget class="QPushButton" name="pbCloseImageFS">
          <property name="geometry">
           <rect>
            <x>750</x>
@@ -5234,7 +5270,7 @@ font-size: 13px;
           <string>X</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_2">
+        <widget class="QLabel" name="labelFS">
          <property name="geometry">
           <rect>
            <x>752</x>
@@ -5253,7 +5289,7 @@ color:white;</string>
          </property>
         </widget>
        </widget>
-       <widget class="QLabel" name="showEnlargeCertificate">
+       <widget class="QLabel" name="showLargeCertificateFS">
         <property name="geometry">
          <rect>
           <x>200</x>
@@ -5269,14 +5305,11 @@ border-radius: 25;}</string>
         <property name="text">
          <string/>
         </property>
-        <property name="pixmap">
-         <pixmap resource="Resources.qrc">:/res/images/vaccineCertificate.png</pixmap>
-        </property>
         <property name="scaledContents">
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QLabel" name="showEnlargeQRCodeImage">
+       <widget class="QLabel" name="showLargeQRCodeImageFS">
         <property name="geometry">
          <rect>
           <x>200</x>
@@ -5292,14 +5325,11 @@ border-radius: 25;}</string>
         <property name="text">
          <string/>
         </property>
-        <property name="pixmap">
-         <pixmap resource="Resources.qrc">:/res/images/QRCodeImage.png</pixmap>
-        </property>
         <property name="scaledContents">
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QLabel" name="showLargeQR">
+       <widget class="QLabel" name="showLargeQRFS">
         <property name="geometry">
          <rect>
           <x>315</x>
@@ -5312,17 +5342,17 @@ border-radius: 25;}</string>
          <string/>
         </property>
        </widget>
-       <zorder>frame_2</zorder>
-       <zorder>showEnlargeCertificate</zorder>
-       <zorder>showEnlargeQRCodeImage</zorder>
-       <zorder>showLargeQR</zorder>
-       <zorder>showEnlargeTests</zorder>
+       <zorder>frameFS2</zorder>
+       <zorder>showLargeCertificateFS</zorder>
+       <zorder>showLargeQRCodeImageFS</zorder>
+       <zorder>showLargeQRFS</zorder>
+       <zorder>showLargeTestsFS</zorder>
       </widget>
      </widget>
-     <zorder>userHomeWhiteBackground_4</zorder>
-     <zorder>userHomeHelloBar_4</zorder>
-     <zorder>userProfileBlueMenuBar_3</zorder>
-     <zorder>userHomeDisplayFrame_4</zorder>
+     <zorder>userHomeWhiteBackgroundFS</zorder>
+     <zorder>userHomeHelloBarFS</zorder>
+     <zorder>userProfileBlueMenuBarFS</zorder>
+     <zorder>userHomeDisplayFrameFS</zorder>
     </widget>
    </widget>
   </widget>

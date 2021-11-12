@@ -47,6 +47,10 @@ public:
 
     void pbContactUs();
     void submitReport();
+    void getVaccinatedLink();
+    void getTestedLink();
+    void learnMoreLink();
+    void covidRecordLink();
 
     void logout();
 };
