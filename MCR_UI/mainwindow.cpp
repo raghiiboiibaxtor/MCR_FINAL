@@ -332,9 +332,9 @@ void MainWindow::saveUser()
         ui->listAllUsersAP->addItem(ptrNewCitizen->getNHI());
         // Writing to file
         /// Windows File Path
-        QFile outputFile("Citizens.txt");
+        //QFile outputFile("Citizens.txt");
         /// Mac File Path
-        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -406,8 +406,8 @@ void MainWindow::pbAllUsers()
     ui->stackedWidget->setCurrentIndex(1);
 
     // Open file for reading
-    //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
-    QFile inputFile("Citizens.txt");
+    QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+    //QFile inputFile("Citizens.txt");
     inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
     QTextStream read(&inputFile);
 
@@ -769,9 +769,9 @@ void MainWindow::saveEdit()
 
         // Writing edit to file
         /// Windows File Path
-        QFile outputFile("Citizens.txt");
+        //QFile outputFile("Citizens.txt");
         /// Mac File Path
-        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -873,8 +873,8 @@ void MainWindow::pbReports()
     ui->stackedWidget->setCurrentIndex(3);
 
     // Open file for reading
-    //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
-    QFile inputFile("UserReports.txt");
+    QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+    //QFile inputFile("UserReports.txt");
     inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
     QTextStream read(&inputFile);
 

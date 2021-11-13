@@ -130,8 +130,8 @@ void UserLogin::login()
     }
     else if(NHI != "NHIAdmin")
     {
-        //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
-        QFile inputFile("Citizens.txt");
+        QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+        //QFile inputFile("Citizens.txt");
         inputFile.open(QIODevice::ReadOnly | QIODevice::Text);
         QTextStream read(&inputFile);
 
@@ -344,9 +344,9 @@ void UserLogin::submitReport()
 
     // Writing to file
     /// Windows File Path
-    QFile outputFile("UserReports.txt");
+    //QFile outputFile("UserReports.txt");
     /// Mac File Path
-    //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+    QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
 
     QTextStream out(&outputFile);
     outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
