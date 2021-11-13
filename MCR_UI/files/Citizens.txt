@@ -1,1 +1,1 @@
-Raghii,1234234,raghii@login,23413,NHI12345,gerera,vefvarfe,Not Vaccinated,CVN12345,egwtgtg,rtgrw,wgwrtg,wegwerg,wegwg,vdfvafdv,./vaccineCertificates/vaccineCertificate.png,./qrCodes/qrCode.png,./testResults/testResultPositive.png,
+Raghiiboii;;12345678;;raghii@login;;231095;;NHI1234;;Meagan Mathers;;Hello Test Notes;;Not Vaccinated;;CVN1234;;;;;;;;;;;;;;./vaccineCertificates/vaccineCertificate.png;;;;;;

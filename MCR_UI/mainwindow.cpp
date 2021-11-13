@@ -217,6 +217,20 @@ void MainWindow::addCertificateImage()
         ui->addCertificateAP->setScaledContents(true);
 
         certificateImage = "./vaccineCertificates/" + shortName;
+
+
+       /* QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates/vaxCertificates.txt");
+
+        QTextStream out(&outputFile);
+        outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
+        out << ptrCurrentCitizen->getCertificate() << Qt::endl << Qt::endl;
+
+    // Flushing file and then closing.
+    out.flush();
+    outputFile.close();*/
+
+
+
     }
 } /// End of addCertificateImage()
 
@@ -341,25 +355,25 @@ void MainWindow::saveUser()
 
             for (int i = 0; i < userList.size(); i++)
                {
-                out << userList.at(i)->getName() << ",";
-                out << userList.at(i)->getContactNumber() << ",";
-                out << userList.at(i)->getEmailAddress() << ",";
-                out << userList.at(i)->getDateOfBirth() << ",";
-                out << userList.at(i)->getNHI() << ",";
-                out << userList.at(i)->getEmergencyContact() << ",";
-                out << userList.at(i)->getAdditionalNotes() << ",";
-                out << userList.at(i)->getVaccineStatus() << ",";
-                out << userList.at(i)->getCVN()<< ",";
-                out << userList.at(i)->getVaccineName1() << ",";
-                out << userList.at(i)->getBatchNumber1() << ",";
-                out << userList.at(i)->getDateGiven1() << ",";
-                out << userList.at(i)->getVaccineName2() << ",";
-                out << userList.at(i)->getBatchNumber2() << ",";
-                out << userList.at(i)->getDateGiven2() << ",";
-                out << userList.at(i)->getCertificate() << ",";
-                out << userList.at(i)->getQRCode() << ",";
-                out << userList.at(i)->getTestResult() << ",";
-                out << userList.at(i)->getCitizenImage() << Qt::endl;
+                out << userList.at(i)->getName() << ";;";
+                out << userList.at(i)->getContactNumber() << ";;";
+                out << userList.at(i)->getEmailAddress() << ";;";
+                out << userList.at(i)->getDateOfBirth() << ";;";
+                out << userList.at(i)->getNHI() << ";;";
+                out << userList.at(i)->getEmergencyContact() << ";;";
+                out << userList.at(i)->getAdditionalNotes() << ";;";
+                out << userList.at(i)->getVaccineStatus() << ";;";
+                out << userList.at(i)->getCVN()<< ";;";
+                out << userList.at(i)->getVaccineName1() << ";;";
+                out << userList.at(i)->getBatchNumber1() << ";;";
+                out << userList.at(i)->getDateGiven1() << ";;";
+                out << userList.at(i)->getVaccineName2() << ";;";
+                out << userList.at(i)->getBatchNumber2() << ";;";
+                out << userList.at(i)->getDateGiven2() << ";;";
+                out << userList.at(i)->getCertificate() << ";;";
+                out << userList.at(i)->getQRCode() << ";;";
+                out << userList.at(i)->getTestResult() << ";;";
+                out << userList.at(i)->getCitizenImage() << Qt::endl<<Qt::endl;
                }
             // Flushing file and then closing.
             out.flush();
@@ -427,7 +441,7 @@ void MainWindow::pbAllUsers()
    {
        // Reading from file and seperating info at text.split()
         QString text = read.readLine();
-        QStringList info = text.split(",");
+        QStringList info = text.split(";;");
 
        // Add read information to ui
        ui->listAllUsersAUP->addItem(info.at(4));
@@ -778,25 +792,25 @@ void MainWindow::saveEdit()
 
             for (int i = 0; i < userList.size(); i++)
                {
-                out << userList.at(i)->getName() << ",";
-                out << userList.at(i)->getContactNumber() << ",";
-                out << userList.at(i)->getEmailAddress() << ",";
-                out << userList.at(i)->getDateOfBirth() << ",";
-                out << userList.at(i)->getNHI() << ",";
-                out << userList.at(i)->getEmergencyContact() << ",";
-                out << userList.at(i)->getAdditionalNotes() << ",";
-                out << userList.at(i)->getVaccineStatus() << ",";
-                out << userList.at(i)->getCVN()<< ",";
-                out << userList.at(i)->getVaccineName1() << ",";
-                out << userList.at(i)->getBatchNumber1() << ",";
-                out << userList.at(i)->getDateGiven1() << ",";
-                out << userList.at(i)->getVaccineName2() << ",";
-                out << userList.at(i)->getBatchNumber2() << ",";
-                out << userList.at(i)->getDateGiven2() << ",";
-                out << userList.at(i)->getCertificate() << ",";
-                out << userList.at(i)->getQRCode() << ",";
-                out << userList.at(i)->getTestResult() << ",";
-                out << userList.at(i)->getCitizenImage() << Qt::endl;
+                out << userList.at(i)->getName() << ";;";
+                out << userList.at(i)->getContactNumber() << ";;";
+                out << userList.at(i)->getEmailAddress() << ";;";
+                out << userList.at(i)->getDateOfBirth() << ";;";
+                out << userList.at(i)->getNHI() << ";;";
+                out << userList.at(i)->getEmergencyContact() << ";;";
+                out << userList.at(i)->getAdditionalNotes() << ";;";
+                out << userList.at(i)->getVaccineStatus() << ";;";
+                out << userList.at(i)->getCVN()<< ";;";
+                out << userList.at(i)->getVaccineName1() << ";;";
+                out << userList.at(i)->getBatchNumber1() << ";;";
+                out << userList.at(i)->getDateGiven1() << ";;";
+                out << userList.at(i)->getVaccineName2() << ";;";
+                out << userList.at(i)->getBatchNumber2() << ";;";
+                out << userList.at(i)->getDateGiven2() << ";;";
+                out << userList.at(i)->getCertificate() << ";;";
+                out << userList.at(i)->getQRCode() << ";;";
+                out << userList.at(i)->getTestResult() << ";;";
+                out << userList.at(i)->getCitizenImage() << Qt::endl<<Qt::endl;
                }
             // Flushing file and then closing.
             out.flush();
@@ -891,7 +905,7 @@ void MainWindow::pbReports()
     {
         // Reading from file and seperating info at text.split()
         QString text = read.readLine();
-        QStringList info = text.split(",");
+        QStringList info = text.split(";;");
 
         // Add read information to ui list widget
         ui->listAllReportsRP->addItem(info.at(2)); // Display subject in list widget

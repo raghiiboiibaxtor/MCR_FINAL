@@ -32,7 +32,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="adminHomePage">
      <widget class="QFrame" name="userHomeHelloBarHP">
@@ -4591,6 +4591,9 @@ padding-left: 3px;}</string>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
         </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
        </widget>
        <zorder>showReportDetailsRP</zorder>
        <zorder>showReportSubjectRP</zorder>
@@ -5195,37 +5198,6 @@ border-radius: 50px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="editUserNameEP">
-        <property name="geometry">
-         <rect>
-          <x>120</x>
-          <y>20</y>
-          <width>331</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial Rounded MT Bold</family>
-          <pointsize>-1</pointsize>
-          <weight>37</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font-weight: 300;
-font-size: 23px;
-color:#2B528C;
-background: rgba(254, 206, 103, 0.00);
-</string>
-        </property>
-        <property name="text">
-         <string>User Full Name</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
        <widget class="QLabel" name="labelNHIEP">
         <property name="geometry">
          <rect>
@@ -5593,7 +5565,7 @@ padding-left: 5px;</string>
          <rect>
           <x>120</x>
           <y>60</y>
-          <width>101</width>
+          <width>111</width>
           <height>31</height>
          </rect>
         </property>
@@ -5613,9 +5585,9 @@ padding-left: 3px;}</string>
        <widget class="QLineEdit" name="editUserPhoneEP">
         <property name="geometry">
          <rect>
-          <x>247</x>
+          <x>240</x>
           <y>60</y>
-          <width>111</width>
+          <width>131</width>
           <height>31</height>
          </rect>
         </property>
@@ -6084,9 +6056,9 @@ color:#2B528C;</string>
        <widget class="QComboBox" name="editUserVaccineSBEP">
         <property name="geometry">
          <rect>
-          <x>380</x>
+          <x>430</x>
           <y>20</y>
-          <width>241</width>
+          <width>191</width>
           <height>31</height>
          </rect>
         </property>
@@ -6265,6 +6237,31 @@ background: rgba(254, 206, 103, 0.00);
          <string>Click grey text to edit</string>
         </property>
        </widget>
+       <widget class="QLineEdit" name="editUserNameEP">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>20</y>
+          <width>301</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit
+{background: #F8FBFF;
+border-radius: 15;
+border-color: rgba(104, 160, 229, 0.33);
+color: #2B528C;
+font-size: 12px; 
+padding-left: 3px;}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>Edit User Name</string>
+        </property>
+       </widget>
        <zorder>editTestResultsEP</zorder>
        <zorder>editQRCodeEP</zorder>
        <zorder>vaccineDose1FrameEP</zorder>
@@ -6272,7 +6269,6 @@ background: rgba(254, 206, 103, 0.00);
        <zorder>editUserPhoneEP</zorder>
        <zorder>editUserDOBEP</zorder>
        <zorder>editUserNotesEP</zorder>
-       <zorder>editUserNameEP</zorder>
        <zorder>labelNHIEP</zorder>
        <zorder>labelEmergencyEP</zorder>
        <zorder>labelAdditionalNotesEP</zorder>
@@ -6298,6 +6294,7 @@ background: rgba(254, 206, 103, 0.00);
        <zorder>pbEditQRCodeEP</zorder>
        <zorder>pbEditCertificateEP</zorder>
        <zorder>labelClickEditEP</zorder>
+       <zorder>editUserNameEP</zorder>
       </widget>
       <widget class="QPushButton" name="pbSearchEP">
        <property name="geometry">
