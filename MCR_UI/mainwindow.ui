@@ -32,7 +32,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="adminHomePage">
      <widget class="QFrame" name="userHomeHelloBarHP">
@@ -3211,7 +3211,7 @@ font-size: 12px;
 padding-left: 3px;}</string>
         </property>
         <property name="placeholderText">
-         <string>Please include emergency contact full name and contact phone number.</string>
+         <string>Please include emergency contact full name and contact phone number without using commas.</string>
         </property>
        </widget>
        <widget class="QPlainTextEdit" name="addNotesAP">

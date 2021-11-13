@@ -1,3 +1,1 @@
-dsf,,sdf,,sdf,,,Not Vaccinated,,,,,,,,,,,
-Tess Williams,021 44 55 ,tess@,11/11/11,NHI,Reub 111,dfgdfg,Not Vaccinated,cv,Pfizer,BN22,22/22,Pfizer,BN5555,33/33,,,,
-dfgdf,,fdgdf,,dfgdfg,,,Not Vaccinated,,,,,,,,./vaccineCertificates/QRCodeImage.png,./qrCodes/vaccineCertificate.png,./testResults/testResultPositive.png,./userProfilePictures/iconVaccine.png
+Tess Williams,027 222 333,name@testing.com,11/12/1996,NHI456,Reuben Watson 027 555 666,,Fully Vaccinated,CV0000002,Pfizer,BN# 58964,10/10/2021,Pfizer,BN# 96642,30/11/2021,./vaccineCertificates/vaccineCertificate.png,./qrCodes/QRCodeImage.png,./testResults/testResultPositive.png,

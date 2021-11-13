@@ -332,9 +332,9 @@ void MainWindow::saveUser()
         ui->listAllUsersAP->addItem(ptrNewCitizen->getNHI());
         // Writing to file
         /// Windows File Path
-        //QFile outputFile("Citizens.txt");
+        QFile outputFile("Citizens.txt");
         /// Mac File Path
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -406,8 +406,8 @@ void MainWindow::pbAllUsers()
     ui->stackedWidget->setCurrentIndex(1);
 
     // Open file for reading
-    QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
-    //QFile inputFile("Citizens.txt");
+    //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+    QFile inputFile("Citizens.txt");
     inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
     QTextStream read(&inputFile);
 
@@ -568,12 +568,13 @@ void MainWindow::searchUser()
 void MainWindow:: editUser()
 {
     int listNum = ui->listAllUsersAUP->currentRow();
-    // Changing UI page
-    ui->stackedWidget->setCurrentIndex(4);
 
     if (listNum != -1)
     {
-        ptrCurrentCitizen = userList.at(listNum);
+        // Changing UI page
+        ui->stackedWidget->setCurrentIndex(4);
+
+        ptrCurrentCitizen = userList.at(listNum);        
 
             if (ptrCurrentCitizen != nullptr)
            {          
@@ -768,9 +769,9 @@ void MainWindow::saveEdit()
 
         // Writing edit to file
         /// Windows File Path
-        //QFile outputFile("Citizens.txt");
+        QFile outputFile("Citizens.txt");
         /// Mac File Path
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -833,13 +834,19 @@ void MainWindow::saveEdit()
             ui->showUserNotesAUP->setText(ptrCurrentCitizen->getAdditionalNotes());
             ui->showUserVaccStatusAUP->setText(ptrCurrentCitizen->getVaccineStatus());
             ui->showUserCVNAUP->setText(ptrCurrentCitizen->getCVN());
-            QPixmap pixmap(ptrCurrentCitizen->getCitizenImage());
+            ui->show1stDoseNameAUP->setText(ptrCurrentCitizen->getVaccineName1());
+            ui->show1stDoseBatchAUP->setText(ptrCurrentCitizen->getBatchNumber1());
+            ui->show1stDoseDateAUP->setText(ptrCurrentCitizen->getDateGiven1());
+            ui->show2ndDoseNameAUP->setText(ptrCurrentCitizen->getVaccineName2());
+            ui->show2ndDoseBatchAUP->setText(ptrCurrentCitizen->getBatchNumber2());
+            ui->show2ndDoseDateAUP->setText(ptrCurrentCitizen->getDateGiven2());
+            QPixmap pixmap(ptrCurrentCitizen->getCertificate());
             ui->showCertificateAUP->setPixmap(pixmap);
             ui->showCertificateAUP->setScaledContents(true);
-            QPixmap pixmap1(ptrCurrentCitizen->getCitizenImage());
+            QPixmap pixmap1(ptrCurrentCitizen->getQRCode());
             ui->showQRCodeAUP->setPixmap(pixmap1);
             ui->showQRCodeAUP->setScaledContents(true);
-            QPixmap pixmap2(ptrCurrentCitizen->getCitizenImage());
+            QPixmap pixmap2(ptrCurrentCitizen->getTestResult());
             ui->showTestResultsAUP->setPixmap(pixmap2);
             ui->showTestResultsAUP->setScaledContents(true);
             QPixmap pixmap3(ptrCurrentCitizen->getCitizenImage());
@@ -866,8 +873,8 @@ void MainWindow::pbReports()
     ui->stackedWidget->setCurrentIndex(3);
 
     // Open file for reading
-    QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
-    //QFile inputFile("UserReports.txt");
+    //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+    QFile inputFile("UserReports.txt");
     inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
     QTextStream read(&inputFile);
 

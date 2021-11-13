@@ -2421,8 +2421,8 @@ public:
 "{background: rgba(254, 206, 103, 0.88);\n"
 "border-radius: 15;\n"
 "border-color: rgba(104, 160, 229, 0.33);\n"
-"color: #F8FBFF;\n"
-"font-size: 16px; \n"
+"color: #2B528C;\n"
+"font-size: 12px; \n"
 "padding-left: 3px;}"));
         editUserCVNEP = new QLineEdit(userInfoFrameEP);
         editUserCVNEP->setObjectName(QString::fromUtf8("editUserCVNEP"));
@@ -2432,7 +2432,7 @@ public:
 "border-radius: 15;\n"
 "border-color: rgba(104, 160, 229, 0.33);\n"
 "color: #2B528C;\n"
-"font-size: 16px; \n"
+"font-size: 12px; \n"
 "padding-left: 3px;}"));
         editUserEmergencyEP = new QLineEdit(userInfoFrameEP);
         editUserEmergencyEP->setObjectName(QString::fromUtf8("editUserEmergencyEP"));
@@ -2635,7 +2635,6 @@ public:
         editUserVaccineSBEP->setFont(font3);
         editUserVaccineSBEP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
 "border-radius: 15;\n"
-"border: 1px solid #C4DBF4;\n"
 "color: #2B528C;\n"
 "font-size: 12px; \n"
 "padding-left: 3px;\n"
@@ -2893,7 +2892,7 @@ public:
         pbSaveAP->setText(QCoreApplication::translate("MainWindow", "Save User", nullptr));
         labelConfidentialAP->setText(QCoreApplication::translate("MainWindow", "This information is confidential.", nullptr));
         labelUnauthorisedAP->setText(QCoreApplication::translate("MainWindow", "Unauthorised access and changes will result in legal action.", nullptr));
-        addUserEmergencyAP->setPlaceholderText(QCoreApplication::translate("MainWindow", "Please include emergency contact full name and contact phone number.", nullptr));
+        addUserEmergencyAP->setPlaceholderText(QCoreApplication::translate("MainWindow", "Please include emergency contact full name and contact phone number without using commas.", nullptr));
         addUserDOBAP->setPlaceholderText(QCoreApplication::translate("MainWindow", "Birthday", nullptr));
         addUserPhoneAP->setPlaceholderText(QCoreApplication::translate("MainWindow", "Phone Number", nullptr));
         addUserEmailAP->setPlaceholderText(QCoreApplication::translate("MainWindow", "Email Address", nullptr));

@@ -107,11 +107,11 @@ void UserLogin::login()
 
     // Check if login input matches, if not, an error message will be displayed
     // If correct, directed to Home Page
-    if (NHI == "1") // Admin Login Check Loop
+    if (NHI == "NHIAdmin") // Admin Login Check Loop
     {
-        if (email == "1")
+        if (email == "admin@mycovidrecord.co.nz")
         {
-            if (accessNumber == "1")
+            if (accessNumber == "4242")
             {
                 this->hide();
                 // Displays Admin Home Page
@@ -128,10 +128,10 @@ void UserLogin::login()
             ui->labelErrorLP->setText("Incorrect Email Entered");
         }
     }
-    else if(NHI != "1")
+    else if(NHI != "NHIAdmin")
     {
-        QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
-        //QFile inputFile("Citizens.txt");
+        //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+        QFile inputFile("Citizens.txt");
         inputFile.open(QIODevice::ReadOnly | QIODevice::Text);
         QTextStream read(&inputFile);
 
@@ -153,7 +153,7 @@ void UserLogin::login()
 
             if (email == fileEmail && NHI == fileNHI) // User Login Check Loop
             {
-                if (accessNumber == "1234")
+                if (accessNumber == "5656")
                 {
                     // Adding file information to vector
                     classCitizen* temp = new classCitizen(info.at(0), info.at(1), info.at(2), info.at(3), info.at(4), info.at(5), info.at(6), info.at(7), info.at(8), info.at(9), info.at(10),
@@ -218,11 +218,11 @@ void UserLogin::login()
             }
             else if (NHI != fileEmail)
             {
-                ui->labelErrorLP->setText("Incorrect NHI Entered");
+                ui->labelErrorLP->setText("Incorrect Email Entered");
             }
             else
             {
-                ui->labelErrorLP->setText("Incorrect Email Entered");
+                ui->labelErrorLP->setText("Incorrect NHI Entered");
             }
         }
         //Flushing file and then closing.

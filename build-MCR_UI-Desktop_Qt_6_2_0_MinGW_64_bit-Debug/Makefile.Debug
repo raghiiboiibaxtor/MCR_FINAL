@@ -123,6 +123,7 @@ debug/qrc_Resources.cpp: ../MCR_UI/Resources.qrc \
 		../MCR_UI/images/QRCodeImage.png \
 		../MCR_UI/images/iconArrow.png \
 		../MCR_UI/images/iconVaccine.png \
+		../MCR_UI/images/qrCode.png \
 		../MCR_UI/images/imgHome1.png \
 		../MCR_UI/images/iconArrow1.png
 	D:\Tess\Qt\6.2.0\mingw81_64\bin\rcc.exe -name Resources ..\MCR_UI\Resources.qrc -o debug\qrc_Resources.cpp
@@ -922,6 +923,58 @@ debug/mainwindow.o: ../MCR_UI/mainwindow.cpp ../MCR_UI/mainwindow.h \
 		../MCR_UI/citizenreport.h \
 		../MCR_UI/userlogin.h \
 		ui_mainwindow.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/QVariant \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/QIcon \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QApplication \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qapplication.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qcoreapplication.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qeventloop.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qfuture.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qfutureinterface.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qmutex.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qresultstore.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qfuture_impl.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qthreadpool.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qthread.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qdeadlinetimer.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qelapsedtimer.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qrunnable.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qexception.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qapplicationpermission.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qcoreapplication_platform.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qguiapplication.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qinputmethod.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qguiapplication_platform.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QComboBox \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qcombobox.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QFrame \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QLabel \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qlabel.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qpicture.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qtextdocument.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QLineEdit \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qlineedit.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qtextcursor.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qtextformat.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qpen.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qtextoption.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QListWidget \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QPlainTextEdit \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qplaintextedit.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qtextedit.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qabstracttextdocumentlayout.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qtextlayout.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qglyphrun.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qrawfont.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qfontdatabase.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QPushButton \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qpushbutton.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qabstractbutton.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QStackedWidget \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qstackedwidget.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QStatusBar \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qstatusbar.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QWidget \
 		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/QFile \
 		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qfile.h \
 		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qfiledevice.h \
@@ -1098,13 +1151,67 @@ debug/userlogin.o: ../MCR_UI/userlogin.cpp ../MCR_UI/userlogin.h \
 		../MCR_UI/classcitizen.h \
 		../MCR_UI/citizenreport.h \
 		ui_userlogin.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/QVariant \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/QIcon \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QApplication \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qapplication.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qcoreapplication.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qeventloop.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qfuture.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qfutureinterface.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qmutex.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qresultstore.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qfuture_impl.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qthreadpool.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qthread.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qdeadlinetimer.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qelapsedtimer.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qrunnable.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qexception.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qapplicationpermission.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qcoreapplication_platform.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qguiapplication.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qinputmethod.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qguiapplication_platform.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QComboBox \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qcombobox.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QFrame \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QLabel \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qlabel.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qpicture.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qtextdocument.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QLineEdit \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qlineedit.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qtextcursor.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qtextformat.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qpen.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qtextoption.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QPlainTextEdit \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qplaintextedit.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qtextedit.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qabstracttextdocumentlayout.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qtextlayout.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qglyphrun.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qrawfont.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qfontdatabase.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QPushButton \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qpushbutton.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qabstractbutton.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QStackedWidget \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qstackedwidget.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QStatusBar \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qstatusbar.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QWidget \
 		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/QFile \
 		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qfile.h \
 		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qfiledevice.h \
 		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/QTextStream \
 		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/QMessageBox \
 		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qmessagebox.h \
-		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qdialog.h
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtWidgets/qdialog.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/QUrl \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/QDesktopServices \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qdesktopservices.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\userlogin.o ..\MCR_UI\userlogin.cpp
 
 debug/qrc_Resources.o: debug/qrc_Resources.cpp 

@@ -119,6 +119,7 @@ public:
     QFrame *testResultFramePP;
     QLabel *showTestResultsPP;
     QFrame *qrCodeFramePP;
+    QLabel *QRCodeFramePP;
     QLabel *showQRCodePP;
     QFrame *certificateFramePP;
     QLabel *showCertificatePP;
@@ -1127,25 +1128,32 @@ public:
         testResultFramePP->setGeometry(QRect(400, 540, 131, 201));
         testResultFramePP->setFont(font8);
         testResultFramePP->setStyleSheet(QString::fromUtf8("background: #F2F8FC;\n"
-"border-radius: 50px;"));
+"border-radius: 20px;"));
         testResultFramePP->setFrameShape(QFrame::StyledPanel);
         testResultFramePP->setFrameShadow(QFrame::Raised);
         showTestResultsPP = new QLabel(testResultFramePP);
         showTestResultsPP->setObjectName(QString::fromUtf8("showTestResultsPP"));
-        showTestResultsPP->setGeometry(QRect(9, 10, 111, 181));
+        showTestResultsPP->setGeometry(QRect(9, 26, 111, 151));
         showTestResultsPP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
-"border-radius: 50px;"));
+"border-radius: 20px;"));
         qrCodeFramePP = new QFrame(userHomeDisplayFramePP);
         qrCodeFramePP->setObjectName(QString::fromUtf8("qrCodeFramePP"));
         qrCodeFramePP->setGeometry(QRect(720, 540, 131, 201));
         qrCodeFramePP->setFont(font8);
         qrCodeFramePP->setStyleSheet(QString::fromUtf8("background: #F2F8FC;\n"
-"border-radius: 50px;"));
+"border-radius: 20px;"));
         qrCodeFramePP->setFrameShape(QFrame::StyledPanel);
         qrCodeFramePP->setFrameShadow(QFrame::Raised);
+        QRCodeFramePP = new QLabel(qrCodeFramePP);
+        QRCodeFramePP->setObjectName(QString::fromUtf8("QRCodeFramePP"));
+        QRCodeFramePP->setGeometry(QRect(10, 27, 111, 151));
+        QRCodeFramePP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
+"border-radius: 20px;"));
+        QRCodeFramePP->setPixmap(QPixmap(QString::fromUtf8(":/res/images/QRCodeImage.png")));
+        QRCodeFramePP->setScaledContents(true);
         showQRCodePP = new QLabel(qrCodeFramePP);
         showQRCodePP->setObjectName(QString::fromUtf8("showQRCodePP"));
-        showQRCodePP->setGeometry(QRect(10, 10, 111, 181));
+        showQRCodePP->setGeometry(QRect(41, 113, 51, 51));
         showQRCodePP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
 "border-radius: 50px;"));
         certificateFramePP = new QFrame(userHomeDisplayFramePP);
@@ -1153,14 +1161,15 @@ public:
         certificateFramePP->setGeometry(QRect(560, 540, 131, 201));
         certificateFramePP->setFont(font8);
         certificateFramePP->setStyleSheet(QString::fromUtf8("background: #F2F8FC;\n"
-"border-radius: 50px;"));
+"border-radius: 20px;"));
         certificateFramePP->setFrameShape(QFrame::StyledPanel);
         certificateFramePP->setFrameShadow(QFrame::Raised);
         showCertificatePP = new QLabel(certificateFramePP);
         showCertificatePP->setObjectName(QString::fromUtf8("showCertificatePP"));
-        showCertificatePP->setGeometry(QRect(10, 10, 111, 181));
+        showCertificatePP->setGeometry(QRect(10, 26, 111, 151));
         showCertificatePP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
-"border-radius: 50px;"));
+"border-radius: 20px;"));
+        showCertificatePP->setScaledContents(true);
         labelClickEnlargePP = new QLabel(userHomeDisplayFramePP);
         labelClickEnlargePP->setObjectName(QString::fromUtf8("labelClickEnlargePP"));
         labelClickEnlargePP->setGeometry(QRect(400, 514, 431, 20));
@@ -1205,7 +1214,7 @@ public:
         labelQRCodeTextPP->setAlignment(Qt::AlignCenter);
         pbEnlargeResultsPP = new QPushButton(userHomeDisplayFramePP);
         pbEnlargeResultsPP->setObjectName(QString::fromUtf8("pbEnlargeResultsPP"));
-        pbEnlargeResultsPP->setGeometry(QRect(500, 540, 31, 31));
+        pbEnlargeResultsPP->setGeometry(QRect(500, 710, 31, 31));
         pbEnlargeResultsPP->setFont(font9);
         pbEnlargeResultsPP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background: #2B528C;\n"
@@ -1221,7 +1230,7 @@ public:
 "}"));
         pbEnlargeCertificatePP = new QPushButton(userHomeDisplayFramePP);
         pbEnlargeCertificatePP->setObjectName(QString::fromUtf8("pbEnlargeCertificatePP"));
-        pbEnlargeCertificatePP->setGeometry(QRect(660, 540, 31, 31));
+        pbEnlargeCertificatePP->setGeometry(QRect(660, 710, 31, 31));
         pbEnlargeCertificatePP->setFont(font9);
         pbEnlargeCertificatePP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background: #2B528C;\n"
@@ -1237,7 +1246,7 @@ public:
 "}"));
         pbEnlargeQRPP = new QPushButton(userHomeDisplayFramePP);
         pbEnlargeQRPP->setObjectName(QString::fromUtf8("pbEnlargeQRPP"));
-        pbEnlargeQRPP->setGeometry(QRect(820, 540, 31, 31));
+        pbEnlargeQRPP->setGeometry(QRect(820, 710, 31, 31));
         pbEnlargeQRPP->setFont(font9);
         pbEnlargeQRPP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background: #2B528C;\n"
@@ -2295,7 +2304,7 @@ public:
 
         retranslateUi(UserLogin);
 
-        stackedWidget->setCurrentIndex(3);
+        stackedWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(UserLogin);
@@ -2371,9 +2380,10 @@ public:
         labelUserCVNPP->setText(QCoreApplication::translate("UserLogin", "My CVN ", nullptr));
         showUserNHIPP->setText(QString());
         labelMedicalInfoPP->setText(QCoreApplication::translate("UserLogin", "Medical Information", nullptr));
-        showTestResultsPP->setText(QCoreApplication::translate("UserLogin", "Test Image Label", nullptr));
-        showQRCodePP->setText(QCoreApplication::translate("UserLogin", "QR Code", nullptr));
-        showCertificatePP->setText(QCoreApplication::translate("UserLogin", "Certificate Image", nullptr));
+        showTestResultsPP->setText(QString());
+        QRCodeFramePP->setText(QString());
+        showQRCodePP->setText(QString());
+        showCertificatePP->setText(QString());
         labelClickEnlargePP->setText(QCoreApplication::translate("UserLogin", "Click to '+' enlarge your documents.", nullptr));
         labelTestResultTextPP->setText(QCoreApplication::translate("UserLogin", "Test Results", nullptr));
         labelCertificatePP->setText(QCoreApplication::translate("UserLogin", "Certificates", nullptr));
