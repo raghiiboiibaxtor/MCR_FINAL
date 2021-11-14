@@ -2726,7 +2726,7 @@ border-radius: 40px;</string>
         <property name="geometry">
          <rect>
           <x>25</x>
-          <y>110</y>
+          <y>103</y>
           <width>101</width>
           <height>20</height>
          </rect>
@@ -2754,7 +2754,7 @@ background: rgba(254, 206, 103, 0.00);
         <property name="geometry">
          <rect>
           <x>25</x>
-          <y>170</y>
+          <y>162</y>
           <width>321</width>
           <height>20</height>
          </rect>
@@ -2781,7 +2781,7 @@ background: rgba(254, 206, 103, 0.00);</string>
         <property name="geometry">
          <rect>
           <x>25</x>
-          <y>230</y>
+          <y>223</y>
           <width>321</width>
           <height>20</height>
          </rect>
@@ -2825,7 +2825,7 @@ border-radius: 40px;</string>
         <property name="geometry">
          <rect>
           <x>335</x>
-          <y>110</y>
+          <y>103</y>
           <width>281</width>
           <height>20</height>
          </rect>
@@ -2851,8 +2851,8 @@ background: rgba(254, 206, 103, 0.00);</string>
        <widget class="QLabel" name="labelVaccinesAP">
         <property name="geometry">
          <rect>
-          <x>33</x>
-          <y>350</y>
+          <x>26</x>
+          <y>333</y>
           <width>181</width>
           <height>31</height>
          </rect>
@@ -2881,8 +2881,8 @@ background: rgba(254, 206, 103, 0.00);</string>
        <widget class="QLabel" name="labelDocumentationAP">
         <property name="geometry">
          <rect>
-          <x>320</x>
-          <y>349</y>
+          <x>319</x>
+          <y>332</y>
           <width>211</width>
           <height>31</height>
          </rect>
@@ -2912,7 +2912,7 @@ background: rgba(254, 206, 103, 0.00);</string>
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>395</y>
+          <y>425</y>
           <width>271</width>
           <height>61</height>
          </rect>
@@ -3065,8 +3065,8 @@ color:#2B528C;
        <widget class="QPushButton" name="pbSaveAP">
         <property name="geometry">
          <rect>
-          <x>438</x>
-          <y>550</y>
+          <x>443</x>
+          <y>553</y>
           <width>181</width>
           <height>51</height>
          </rect>
@@ -3101,7 +3101,7 @@ font-size: 18px;
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>560</y>
+          <y>573</y>
           <width>201</width>
           <height>21</height>
          </rect>
@@ -3130,7 +3130,7 @@ background: rgba(254, 206, 103, 0.00);
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>580</y>
+          <y>590</y>
           <width>381</width>
           <height>21</height>
          </rect>
@@ -3158,7 +3158,7 @@ background: rgba(254, 206, 103, 0.00);
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>130</y>
+          <y>123</y>
           <width>271</width>
           <height>31</height>
          </rect>
@@ -3177,7 +3177,7 @@ padding-left: 3px;}</string>
         <property name="geometry">
          <rect>
           <x>330</x>
-          <y>130</y>
+          <y>123</y>
           <width>291</width>
           <height>31</height>
          </rect>
@@ -3196,7 +3196,7 @@ padding-left: 3px;}</string>
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>190</y>
+          <y>182</y>
           <width>601</width>
           <height>31</height>
          </rect>
@@ -3211,16 +3211,16 @@ font-size: 12px;
 padding-left: 3px;}</string>
         </property>
         <property name="placeholderText">
-         <string>Please include emergency contact full name and contact phone number</string>
+         <string>Full name and phone number</string>
         </property>
        </widget>
        <widget class="QPlainTextEdit" name="addNotesAP">
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>250</y>
+          <y>243</y>
           <width>601</width>
-          <height>91</height>
+          <height>81</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -3237,7 +3237,7 @@ padding-left: 5px;</string>
          <rect>
           <x>120</x>
           <y>60</y>
-          <width>121</width>
+          <width>111</width>
           <height>31</height>
          </rect>
         </property>
@@ -3257,9 +3257,9 @@ padding-left: 3px;}</string>
        <widget class="QLineEdit" name="addUserPhoneAP">
         <property name="geometry">
          <rect>
-          <x>247</x>
+          <x>241</x>
           <y>60</y>
-          <width>121</width>
+          <width>131</width>
           <height>31</height>
          </rect>
         </property>
@@ -3302,7 +3302,7 @@ padding-left: 3px;}</string>
         <property name="geometry">
          <rect>
           <x>320</x>
-          <y>512</y>
+          <y>507</y>
           <width>91</width>
           <height>20</height>
          </rect>
@@ -3311,12 +3311,12 @@ padding-left: 3px;}</string>
          <font>
           <family>Avenir Next</family>
           <pointsize>-1</pointsize>
-          <weight>25</weight>
-          <bold>false</bold>
+          <weight>62</weight>
+          <bold>true</bold>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">font-weight: 200;
+         <string notr="true">font-weight: 500;
 font-size: 12px;
 color:#2B528C;
 background: rgba(254, 206, 103, 0.00);
@@ -3333,7 +3333,7 @@ background: rgba(254, 206, 103, 0.00);
         <property name="geometry">
          <rect>
           <x>430</x>
-          <y>511</y>
+          <y>506</y>
           <width>91</width>
           <height>20</height>
          </rect>
@@ -3342,12 +3342,12 @@ background: rgba(254, 206, 103, 0.00);
          <font>
           <family>Avenir Next</family>
           <pointsize>-1</pointsize>
-          <weight>25</weight>
-          <bold>false</bold>
+          <weight>62</weight>
+          <bold>true</bold>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">font-weight: 200;
+         <string notr="true">font-weight: 500;
 font-size: 12px;
 color:#2B528C;
 background: rgba(254, 206, 103, 0.00);
@@ -3364,7 +3364,7 @@ background: rgba(254, 206, 103, 0.00);
         <property name="geometry">
          <rect>
           <x>540</x>
-          <y>511</y>
+          <y>506</y>
           <width>81</width>
           <height>20</height>
          </rect>
@@ -3373,12 +3373,12 @@ background: rgba(254, 206, 103, 0.00);
          <font>
           <family>Avenir Next</family>
           <pointsize>-1</pointsize>
-          <weight>25</weight>
-          <bold>false</bold>
+          <weight>62</weight>
+          <bold>true</bold>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">font-weight: 200;
+         <string notr="true">font-weight: 500;
 font-size: 12px;
 color:#2B528C;
 background: rgba(254, 206, 103, 0.00);
@@ -3395,7 +3395,7 @@ background: rgba(254, 206, 103, 0.00);
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>465</y>
+          <y>495</y>
           <width>271</width>
           <height>61</height>
          </rect>
@@ -3543,9 +3543,9 @@ color:#2B528C;
        <widget class="QLabel" name="labelClickUploadAP">
         <property name="geometry">
          <rect>
-          <x>320</x>
-          <y>373</y>
-          <width>131</width>
+          <x>319</x>
+          <y>356</y>
+          <width>221</width>
           <height>21</height>
          </rect>
         </property>
@@ -3565,7 +3565,7 @@ background: rgba(254, 206, 103, 0.00);
 </string>
         </property>
         <property name="text">
-         <string>Click to upload</string>
+         <string>Click to upload user documentation</string>
         </property>
        </widget>
        <widget class="QPushButton" name="pbAddUserPictureAP">
@@ -3588,50 +3588,12 @@ color:#2B528C;</string>
          <string>Add</string>
         </property>
        </widget>
-       <widget class="QComboBox" name="addVaccStatusAP">
-        <property name="geometry">
-         <rect>
-          <x>430</x>
-          <y>20</y>
-          <width>191</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QComboBox
-{background: #F8FBFF;
-border-radius: 15;
-color: #2B528C;
-font-size: 12px; 
-padding-left: 3px;}
-
-</string>
-        </property>
-        <property name="placeholderText">
-         <string/>
-        </property>
-        <item>
-         <property name="text">
-          <string>Not Vaccinated</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Partially Vaccinated</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Vaccinated</string>
-         </property>
-        </item>
-       </widget>
        <widget class="QLineEdit" name="addUserNameAP">
         <property name="geometry">
          <rect>
           <x>120</x>
           <y>20</y>
-          <width>301</width>
+          <width>501</width>
           <height>31</height>
          </rect>
         </property>
@@ -3648,14 +3610,14 @@ padding-left: 3px;}</string>
          <string/>
         </property>
         <property name="placeholderText">
-         <string>Add User Name</string>
+         <string>Add User Full Name</string>
         </property>
        </widget>
        <widget class="QLabel" name="labelClickEditAP">
         <property name="geometry">
          <rect>
-          <x>35</x>
-          <y>374</y>
+          <x>28</x>
+          <y>357</y>
           <width>171</width>
           <height>21</height>
          </rect>
@@ -3676,14 +3638,14 @@ background: rgba(254, 206, 103, 0.00);
 </string>
         </property>
         <property name="text">
-         <string>Click grey text to edit </string>
+         <string>Edit Vaccine Information</string>
         </property>
        </widget>
        <widget class="QLabel" name="addQRCodeAP">
         <property name="geometry">
          <rect>
           <x>530</x>
-          <y>395</y>
+          <y>390</y>
           <width>91</width>
           <height>111</height>
          </rect>
@@ -3701,7 +3663,7 @@ border-radius: 45;
         <property name="geometry">
          <rect>
           <x>540</x>
-          <y>405</y>
+          <y>400</y>
           <width>71</width>
           <height>91</height>
          </rect>
@@ -3721,7 +3683,7 @@ color:#2B528C;</string>
         <property name="geometry">
          <rect>
           <x>329</x>
-          <y>406</y>
+          <y>401</y>
           <width>71</width>
           <height>91</height>
          </rect>
@@ -3741,7 +3703,7 @@ color:#2B528C;</string>
         <property name="geometry">
          <rect>
           <x>435</x>
-          <y>405</y>
+          <y>400</y>
           <width>71</width>
           <height>91</height>
          </rect>
@@ -3761,7 +3723,7 @@ color:#2B528C;</string>
         <property name="geometry">
          <rect>
           <x>425</x>
-          <y>395</y>
+          <y>390</y>
           <width>91</width>
           <height>111</height>
          </rect>
@@ -3779,7 +3741,7 @@ border-radius: 45;
         <property name="geometry">
          <rect>
           <x>319</x>
-          <y>396</y>
+          <y>391</y>
           <width>91</width>
           <height>111</height>
          </rect>
@@ -3791,6 +3753,124 @@ border-radius: 45;
         </property>
         <property name="text">
          <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pbChangeQRCodeAP">
+        <property name="geometry">
+         <rect>
+          <x>532</x>
+          <y>485</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #C4DBF4;
+border-radius: 10px;
+font-weight: 200;
+font-size: 12px;
+color:#2B528C;</string>
+        </property>
+        <property name="text">
+         <string>Change</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pbChangeCertificateAP">
+        <property name="geometry">
+         <rect>
+          <x>426</x>
+          <y>485</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #C4DBF4;
+border-radius: 10px;
+font-weight: 200;
+font-size: 12px;
+color:#2B528C;</string>
+        </property>
+        <property name="text">
+         <string>Change</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pbChangeTestResultsAP">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>485</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #C4DBF4;
+border-radius: 10px;
+font-weight: 200;
+font-size: 12px;
+color:#2B528C;</string>
+        </property>
+        <property name="text">
+         <string>Change</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="addVaccStatusAP">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>384</y>
+          <width>271</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QComboBox
+{background: #F8FBFF;
+border-radius: 15;
+color: #2B528C;
+font-size: 12px; 
+padding-left: 3px;}
+
+</string>
+        </property>
+        <property name="placeholderText">
+         <string>Vaccination Status</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Not Vaccinated</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Partially Vaccinated</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Vaccinated</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QPushButton" name="pbChangeUserPictureAP">
+        <property name="geometry">
+         <rect>
+          <x>21</x>
+          <y>73</y>
+          <width>81</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #C4DBF4;
+border-radius: 10px;
+font-weight: 200;
+font-size: 12px;
+color:#2B528C;</string>
+        </property>
+        <property name="text">
+         <string>Change</string>
         </property>
        </widget>
        <zorder>addTestResultsAP</zorder>
@@ -3817,88 +3897,19 @@ border-radius: 45;
        <zorder>labelCertificateAP</zorder>
        <zorder>labelQRCodeAP</zorder>
        <zorder>labelClickUploadAP</zorder>
-       <zorder>pbAddUserPictureAP</zorder>
-       <zorder>addVaccStatusAP</zorder>
        <zorder>addUserNameAP</zorder>
        <zorder>labelClickEditAP</zorder>
        <zorder>addQRCodeAP</zorder>
-       <zorder>pbAddTestResultsAP</zorder>
        <zorder>addCertificateAP</zorder>
+       <zorder>pbChangeQRCodeAP</zorder>
+       <zorder>pbChangeCertificateAP</zorder>
+       <zorder>pbChangeTestResultsAP</zorder>
+       <zorder>pbAddTestResultsAP</zorder>
        <zorder>pbAddCertificateAP</zorder>
        <zorder>pbAddQRCodeAP</zorder>
-      </widget>
-      <widget class="QPushButton" name="pbSearchAP">
-       <property name="geometry">
-        <rect>
-         <x>730</x>
-         <y>100</y>
-         <width>131</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Arial Rounded MT Bold</family>
-         <pointsize>-1</pointsize>
-         <weight>62</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton{
-color:#2B528C;
-background: #2B528C;
-font-weight: 500;
-border-radius: 15px;
-background: #C4DBF4;
-border-color: rgba(104, 160, 229, 0.00);
-font-size: 16px; 
-}
-QPushButton:hover
-{
-background: rgba(196, 219, 244, 0.77);
-}</string>
-       </property>
-       <property name="text">
-        <string>Search</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="editSearchAP">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>100</y>
-         <width>701</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Avenir Next</family>
-         <pointsize>-1</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLineEdit
-{background: #F8FBFF;
-border-radius: 15;
-border: 1px solid #C4DBF4;
-color: #2B528C;
-font-size: 12px; 
-padding-left: 3px;}
-
-QLineEdit:hove{
-border-color: rgba(104, 160, 229, 0.88);
-background: #C4DBF4;
-}
-
-QLineEdit:focus{
-border: 3px solid rgba(104, 160, 229, 0.88);
-}</string>
-       </property>
-       <property name="placeholderText">
-        <string>Click to start typing</string>
-       </property>
+       <zorder>addVaccStatusAP</zorder>
+       <zorder>pbChangeUserPictureAP</zorder>
+       <zorder>pbAddUserPictureAP</zorder>
       </widget>
       <widget class="QListWidget" name="listAllUsersAP">
        <property name="geometry">
@@ -3922,6 +3933,128 @@ line-height: 3px;
 </string>
        </property>
       </widget>
+      <widget class="QLabel" name="alerLevelUpdatesTitle_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>103</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Avenir Next</family>
+         <pointsize>-1</pointsize>
+         <weight>37</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-weight: 300;
+font-size: 18px;
+color:#2B528C;
+
+</string>
+       </property>
+       <property name="text">
+        <string>View All Users</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="alerLevelUpdatesTitle_3">
+       <property name="geometry">
+        <rect>
+         <x>221</x>
+         <y>103</y>
+         <width>431</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Avenir Next</family>
+         <pointsize>-1</pointsize>
+         <weight>37</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-weight: 300;
+font-size: 18px;
+color:#2B528C;
+
+</string>
+       </property>
+       <property name="text">
+        <string>Add User information by clicking the grey text</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelSelectRP_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>130</y>
+         <width>261</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Avenir Next</family>
+         <pointsize>-1</pointsize>
+         <weight>25</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-weight: 200;
+font-size: 12px;
+color:#2B528C;
+background: rgba(254, 206, 103, 0.00);
+
+</string>
+       </property>
+       <property name="text">
+        <string>Added users will appear here.</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelSelectRP_3">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>130</y>
+         <width>261</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Avenir Next</family>
+         <pointsize>-1</pointsize>
+         <weight>25</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-weight: 200;
+font-size: 12px;
+color:#2B528C;
+background: rgba(254, 206, 103, 0.00);
+
+</string>
+       </property>
+       <property name="text">
+        <string>Added users will appear here.</string>
+       </property>
+      </widget>
+      <zorder>alerLevelUpdatesTitle_2</zorder>
+      <zorder>alerLevelUpdatesTitle_3</zorder>
+      <zorder>homeSubHeadingAP</zorder>
+      <zorder>homeTitleAP</zorder>
+      <zorder>userInfoFrameAP</zorder>
+      <zorder>listAllUsersAP</zorder>
+      <zorder>labelSelectRP_2</zorder>
+      <zorder>labelSelectRP_3</zorder>
      </widget>
      <zorder>userHomeWhiteBackgroundAP</zorder>
      <zorder>userProfileBlueMenuBarAP</zorder>
@@ -5328,7 +5461,7 @@ background: rgba(254, 206, 103, 0.00);</string>
         <property name="geometry">
          <rect>
           <x>33</x>
-          <y>350</y>
+          <y>337</y>
           <width>181</width>
           <height>31</height>
          </rect>
@@ -5358,7 +5491,7 @@ background: rgba(254, 206, 103, 0.00);</string>
         <property name="geometry">
          <rect>
           <x>314</x>
-          <y>349</y>
+          <y>336</y>
           <width>211</width>
           <height>31</height>
          </rect>
@@ -5523,7 +5656,7 @@ padding-left: 3px;}</string>
           <x>20</x>
           <y>250</y>
           <width>601</width>
-          <height>91</height>
+          <height>81</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -5620,12 +5753,12 @@ padding-left: 3px;}</string>
          <font>
           <family>Avenir Next</family>
           <pointsize>-1</pointsize>
-          <weight>25</weight>
-          <bold>false</bold>
+          <weight>62</weight>
+          <bold>true</bold>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">font-weight: 200;
+         <string notr="true">font-weight: 500;
 font-size: 12px;
 color:#2B528C;
 background: rgba(254, 206, 103, 0.00);
@@ -5651,12 +5784,12 @@ background: rgba(254, 206, 103, 0.00);
          <font>
           <family>Avenir Next</family>
           <pointsize>-1</pointsize>
-          <weight>25</weight>
-          <bold>false</bold>
+          <weight>62</weight>
+          <bold>true</bold>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">font-weight: 200;
+         <string notr="true">font-weight: 500;
 font-size: 12px;
 color:#2B528C;
 background: rgba(254, 206, 103, 0.00);
@@ -5682,12 +5815,12 @@ background: rgba(254, 206, 103, 0.00);
          <font>
           <family>Avenir Next</family>
           <pointsize>-1</pointsize>
-          <weight>25</weight>
-          <bold>false</bold>
+          <weight>62</weight>
+          <bold>true</bold>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">font-weight: 200;
+         <string notr="true">font-weight: 500;
 font-size: 12px;
 color:#2B528C;
 background: rgba(254, 206, 103, 0.00);
@@ -5704,7 +5837,7 @@ background: rgba(254, 206, 103, 0.00);
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>466</y>
+          <y>490</y>
           <width>271</width>
           <height>61</height>
          </rect>
@@ -5847,7 +5980,7 @@ color:#2B528C;
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>396</y>
+          <y>420</y>
           <width>271</width>
           <height>61</height>
          </rect>
@@ -5990,8 +6123,8 @@ color:#2B528C;
         <property name="geometry">
          <rect>
           <x>315</x>
-          <y>373</y>
-          <width>131</width>
+          <y>360</y>
+          <width>221</width>
           <height>21</height>
          </rect>
         </property>
@@ -6005,13 +6138,13 @@ color:#2B528C;
         </property>
         <property name="styleSheet">
          <string notr="true">font-weight: 200;
-font-size: 12px;
+font-size: 10px;
 color:#2B528C;
 background: rgba(254, 206, 103, 0.00);
 </string>
         </property>
         <property name="text">
-         <string>Click to change</string>
+         <string>Click to change user documentation</string>
         </property>
        </widget>
        <widget class="QPushButton" name="pbEditUserPictureEP">
@@ -6037,9 +6170,9 @@ color:#2B528C;</string>
        <widget class="QComboBox" name="editUserVaccineSBEP">
         <property name="geometry">
          <rect>
-          <x>430</x>
-          <y>20</y>
-          <width>191</width>
+          <x>20</x>
+          <y>380</y>
+          <width>271</width>
           <height>31</height>
          </rect>
         </property>
@@ -6194,8 +6327,8 @@ color:#2B528C;</string>
         <property name="geometry">
          <rect>
           <x>34</x>
-          <y>373</y>
-          <width>131</width>
+          <y>360</y>
+          <width>161</width>
           <height>21</height>
          </rect>
         </property>
@@ -6209,13 +6342,13 @@ color:#2B528C;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">font-weight: 200;
-font-size: 12px;
+font-size: 10px;
 color:#2B528C;
 background: rgba(254, 206, 103, 0.00);
 </string>
         </property>
         <property name="text">
-         <string>Click grey text to edit</string>
+         <string>Edit Vaccine Information</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="editUserNameEP">
@@ -6223,7 +6356,7 @@ background: rgba(254, 206, 103, 0.00);
          <rect>
           <x>120</x>
           <y>20</y>
-          <width>301</width>
+          <width>501</width>
           <height>31</height>
          </rect>
         </property>
@@ -6264,6 +6397,86 @@ padding-left: 3px;</string>
          <string/>
         </property>
        </widget>
+       <widget class="QPushButton" name="pbChangeTestResultsEP">
+        <property name="geometry">
+         <rect>
+          <x>314</x>
+          <y>490</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #C4DBF4;
+border-radius: 10px;
+font-weight: 200;
+font-size: 12px;
+color:#2B528C;</string>
+        </property>
+        <property name="text">
+         <string>Change</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pbChangeCertificateEP">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>490</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #C4DBF4;
+border-radius: 10px;
+font-weight: 200;
+font-size: 12px;
+color:#2B528C;</string>
+        </property>
+        <property name="text">
+         <string>Change</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pbChangeQRCodeEP">
+        <property name="geometry">
+         <rect>
+          <x>526</x>
+          <y>490</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #C4DBF4;
+border-radius: 10px;
+font-weight: 200;
+font-size: 12px;
+color:#2B528C;</string>
+        </property>
+        <property name="text">
+         <string>Change</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pbChangeUserPictureEP">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>74</y>
+          <width>81</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #C4DBF4;
+border-radius: 10px;
+font-weight: 200;
+font-size: 12px;
+color:#2B528C;</string>
+        </property>
+        <property name="text">
+         <string>Change</string>
+        </property>
+       </widget>
        <zorder>editTestResultsEP</zorder>
        <zorder>editQRCodeEP</zorder>
        <zorder>vaccineDose1FrameEP</zorder>
@@ -6288,15 +6501,19 @@ padding-left: 3px;</string>
        <zorder>labeQRCodeEP</zorder>
        <zorder>vaccineDose2FrameEP</zorder>
        <zorder>labelClickChangeEP</zorder>
-       <zorder>pbEditUserPictureEP</zorder>
        <zorder>editUserVaccineSBEP</zorder>
        <zorder>pbEditTestResultsEP</zorder>
        <zorder>editCertificateEP</zorder>
-       <zorder>pbEditQRCodeEP</zorder>
-       <zorder>pbEditCertificateEP</zorder>
        <zorder>labelClickEditEP</zorder>
        <zorder>editUserNameEP</zorder>
        <zorder>showNHIEP</zorder>
+       <zorder>pbChangeTestResultsEP</zorder>
+       <zorder>pbChangeCertificateEP</zorder>
+       <zorder>pbEditCertificateEP</zorder>
+       <zorder>pbChangeQRCodeEP</zorder>
+       <zorder>pbEditQRCodeEP</zorder>
+       <zorder>pbChangeUserPictureEP</zorder>
+       <zorder>pbEditUserPictureEP</zorder>
       </widget>
       <widget class="QPushButton" name="pbSearchEP">
        <property name="geometry">

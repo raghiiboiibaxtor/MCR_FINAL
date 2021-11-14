@@ -29,9 +29,19 @@ QString userProfilePictureSave = "";
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
+    // Initialising ui
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(0);
 
+    // Hidden Ui elements upon initialisation
+    ui->pbChangeCertificateEP->hide();
+    ui->pbChangeQRCodeEP->hide();
+    ui->pbChangeTestResultsEP->hide();
+    ui->pbChangeUserPictureAP->hide();
+    ui->pbChangeCertificateAP->hide();
+    ui->pbChangeQRCodeAP->hide();
+    ui->pbChangeTestResultsAP->hide();
+    ui->pbChangeUserPictureEP->hide();
     // Constructing File Path Directories
    //Mac Create Directory
    QDir pathDir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files");
@@ -125,10 +135,15 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
      connect(ui->pbLogoutFS, &QPushButton::clicked, this, &MainWindow::logout);
 
     // In app buttons & connections.
+    /// Add User connections
     connect(ui->pbAddCertificateAP, &QPushButton::clicked, this, &MainWindow::addCertificateImage);
+    connect(ui->pbChangeCertificateAP, &QPushButton::clicked, this, &MainWindow::addCertificateImage);
     connect(ui->pbAddQRCodeAP, &QPushButton::clicked, this, &MainWindow::addQRCodeImage);
+    connect(ui->pbChangeQRCodeAP, &QPushButton::clicked, this, &MainWindow::addQRCodeImage);
     connect(ui->pbAddTestResultsAP, &QPushButton::clicked, this, &MainWindow::addTestResultImage);
+    connect(ui->pbChangeTestResultsAP, &QPushButton::clicked, this, &MainWindow::addTestResultImage);
     connect(ui->pbAddUserPictureAP, &QPushButton::clicked, this, &MainWindow::addUserPicture);
+    connect(ui->pbChangeUserPictureAP, &QPushButton::clicked, this, &MainWindow::addUserPicture);
     connect(ui->pbSaveAP, &QPushButton::clicked, this, &MainWindow::saveUser);
     /// All Users connections
     connect(ui->pbAllUsersHP, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
@@ -142,9 +157,13 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     /// Edit User connections
     connect(ui->pbEditUserAUP, &QPushButton::clicked, this, &MainWindow::editUser);
     connect(ui->pbEditCertificateEP, &QPushButton::clicked, this, &MainWindow::editCertificateImage);
+    connect(ui->pbChangeCertificateEP, &QPushButton::clicked, this, &MainWindow::editCertificateImage);
     connect(ui->pbEditQRCodeEP, &QPushButton::clicked, this, &MainWindow::editQRCodeImage);
+    connect(ui->pbChangeQRCodeEP, &QPushButton::clicked, this, &MainWindow::editQRCodeImage);
     connect(ui->pbEditTestResultsEP, &QPushButton::clicked, this, &MainWindow::editTestResultImage);
+    connect(ui->pbChangeTestResultsEP, &QPushButton::clicked, this, &MainWindow::editTestResultImage);
     connect(ui->pbEditUserPictureEP, &QPushButton::clicked, this, &MainWindow::editUserPicture);
+    connect(ui->pbChangeUserPictureEP, &QPushButton::clicked, this, &MainWindow::editUserPicture);
     connect(ui->pbSaveEditEP, &QPushButton::clicked, this, &MainWindow::saveEdit);
     /// Report connections
     connect(ui->listAllReportsRP, &QListWidget::itemClicked, this, &MainWindow::selectReportDetails);
@@ -230,6 +249,8 @@ void MainWindow::addCertificateImage()
         // Display on Add User Page
         ui->addCertificateAP->setPixmap(pixmap);
         ui->addCertificateAP->setScaledContents(true);
+        ui->pbAddCertificateAP->hide();
+        ui->pbChangeCertificateAP->show();
 
         certificateImageSave = "./vaccineCertificates/" + shortName;
         //QFile outputFile("vaxCertificates.txt");
@@ -265,6 +286,8 @@ void MainWindow::addQRCodeImage()
         // Display on Add User Page
         ui->addQRCodeAP->setPixmap(pixmap1);
         ui->addQRCodeAP->setScaledContents(true);
+        ui->pbAddQRCodeAP->hide();
+        ui->pbChangeQRCodeAP->show();
 
         qrCodeImageSave = "./qrCodes/" + shortName;
 
@@ -300,6 +323,8 @@ void MainWindow::addTestResultImage()
         // Display on Add User Page
         ui->addTestResultsAP->setPixmap(pixmap2);
         ui->addTestResultsAP->setScaledContents(true);
+        ui->pbAddTestResultsAP->hide();
+        ui->pbChangeTestResultsAP->show();
 
         testResultImageSave = "./testResults/" + shortName;
 
@@ -335,6 +360,8 @@ void MainWindow::addUserPicture()
         // Display on Add User Page
         ui->addUserPictureAP->setPixmap(pixmap3);
         ui->addUserPictureAP->setScaledContents(true);
+        ui->pbAddUserPictureAP->hide();
+        ui->pbChangeUserPictureAP->show();
 
         userProfilePictureSave = "./userProfilePictures/" + shortName;
     }
@@ -404,7 +431,7 @@ void MainWindow::saveUser()
             out.flush();
             outputFile.close();
 
-            // Clear input from labels
+            // Clearing input from labels
             ui->addUserNameAP->clear();
             ui->addUserPhoneAP->clear();
             ui->addUserEmailAP->clear();
@@ -423,6 +450,25 @@ void MainWindow::saveUser()
             ui->addQRCodeAP->clear();
             ui->addTestResultsAP->clear();
             ui->addUserPictureAP->clear();
+            // Changing ui
+            ui->pbChangeCertificateEP->hide();
+            ui->pbChangeQRCodeEP->hide();
+            ui->pbChangeTestResultsEP->hide();
+            ui->pbChangeUserPictureAP->hide();
+            ui->pbChangeCertificateAP->hide();
+            ui->pbChangeQRCodeAP->hide();
+            ui->pbChangeTestResultsAP->hide();
+            ui->pbChangeUserPictureEP->hide();
+            ui->pbAddCertificateAP->show();
+            ui->pbEditCertificateEP->show();
+            ui->pbAddQRCodeAP->show();
+            ui->pbEditQRCodeEP->show();
+            ui->pbAddTestResultsAP->show();
+            ui->pbEditTestResultsEP->show();
+            ui->pbAddUserPictureAP->show();
+            ui->pbEditUserPictureEP->show();
+
+
 
            // Clearing global variables
             certificateImageSave = "";
@@ -737,6 +783,8 @@ void MainWindow::editCertificateImage()
 
         ui->editCertificateEP->setPixmap(pixmap);
         ui->editCertificateEP->setScaledContents(true);
+        ui->pbEditCertificateEP->hide();
+        ui->pbChangeCertificateEP->show();
 
         certificateImageSave = "./vaccineCertificates/" + shortName;
 
@@ -764,6 +812,8 @@ void MainWindow::editQRCodeImage()
 
         ui->editQRCodeEP->setPixmap(pixmap1);
         ui->editQRCodeEP->setScaledContents(true);
+        ui->pbEditQRCodeEP->hide();
+        ui->pbChangeQRCodeEP->show();
 
         qrCodeImageSave = "./qrCodes/" + shortName;
         ui->editQRCodeEP->setPixmap(pixmap1);
@@ -789,6 +839,9 @@ void MainWindow::editTestResultImage()
 
         ui->editTestResultsEP->setPixmap(pixmap2);
         ui->editTestResultsEP->setScaledContents(true);
+        ui->pbEditTestResultsEP->hide();
+        ui->pbChangeTestResultsEP->show();
+
 
         testResultImageSave = "./testResults/" + shortName;
         ui->editTestResultsEP->setPixmap(pixmap2);
@@ -814,6 +867,8 @@ void MainWindow::editUserPicture()
 
         ui->editUserPictureEP->setPixmap(pixmap2);
         ui->editUserPictureEP->setScaledContents(true);
+        ui->pbEditUserPictureEP->hide();
+        ui->pbChangeUserPictureEP->show();
 
         userProfilePictureSave = "./userProfilePictures/" + shortName;
         ui->editUserPictureEP->setPixmap(pixmap2);
@@ -925,7 +980,23 @@ void MainWindow::saveEdit()
             ui->editQRCodeEP->clear();
             ui->editTestResultsEP->clear();
             ui->editUserPictureEP->clear();
-
+            // Changing ui buttons
+            ui->pbChangeCertificateEP->hide();
+            ui->pbChangeQRCodeEP->hide();
+            ui->pbChangeTestResultsEP->hide();
+            ui->pbChangeUserPictureAP->hide();
+            ui->pbChangeCertificateAP->hide();
+            ui->pbChangeQRCodeAP->hide();
+            ui->pbChangeTestResultsAP->hide();
+            ui->pbChangeUserPictureEP->hide();
+            ui->pbAddCertificateAP->show();
+            ui->pbEditCertificateEP->show();
+            ui->pbAddQRCodeAP->show();
+            ui->pbEditQRCodeEP->show();
+            ui->pbAddTestResultsAP->show();
+            ui->pbEditTestResultsEP->show();
+            ui->pbAddUserPictureAP->show();
+            ui->pbEditUserPictureEP->show();
 
             // Changing input from view user labels
             ui->showUserNameAUP->setText(ptrCurrentCitizen->getName());

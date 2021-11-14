@@ -32,7 +32,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="loginPage">
      <widget class="QLabel" name="loginWhiteBackgroundLP">
@@ -3618,7 +3618,7 @@ color: #2B528C;
      <widget class="QFrame" name="userHomeHelloBarFS">
       <property name="geometry">
        <rect>
-        <x>-10</x>
+        <x>0</x>
         <y>430</y>
         <width>211</width>
         <height>511</height>
@@ -3746,7 +3746,7 @@ color: #2B528C;
      <widget class="QFrame" name="userProfileBlueMenuBarFS">
       <property name="geometry">
        <rect>
-        <x>-10</x>
+        <x>0</x>
         <y>-100</y>
         <width>211</width>
         <height>741</height>
