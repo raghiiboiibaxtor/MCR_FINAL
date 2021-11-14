@@ -41,7 +41,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
        }
 
        // File path for Vaccine Certificates
-        //QDir pathDir0("./VaccineCertificates");
+       //QDir pathDir0("./VaccineCertificates");
        QDir pathDir0("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates");
        if(!pathDir0.exists())
        {
@@ -61,7 +61,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
        }
 
        // File path for Test Results
-      // QDir pathDir2("./TestResults");
+       //QDir pathDir2("./TestResults");
        QDir pathDir2("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
        if(!pathDir2.exists())
        {
@@ -71,13 +71,13 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
        }
 
        // File path for User Profile Pictures
-      // QDir pathDir3("./UserProfilePictures");
+       //QDir pathDir3("./UserProfilePictures");
        QDir pathDir3("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserProfilePictures");
        if(!pathDir3.exists())
        {
            //create it!
            //QDir().mkdir("./UserProfilePictures");
-             QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
+           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
        }
 
 
@@ -268,8 +268,8 @@ void MainWindow::addQRCodeImage()
 
         qrCodeImageSave = "./qrCodes/" + shortName;
 
-        //QFile outputFile("issuedQRCodes.txt");
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes/issuedQRCodes.txt");
+        QFile outputFile("issuedQRCodes.txt");
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes/issuedQRCodes.txt");
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
         // Writing to file
@@ -303,8 +303,8 @@ void MainWindow::addTestResultImage()
 
         testResultImageSave = "./testResults/" + shortName;
 
-        //QFile outputFile("issuedTestResults.txt");
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults/issuedTestResults.txt");
+        QFile outputFile("issuedTestResults.txt");
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults/issuedTestResults.txt");
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
         // Writing to file
@@ -403,15 +403,6 @@ void MainWindow::saveUser()
             // Flushing file and then closing.
             out.flush();
             outputFile.close();
-
-            for (int i = 0; i<userList.size(); i++)
-            {
-                if (userList.at(i)->getCitizenImage() > "")
-                {
-
-                }
-            }
-
 
             // Clear input from labels
             ui->addUserNameAP->clear();
@@ -696,7 +687,7 @@ void MainWindow:: editUser()
                 ui->editUserPhoneEP->setText(ptrCurrentCitizen->getContactNumber());
                 ui->editUserEmailEP->setText(ptrCurrentCitizen->getEmailAddress());
                 ui->editUserDOBEP->setText(ptrCurrentCitizen->getDateOfBirth());
-                ui->NHIDisplayLabelEP->setText(ptrCurrentCitizen->getNHI()); // Non-editable
+                ui->showNHIEP->setText(ptrCurrentCitizen->getNHI()); // Non-editable
                 ui->editUserEmergencyEP->setText(ptrCurrentCitizen->getEmergencyContact());
                 ui->editUserNotesEP->setPlainText(ptrCurrentCitizen->getAdditionalNotes());
                 ui->editUserVaccineSBEP->setCurrentText(ptrCurrentCitizen->getVaccineStatus());
@@ -875,10 +866,6 @@ void MainWindow::saveEdit()
         ptrCurrentCitizen->setVaccineName2(edit2VaccName);
         ptrCurrentCitizen->setBatchNumber2(edit2BatchNum);
         ptrCurrentCitizen->setDateGiven2(edit2Date);
-      //  ptrCurrentCitizen->setCertificate(certificateImage);
-        //ptrCurrentCitizen->setQRCode(qrCodeImage);
-       // ptrCurrentCitizen->setTestResult(testResultImage);
-      //  ptrCurrentCitizen->setCitizenImage(userProfilePicture);
 
         // Writing edit to file
         /// Windows File Path
@@ -921,7 +908,7 @@ void MainWindow::saveEdit()
             ui->editUserPhoneEP->clear();
             ui->editUserEmailEP->clear();
             ui->editUserDOBEP->clear();
-            ui->NHIDisplayLabelEP->clear();
+            ui->showUserNHIFS->clear();
             ui->editUserEmergencyEP->clear();
             ui->editUserNotesEP->clear();
             ui->editUserVaccineSBEP->clear();
