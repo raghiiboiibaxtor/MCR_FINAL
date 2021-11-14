@@ -225,7 +225,6 @@ public:
     QLabel *homeSubHeadingEP;
     QLabel *homeTitleEP;
     QFrame *userInfoFrameEP;
-    QLabel *editUserNameEP;
     QLabel *labelNHIEP;
     QLabel *labelEmergencyEP;
     QLabel *labelAdditionalNotesEP;
@@ -236,7 +235,6 @@ public:
     QPushButton *pbSaveEditEP;
     QLabel *labelConfidentialEP;
     QLabel *labelUnauthorisedEP;
-    QLineEdit *NHIDisplayLabelEP;
     QLineEdit *editUserCVNEP;
     QLineEdit *editUserEmergencyEP;
     QPlainTextEdit *editUserNotesEP;
@@ -268,10 +266,86 @@ public:
     QLabel *editQRCodeEP;
     QPushButton *pbEditCertificateEP;
     QLabel *labelClickEditEP;
+    QLineEdit *editUserNameEP;
+    QLabel *showNHIEP;
     QPushButton *pbSearchEP;
     QLineEdit *editSearchEP;
     QListWidget *listAllUsersEP;
     QLabel *userHomeWhiteBackgroundEP;
+    QWidget *adminEnlargeImagesPage;
+    QFrame *userHomeHelloBarFS;
+    QLabel *displayPictureFS;
+    QLabel *labelAdminNameFS;
+    QLabel *labelHeyThereFS;
+    QPushButton *pbLogoutFS;
+    QFrame *userProfileBlueMenuBarFS;
+    QPushButton *pbHomeFS;
+    QPushButton *pbAllUsersFS;
+    QPushButton *pbAddUserFS;
+    QPushButton *pbReportsFS;
+    QFrame *userHomeDisplayFrameFS;
+    QFrame *frameFS;
+    QLabel *showLargeTestsFS;
+    QFrame *frameFS2;
+    QPushButton *pbFullScreenFS;
+    QPushButton *pbCloseImageFS;
+    QLabel *closeImageTextFS;
+    QLabel *showLargeCertificateFS;
+    QLabel *showLargeQRCodeImageFS;
+    QLabel *showLargeQRFS;
+    QFrame *allUserPageFS;
+    QLabel *homeSubHeadingFS;
+    QLabel *homeTitleFS;
+    QFrame *userInfoFrameFS;
+    QLabel *showUserNameFS;
+    QLabel *labelNHIFS;
+    QLabel *showUserNHIFS;
+    QLabel *showUserEmergencyFS;
+    QLabel *labelEmergencyFS;
+    QLabel *showUserNotesFS;
+    QLabel *labelAdditionalNotesFS;
+    QLabel *showUserPictureFS;
+    QLabel *labelCVNFS;
+    QLabel *showUserCVNFS;
+    QLabel *showUserDOBFS;
+    QLabel *showUserPhoneFS;
+    QLabel *showUserEmailFS;
+    QLabel *showUserVaccStatusFS;
+    QLabel *labelVaccineFS;
+    QLabel *labelDocumentationFS;
+    QFrame *vaccineDose1FrameFS;
+    QLabel *vaccineIcon1FrameFS;
+    QLabel *show1stDoseNameFS;
+    QLabel *show1stDoseBatchFS;
+    QLabel *show1stDoseDateFS;
+    QLabel *imgVaccineIcon1FS;
+    QFrame *vaccineDose2FrameFS;
+    QLabel *vaccineIcon2FrameFS;
+    QLabel *show2ndDoseNameFS;
+    QLabel *show2ndDoseBatchFS;
+    QLabel *show2ndDoseDateFS;
+    QLabel *imgVaccineIcon2FS;
+    QPushButton *pbEditUserFS;
+    QLabel *labelConfidentialFS;
+    QLabel *labelUnauthorisedFS;
+    QFrame *certificateFrameFS;
+    QLabel *showCertificateFS;
+    QPushButton *pbLargeCertificateFS;
+    QLabel *labelCertificateFS;
+    QFrame *testResultFrameFS;
+    QLabel *showTestResultsFS;
+    QPushButton *pbLargeTestResultFS;
+    QFrame *QRCodeFrameFS;
+    QLabel *showQRCodeFS;
+    QPushButton *pbLargeQRCodeFS;
+    QLabel *labelTestResultFS;
+    QLabel *labelQRCodeFS;
+    QFrame *userPictureFrameFS;
+    QLabel *labelClickEnlargeFS;
+    QPushButton *pbSearchFS;
+    QLineEdit *labelSearchUserFS;
+    QListWidget *listAllUsersFS;
+    QLabel *userHomeWhiteBackgroundFS;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -2064,6 +2138,7 @@ public:
 "font-size: 16px; \n"
 "padding-left: 3px;}"));
         showReportDetailsRP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+        showReportDetailsRP->setWordWrap(true);
         showReportDetailsRP->raise();
         showReportSubjectRP->raise();
         showContactDetailsRP->raise();
@@ -2313,16 +2388,6 @@ public:
 "border-radius: 50px;"));
         userInfoFrameEP->setFrameShape(QFrame::StyledPanel);
         userInfoFrameEP->setFrameShadow(QFrame::Raised);
-        editUserNameEP = new QLabel(userInfoFrameEP);
-        editUserNameEP->setObjectName(QString::fromUtf8("editUserNameEP"));
-        editUserNameEP->setGeometry(QRect(120, 20, 331, 41));
-        editUserNameEP->setFont(font5);
-        editUserNameEP->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
-"font-size: 23px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);\n"
-""));
-        editUserNameEP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         labelNHIEP = new QLabel(userInfoFrameEP);
         labelNHIEP->setObjectName(QString::fromUtf8("labelNHIEP"));
         labelNHIEP->setGeometry(QRect(25, 110, 101, 20));
@@ -2414,16 +2479,6 @@ public:
 "color:#2B528C;\n"
 "background: rgba(254, 206, 103, 0.00);\n"
 ""));
-        NHIDisplayLabelEP = new QLineEdit(userInfoFrameEP);
-        NHIDisplayLabelEP->setObjectName(QString::fromUtf8("NHIDisplayLabelEP"));
-        NHIDisplayLabelEP->setGeometry(QRect(20, 130, 271, 31));
-        NHIDisplayLabelEP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
-"{background: rgba(254, 206, 103, 0.88);\n"
-"border-radius: 15;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"color: #2B528C;\n"
-"font-size: 12px; \n"
-"padding-left: 3px;}"));
         editUserCVNEP = new QLineEdit(userInfoFrameEP);
         editUserCVNEP->setObjectName(QString::fromUtf8("editUserCVNEP"));
         editUserCVNEP->setGeometry(QRect(330, 130, 291, 31));
@@ -2457,7 +2512,7 @@ public:
         editUserNotesEP->setTabChangesFocus(true);
         editUserDOBEP = new QLineEdit(userInfoFrameEP);
         editUserDOBEP->setObjectName(QString::fromUtf8("editUserDOBEP"));
-        editUserDOBEP->setGeometry(QRect(120, 60, 101, 31));
+        editUserDOBEP->setGeometry(QRect(120, 60, 111, 31));
         editUserDOBEP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
 "{background: #F8FBFF;\n"
 "border-radius: 15;\n"
@@ -2467,7 +2522,7 @@ public:
 "padding-left: 3px;}"));
         editUserPhoneEP = new QLineEdit(userInfoFrameEP);
         editUserPhoneEP->setObjectName(QString::fromUtf8("editUserPhoneEP"));
-        editUserPhoneEP->setGeometry(QRect(247, 60, 111, 31));
+        editUserPhoneEP->setGeometry(QRect(240, 60, 131, 31));
         editUserPhoneEP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
 "{background: #F8FBFF;\n"
 "border-radius: 15;\n"
@@ -2631,7 +2686,7 @@ public:
         editUserVaccineSBEP->addItem(QString());
         editUserVaccineSBEP->addItem(QString());
         editUserVaccineSBEP->setObjectName(QString::fromUtf8("editUserVaccineSBEP"));
-        editUserVaccineSBEP->setGeometry(QRect(380, 20, 241, 31));
+        editUserVaccineSBEP->setGeometry(QRect(430, 20, 191, 31));
         editUserVaccineSBEP->setFont(font3);
         editUserVaccineSBEP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
 "border-radius: 15;\n"
@@ -2639,6 +2694,7 @@ public:
 "font-size: 12px; \n"
 "padding-left: 3px;\n"
 ""));
+        editUserVaccineSBEP->setPlaceholderText(QString::fromUtf8("Edit Vaccine Status"));
         pbEditTestResultsEP = new QPushButton(userInfoFrameEP);
         pbEditTestResultsEP->setObjectName(QString::fromUtf8("pbEditTestResultsEP"));
         pbEditTestResultsEP->setGeometry(QRect(324, 407, 71, 91));
@@ -2690,6 +2746,25 @@ public:
 "color:#2B528C;\n"
 "background: rgba(254, 206, 103, 0.00);\n"
 ""));
+        editUserNameEP = new QLineEdit(userInfoFrameEP);
+        editUserNameEP->setObjectName(QString::fromUtf8("editUserNameEP"));
+        editUserNameEP->setGeometry(QRect(120, 20, 301, 31));
+        editUserNameEP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
+"{background: #F8FBFF;\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"color: #2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}"));
+        showNHIEP = new QLabel(userInfoFrameEP);
+        showNHIEP->setObjectName(QString::fromUtf8("showNHIEP"));
+        showNHIEP->setGeometry(QRect(20, 130, 271, 31));
+        showNHIEP->setStyleSheet(QString::fromUtf8("background: rgba(254, 206, 103, 0.88);\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"color: #2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;"));
         editTestResultsEP->raise();
         editQRCodeEP->raise();
         vaccineDose1FrameEP->raise();
@@ -2697,7 +2772,6 @@ public:
         editUserPhoneEP->raise();
         editUserDOBEP->raise();
         editUserNotesEP->raise();
-        editUserNameEP->raise();
         labelNHIEP->raise();
         labelEmergencyEP->raise();
         labelAdditionalNotesEP->raise();
@@ -2708,7 +2782,6 @@ public:
         pbSaveEditEP->raise();
         labelConfidentialEP->raise();
         labelUnauthorisedEP->raise();
-        NHIDisplayLabelEP->raise();
         editUserCVNEP->raise();
         editUserEmergencyEP->raise();
         labelTestResultsEP->raise();
@@ -2723,6 +2796,8 @@ public:
         pbEditQRCodeEP->raise();
         pbEditCertificateEP->raise();
         labelClickEditEP->raise();
+        editUserNameEP->raise();
+        showNHIEP->raise();
         pbSearchEP = new QPushButton(userHomeDisplayFrameEP);
         pbSearchEP->setObjectName(QString::fromUtf8("pbSearchEP"));
         pbSearchEP->setGeometry(QRect(730, 100, 131, 31));
@@ -2781,6 +2856,758 @@ public:
         userProfileBlueMenuBarEP->raise();
         userHomeDisplayFrameEP->raise();
         userHomeHelloBarEP->raise();
+        adminEnlargeImagesPage = new QWidget();
+        adminEnlargeImagesPage->setObjectName(QString::fromUtf8("adminEnlargeImagesPage"));
+        userHomeHelloBarFS = new QFrame(adminEnlargeImagesPage);
+        userHomeHelloBarFS->setObjectName(QString::fromUtf8("userHomeHelloBarFS"));
+        userHomeHelloBarFS->setGeometry(QRect(0, 430, 211, 511));
+        userHomeHelloBarFS->setStyleSheet(QString::fromUtf8("background: rgba(104, 160, 229, 0.33);\n"
+"border-radius: 105px;"));
+        userHomeHelloBarFS->setFrameShape(QFrame::StyledPanel);
+        userHomeHelloBarFS->setFrameShadow(QFrame::Raised);
+        displayPictureFS = new QLabel(userHomeHelloBarFS);
+        displayPictureFS->setObjectName(QString::fromUtf8("displayPictureFS"));
+        displayPictureFS->setGeometry(QRect(25, 25, 161, 161));
+        displayPictureFS->setStyleSheet(QString::fromUtf8("background: rgba(248, 251, 255, 0.99);\n"
+"border-radius: 80px;"));
+        displayPictureFS->setAlignment(Qt::AlignCenter);
+        labelAdminNameFS = new QLabel(userHomeHelloBarFS);
+        labelAdminNameFS->setObjectName(QString::fromUtf8("labelAdminNameFS"));
+        labelAdminNameFS->setGeometry(QRect(18, 259, 191, 31));
+        labelAdminNameFS->setFont(font);
+        labelAdminNameFS->setStyleSheet(QString::fromUtf8("color: #2B528C;\n"
+"font-weight: 500;\n"
+"font-size: 23px;\n"
+"background: rgba(104, 160, 229, 0.00);"));
+        labelHeyThereFS = new QLabel(userHomeHelloBarFS);
+        labelHeyThereFS->setObjectName(QString::fromUtf8("labelHeyThereFS"));
+        labelHeyThereFS->setGeometry(QRect(18, 229, 101, 31));
+        labelHeyThereFS->setFont(font1);
+        labelHeyThereFS->setStyleSheet(QString::fromUtf8("color: #2B528C;\n"
+"font-weight: 400;\n"
+"font-size: 18px;\n"
+"background: rgba(104, 160, 229, 0.00);"));
+        pbLogoutFS = new QPushButton(userHomeHelloBarFS);
+        pbLogoutFS->setObjectName(QString::fromUtf8("pbLogoutFS"));
+        pbLogoutFS->setGeometry(QRect(10, 310, 191, 31));
+        pbLogoutFS->setFont(font);
+        pbLogoutFS->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"color: #2B528C;\n"
+"font-weight: 500;\n"
+"border-radius: 15px;\n"
+"background:  rgba(248, 251, 255, 0.99);\n"
+"font-size: 16px; \n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"background:  rgba(248, 251, 255, 0.55);\n"
+"border-color: rgba(104, 160, 229, 0.88);\n"
+"font-size: 16px;\n"
+"color: #2B528C;\n"
+"}"));
+        labelAdminNameFS->raise();
+        labelHeyThereFS->raise();
+        pbLogoutFS->raise();
+        displayPictureFS->raise();
+        userProfileBlueMenuBarFS = new QFrame(adminEnlargeImagesPage);
+        userProfileBlueMenuBarFS->setObjectName(QString::fromUtf8("userProfileBlueMenuBarFS"));
+        userProfileBlueMenuBarFS->setGeometry(QRect(0, -100, 211, 741));
+        userProfileBlueMenuBarFS->setStyleSheet(QString::fromUtf8(" background: #2B528C;\n"
+"border-radius: 105px;"));
+        userProfileBlueMenuBarFS->setFrameShape(QFrame::StyledPanel);
+        userProfileBlueMenuBarFS->setFrameShadow(QFrame::Raised);
+        pbHomeFS = new QPushButton(userProfileBlueMenuBarFS);
+        pbHomeFS->setObjectName(QString::fromUtf8("pbHomeFS"));
+        pbHomeFS->setGeometry(QRect(-81, 133, 271, 51));
+        pbHomeFS->setFont(font);
+        pbHomeFS->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background: #2B528C;\n"
+"font-weight: 500;\n"
+"border-radius: 25px;\n"
+"color:  rgba(248, 251, 255, 0.99);\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"font-size: 16px; \n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"font-size: 18px;\n"
+"}"));
+        pbAllUsersFS = new QPushButton(userProfileBlueMenuBarFS);
+        pbAllUsersFS->setObjectName(QString::fromUtf8("pbAllUsersFS"));
+        pbAllUsersFS->setGeometry(QRect(-50, 220, 241, 51));
+        pbAllUsersFS->setFont(font);
+        pbAllUsersFS->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"color: #2B528C;\n"
+"font-weight: 500;\n"
+"border-radius: 25px;\n"
+"background:  white;\n"
+"font-size: 16px; \n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"font-size: 17px;\n"
+"\n"
+"}"));
+        pbAddUserFS = new QPushButton(userProfileBlueMenuBarFS);
+        pbAddUserFS->setObjectName(QString::fromUtf8("pbAddUserFS"));
+        pbAddUserFS->setGeometry(QRect(-40, 310, 231, 51));
+        pbAddUserFS->setFont(font);
+        pbAddUserFS->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background: #2B528C;\n"
+"font-weight: 500;\n"
+"border-radius: 25px;\n"
+"color:  rgba(248, 251, 255, 0.99);\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"font-size: 16px; \n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"font-size: 18px;\n"
+"}"));
+        pbReportsFS = new QPushButton(userProfileBlueMenuBarFS);
+        pbReportsFS->setObjectName(QString::fromUtf8("pbReportsFS"));
+        pbReportsFS->setGeometry(QRect(-40, 400, 231, 51));
+        pbReportsFS->setFont(font);
+        pbReportsFS->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background: #2B528C;\n"
+"font-weight: 500;\n"
+"border-radius: 25px;\n"
+"color:  rgba(248, 251, 255, 0.99);\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"font-size: 16px; \n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"font-size: 18px;\n"
+"}"));
+        userHomeDisplayFrameFS = new QFrame(adminEnlargeImagesPage);
+        userHomeDisplayFrameFS->setObjectName(QString::fromUtf8("userHomeDisplayFrameFS"));
+        userHomeDisplayFrameFS->setGeometry(QRect(220, 0, 881, 791));
+        userHomeDisplayFrameFS->setStyleSheet(QString::fromUtf8("background: white;"));
+        userHomeDisplayFrameFS->setFrameShape(QFrame::NoFrame);
+        userHomeDisplayFrameFS->setFrameShadow(QFrame::Raised);
+        frameFS = new QFrame(userHomeDisplayFrameFS);
+        frameFS->setObjectName(QString::fromUtf8("frameFS"));
+        frameFS->setGeometry(QRect(0, 0, 891, 791));
+        frameFS->setStyleSheet(QString::fromUtf8("background: rgba(43, 82, 140, 0.55);\n"
+"border: 0px;"));
+        frameFS->setFrameShape(QFrame::StyledPanel);
+        frameFS->setFrameShadow(QFrame::Raised);
+        showLargeTestsFS = new QLabel(frameFS);
+        showLargeTestsFS->setObjectName(QString::fromUtf8("showLargeTestsFS"));
+        showLargeTestsFS->setGeometry(QRect(200, 80, 471, 641));
+        showLargeTestsFS->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"border-radius: 25;}"));
+        showLargeTestsFS->setScaledContents(true);
+        frameFS2 = new QFrame(frameFS);
+        frameFS2->setObjectName(QString::fromUtf8("frameFS2"));
+        frameFS2->setGeometry(QRect(0, 0, 891, 791));
+        frameFS2->setStyleSheet(QString::fromUtf8("background: rgba(43, 82, 140, 0.88);\n"
+"border: 0px;"));
+        frameFS2->setFrameShape(QFrame::StyledPanel);
+        frameFS2->setFrameShadow(QFrame::Raised);
+        pbFullScreenFS = new QPushButton(frameFS2);
+        pbFullScreenFS->setObjectName(QString::fromUtf8("pbFullScreenFS"));
+        pbFullScreenFS->setGeometry(QRect(705, 710, 91, 31));
+        QFont font7;
+        font7.setFamilies({QString::fromUtf8("Avenir Next")});
+        font7.setBold(true);
+        pbFullScreenFS->setFont(font7);
+        pbFullScreenFS->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"color: #2B528C;\n"
+"font-weight: 500;\n"
+"border-radius: 15px;\n"
+"background:  white;\n"
+"font-size: 12px; \n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"font-size: 13px;\n"
+"\n"
+"}"));
+        pbCloseImageFS = new QPushButton(frameFS2);
+        pbCloseImageFS->setObjectName(QString::fromUtf8("pbCloseImageFS"));
+        pbCloseImageFS->setGeometry(QRect(750, 40, 31, 31));
+        pbCloseImageFS->setFont(font7);
+        pbCloseImageFS->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"color: #2B528C;\n"
+"font-weight: 500;\n"
+"border-radius: 15px;\n"
+"background:  white;\n"
+"font-size: 12px; \n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"font-size: 13px;\n"
+"\n"
+"}"));
+        closeImageTextFS = new QLabel(frameFS2);
+        closeImageTextFS->setObjectName(QString::fromUtf8("closeImageTextFS"));
+        closeImageTextFS->setGeometry(QRect(752, 77, 31, 16));
+        closeImageTextFS->setStyleSheet(QString::fromUtf8("background: rgba(43, 82, 140, 0.00);\n"
+"font-size: 10px;\n"
+"color:white;"));
+        showLargeCertificateFS = new QLabel(frameFS);
+        showLargeCertificateFS->setObjectName(QString::fromUtf8("showLargeCertificateFS"));
+        showLargeCertificateFS->setGeometry(QRect(200, 80, 471, 641));
+        showLargeCertificateFS->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"border-radius: 25;}"));
+        showLargeCertificateFS->setScaledContents(true);
+        showLargeQRCodeImageFS = new QLabel(frameFS);
+        showLargeQRCodeImageFS->setObjectName(QString::fromUtf8("showLargeQRCodeImageFS"));
+        showLargeQRCodeImageFS->setGeometry(QRect(200, 80, 471, 641));
+        showLargeQRCodeImageFS->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"border-radius: 25;}"));
+        showLargeQRCodeImageFS->setScaledContents(true);
+        showLargeQRFS = new QLabel(frameFS);
+        showLargeQRFS->setObjectName(QString::fromUtf8("showLargeQRFS"));
+        showLargeQRFS->setGeometry(QRect(315, 429, 251, 251));
+        allUserPageFS = new QFrame(frameFS);
+        allUserPageFS->setObjectName(QString::fromUtf8("allUserPageFS"));
+        allUserPageFS->setGeometry(QRect(0, 0, 881, 791));
+        allUserPageFS->setStyleSheet(QString::fromUtf8("background: white;"));
+        allUserPageFS->setFrameShape(QFrame::NoFrame);
+        allUserPageFS->setFrameShadow(QFrame::Raised);
+        homeSubHeadingFS = new QLabel(allUserPageFS);
+        homeSubHeadingFS->setObjectName(QString::fromUtf8("homeSubHeadingFS"));
+        homeSubHeadingFS->setGeometry(QRect(21, 55, 481, 51));
+        homeSubHeadingFS->setFont(font2);
+        homeSubHeadingFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 18px;\n"
+"color: #2B528C;\n"
+"background: rgba(104, 160, 229, 0.00);\n"
+""));
+        homeTitleFS = new QLabel(allUserPageFS);
+        homeTitleFS->setObjectName(QString::fromUtf8("homeTitleFS"));
+        homeTitleFS->setGeometry(QRect(20, 15, 511, 50));
+        homeTitleFS->setFont(font);
+        homeTitleFS->setStyleSheet(QString::fromUtf8("font-weight: 500;\n"
+"font-size: 40px;\n"
+"color:#2B528C;\n"
+"background: rgba(104, 160, 229, 0.00);\n"
+""));
+        userInfoFrameFS = new QFrame(allUserPageFS);
+        userInfoFrameFS->setObjectName(QString::fromUtf8("userInfoFrameFS"));
+        userInfoFrameFS->setGeometry(QRect(220, 150, 641, 621));
+        userInfoFrameFS->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
+"border-radius: 40px;"));
+        userInfoFrameFS->setFrameShape(QFrame::StyledPanel);
+        userInfoFrameFS->setFrameShadow(QFrame::Raised);
+        showUserNameFS = new QLabel(userInfoFrameFS);
+        showUserNameFS->setObjectName(QString::fromUtf8("showUserNameFS"));
+        showUserNameFS->setGeometry(QRect(120, 20, 331, 41));
+        showUserNameFS->setFont(font5);
+        showUserNameFS->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
+"font-size: 23px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        showUserNameFS->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        labelNHIFS = new QLabel(userInfoFrameFS);
+        labelNHIFS->setObjectName(QString::fromUtf8("labelNHIFS"));
+        labelNHIFS->setGeometry(QRect(25, 110, 101, 20));
+        labelNHIFS->setFont(font2);
+        labelNHIFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 14px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        showUserNHIFS = new QLabel(userInfoFrameFS);
+        showUserNHIFS->setObjectName(QString::fromUtf8("showUserNHIFS"));
+        showUserNHIFS->setGeometry(QRect(20, 130, 281, 31));
+        showUserNHIFS->setStyleSheet(QString::fromUtf8("QLabel \n"
+"{background: #DFF1FE;\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+" color:#2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}"));
+        showUserEmergencyFS = new QLabel(userInfoFrameFS);
+        showUserEmergencyFS->setObjectName(QString::fromUtf8("showUserEmergencyFS"));
+        showUserEmergencyFS->setGeometry(QRect(20, 190, 601, 31));
+        showUserEmergencyFS->setStyleSheet(QString::fromUtf8("QLabel \n"
+"{background: #DFF1FE;\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+" color:#2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}"));
+        labelEmergencyFS = new QLabel(userInfoFrameFS);
+        labelEmergencyFS->setObjectName(QString::fromUtf8("labelEmergencyFS"));
+        labelEmergencyFS->setGeometry(QRect(25, 170, 321, 20));
+        labelEmergencyFS->setFont(font2);
+        labelEmergencyFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 14px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        showUserNotesFS = new QLabel(userInfoFrameFS);
+        showUserNotesFS->setObjectName(QString::fromUtf8("showUserNotesFS"));
+        showUserNotesFS->setGeometry(QRect(20, 250, 601, 91));
+        showUserNotesFS->setStyleSheet(QString::fromUtf8("QLabel \n"
+"{background: #DFF1FE;\n"
+"border-radius: 20;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+" color:#2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}"));
+        showUserNotesFS->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+        labelAdditionalNotesFS = new QLabel(userInfoFrameFS);
+        labelAdditionalNotesFS->setObjectName(QString::fromUtf8("labelAdditionalNotesFS"));
+        labelAdditionalNotesFS->setGeometry(QRect(25, 230, 321, 20));
+        labelAdditionalNotesFS->setFont(font2);
+        labelAdditionalNotesFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 14px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        showUserPictureFS = new QLabel(userInfoFrameFS);
+        showUserPictureFS->setObjectName(QString::fromUtf8("showUserPictureFS"));
+        showUserPictureFS->setGeometry(QRect(20, 11, 81, 81));
+        showUserPictureFS->setStyleSheet(QString::fromUtf8("background: rgba(248, 251, 255, 0.99);\n"
+"border-radius: 40px;"));
+        showUserPictureFS->setAlignment(Qt::AlignCenter);
+        labelCVNFS = new QLabel(userInfoFrameFS);
+        labelCVNFS->setObjectName(QString::fromUtf8("labelCVNFS"));
+        labelCVNFS->setGeometry(QRect(335, 110, 281, 20));
+        labelCVNFS->setFont(font2);
+        labelCVNFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 14px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);"));
+        showUserCVNFS = new QLabel(userInfoFrameFS);
+        showUserCVNFS->setObjectName(QString::fromUtf8("showUserCVNFS"));
+        showUserCVNFS->setGeometry(QRect(330, 130, 291, 31));
+        showUserCVNFS->setStyleSheet(QString::fromUtf8("QLabel \n"
+"{background: #DFF1FE;\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+" color:#2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}"));
+        showUserDOBFS = new QLabel(userInfoFrameFS);
+        showUserDOBFS->setObjectName(QString::fromUtf8("showUserDOBFS"));
+        showUserDOBFS->setGeometry(QRect(120, 63, 111, 20));
+        showUserDOBFS->setFont(font2);
+        showUserDOBFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 14px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        showUserPhoneFS = new QLabel(userInfoFrameFS);
+        showUserPhoneFS->setObjectName(QString::fromUtf8("showUserPhoneFS"));
+        showUserPhoneFS->setGeometry(QRect(240, 63, 121, 20));
+        showUserPhoneFS->setFont(font2);
+        showUserPhoneFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 14px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        showUserEmailFS = new QLabel(userInfoFrameFS);
+        showUserEmailFS->setObjectName(QString::fromUtf8("showUserEmailFS"));
+        showUserEmailFS->setGeometry(QRect(384, 63, 241, 20));
+        showUserEmailFS->setFont(font2);
+        showUserEmailFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 14px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        showUserVaccStatusFS = new QLabel(userInfoFrameFS);
+        showUserVaccStatusFS->setObjectName(QString::fromUtf8("showUserVaccStatusFS"));
+        showUserVaccStatusFS->setGeometry(QRect(480, 20, 141, 31));
+        showUserVaccStatusFS->setStyleSheet(QString::fromUtf8("QLabel \n"
+"{background: #DFF1FE;\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+" color:#2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}"));
+        showUserVaccStatusFS->setAlignment(Qt::AlignCenter);
+        labelVaccineFS = new QLabel(userInfoFrameFS);
+        labelVaccineFS->setObjectName(QString::fromUtf8("labelVaccineFS"));
+        labelVaccineFS->setGeometry(QRect(33, 351, 181, 31));
+        labelVaccineFS->setFont(font6);
+        labelVaccineFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 18px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);"));
+        labelVaccineFS->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        labelDocumentationFS = new QLabel(userInfoFrameFS);
+        labelDocumentationFS->setObjectName(QString::fromUtf8("labelDocumentationFS"));
+        labelDocumentationFS->setGeometry(QRect(314, 350, 201, 31));
+        labelDocumentationFS->setFont(font6);
+        labelDocumentationFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 18px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);"));
+        labelDocumentationFS->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        vaccineDose1FrameFS = new QFrame(userInfoFrameFS);
+        vaccineDose1FrameFS->setObjectName(QString::fromUtf8("vaccineDose1FrameFS"));
+        vaccineDose1FrameFS->setGeometry(QRect(20, 396, 271, 61));
+        vaccineDose1FrameFS->setStyleSheet(QString::fromUtf8("background: #DFF1FE;\n"
+"border-radius: 30px;"));
+        vaccineDose1FrameFS->setFrameShape(QFrame::StyledPanel);
+        vaccineDose1FrameFS->setFrameShadow(QFrame::Raised);
+        vaccineIcon1FrameFS = new QLabel(vaccineDose1FrameFS);
+        vaccineIcon1FrameFS->setObjectName(QString::fromUtf8("vaccineIcon1FrameFS"));
+        vaccineIcon1FrameFS->setGeometry(QRect(5, 5, 51, 51));
+        vaccineIcon1FrameFS->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
+"border-radius: 25px;"));
+        vaccineIcon1FrameFS->setAlignment(Qt::AlignCenter);
+        show1stDoseNameFS = new QLabel(vaccineDose1FrameFS);
+        show1stDoseNameFS->setObjectName(QString::fromUtf8("show1stDoseNameFS"));
+        show1stDoseNameFS->setGeometry(QRect(70, 7, 191, 21));
+        show1stDoseNameFS->setFont(font5);
+        show1stDoseNameFS->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
+"font-size: 14px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        show1stDoseNameFS->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        show1stDoseBatchFS = new QLabel(vaccineDose1FrameFS);
+        show1stDoseBatchFS->setObjectName(QString::fromUtf8("show1stDoseBatchFS"));
+        show1stDoseBatchFS->setGeometry(QRect(70, 30, 71, 20));
+        show1stDoseBatchFS->setFont(font2);
+        show1stDoseBatchFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        show1stDoseDateFS = new QLabel(vaccineDose1FrameFS);
+        show1stDoseDateFS->setObjectName(QString::fromUtf8("show1stDoseDateFS"));
+        show1stDoseDateFS->setGeometry(QRect(141, 30, 101, 20));
+        show1stDoseDateFS->setFont(font2);
+        show1stDoseDateFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        show1stDoseDateFS->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        imgVaccineIcon1FS = new QLabel(vaccineDose1FrameFS);
+        imgVaccineIcon1FS->setObjectName(QString::fromUtf8("imgVaccineIcon1FS"));
+        imgVaccineIcon1FS->setGeometry(QRect(19, 15, 21, 31));
+        imgVaccineIcon1FS->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
+"border-radius: 20px;"));
+        imgVaccineIcon1FS->setPixmap(QPixmap(QString::fromUtf8(":/res/images/iconVaccine.png")));
+        imgVaccineIcon1FS->setScaledContents(true);
+        imgVaccineIcon1FS->setAlignment(Qt::AlignCenter);
+        vaccineDose2FrameFS = new QFrame(userInfoFrameFS);
+        vaccineDose2FrameFS->setObjectName(QString::fromUtf8("vaccineDose2FrameFS"));
+        vaccineDose2FrameFS->setGeometry(QRect(20, 466, 271, 61));
+        vaccineDose2FrameFS->setStyleSheet(QString::fromUtf8("background: #DFF1FE;\n"
+"border-radius: 30px;"));
+        vaccineDose2FrameFS->setFrameShape(QFrame::StyledPanel);
+        vaccineDose2FrameFS->setFrameShadow(QFrame::Raised);
+        vaccineIcon2FrameFS = new QLabel(vaccineDose2FrameFS);
+        vaccineIcon2FrameFS->setObjectName(QString::fromUtf8("vaccineIcon2FrameFS"));
+        vaccineIcon2FrameFS->setGeometry(QRect(5, 5, 51, 51));
+        vaccineIcon2FrameFS->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
+"border-radius: 25px;"));
+        vaccineIcon2FrameFS->setAlignment(Qt::AlignCenter);
+        show2ndDoseNameFS = new QLabel(vaccineDose2FrameFS);
+        show2ndDoseNameFS->setObjectName(QString::fromUtf8("show2ndDoseNameFS"));
+        show2ndDoseNameFS->setGeometry(QRect(70, 7, 191, 21));
+        show2ndDoseNameFS->setFont(font5);
+        show2ndDoseNameFS->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
+"font-size: 14px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        show2ndDoseNameFS->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        show2ndDoseBatchFS = new QLabel(vaccineDose2FrameFS);
+        show2ndDoseBatchFS->setObjectName(QString::fromUtf8("show2ndDoseBatchFS"));
+        show2ndDoseBatchFS->setGeometry(QRect(70, 30, 71, 20));
+        show2ndDoseBatchFS->setFont(font2);
+        show2ndDoseBatchFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        show2ndDoseDateFS = new QLabel(vaccineDose2FrameFS);
+        show2ndDoseDateFS->setObjectName(QString::fromUtf8("show2ndDoseDateFS"));
+        show2ndDoseDateFS->setGeometry(QRect(141, 30, 101, 20));
+        show2ndDoseDateFS->setFont(font2);
+        show2ndDoseDateFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        show2ndDoseDateFS->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        imgVaccineIcon2FS = new QLabel(vaccineDose2FrameFS);
+        imgVaccineIcon2FS->setObjectName(QString::fromUtf8("imgVaccineIcon2FS"));
+        imgVaccineIcon2FS->setGeometry(QRect(19, 15, 21, 31));
+        imgVaccineIcon2FS->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
+"border-radius: 20px;"));
+        imgVaccineIcon2FS->setPixmap(QPixmap(QString::fromUtf8(":/res/images/iconVaccine.png")));
+        imgVaccineIcon2FS->setScaledContents(true);
+        imgVaccineIcon2FS->setAlignment(Qt::AlignCenter);
+        pbEditUserFS = new QPushButton(userInfoFrameFS);
+        pbEditUserFS->setObjectName(QString::fromUtf8("pbEditUserFS"));
+        pbEditUserFS->setGeometry(QRect(438, 550, 181, 51));
+        pbEditUserFS->setFont(font);
+        pbEditUserFS->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background: #2B528C;\n"
+"font-weight: 500;\n"
+"border-radius: 25px;\n"
+"color:  rgba(248, 251, 255, 0.99);\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"font-size: 16px; \n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"font-size: 18px;\n"
+"}"));
+        labelConfidentialFS = new QLabel(userInfoFrameFS);
+        labelConfidentialFS->setObjectName(QString::fromUtf8("labelConfidentialFS"));
+        labelConfidentialFS->setGeometry(QRect(30, 560, 201, 21));
+        labelConfidentialFS->setFont(font2);
+        labelConfidentialFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        labelUnauthorisedFS = new QLabel(userInfoFrameFS);
+        labelUnauthorisedFS->setObjectName(QString::fromUtf8("labelUnauthorisedFS"));
+        labelUnauthorisedFS->setGeometry(QRect(30, 580, 381, 21));
+        labelUnauthorisedFS->setFont(font2);
+        labelUnauthorisedFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        certificateFrameFS = new QFrame(userInfoFrameFS);
+        certificateFrameFS->setObjectName(QString::fromUtf8("certificateFrameFS"));
+        certificateFrameFS->setGeometry(QRect(423, 394, 91, 111));
+        certificateFrameFS->setFont(font3);
+        certificateFrameFS->setStyleSheet(QString::fromUtf8("background: #DFF1FE;\n"
+"border-radius: 45px;"));
+        certificateFrameFS->setFrameShape(QFrame::StyledPanel);
+        certificateFrameFS->setFrameShadow(QFrame::Raised);
+        showCertificateFS = new QLabel(certificateFrameFS);
+        showCertificateFS->setObjectName(QString::fromUtf8("showCertificateFS"));
+        showCertificateFS->setGeometry(QRect(10, 10, 71, 91));
+        showCertificateFS->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
+"border-radius: 35px;"));
+        pbLargeCertificateFS = new QPushButton(certificateFrameFS);
+        pbLargeCertificateFS->setObjectName(QString::fromUtf8("pbLargeCertificateFS"));
+        pbLargeCertificateFS->setGeometry(QRect(70, 0, 21, 20));
+        pbLargeCertificateFS->setFont(font4);
+        pbLargeCertificateFS->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background: #2B528C;\n"
+"font-weight: 300;\n"
+"border-radius: 10px;\n"
+"color:  rgba(248, 251, 255, 0.99);\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"font-size: 16px; \n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"font-size: 11px;\n"
+"}"));
+        labelCertificateFS = new QLabel(userInfoFrameFS);
+        labelCertificateFS->setObjectName(QString::fromUtf8("labelCertificateFS"));
+        labelCertificateFS->setGeometry(QRect(425, 510, 91, 20));
+        labelCertificateFS->setFont(font2);
+        labelCertificateFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        labelCertificateFS->setAlignment(Qt::AlignCenter);
+        testResultFrameFS = new QFrame(userInfoFrameFS);
+        testResultFrameFS->setObjectName(QString::fromUtf8("testResultFrameFS"));
+        testResultFrameFS->setGeometry(QRect(314, 395, 91, 111));
+        testResultFrameFS->setFont(font3);
+        testResultFrameFS->setStyleSheet(QString::fromUtf8("background: #DFF1FE;\n"
+"border-radius: 45px;"));
+        testResultFrameFS->setFrameShape(QFrame::StyledPanel);
+        testResultFrameFS->setFrameShadow(QFrame::Raised);
+        showTestResultsFS = new QLabel(testResultFrameFS);
+        showTestResultsFS->setObjectName(QString::fromUtf8("showTestResultsFS"));
+        showTestResultsFS->setGeometry(QRect(10, 10, 71, 91));
+        showTestResultsFS->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
+"border-radius: 35px;"));
+        pbLargeTestResultFS = new QPushButton(testResultFrameFS);
+        pbLargeTestResultFS->setObjectName(QString::fromUtf8("pbLargeTestResultFS"));
+        pbLargeTestResultFS->setGeometry(QRect(70, 0, 21, 20));
+        pbLargeTestResultFS->setFont(font4);
+        pbLargeTestResultFS->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background: #2B528C;\n"
+"font-weight: 300;\n"
+"border-radius: 10px;\n"
+"color:  rgba(248, 251, 255, 0.99);\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"font-size: 16px; \n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"font-size: 11px;\n"
+"}"));
+        QRCodeFrameFS = new QFrame(userInfoFrameFS);
+        QRCodeFrameFS->setObjectName(QString::fromUtf8("QRCodeFrameFS"));
+        QRCodeFrameFS->setGeometry(QRect(530, 394, 91, 111));
+        QRCodeFrameFS->setFont(font3);
+        QRCodeFrameFS->setStyleSheet(QString::fromUtf8("background: #DFF1FE;\n"
+"border-radius: 45px;"));
+        QRCodeFrameFS->setFrameShape(QFrame::StyledPanel);
+        QRCodeFrameFS->setFrameShadow(QFrame::Raised);
+        showQRCodeFS = new QLabel(QRCodeFrameFS);
+        showQRCodeFS->setObjectName(QString::fromUtf8("showQRCodeFS"));
+        showQRCodeFS->setGeometry(QRect(10, 10, 71, 91));
+        showQRCodeFS->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
+"border-radius: 35px;"));
+        pbLargeQRCodeFS = new QPushButton(QRCodeFrameFS);
+        pbLargeQRCodeFS->setObjectName(QString::fromUtf8("pbLargeQRCodeFS"));
+        pbLargeQRCodeFS->setGeometry(QRect(70, 0, 21, 20));
+        pbLargeQRCodeFS->setFont(font4);
+        pbLargeQRCodeFS->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background: #2B528C;\n"
+"font-weight: 300;\n"
+"border-radius: 10px;\n"
+"color:  rgba(248, 251, 255, 0.99);\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"font-size: 16px; \n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"font-size: 11px;\n"
+"}"));
+        labelTestResultFS = new QLabel(userInfoFrameFS);
+        labelTestResultFS->setObjectName(QString::fromUtf8("labelTestResultFS"));
+        labelTestResultFS->setGeometry(QRect(314, 511, 91, 20));
+        labelTestResultFS->setFont(font2);
+        labelTestResultFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        labelTestResultFS->setAlignment(Qt::AlignCenter);
+        labelQRCodeFS = new QLabel(userInfoFrameFS);
+        labelQRCodeFS->setObjectName(QString::fromUtf8("labelQRCodeFS"));
+        labelQRCodeFS->setGeometry(QRect(531, 510, 91, 20));
+        labelQRCodeFS->setFont(font2);
+        labelQRCodeFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        labelQRCodeFS->setAlignment(Qt::AlignCenter);
+        userPictureFrameFS = new QFrame(userInfoFrameFS);
+        userPictureFrameFS->setObjectName(QString::fromUtf8("userPictureFrameFS"));
+        userPictureFrameFS->setGeometry(QRect(15, 6, 91, 91));
+        userPictureFrameFS->setFont(font3);
+        userPictureFrameFS->setStyleSheet(QString::fromUtf8("background: #DFF1FE;\n"
+"border-radius: 45px;"));
+        userPictureFrameFS->setFrameShape(QFrame::StyledPanel);
+        userPictureFrameFS->setFrameShadow(QFrame::Raised);
+        labelClickEnlargeFS = new QLabel(userInfoFrameFS);
+        labelClickEnlargeFS->setObjectName(QString::fromUtf8("labelClickEnlargeFS"));
+        labelClickEnlargeFS->setGeometry(QRect(314, 374, 201, 21));
+        labelClickEnlargeFS->setFont(font2);
+        labelClickEnlargeFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 10px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        showUserNotesFS->raise();
+        showUserNameFS->raise();
+        labelNHIFS->raise();
+        showUserNHIFS->raise();
+        showUserEmergencyFS->raise();
+        labelEmergencyFS->raise();
+        labelAdditionalNotesFS->raise();
+        showUserPictureFS->raise();
+        labelCVNFS->raise();
+        showUserCVNFS->raise();
+        showUserDOBFS->raise();
+        showUserPhoneFS->raise();
+        showUserEmailFS->raise();
+        showUserVaccStatusFS->raise();
+        labelVaccineFS->raise();
+        labelDocumentationFS->raise();
+        vaccineDose1FrameFS->raise();
+        vaccineDose2FrameFS->raise();
+        pbEditUserFS->raise();
+        labelConfidentialFS->raise();
+        labelUnauthorisedFS->raise();
+        certificateFrameFS->raise();
+        labelCertificateFS->raise();
+        testResultFrameFS->raise();
+        QRCodeFrameFS->raise();
+        labelTestResultFS->raise();
+        labelQRCodeFS->raise();
+        userPictureFrameFS->raise();
+        labelClickEnlargeFS->raise();
+        pbSearchFS = new QPushButton(allUserPageFS);
+        pbSearchFS->setObjectName(QString::fromUtf8("pbSearchFS"));
+        pbSearchFS->setGeometry(QRect(730, 100, 131, 31));
+        pbSearchFS->setFont(font);
+        pbSearchFS->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"color:#2B528C;\n"
+"background: #2B528C;\n"
+"font-weight: 500;\n"
+"border-radius: 15px;\n"
+"background: #C4DBF4;\n"
+"border-color: rgba(104, 160, 229, 0.00);\n"
+"font-size: 16px; \n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"background: rgba(196, 219, 244, 0.77);\n"
+"}"));
+        labelSearchUserFS = new QLineEdit(allUserPageFS);
+        labelSearchUserFS->setObjectName(QString::fromUtf8("labelSearchUserFS"));
+        labelSearchUserFS->setGeometry(QRect(20, 100, 701, 31));
+        labelSearchUserFS->setFont(font3);
+        labelSearchUserFS->setStyleSheet(QString::fromUtf8("QLineEdit\n"
+"{background: #F8FBFF;\n"
+"border-radius: 15;\n"
+"border: 1px solid #C4DBF4;\n"
+"color: #2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}\n"
+"\n"
+"QLineEdit:hove{\n"
+"border-color: rgba(104, 160, 229, 0.88);\n"
+"background: #C4DBF4;\n"
+"}\n"
+"\n"
+"QLineEdit:focus{\n"
+"border: 3px solid rgba(104, 160, 229, 0.88);\n"
+"}"));
+        listAllUsersFS = new QListWidget(allUserPageFS);
+        listAllUsersFS->setObjectName(QString::fromUtf8("listAllUsersFS"));
+        listAllUsersFS->setGeometry(QRect(20, 150, 181, 621));
+        listAllUsersFS->setStyleSheet(QString::fromUtf8("background: #F2F8FC;\n"
+"border-radius: 20px;\n"
+"font-weight: 200;\n"
+"font-size: 14px;\n"
+"color: #2B528C;\n"
+"padding-left: 8px;\n"
+"padding-right: 8px;\n"
+"padding-top: 10px;\n"
+""));
+        userInfoFrameFS->raise();
+        homeSubHeadingFS->raise();
+        homeTitleFS->raise();
+        pbSearchFS->raise();
+        labelSearchUserFS->raise();
+        listAllUsersFS->raise();
+        allUserPageFS->raise();
+        frameFS2->raise();
+        showLargeTestsFS->raise();
+        showLargeQRCodeImageFS->raise();
+        showLargeQRFS->raise();
+        showLargeCertificateFS->raise();
+        userHomeWhiteBackgroundFS = new QLabel(adminEnlargeImagesPage);
+        userHomeWhiteBackgroundFS->setObjectName(QString::fromUtf8("userHomeWhiteBackgroundFS"));
+        userHomeWhiteBackgroundFS->setGeometry(QRect(0, 0, 1101, 791));
+        userHomeWhiteBackgroundFS->setStyleSheet(QString::fromUtf8("background: #F2F8FC;"));
+        stackedWidget->addWidget(adminEnlargeImagesPage);
+        userHomeWhiteBackgroundFS->raise();
+        userHomeHelloBarFS->raise();
+        userProfileBlueMenuBarFS->raise();
+        userHomeDisplayFrameFS->raise();
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -2788,7 +3615,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -2815,7 +3642,7 @@ public:
         pbAllUsersAUP->setText(QCoreApplication::translate("MainWindow", "All Users", nullptr));
         pbAddUserAUP->setText(QCoreApplication::translate("MainWindow", "Add User", nullptr));
         pbReportsAUP->setText(QCoreApplication::translate("MainWindow", "Reports", nullptr));
-        homeSubHeadingAUP->setText(QCoreApplication::translate("MainWindow", "This user is now available for editing.", nullptr));
+        homeSubHeadingAUP->setText(QCoreApplication::translate("MainWindow", "These users are now available for editing.", nullptr));
         homeTitleAUP->setText(QCoreApplication::translate("MainWindow", "All Users", nullptr));
         showUserNameAUP->setText(QCoreApplication::translate("MainWindow", "User Full Name", nullptr));
         labelNHIAUP->setText(QCoreApplication::translate("MainWindow", "NHI Number", nullptr));
@@ -2857,7 +3684,7 @@ public:
         labelQRCodeAUP->setText(QCoreApplication::translate("MainWindow", "QR Code", nullptr));
         labelClickEnlargeAUP->setText(QCoreApplication::translate("MainWindow", "Click '+' to enlarge images.", nullptr));
         pbSearchAUP->setText(QCoreApplication::translate("MainWindow", "Search", nullptr));
-        labelSearchUserAUP->setPlaceholderText(QCoreApplication::translate("MainWindow", "Click to start typing", nullptr));
+        labelSearchUserAUP->setPlaceholderText(QCoreApplication::translate("MainWindow", "Search by NHI Number", nullptr));
         displayPictureAUP->setText(QCoreApplication::translate("MainWindow", "displayPicture", nullptr));
         labelAdminAUP->setText(QCoreApplication::translate("MainWindow", "Administrator!", nullptr));
         labelHeyThereAUP->setText(QCoreApplication::translate("MainWindow", "Hey there,", nullptr));
@@ -2878,7 +3705,7 @@ public:
         labelEmergencyAP->setText(QCoreApplication::translate("MainWindow", "Emergency Contact", nullptr));
         labelAdditionalNotesAP->setText(QCoreApplication::translate("MainWindow", "Additional Notes", nullptr));
         addUserPictureAP->setText(QString());
-        labelCVNAP->setText(QCoreApplication::translate("MainWindow", "CVN Number", nullptr));
+        labelCVNAP->setText(QCoreApplication::translate("MainWindow", "CV Number", nullptr));
         labelVaccinesAP->setText(QCoreApplication::translate("MainWindow", "Vaccines Recieved", nullptr));
         labelDocumentationAP->setText(QCoreApplication::translate("MainWindow", "Documentation", nullptr));
         vaccineIcon1FrameAP->setText(QString());
@@ -2892,7 +3719,7 @@ public:
         pbSaveAP->setText(QCoreApplication::translate("MainWindow", "Save User", nullptr));
         labelConfidentialAP->setText(QCoreApplication::translate("MainWindow", "This information is confidential.", nullptr));
         labelUnauthorisedAP->setText(QCoreApplication::translate("MainWindow", "Unauthorised access and changes will result in legal action.", nullptr));
-        addUserEmergencyAP->setPlaceholderText(QCoreApplication::translate("MainWindow", "Please include emergency contact full name and contact phone number without using commas.", nullptr));
+        addUserEmergencyAP->setPlaceholderText(QCoreApplication::translate("MainWindow", "Please include emergency contact full name and contact phone number", nullptr));
         addUserDOBAP->setPlaceholderText(QCoreApplication::translate("MainWindow", "Birthday", nullptr));
         addUserPhoneAP->setPlaceholderText(QCoreApplication::translate("MainWindow", "Phone Number", nullptr));
         addUserEmailAP->setPlaceholderText(QCoreApplication::translate("MainWindow", "Email Address", nullptr));
@@ -2966,12 +3793,11 @@ public:
         pbReportsEP->setText(QCoreApplication::translate("MainWindow", "Reports", nullptr));
         homeSubHeadingEP->setText(QCoreApplication::translate("MainWindow", "Manage your users information with ease. ", nullptr));
         homeTitleEP->setText(QCoreApplication::translate("MainWindow", "Editing User", nullptr));
-        editUserNameEP->setText(QCoreApplication::translate("MainWindow", "User Full Name", nullptr));
         labelNHIEP->setText(QCoreApplication::translate("MainWindow", "NHI Number", nullptr));
         labelEmergencyEP->setText(QCoreApplication::translate("MainWindow", "Emergency Contact", nullptr));
         labelAdditionalNotesEP->setText(QCoreApplication::translate("MainWindow", "Additional Notes", nullptr));
         editUserPictureEP->setText(QString());
-        labelCVNEP->setText(QCoreApplication::translate("MainWindow", "CVN Number", nullptr));
+        labelCVNEP->setText(QCoreApplication::translate("MainWindow", "CV Number", nullptr));
         labelVaccineEP->setText(QCoreApplication::translate("MainWindow", "Vaccines Recieved", nullptr));
         labelDocumentationEP->setText(QCoreApplication::translate("MainWindow", "Documentation", nullptr));
         pbSaveEditEP->setText(QCoreApplication::translate("MainWindow", "Save Changes", nullptr));
@@ -3004,7 +3830,6 @@ public:
         editUserVaccineSBEP->setItemText(1, QCoreApplication::translate("MainWindow", "Partially Vaccinated", nullptr));
         editUserVaccineSBEP->setItemText(2, QCoreApplication::translate("MainWindow", "Fully Vaccinated", nullptr));
 
-        editUserVaccineSBEP->setPlaceholderText(QCoreApplication::translate("MainWindow", "Edit Vaccine Status", nullptr));
         pbEditTestResultsEP->setText(QCoreApplication::translate("MainWindow", "Upload", nullptr));
         editCertificateEP->setText(QString());
         editTestResultsEP->setText(QString());
@@ -3012,9 +3837,71 @@ public:
         editQRCodeEP->setText(QString());
         pbEditCertificateEP->setText(QCoreApplication::translate("MainWindow", "Upload", nullptr));
         labelClickEditEP->setText(QCoreApplication::translate("MainWindow", "Click grey text to edit", nullptr));
+        editUserNameEP->setText(QString());
+        editUserNameEP->setPlaceholderText(QCoreApplication::translate("MainWindow", "Edit User Name", nullptr));
+        showNHIEP->setText(QString());
         pbSearchEP->setText(QCoreApplication::translate("MainWindow", "Search", nullptr));
         editSearchEP->setPlaceholderText(QCoreApplication::translate("MainWindow", "Click to start typing", nullptr));
         userHomeWhiteBackgroundEP->setText(QString());
+        displayPictureFS->setText(QCoreApplication::translate("MainWindow", "displayPicture", nullptr));
+        labelAdminNameFS->setText(QCoreApplication::translate("MainWindow", "Administrator!", nullptr));
+        labelHeyThereFS->setText(QCoreApplication::translate("MainWindow", "Hey there,", nullptr));
+        pbLogoutFS->setText(QCoreApplication::translate("MainWindow", "Logout", nullptr));
+        pbHomeFS->setText(QCoreApplication::translate("MainWindow", "Home", nullptr));
+        pbAllUsersFS->setText(QCoreApplication::translate("MainWindow", "All Users", nullptr));
+        pbAddUserFS->setText(QCoreApplication::translate("MainWindow", "Add User", nullptr));
+        pbReportsFS->setText(QCoreApplication::translate("MainWindow", "Reports", nullptr));
+        showLargeTestsFS->setText(QString());
+        pbFullScreenFS->setText(QCoreApplication::translate("MainWindow", "Full Screen", nullptr));
+        pbCloseImageFS->setText(QCoreApplication::translate("MainWindow", "X", nullptr));
+        closeImageTextFS->setText(QCoreApplication::translate("MainWindow", "Close", nullptr));
+        showLargeCertificateFS->setText(QString());
+        showLargeQRCodeImageFS->setText(QString());
+        showLargeQRFS->setText(QString());
+        homeSubHeadingFS->setText(QCoreApplication::translate("MainWindow", "This user is now available for editing.", nullptr));
+        homeTitleFS->setText(QCoreApplication::translate("MainWindow", "All Users", nullptr));
+        showUserNameFS->setText(QCoreApplication::translate("MainWindow", "User Full Name", nullptr));
+        labelNHIFS->setText(QCoreApplication::translate("MainWindow", "NHI Number", nullptr));
+        showUserNHIFS->setText(QString());
+        showUserEmergencyFS->setText(QString());
+        labelEmergencyFS->setText(QCoreApplication::translate("MainWindow", "Emergency Contact", nullptr));
+        showUserNotesFS->setText(QString());
+        labelAdditionalNotesFS->setText(QCoreApplication::translate("MainWindow", "Additional Notes", nullptr));
+        showUserPictureFS->setText(QCoreApplication::translate("MainWindow", "displayPicture", nullptr));
+        labelCVNFS->setText(QCoreApplication::translate("MainWindow", "CV Number", nullptr));
+        showUserCVNFS->setText(QString());
+        showUserDOBFS->setText(QCoreApplication::translate("MainWindow", "Birthday", nullptr));
+        showUserPhoneFS->setText(QCoreApplication::translate("MainWindow", "Contact Number", nullptr));
+        showUserEmailFS->setText(QCoreApplication::translate("MainWindow", "Email", nullptr));
+        showUserVaccStatusFS->setText(QCoreApplication::translate("MainWindow", "Vaccination Status", nullptr));
+        labelVaccineFS->setText(QCoreApplication::translate("MainWindow", "Vaccines Recieved", nullptr));
+        labelDocumentationFS->setText(QCoreApplication::translate("MainWindow", "Documentation", nullptr));
+        vaccineIcon1FrameFS->setText(QString());
+        show1stDoseNameFS->setText(QCoreApplication::translate("MainWindow", "Vaccination Type", nullptr));
+        show1stDoseBatchFS->setText(QCoreApplication::translate("MainWindow", "Batch #", nullptr));
+        show1stDoseDateFS->setText(QCoreApplication::translate("MainWindow", "Date Recieved", nullptr));
+        imgVaccineIcon1FS->setText(QString());
+        vaccineIcon2FrameFS->setText(QString());
+        show2ndDoseNameFS->setText(QCoreApplication::translate("MainWindow", "Vaccination Type", nullptr));
+        show2ndDoseBatchFS->setText(QCoreApplication::translate("MainWindow", "Batch #", nullptr));
+        show2ndDoseDateFS->setText(QCoreApplication::translate("MainWindow", "Date Recieved", nullptr));
+        imgVaccineIcon2FS->setText(QString());
+        pbEditUserFS->setText(QCoreApplication::translate("MainWindow", "Edit User", nullptr));
+        labelConfidentialFS->setText(QCoreApplication::translate("MainWindow", "This information is confidential.", nullptr));
+        labelUnauthorisedFS->setText(QCoreApplication::translate("MainWindow", "Unauthorised access and changes will result in legal action.", nullptr));
+        showCertificateFS->setText(QString());
+        pbLargeCertificateFS->setText(QCoreApplication::translate("MainWindow", "+", nullptr));
+        labelCertificateFS->setText(QCoreApplication::translate("MainWindow", "Certificate", nullptr));
+        showTestResultsFS->setText(QString());
+        pbLargeTestResultFS->setText(QCoreApplication::translate("MainWindow", "+", nullptr));
+        showQRCodeFS->setText(QString());
+        pbLargeQRCodeFS->setText(QCoreApplication::translate("MainWindow", "+", nullptr));
+        labelTestResultFS->setText(QCoreApplication::translate("MainWindow", "Test Results", nullptr));
+        labelQRCodeFS->setText(QCoreApplication::translate("MainWindow", "QR Code", nullptr));
+        labelClickEnlargeFS->setText(QCoreApplication::translate("MainWindow", "Click '+' to enlarge images.", nullptr));
+        pbSearchFS->setText(QCoreApplication::translate("MainWindow", "Search", nullptr));
+        labelSearchUserFS->setPlaceholderText(QCoreApplication::translate("MainWindow", "Click to start typing", nullptr));
+        userHomeWhiteBackgroundFS->setText(QString());
     } // retranslateUi
 
 };

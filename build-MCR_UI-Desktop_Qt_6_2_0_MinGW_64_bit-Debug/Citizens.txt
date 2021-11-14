@@ -1,1 +1,0 @@
-Tess Williams,027 222 333,name@testing.com,11/12/1996,NHI456,Reuben Watson 027 555 666,,Fully Vaccinated,CV0000002,Pfizer,BN# 58964,10/10/2021,Pfizer,BN# 96642,30/11/2021,./vaccineCertificates/vaccineCertificate.png,./qrCodes/QRCodeImage.png,./testResults/testResultPositive.png,
