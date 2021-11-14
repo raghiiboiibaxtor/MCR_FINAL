@@ -1,2 +1,5 @@
 ./vaccineCertificates/vaccineCertificate.png
 ./vaccineCertificates/vaccineCertificate.png
+./vaccineCertificates/vaccineCertificate.png
+./vaccineCertificates/vaccineCertificate.png
+./vaccineCertificates/vaccineCertificate.png

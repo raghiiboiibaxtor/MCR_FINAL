@@ -19,6 +19,12 @@
 // Admin Main Window
 //*********************************************************
 
+// Assigning Global Variables
+QString certificateImageSave = ""; /// Global QString imagePaths are used as temp variables to push_back to the vector, rather that directly assiging the classCitizen attributes with the image path file.
+QString qrCodeImageSave = "";
+QString testResultImageSave = "";
+QString userProfilePictureSave = "";
+
 // { Overloading constructors begins :
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
@@ -225,19 +231,17 @@ void MainWindow::addCertificateImage()
         ui->addCertificateAP->setPixmap(pixmap);
         ui->addCertificateAP->setScaledContents(true);
 
-        certificateImage = "./vaccineCertificates/" + shortName;
+        certificateImageSave = "./vaccineCertificates/" + shortName;
         //QFile outputFile("vaxCertificates.txt");
         QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates/vaxCertificates.txt");
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
         // Writing to file
-        out << certificateImage << Qt::endl;
+        out << certificateImageSave << Qt::endl;
 
     // Flushing file and then closing.
     out.flush();
     outputFile.close();
-
-
 
     }
 } /// End of addCertificateImage()
@@ -262,14 +266,14 @@ void MainWindow::addQRCodeImage()
         ui->addQRCodeAP->setPixmap(pixmap1);
         ui->addQRCodeAP->setScaledContents(true);
 
-        qrCodeImage = "./qrCodes/" + shortName;
+        qrCodeImageSave = "./qrCodes/" + shortName;
 
         //QFile outputFile("issuedQRCodes.txt");
         QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes/issuedQRCodes.txt");
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
         // Writing to file
-        out << qrCodeImage << Qt::endl;
+        out << qrCodeImageSave << Qt::endl;
 
     // Flushing file and then closing.
     out.flush();
@@ -280,7 +284,6 @@ void MainWindow::addQRCodeImage()
 // Function to add QR Code
 void MainWindow::addTestResultImage()
 {
-
     QString fileName;
     fileName = QFileDialog::getOpenFileName(this, "Open Image", "./", "Image File(*.png *.jpg .*jpeg)");
 
@@ -298,17 +301,18 @@ void MainWindow::addTestResultImage()
         ui->addTestResultsAP->setPixmap(pixmap2);
         ui->addTestResultsAP->setScaledContents(true);
 
-        testResultImage = "./testResults/" + shortName;
+        testResultImageSave = "./testResults/" + shortName;
 
         //QFile outputFile("issuedTestResults.txt");
         QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults/issuedTestResults.txt");
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
         // Writing to file
-        out << testResultImage << Qt::endl;
+        out << testResultImageSave << Qt::endl;
     // Flushing file and then closing.
     out.flush();
     outputFile.close();
+
     }
 } /// End of addTestResultImage()
 
@@ -332,7 +336,7 @@ void MainWindow::addUserPicture()
         ui->addUserPictureAP->setPixmap(pixmap3);
         ui->addUserPictureAP->setScaledContents(true);
 
-        userProfilePicture = "./userProfilePictures/" + shortName;
+        userProfilePictureSave = "./userProfilePictures/" + shortName;
     }
 } /// End of addUserPicture()
 
@@ -358,7 +362,7 @@ void MainWindow::saveUser()
     if (addName.trimmed() != "" && addNhi.trimmed() != "" && addEmail.trimmed() != "")
     {
         classCitizen *ptrNewCitizen = new classCitizen(addName, addPhone, addEmail, addDob, addNhi, addEmergencyContact, addNotes, addVaccStatus, addCvn,
-                                                       add1VaccName, add1BatchNum, add1Date, add2VaccName, add2BatchNum, add2Date, certificateImage, qrCodeImage, testResultImage, userProfilePicture);
+                                                       add1VaccName, add1BatchNum, add1Date, add2VaccName, add2BatchNum, add2Date, certificateImageSave, qrCodeImageSave, testResultImageSave, userProfilePictureSave);
         userList.push_back(ptrNewCitizen);
 
         // Updating ui list widgets to display added user.
@@ -429,8 +433,11 @@ void MainWindow::saveUser()
             ui->addTestResultsAP->clear();
             ui->addUserPictureAP->clear();
 
-            // Displaying saved message for admin user
-           // ui->lblSavedMessage->show();
+           // Clear global variables
+            certificateImageSave = "";
+            qrCodeImageSave = "";
+            testResultImageSave = "";
+            userProfilePictureSave = "";
     }
     else
     {

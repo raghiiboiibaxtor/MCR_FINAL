@@ -25,9 +25,9 @@ private:
     QString batchNumber2;
     QString dateGiven2;
     QString citizenImage;
-    QString qrCodeImage;
-    QString certificateImage;
-    QString testResultImage;
+    QString qrCodeImage;  //17
+    QString certificateImage; //18
+    QString testResultImage; //19
 
 public:
     // Constructor
