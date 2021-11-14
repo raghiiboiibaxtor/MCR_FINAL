@@ -424,7 +424,7 @@ void MainWindow::saveUser()
             ui->addTestResultsAP->clear();
             ui->addUserPictureAP->clear();
 
-           // Clear global variables
+           // Clearing global variables
             certificateImageSave = "";
             qrCodeImageSave = "";
             testResultImageSave = "";
@@ -738,10 +738,10 @@ void MainWindow::editCertificateImage()
         ui->editCertificateEP->setPixmap(pixmap);
         ui->editCertificateEP->setScaledContents(true);
 
-        certificateImage = "./vaccineCertificates/" + shortName;
+        certificateImageSave = "./vaccineCertificates/" + shortName;
 
         ui->editCertificateEP->setPixmap(pixmap);
-        ptrCurrentCitizen->setCertificate(certificateImage);
+        ptrCurrentCitizen->setCertificate(certificateImageSave);
     }
 } /// End of addQRCodeImage()
 
@@ -765,9 +765,9 @@ void MainWindow::editQRCodeImage()
         ui->editQRCodeEP->setPixmap(pixmap1);
         ui->editQRCodeEP->setScaledContents(true);
 
-        qrCodeImage = "./qrCodes/" + shortName;
+        qrCodeImageSave = "./qrCodes/" + shortName;
         ui->editQRCodeEP->setPixmap(pixmap1);
-        ptrCurrentCitizen->setQRCode(qrCodeImage);
+        ptrCurrentCitizen->setQRCode(qrCodeImageSave);
     }
 } /// End of addQRCodeImage()
 
@@ -790,9 +790,9 @@ void MainWindow::editTestResultImage()
         ui->editTestResultsEP->setPixmap(pixmap2);
         ui->editTestResultsEP->setScaledContents(true);
 
-        testResultImage = "./testResults/" + shortName;
+        testResultImageSave = "./testResults/" + shortName;
         ui->editTestResultsEP->setPixmap(pixmap2);
-        ptrCurrentCitizen->setTestResult(testResultImage);
+        ptrCurrentCitizen->setTestResult(testResultImageSave);
     }
 } /// End of addTestResultImage()
 
@@ -815,7 +815,9 @@ void MainWindow::editUserPicture()
         ui->editUserPictureEP->setPixmap(pixmap2);
         ui->editUserPictureEP->setScaledContents(true);
 
-        userProfilePicture = "./userProfilePictures/" + shortName;
+        userProfilePictureSave = "./userProfilePictures/" + shortName;
+        ui->editUserPictureEP->setPixmap(pixmap2);
+        ptrCurrentCitizen->setCitizenImage(userProfilePictureSave);
     }
 } /// End of addTestResultImage()
 
@@ -923,6 +925,7 @@ void MainWindow::saveEdit()
             ui->editQRCodeEP->clear();
             ui->editTestResultsEP->clear();
             ui->editUserPictureEP->clear();
+
 
             // Changing input from view user labels
             ui->showUserNameAUP->setText(ptrCurrentCitizen->getName());
