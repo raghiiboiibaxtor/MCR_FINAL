@@ -226,7 +226,7 @@ void MainWindow::addCertificateImage()
         ui->addCertificateAP->setScaledContents(true);
 
         certificateImage = "./vaccineCertificates/" + shortName;
-
+        //QFile outputFile("vaxCertificates.txt");
         QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates/vaxCertificates.txt");
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
@@ -264,6 +264,7 @@ void MainWindow::addQRCodeImage()
 
         qrCodeImage = "./qrCodes/" + shortName;
 
+        //QFile outputFile("issuedQRCodes.txt");
         QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes/issuedQRCodes.txt");
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
@@ -299,8 +300,8 @@ void MainWindow::addTestResultImage()
 
         testResultImage = "./testResults/" + shortName;
 
+        //QFile outputFile("issuedTestResults.txt");
         QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults/issuedTestResults.txt");
-
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
         // Writing to file
