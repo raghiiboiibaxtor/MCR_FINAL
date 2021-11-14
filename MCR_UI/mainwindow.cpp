@@ -221,25 +221,21 @@ void MainWindow::addCertificateImage()
 
         QPixmap pixmap("./vaccineCertificates/"+shortName);
 
-        // Display in All User Page
-        ui->showCertificateAUP->setPixmap(pixmap);
-        ui->showCertificateAUP->setScaledContents(true);
         // Display on Add User Page
         ui->addCertificateAP->setPixmap(pixmap);
         ui->addCertificateAP->setScaledContents(true);
 
         certificateImage = "./vaccineCertificates/" + shortName;
 
-       // ptrCurrentCitizen->setCertificate("./vaccineCertificates/" + shortName);
-       /* QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates/vaxCertificates.txt");
-
+        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates/vaxCertificates.txt");
         QTextStream out(&outputFile);
-        outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
-        out << ptrCurrentCitizen->getCertificate() << Qt::endl << Qt::endl;
+        outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
+        // Writing to file
+        out << certificateImage << Qt::endl;
 
     // Flushing file and then closing.
     out.flush();
-    outputFile.close();*/
+    outputFile.close();
 
 
 
@@ -249,9 +245,6 @@ void MainWindow::addCertificateImage()
 // Function to add QR Code Image
 void MainWindow::addQRCodeImage()
 {
-
-
-
     QString fileName;
     fileName = QFileDialog::getOpenFileName(this, "Open Image", "./", "Image File(*.png *.jpg .*jpeg)");
 
@@ -270,6 +263,16 @@ void MainWindow::addQRCodeImage()
         ui->addQRCodeAP->setScaledContents(true);
 
         qrCodeImage = "./qrCodes/" + shortName;
+
+        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes/issuedQRCodes.txt");
+        QTextStream out(&outputFile);
+        outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
+        // Writing to file
+        out << qrCodeImage << Qt::endl;
+
+    // Flushing file and then closing.
+    out.flush();
+    outputFile.close();
     }
 } /// End of addQRCodeImage()
 
@@ -295,6 +298,16 @@ void MainWindow::addTestResultImage()
         ui->addTestResultsAP->setScaledContents(true);
 
         testResultImage = "./testResults/" + shortName;
+
+        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults/issuedTestResults.txt");
+
+        QTextStream out(&outputFile);
+        outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
+        // Writing to file
+        out << testResultImage << Qt::endl;
+    // Flushing file and then closing.
+    out.flush();
+    outputFile.close();
     }
 } /// End of addTestResultImage()
 
@@ -385,6 +398,15 @@ void MainWindow::saveUser()
             // Flushing file and then closing.
             out.flush();
             outputFile.close();
+
+            for (int i = 0; i<userList.size(); i++)
+            {
+                if (userList.at(i)->getCitizenImage() > "")
+                {
+
+                }
+            }
+
 
             // Clear input from labels
             ui->addUserNameAP->clear();

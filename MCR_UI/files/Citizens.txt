@@ -1,2 +1,3 @@
-Raghiiboii||raghii@login||NHI123|||Vaccinated|CVN123||||||||./qrCodes/qrCode.png||
-Meagan||meagan@login||NHI12345|||Vaccinated|CVN12345|||||||||./testResults/testResultPositive.png|
+Raghiiboii||raghii@login||NHI123|||Not Vaccinated||||||||./vaccineCertificates/vaccineCertificate.png|./qrCodes/qrCode.png|./testResults/testResultPositive.png|
+Meagan||meagan@test||NHI12345|||Not Vaccinated|CVN12345|||||||./vaccineCertificates/vaccineCertificate.png|./qrCodes/qrCode.png|./testResults/testResultPositive.png|
+Test File||test@login||NHI1234|||Not Vaccinated|CVN1234|||||||./vaccineCertificates/vaccineCertificate.png|||
