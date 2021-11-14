@@ -46,6 +46,11 @@ public:
     void addTestResultImage();
     void addUserPicture();
     void saveUser();
+    void pbShowCertificate();
+    void pbShowQRCode();
+    void pbShowTestResult();
+    void pbClose();
+    void pbFullScreen();
 
     void pbAllUsers();
     void selectUserDetails();

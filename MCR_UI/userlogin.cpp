@@ -146,7 +146,7 @@ void UserLogin::login()
         while (!read.atEnd())
         {
             QString line = read.readLine();
-            QStringList info = line.split(";;");
+            QStringList info = line.split("|");
 
             QString fileEmail = info.at(2);
             QString fileNHI = info.at(4);
@@ -353,10 +353,10 @@ void UserLogin::submitReport()
 
     for (int i = 0; i < reportList.size(); i++)
        {
-        out << reportList.at(i)->getName() << ";;";
-        out << reportList.at(i)->getContact() << ";;";
-        out << reportList.at(i)->getCategory() << ";;";
-        out << reportList.at(i)->getSubject() << ";;";
+        out << reportList.at(i)->getName() << "|";
+        out << reportList.at(i)->getContact() << "|";
+        out << reportList.at(i)->getCategory() << "|";
+        out << reportList.at(i)->getSubject() << "|";
         out << reportList.at(i)->getDetails()<< Qt::endl; //Qt::endl;
        }
 

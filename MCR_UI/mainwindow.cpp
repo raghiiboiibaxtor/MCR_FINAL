@@ -84,6 +84,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     connect(ui->pbHomeAP, &QPushButton::clicked, this, &MainWindow::pbHome);
     connect(ui->pbHomeRP, &QPushButton::clicked, this, &MainWindow::pbHome);
     connect(ui->pbHomeEP, &QPushButton::clicked, this, &MainWindow::pbHome);
+    connect(ui->pbHomeFS, &QPushButton::clicked, this, &MainWindow::pbHome);
 
     /// Add User Buttons
     connect(ui->pbAddUserHP, &QPushButton::clicked, this, &MainWindow::addNewUser);
@@ -91,6 +92,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     connect(ui->pbAddUserAP, &QPushButton::clicked, this, &MainWindow::addNewUser);
     connect(ui->pbAddUserRP, &QPushButton::clicked, this, &MainWindow::addNewUser);
     connect(ui->pbAddUserEP, &QPushButton::clicked, this, &MainWindow::addNewUser);
+    connect(ui->pbAddUserFS, &QPushButton::clicked, this, &MainWindow::addNewUser);
 
     /// All User Buttons
     connect(ui->pbAllUsersHP, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
@@ -98,6 +100,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     connect(ui->pbAllUsersAP, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
     connect(ui->pbAllUsersRP, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
     connect(ui->pbAllUsersEP, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
+    connect(ui->pbAllUsersFS, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
 
     /// Report Buttons
     connect(ui->pbReportsHP, &QPushButton::clicked, this, &MainWindow::pbReports);
@@ -105,6 +108,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     connect(ui->pbReportsAP, &QPushButton::clicked, this, &MainWindow::pbReports);
     connect(ui->pbReportsRP, &QPushButton::clicked, this, &MainWindow::pbReports);
     connect(ui->pbReportsEP, &QPushButton::clicked, this, &MainWindow::pbReports);
+    connect(ui->pbReportsFS, &QPushButton::clicked, this, &MainWindow::pbReports);
 
     /// Logout Buttons
      connect(ui->pbLogoutHP, &QPushButton::clicked, this, &MainWindow::logout);
@@ -112,6 +116,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
      connect(ui->pbLogoutAP, &QPushButton::clicked, this, &MainWindow::logout);
      connect(ui->pbLogoutRP, &QPushButton::clicked, this, &MainWindow::logout);
      connect(ui->pbLogoutEP, &QPushButton::clicked, this, &MainWindow::logout);
+     connect(ui->pbLogoutFS, &QPushButton::clicked, this, &MainWindow::logout);
 
     // In app buttons & connections.
     connect(ui->pbAddCertificateAP, &QPushButton::clicked, this, &MainWindow::addCertificateImage);
@@ -123,6 +128,11 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     connect(ui->pbAllUsersHP, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
     connect(ui->listAllUsersAUP, &QListWidget::itemClicked, this, &MainWindow::selectUserDetails);
     connect(ui->pbSearchAUP, &QPushButton::clicked, this, &MainWindow::searchUser);
+    connect(ui->pbLargeCertificateAUP, &QPushButton::clicked, this, &MainWindow::pbShowCertificate);
+    connect(ui->pbLargeQRCodeAUP, &QPushButton::clicked, this, &MainWindow::pbShowQRCode);
+    connect(ui->pbLargeTestResultAUP, &QPushButton::clicked, this, &MainWindow::pbShowTestResult);
+    connect(ui->pbFullScreenFS, &QPushButton::clicked, this, &MainWindow::pbFullScreen);
+    connect(ui->pbCloseImageFS, &QPushButton::clicked, this, &MainWindow::pbClose);
     /// Edit User connections
     connect(ui->pbEditUserAUP, &QPushButton::clicked, this, &MainWindow::editUser);
     connect(ui->pbEditCertificateEP, &QPushButton::clicked, this, &MainWindow::editCertificateImage);
@@ -196,6 +206,8 @@ void MainWindow::addNewUser()
 // Function to add Vaccine Certificate Image
 void MainWindow::addCertificateImage()
 {
+    certificateImage = "";
+
     QString fileName;
     fileName = QFileDialog::getOpenFileName(this, "Open Image", "./", "Image File(*.png *.jpg .*jpeg)");
 
@@ -218,7 +230,7 @@ void MainWindow::addCertificateImage()
 
         certificateImage = "./vaccineCertificates/" + shortName;
 
-
+       // ptrCurrentCitizen->setCertificate("./vaccineCertificates/" + shortName);
        /* QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates/vaxCertificates.txt");
 
         QTextStream out(&outputFile);
@@ -237,6 +249,9 @@ void MainWindow::addCertificateImage()
 // Function to add QR Code Image
 void MainWindow::addQRCodeImage()
 {
+
+
+
     QString fileName;
     fileName = QFileDialog::getOpenFileName(this, "Open Image", "./", "Image File(*.png *.jpg .*jpeg)");
 
@@ -250,12 +265,9 @@ void MainWindow::addQRCodeImage()
 
         QPixmap pixmap1("./qrCodes/"+shortName);
 
-        // Display in All User Page
-        ui->showQRCodeAUP->setPixmap(pixmap1);
-        ui->showQRCodeAUP->setScaledContents(true);
         // Display on Add User Page
-        ui->addCertificateAP->setPixmap(pixmap1);
-        ui->addCertificateAP->setScaledContents(true);
+        ui->addQRCodeAP->setPixmap(pixmap1);
+        ui->addQRCodeAP->setScaledContents(true);
 
         qrCodeImage = "./qrCodes/" + shortName;
     }
@@ -264,6 +276,7 @@ void MainWindow::addQRCodeImage()
 // Function to add QR Code
 void MainWindow::addTestResultImage()
 {
+
     QString fileName;
     fileName = QFileDialog::getOpenFileName(this, "Open Image", "./", "Image File(*.png *.jpg .*jpeg)");
 
@@ -277,9 +290,6 @@ void MainWindow::addTestResultImage()
 
         QPixmap pixmap2("./testResults/"+shortName);
 
-        // Display in All User Page
-        ui->showTestResultsAUP->setPixmap(pixmap2);
-        ui->showTestResultsAUP->setScaledContents(true);
         // Display on Add User Page
         ui->addTestResultsAP->setPixmap(pixmap2);
         ui->addTestResultsAP->setScaledContents(true);
@@ -304,9 +314,6 @@ void MainWindow::addUserPicture()
 
         QPixmap pixmap3("./userProfilePictures/"+shortName);
 
-        // Display in All User Page
-        ui->showUserPictureAUP->setPixmap(pixmap3);
-        ui->showUserPictureAUP->setScaledContents(true);
         // Display on Add User Page
         ui->addUserPictureAP->setPixmap(pixmap3);
         ui->addUserPictureAP->setScaledContents(true);
@@ -355,25 +362,25 @@ void MainWindow::saveUser()
 
             for (int i = 0; i < userList.size(); i++)
                {
-                out << userList.at(i)->getName() << ";;";
-                out << userList.at(i)->getContactNumber() << ";;";
-                out << userList.at(i)->getEmailAddress() << ";;";
-                out << userList.at(i)->getDateOfBirth() << ";;";
-                out << userList.at(i)->getNHI() << ";;";
-                out << userList.at(i)->getEmergencyContact() << ";;";
-                out << userList.at(i)->getAdditionalNotes() << ";;";
-                out << userList.at(i)->getVaccineStatus() << ";;";
-                out << userList.at(i)->getCVN()<< ";;";
-                out << userList.at(i)->getVaccineName1() << ";;";
-                out << userList.at(i)->getBatchNumber1() << ";;";
-                out << userList.at(i)->getDateGiven1() << ";;";
-                out << userList.at(i)->getVaccineName2() << ";;";
-                out << userList.at(i)->getBatchNumber2() << ";;";
-                out << userList.at(i)->getDateGiven2() << ";;";
-                out << userList.at(i)->getCertificate() << ";;";
-                out << userList.at(i)->getQRCode() << ";;";
-                out << userList.at(i)->getTestResult() << ";;";
-                out << userList.at(i)->getCitizenImage() << Qt::endl<<Qt::endl;
+                out << userList.at(i)->getName() << "|";
+                out << userList.at(i)->getContactNumber() << "|";
+                out << userList.at(i)->getEmailAddress() << "|";
+                out << userList.at(i)->getDateOfBirth() << "|";
+                out << userList.at(i)->getNHI() << "|";
+                out << userList.at(i)->getEmergencyContact() << "|";
+                out << userList.at(i)->getAdditionalNotes() << "|";
+                out << userList.at(i)->getVaccineStatus() << "|";
+                out << userList.at(i)->getCVN()<< "|";
+                out << userList.at(i)->getVaccineName1() << "|";
+                out << userList.at(i)->getBatchNumber1() << "|";
+                out << userList.at(i)->getDateGiven1() << "|";
+                out << userList.at(i)->getVaccineName2() << "|";
+                out << userList.at(i)->getBatchNumber2() << "|";
+                out << userList.at(i)->getDateGiven2() << "|";
+                out << userList.at(i)->getCertificate() << "|";
+                out << userList.at(i)->getQRCode() << "|";
+                out << userList.at(i)->getTestResult() << "|";
+                out << userList.at(i)->getCitizenImage() << Qt::endl;
                }
             // Flushing file and then closing.
             out.flush();
@@ -436,12 +443,11 @@ void MainWindow::pbAllUsers()
     ui->listAllUsersEP->clear();
     ui->listAllUsersAP->clear();
 
-
    while(!read.atEnd()) // Start while loop to read file and push info to vec
    {
        // Reading from file and seperating info at text.split()
         QString text = read.readLine();
-        QStringList info = text.split(";;");
+        QStringList info = text.split("|");
 
        // Add read information to ui
        ui->listAllUsersAUP->addItem(info.at(4));
@@ -454,11 +460,12 @@ void MainWindow::pbAllUsers()
        userList.push_back(temp);
    } // End while
 
-
    // Flushing file and then closing.
    read.flush();
    inputFile.close();
+
 } // End of pbAllUsers()
+
 
 // Function to show user's information when selected from list widget
 void MainWindow::selectUserDetails()
@@ -488,18 +495,28 @@ void MainWindow::selectUserDetails()
         QPixmap pixmap(selectedUser->getCertificate());
         ui->showCertificateAUP->setPixmap(pixmap);
         ui->showCertificateAUP->setScaledContents(true);
+        ui->showLargeCertificateFS->setPixmap(pixmap);
+        ui->showLargeCertificateFS->setScaledContents(true);
+        /// QR Code Template
+        QPixmap pixmapQR(":/res/images/QRCodeImage.png");
+        ui->showLargeQRCodeImageFS->setPixmap(pixmapQR);
+        ui->showLargeQRCodeImageFS->setScaledContents(true);
+        /// Unique QR Code
         QPixmap pixmap1(selectedUser->getQRCode());
         ui->showQRCodeAUP->setPixmap(pixmap1);
         ui->showQRCodeAUP->setScaledContents(true);
+        ui->showLargeQRFS->setPixmap(pixmap1);
+        ui->showLargeQRFS->setScaledContents(true);
         QPixmap pixmap2(selectedUser->getTestResult());
         ui->showTestResultsAUP->setPixmap(pixmap2);
         ui->showTestResultsAUP->setScaledContents(true);
+        ui->showLargeTestsFS->setPixmap(pixmap2);
+        ui->showLargeTestsFS->setScaledContents(true);
         QPixmap pixmap3(selectedUser->getCitizenImage());
         ui->showUserPictureAUP->setPixmap(pixmap3);
         ui->showUserPictureAUP->setScaledContents(true);
-
-
     }
+
 } /// End of selectUserDetails()
 
 // Function to search for user in list widget
@@ -573,6 +590,58 @@ void MainWindow::searchUser()
         }
     }
 } /// End of searchUser()
+
+// Function to show Enlarged Certificate Image
+void MainWindow::pbShowCertificate()
+{
+    ui->stackedWidget->setCurrentIndex(5);
+    ui->showLargeTestsFS->hide();
+    ui->showLargeQRCodeImageFS->hide();
+    ui->showLargeQRFS->hide();
+    ui->showLargeCertificateFS->show();
+    ui->pbCloseImageFS->show();
+    ui->closeImageTextFS->show();
+} /// End of pbShowCertificate()
+
+// Function to show Enlarged QR Code Image
+void MainWindow::pbShowQRCode()
+{
+    ui->stackedWidget->setCurrentIndex(5);
+    ui->showLargeTestsFS->hide();
+    ui->showLargeCertificateFS->hide();
+    ui->showLargeQRCodeImageFS->show();
+    ui->showLargeQRFS->show();
+    ui->pbCloseImageFS->show();
+    ui->closeImageTextFS->show();
+} /// End of pbShowQRCode
+
+// Function to show Enlarged Test Results Image
+void MainWindow::pbShowTestResult()
+{
+    ui->stackedWidget->setCurrentIndex(5);
+    ui->showLargeCertificateFS->hide();
+    ui->showLargeQRCodeImageFS->hide();
+    ui->showLargeQRFS->hide();
+    ui->showLargeTestsFS->show();
+    ui->pbCloseImageFS->show();
+    ui->closeImageTextFS->show();
+
+} /// End of pbShowTestResult
+
+
+// Function to close enlarged images
+void MainWindow::pbClose()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+} /// End of pbClose()
+
+// Function to make images full screen
+void MainWindow::pbFullScreen()
+{
+    ui->showLargeTestsFS->showFullScreen();
+    ui->pbCloseImageFS->show();
+    ui->closeImageTextFS->show();
+}
 
 
 /// Edit User Functions
@@ -792,25 +861,25 @@ void MainWindow::saveEdit()
 
             for (int i = 0; i < userList.size(); i++)
                {
-                out << userList.at(i)->getName() << ";;";
-                out << userList.at(i)->getContactNumber() << ";;";
-                out << userList.at(i)->getEmailAddress() << ";;";
-                out << userList.at(i)->getDateOfBirth() << ";;";
-                out << userList.at(i)->getNHI() << ";;";
-                out << userList.at(i)->getEmergencyContact() << ";;";
-                out << userList.at(i)->getAdditionalNotes() << ";;";
-                out << userList.at(i)->getVaccineStatus() << ";;";
-                out << userList.at(i)->getCVN()<< ";;";
-                out << userList.at(i)->getVaccineName1() << ";;";
-                out << userList.at(i)->getBatchNumber1() << ";;";
-                out << userList.at(i)->getDateGiven1() << ";;";
-                out << userList.at(i)->getVaccineName2() << ";;";
-                out << userList.at(i)->getBatchNumber2() << ";;";
-                out << userList.at(i)->getDateGiven2() << ";;";
-                out << userList.at(i)->getCertificate() << ";;";
-                out << userList.at(i)->getQRCode() << ";;";
-                out << userList.at(i)->getTestResult() << ";;";
-                out << userList.at(i)->getCitizenImage() << Qt::endl<<Qt::endl;
+                out << userList.at(i)->getName() << "|";
+                out << userList.at(i)->getContactNumber() << "|";
+                out << userList.at(i)->getEmailAddress() << "|";
+                out << userList.at(i)->getDateOfBirth() << "|";
+                out << userList.at(i)->getNHI() << "|";
+                out << userList.at(i)->getEmergencyContact() << "|";
+                out << userList.at(i)->getAdditionalNotes() << "|";
+                out << userList.at(i)->getVaccineStatus() << "|";
+                out << userList.at(i)->getCVN()<< "|";
+                out << userList.at(i)->getVaccineName1() << "|";
+                out << userList.at(i)->getBatchNumber1() << "|";
+                out << userList.at(i)->getDateGiven1() << "|";
+                out << userList.at(i)->getVaccineName2() << "|";
+                out << userList.at(i)->getBatchNumber2() << "|";
+                out << userList.at(i)->getDateGiven2() << "|";
+                out << userList.at(i)->getCertificate() << "|";
+                out << userList.at(i)->getQRCode() << "|";
+                out << userList.at(i)->getTestResult() << "|";
+                out << userList.at(i)->getCitizenImage() << Qt::endl;
                }
             // Flushing file and then closing.
             out.flush();
@@ -857,12 +926,18 @@ void MainWindow::saveEdit()
             QPixmap pixmap(ptrCurrentCitizen->getCertificate());
             ui->showCertificateAUP->setPixmap(pixmap);
             ui->showCertificateAUP->setScaledContents(true);
+            ui->showLargeCertificateFS->setPixmap(pixmap);
+            ui->showLargeCertificateFS->setScaledContents(true);
             QPixmap pixmap1(ptrCurrentCitizen->getQRCode());
             ui->showQRCodeAUP->setPixmap(pixmap1);
             ui->showQRCodeAUP->setScaledContents(true);
+            ui->showLargeQRFS->setPixmap(pixmap1);
+            ui->showLargeQRFS->setScaledContents(true);
             QPixmap pixmap2(ptrCurrentCitizen->getTestResult());
             ui->showTestResultsAUP->setPixmap(pixmap2);
             ui->showTestResultsAUP->setScaledContents(true);
+            ui->showLargeTestsFS->setPixmap(pixmap2);
+            ui->showLargeTestsFS->setScaledContents(true);
             QPixmap pixmap3(ptrCurrentCitizen->getCitizenImage());
             ui->showUserPictureAUP->setPixmap(pixmap3);
             ui->showUserPictureAUP->setScaledContents(true);
@@ -905,7 +980,7 @@ void MainWindow::pbReports()
     {
         // Reading from file and seperating info at text.split()
         QString text = read.readLine();
-        QStringList info = text.split(";;");
+        QStringList info = text.split("|");
 
         // Add read information to ui list widget
         ui->listAllReportsRP->addItem(info.at(2)); // Display subject in list widget

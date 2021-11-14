@@ -32,7 +32,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="adminHomePage">
      <widget class="QFrame" name="userHomeHelloBarHP">
@@ -6411,6 +6411,1781 @@ padding-right: 8px;
      <zorder>userProfileBlueMenuBarEP</zorder>
      <zorder>userHomeDisplayFrameEP</zorder>
      <zorder>userHomeHelloBarEP</zorder>
+    </widget>
+    <widget class="QWidget" name="adminEnlargeImagesPage">
+     <widget class="QFrame" name="userHomeHelloBarAP_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>430</y>
+        <width>211</width>
+        <height>511</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(104, 160, 229, 0.33);
+border-radius: 105px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="displayPictureAP_2">
+       <property name="geometry">
+        <rect>
+         <x>25</x>
+         <y>25</y>
+         <width>161</width>
+         <height>161</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: rgba(248, 251, 255, 0.99);
+border-radius: 80px;</string>
+       </property>
+       <property name="text">
+        <string>displayPicture</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelAdminNameFS">
+       <property name="geometry">
+        <rect>
+         <x>18</x>
+         <y>259</y>
+         <width>191</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial Rounded MT Bold</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #2B528C;
+font-weight: 500;
+font-size: 23px;
+background: rgba(104, 160, 229, 0.00);</string>
+       </property>
+       <property name="text">
+        <string>Administrator!</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelHeyThereAP_2">
+       <property name="geometry">
+        <rect>
+         <x>18</x>
+         <y>229</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Avenir Next</family>
+         <pointsize>-1</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #2B528C;
+font-weight: 400;
+font-size: 18px;
+background: rgba(104, 160, 229, 0.00);</string>
+       </property>
+       <property name="text">
+        <string>Hey there,</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pbLogoutFS">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>310</y>
+         <width>191</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial Rounded MT Bold</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+color: #2B528C;
+font-weight: 500;
+border-radius: 15px;
+background:  rgba(248, 251, 255, 0.99);
+font-size: 16px; 
+}
+QPushButton:hover
+{
+background:  rgba(248, 251, 255, 0.55);
+border-color: rgba(104, 160, 229, 0.88);
+font-size: 16px;
+color: #2B528C;
+}</string>
+       </property>
+       <property name="text">
+        <string>Logout</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="userProfileBlueMenuBarAP_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-100</y>
+        <width>211</width>
+        <height>741</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> background: #2B528C;
+border-radius: 105px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="pbHomeFS">
+       <property name="geometry">
+        <rect>
+         <x>-81</x>
+         <y>133</y>
+         <width>271</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial Rounded MT Bold</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background: #2B528C;
+font-weight: 500;
+border-radius: 25px;
+color:  rgba(248, 251, 255, 0.99);
+border-color: rgba(104, 160, 229, 0.33);
+font-size: 16px; 
+}
+QPushButton:hover
+{
+font-size: 18px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Home</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pbAllUsersFS">
+       <property name="geometry">
+        <rect>
+         <x>-50</x>
+         <y>220</y>
+         <width>241</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial Rounded MT Bold</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background: #2B528C;
+font-weight: 500;
+border-radius: 25px;
+color:  rgba(248, 251, 255, 0.99);
+border-color: rgba(104, 160, 229, 0.33);
+font-size: 16px; 
+}
+QPushButton:hover
+{
+font-size: 18px;
+}</string>
+       </property>
+       <property name="text">
+        <string>All Users</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pbAddUserFS">
+       <property name="geometry">
+        <rect>
+         <x>-40</x>
+         <y>310</y>
+         <width>231</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial Rounded MT Bold</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+color: #2B528C;
+font-weight: 500;
+border-radius: 25px;
+background:  white;
+font-size: 16px; 
+}
+QPushButton:hover
+{
+font-size: 17px;
+
+}</string>
+       </property>
+       <property name="text">
+        <string>Add User</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pbReportsFS">
+       <property name="geometry">
+        <rect>
+         <x>-40</x>
+         <y>400</y>
+         <width>231</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial Rounded MT Bold</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background: #2B528C;
+font-weight: 500;
+border-radius: 25px;
+color:  rgba(248, 251, 255, 0.99);
+border-color: rgba(104, 160, 229, 0.33);
+font-size: 16px; 
+}
+QPushButton:hover
+{
+font-size: 18px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Reports</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="userHomeDisplayFrameAP_2">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>0</y>
+        <width>881</width>
+        <height>791</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: white;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="homeSubHeadingAP_2">
+       <property name="geometry">
+        <rect>
+         <x>21</x>
+         <y>55</y>
+         <width>481</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Avenir Next</family>
+         <pointsize>-1</pointsize>
+         <weight>25</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-weight: 200;
+font-size: 18px;
+color: #2B528C;
+background: rgba(104, 160, 229, 0.00);
+</string>
+       </property>
+       <property name="text">
+        <string>Manage your users information with ease. </string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="homeTitleAP_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>15</y>
+         <width>511</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial Rounded MT Bold</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-weight: 500;
+font-size: 40px;
+color:#2B528C;
+background: rgba(104, 160, 229, 0.00);
+</string>
+       </property>
+       <property name="text">
+        <string>Adding User</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="userInfoFrameAP_2">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>150</y>
+         <width>641</width>
+         <height>621</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: #DFF1FE;
+border-radius: 40px;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLabel" name="labelNHIAP_2">
+        <property name="geometry">
+         <rect>
+          <x>25</x>
+          <y>110</y>
+          <width>101</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Avenir Next</family>
+          <pointsize>-1</pointsize>
+          <weight>25</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-weight: 200;
+font-size: 14px;
+color:#2B528C;
+background: rgba(254, 206, 103, 0.00);
+</string>
+        </property>
+        <property name="text">
+         <string>NHI Number</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelEmergencyAP_2">
+        <property name="geometry">
+         <rect>
+          <x>25</x>
+          <y>170</y>
+          <width>321</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Avenir Next</family>
+          <pointsize>-1</pointsize>
+          <weight>25</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-weight: 200;
+font-size: 14px;
+color:#2B528C;
+background: rgba(254, 206, 103, 0.00);</string>
+        </property>
+        <property name="text">
+         <string>Emergency Contact</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelAdditionalNotesAP_2">
+        <property name="geometry">
+         <rect>
+          <x>25</x>
+          <y>230</y>
+          <width>321</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Avenir Next</family>
+          <pointsize>-1</pointsize>
+          <weight>25</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-weight: 200;
+font-size: 14px;
+color:#2B528C;
+background: rgba(254, 206, 103, 0.00);</string>
+        </property>
+        <property name="text">
+         <string>Additional Notes</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="addUserPictureAP_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>81</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: rgba(248, 251, 255, 0.99);
+border-radius: 40px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelCVNAP_2">
+        <property name="geometry">
+         <rect>
+          <x>335</x>
+          <y>110</y>
+          <width>281</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Avenir Next</family>
+          <pointsize>-1</pointsize>
+          <weight>25</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-weight: 200;
+font-size: 14px;
+color:#2B528C;
+background: rgba(254, 206, 103, 0.00);</string>
+        </property>
+        <property name="text">
+         <string>CVN Number</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelVaccinesAP_2">
+        <property name="geometry">
+         <rect>
+          <x>33</x>
+          <y>350</y>
+          <width>181</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial Rounded MT Bold</family>
+          <pointsize>-1</pointsize>
+          <weight>25</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-weight: 200;
+font-size: 18px;
+color:#2B528C;
+background: rgba(254, 206, 103, 0.00);</string>
+        </property>
+        <property name="text">
+         <string>Vaccines Recieved</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelDocumentationAP_2">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>349</y>
+          <width>211</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial Rounded MT Bold</family>
+          <pointsize>-1</pointsize>
+          <weight>25</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-weight: 200;
+font-size: 18px;
+color:#2B528C;
+background: rgba(254, 206, 103, 0.00);</string>
+        </property>
+        <property name="text">
+         <string>Documentation</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QFrame" name="vaccineDose1FrameAP_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>395</y>
+          <width>271</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #F8FBFF;
+border-radius: 30px;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="vaccineIcon1FrameAP_2">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>5</y>
+           <width>51</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: #C4DBF4;
+border-radius: 25px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="imgVaccineIcon1AP_2">
+         <property name="geometry">
+          <rect>
+           <x>19</x>
+           <y>15</y>
+           <width>21</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: #C4DBF4;
+border-radius: 20px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="Resources.qrc">:/res/images/iconVaccine.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="add1stDoseNameAP_2">
+         <property name="geometry">
+          <rect>
+           <x>68</x>
+           <y>8</y>
+           <width>191</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial Rounded MT Bold</family>
+           <pointsize>-1</pointsize>
+           <weight>37</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-weight: 300;
+font-size: 14px;
+color:#2B528C;
+
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>Vaccination Type</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="add1stDoseBatchAP_2">
+         <property name="geometry">
+          <rect>
+           <x>67</x>
+           <y>27</y>
+           <width>61</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-weight: 200;
+font-size: 12px;
+color:#2B528C;
+
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Batch</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="add1stDoseDateAP_2">
+         <property name="geometry">
+          <rect>
+           <x>156</x>
+           <y>30</y>
+           <width>91</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-weight: 200;
+font-size: 12px;
+color:#2B528C;
+
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>Date Recieved</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="pbSaveAP_2">
+        <property name="geometry">
+         <rect>
+          <x>438</x>
+          <y>550</y>
+          <width>181</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial Rounded MT Bold</family>
+          <pointsize>-1</pointsize>
+          <weight>62</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background: #2B528C;
+font-weight: 500;
+border-radius: 25px;
+color:  rgba(248, 251, 255, 0.99);
+border-color: rgba(104, 160, 229, 0.33);
+font-size: 16px; 
+}
+QPushButton:hover
+{
+font-size: 18px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Save User</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelConfidentialAP_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>560</y>
+          <width>201</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Avenir Next</family>
+          <pointsize>-1</pointsize>
+          <weight>25</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-weight: 200;
+font-size: 12px;
+color:#2B528C;
+background: rgba(254, 206, 103, 0.00);
+
+</string>
+        </property>
+        <property name="text">
+         <string>This information is confidential.</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelUnauthorisedAP_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>580</y>
+          <width>381</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Avenir Next</family>
+          <pointsize>-1</pointsize>
+          <weight>25</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-weight: 200;
+font-size: 12px;
+color:#2B528C;
+background: rgba(254, 206, 103, 0.00);
+</string>
+        </property>
+        <property name="text">
+         <string>Unauthorised access and changes will result in legal action.</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="addUserNHIAP_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>130</y>
+          <width>271</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit
+{background: rgba(104, 160, 229, 0.55);
+border-radius: 15;
+border-color: rgba(104, 160, 229, 0.33);
+color:#2B528C;
+font-size: 12px; 
+padding-left: 3px;}</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="addUserCVNAP_2">
+        <property name="geometry">
+         <rect>
+          <x>330</x>
+          <y>130</y>
+          <width>291</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit
+{background: rgba(104, 160, 229, 0.55);
+border-radius: 15;
+border-color: rgba(104, 160, 229, 0.33);
+color:#2B528C;
+font-size: 12px; 
+padding-left: 3px;}</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="addUserEmergencyAP_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>190</y>
+          <width>601</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit
+{background: #F8FBFF;
+border-radius: 15;
+border-color: rgba(104, 160, 229, 0.33);
+color: #2B528C;
+font-size: 12px; 
+padding-left: 3px;}</string>
+        </property>
+        <property name="placeholderText">
+         <string>Please include emergency contact full name and contact phone number without using commas.</string>
+        </property>
+       </widget>
+       <widget class="QPlainTextEdit" name="addNotesAP_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>250</y>
+          <width>601</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #F8FBFF;
+border-radius: 20;
+border-color: rgba(104, 160, 229, 0.33);
+color:#2B528C;
+font-size: 12px; 
+padding-left: 5px;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="addUserDOBAP_2">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>60</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit
+{background: #F8FBFF;
+border-radius: 15;
+border-color: rgba(104, 160, 229, 0.33);
+color: #2B528C;
+font-size: 12px; 
+padding-left: 3px;}</string>
+        </property>
+        <property name="placeholderText">
+         <string>Birthday</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="addUserPhoneAP_2">
+        <property name="geometry">
+         <rect>
+          <x>247</x>
+          <y>60</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit
+{background: #F8FBFF;
+border-radius: 15;
+border-color: rgba(104, 160, 229, 0.33);
+color: #2B528C;
+font-size: 12px; 
+padding-left: 3px;}</string>
+        </property>
+        <property name="placeholderText">
+         <string>Phone Number</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="addUserEmailAP_2">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>60</y>
+          <width>241</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit
+{background: #F8FBFF;
+border-radius: 15;
+border-color: rgba(104, 160, 229, 0.33);
+color: #2B528C;
+font-size: 12px; 
+padding-left: 3px;}</string>
+        </property>
+        <property name="placeholderText">
+         <string>Email Address</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelTestResultsAP_2">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>512</y>
+          <width>91</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Avenir Next</family>
+          <pointsize>-1</pointsize>
+          <weight>25</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-weight: 200;
+font-size: 12px;
+color:#2B528C;
+background: rgba(254, 206, 103, 0.00);
+</string>
+        </property>
+        <property name="text">
+         <string>Test Results</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelCertificateAP_2">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>511</y>
+          <width>91</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Avenir Next</family>
+          <pointsize>-1</pointsize>
+          <weight>25</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-weight: 200;
+font-size: 12px;
+color:#2B528C;
+background: rgba(254, 206, 103, 0.00);
+</string>
+        </property>
+        <property name="text">
+         <string>Certificate</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelQRCodeAP_2">
+        <property name="geometry">
+         <rect>
+          <x>540</x>
+          <y>511</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Avenir Next</family>
+          <pointsize>-1</pointsize>
+          <weight>25</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-weight: 200;
+font-size: 12px;
+color:#2B528C;
+background: rgba(254, 206, 103, 0.00);
+</string>
+        </property>
+        <property name="text">
+         <string>QR Code</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QFrame" name="vaccineDose2FrameAP_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>465</y>
+          <width>271</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #F8FBFF;
+border-radius: 30px;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="vaccineIcon2FrameAP_2">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>5</y>
+           <width>51</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: #C4DBF4;
+border-radius: 25px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="imgVaccineIcon2AP_2">
+         <property name="geometry">
+          <rect>
+           <x>19</x>
+           <y>15</y>
+           <width>21</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: #C4DBF4;
+border-radius: 20px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="Resources.qrc">:/res/images/iconVaccine.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="add2ndDoseNameAP_2">
+         <property name="geometry">
+          <rect>
+           <x>67</x>
+           <y>9</y>
+           <width>191</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial Rounded MT Bold</family>
+           <pointsize>-1</pointsize>
+           <weight>37</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-weight: 300;
+font-size: 14px;
+color:#2B528C;
+
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>Vaccination Type</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="add2ndDoseBatchAP_2">
+         <property name="geometry">
+          <rect>
+           <x>67</x>
+           <y>30</y>
+           <width>61</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-weight: 200;
+font-size: 12px;
+color:#2B528C;
+
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Batch</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="add2ndDoseDateAP_2">
+         <property name="geometry">
+          <rect>
+           <x>156</x>
+           <y>31</y>
+           <width>91</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-weight: 200;
+font-size: 12px;
+color:#2B528C;
+
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>Date Recieved</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="labelClickUploadAP_2">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>373</y>
+          <width>131</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Avenir Next</family>
+          <pointsize>-1</pointsize>
+          <weight>25</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-weight: 200;
+font-size: 10px;
+color:#2B528C;
+background: rgba(254, 206, 103, 0.00);
+</string>
+        </property>
+        <property name="text">
+         <string>Click to upload</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pbAddUserPictureAP_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>20</y>
+          <width>61</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #C4DBF4;
+border-radius: 30px;
+font-weight: 200;
+font-size: 12px;
+color:#2B528C;</string>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="addVaccStatusAP_2">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>20</y>
+          <width>191</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QComboBox
+{background: #F8FBFF;
+border-radius: 15;
+color: #2B528C;
+font-size: 12px; 
+padding-left: 3px;}
+
+</string>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+        <item>
+         <property name="text">
+          <string>Not Vaccinated</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Partially Vaccinated</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Vaccinated</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLineEdit" name="addUserNameAP_2">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>20</y>
+          <width>301</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit
+{background: #F8FBFF;
+border-radius: 15;
+border-color: rgba(104, 160, 229, 0.33);
+color: #2B528C;
+font-size: 12px; 
+padding-left: 3px;}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>Add User Name</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelClickEditAP_2">
+        <property name="geometry">
+         <rect>
+          <x>35</x>
+          <y>374</y>
+          <width>171</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Avenir Next</family>
+          <pointsize>-1</pointsize>
+          <weight>25</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-weight: 200;
+font-size: 10px;
+color:#2B528C;
+background: rgba(254, 206, 103, 0.00);
+</string>
+        </property>
+        <property name="text">
+         <string>Click grey text to edit </string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="addQRCodeAP_2">
+        <property name="geometry">
+         <rect>
+          <x>530</x>
+          <y>395</y>
+          <width>91</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #F8FBFF;
+border-radius: 45;
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pbAddQRCodeAP_2">
+        <property name="geometry">
+         <rect>
+          <x>540</x>
+          <y>405</y>
+          <width>71</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #C4DBF4;
+border-radius: 35px;
+font-weight: 200;
+font-size: 12px;
+color:#2B528C;</string>
+        </property>
+        <property name="text">
+         <string>Upload</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pbAddTestResultsAP_2">
+        <property name="geometry">
+         <rect>
+          <x>329</x>
+          <y>406</y>
+          <width>71</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #C4DBF4;
+border-radius: 35px;
+font-weight: 200;
+font-size: 12px;
+color:#2B528C;</string>
+        </property>
+        <property name="text">
+         <string>Upload</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pbAddCertificateAP_2">
+        <property name="geometry">
+         <rect>
+          <x>435</x>
+          <y>405</y>
+          <width>71</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #C4DBF4;
+border-radius: 35px;
+font-weight: 200;
+font-size: 12px;
+color:#2B528C;</string>
+        </property>
+        <property name="text">
+         <string>Upload</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="addCertificateAP_2">
+        <property name="geometry">
+         <rect>
+          <x>425</x>
+          <y>395</y>
+          <width>91</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #F8FBFF;
+border-radius: 45;
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="addTestResultsAP_2">
+        <property name="geometry">
+         <rect>
+          <x>319</x>
+          <y>396</y>
+          <width>91</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #F8FBFF;
+border-radius: 45;
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="pbSearchAP_2">
+       <property name="geometry">
+        <rect>
+         <x>730</x>
+         <y>100</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial Rounded MT Bold</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+color:#2B528C;
+background: #2B528C;
+font-weight: 500;
+border-radius: 15px;
+background: #C4DBF4;
+border-color: rgba(104, 160, 229, 0.00);
+font-size: 16px; 
+}
+QPushButton:hover
+{
+background: rgba(196, 219, 244, 0.77);
+}</string>
+       </property>
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="editSearchAP_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>100</y>
+         <width>701</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Avenir Next</family>
+         <pointsize>-1</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit
+{background: #F8FBFF;
+border-radius: 15;
+border: 1px solid #C4DBF4;
+color: #2B528C;
+font-size: 12px; 
+padding-left: 3px;}
+
+QLineEdit:hove{
+border-color: rgba(104, 160, 229, 0.88);
+background: #C4DBF4;
+}
+
+QLineEdit:focus{
+border: 3px solid rgba(104, 160, 229, 0.88);
+}</string>
+       </property>
+       <property name="placeholderText">
+        <string>Click to start typing</string>
+       </property>
+      </widget>
+      <widget class="QListWidget" name="listAllUsersAP_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>150</y>
+         <width>181</width>
+         <height>621</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: #F2F8FC;
+border-radius: 20px;
+font-weight: 200;
+font-size: 14px;
+color: #2B528C;
+padding-left: 8px;
+padding-top: 10px;
+padding-right: 8px;
+line-height: 3px;
+</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frameFS">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>891</width>
+         <height>791</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: rgba(43, 82, 140, 0.55);
+border: 0px;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLabel" name="showLargeTestsFS">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>80</y>
+          <width>471</width>
+          <height>641</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+border-radius: 25;}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frameFS2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>891</width>
+          <height>791</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: rgba(43, 82, 140, 0.88);
+border: 0px;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QPushButton" name="pbFullScreenFS">
+         <property name="geometry">
+          <rect>
+           <x>705</x>
+           <y>710</y>
+           <width>91</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Avenir Next</family>
+           <pointsize>-1</pointsize>
+           <weight>62</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+color: #2B528C;
+font-weight: 500;
+border-radius: 15px;
+background:  white;
+font-size: 12px; 
+}
+QPushButton:hover
+{
+font-size: 13px;
+
+}</string>
+         </property>
+         <property name="text">
+          <string>Full Screen</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pbCloseImageFS">
+         <property name="geometry">
+          <rect>
+           <x>750</x>
+           <y>40</y>
+           <width>31</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Avenir Next</family>
+           <pointsize>-1</pointsize>
+           <weight>62</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+color: #2B528C;
+font-weight: 500;
+border-radius: 15px;
+background:  white;
+font-size: 12px; 
+}
+QPushButton:hover
+{
+font-size: 13px;
+
+}</string>
+         </property>
+         <property name="text">
+          <string>X</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="closeImageTextFS">
+         <property name="geometry">
+          <rect>
+           <x>752</x>
+           <y>77</y>
+           <width>31</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: rgba(43, 82, 140, 0.00);
+font-size: 10px;
+color:white;</string>
+         </property>
+         <property name="text">
+          <string>Close</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="showLargeCertificateFS">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>80</y>
+          <width>471</width>
+          <height>641</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+border-radius: 25;}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="showLargeQRCodeImageFS">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>80</y>
+          <width>471</width>
+          <height>641</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+border-radius: 25;}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="showLargeQRFS">
+        <property name="geometry">
+         <rect>
+          <x>315</x>
+          <y>429</y>
+          <width>251</width>
+          <height>251</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <zorder>frameFS2</zorder>
+       <zorder>showLargeCertificateFS</zorder>
+       <zorder>showLargeQRCodeImageFS</zorder>
+       <zorder>showLargeTestsFS</zorder>
+       <zorder>showLargeQRFS</zorder>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="userHomeWhiteBackgroundAP_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1101</width>
+        <height>791</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #F2F8FC;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>userHomeWhiteBackgroundAP_2</zorder>
+     <zorder>userHomeHelloBarAP_2</zorder>
+     <zorder>userProfileBlueMenuBarAP_2</zorder>
+     <zorder>userHomeDisplayFrameAP_2</zorder>
     </widget>
    </widget>
   </widget>
