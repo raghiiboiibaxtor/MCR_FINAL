@@ -51,6 +51,7 @@ public:
     void pbShowTestResult();
     void pbClose();
     void pbFullScreen();
+    void pbCancelAdd();
 
     void pbAllUsers();
     void selectUserDetails();
@@ -62,6 +63,7 @@ public:
     void editTestResultImage();
     void editUserPicture();
     void saveEdit();
+    void pbCancelEdit();
 
     void pbReports();
     void selectReportDetails();

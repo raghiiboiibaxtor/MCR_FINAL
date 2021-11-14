@@ -110,6 +110,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     connect(ui->pbAddUserEP, &QPushButton::clicked, this, &MainWindow::addNewUser);
     connect(ui->pbAddUserFS, &QPushButton::clicked, this, &MainWindow::addNewUser);
 
+
     /// All User Buttons
     connect(ui->pbAllUsersHP, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
     connect(ui->pbAllUsersAUP, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
@@ -145,6 +146,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     connect(ui->pbAddUserPictureAP, &QPushButton::clicked, this, &MainWindow::addUserPicture);
     connect(ui->pbChangeUserPictureAP, &QPushButton::clicked, this, &MainWindow::addUserPicture);
     connect(ui->pbSaveAP, &QPushButton::clicked, this, &MainWindow::saveUser);
+    connect(ui->pbCancelAP, &QPushButton::clicked, this, &MainWindow::pbCancelAdd);
     /// All Users connections
     connect(ui->pbAllUsersHP, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
     connect(ui->listAllUsersAUP, &QListWidget::itemClicked, this, &MainWindow::selectUserDetails);
@@ -165,6 +167,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     connect(ui->pbEditUserPictureEP, &QPushButton::clicked, this, &MainWindow::editUserPicture);
     connect(ui->pbChangeUserPictureEP, &QPushButton::clicked, this, &MainWindow::editUserPicture);
     connect(ui->pbSaveEditEP, &QPushButton::clicked, this, &MainWindow::saveEdit);
+    connect(ui->pbCancelEP, &QPushButton::clicked, this, &MainWindow::pbCancelEdit);
     /// Report connections
     connect(ui->listAllReportsRP, &QListWidget::itemClicked, this, &MainWindow::selectReportDetails);
     connect(ui->pbSearchCategoryRP, &QPushButton::clicked, this, &MainWindow::searchCategory);
@@ -483,6 +486,32 @@ void MainWindow::saveUser()
     }
 
 } /// End of saveUser()
+
+
+void MainWindow::pbCancelAdd()
+{
+    // Clearing input from labels
+    ui->addUserNameAP->clear();
+    ui->addUserPhoneAP->clear();
+    ui->addUserEmailAP->clear();
+    ui->addUserDOBAP->clear();
+    ui->addUserNHIAP->clear();
+    ui->addUserEmergencyAP->clear();
+    ui->addNotesAP->clear();
+    ui->addUserCVNAP->clear();
+    ui->add1stDoseNameAP->clear();
+    ui->add1stDoseBatchAP->clear();
+    ui->add1stDoseDateAP->clear();
+    ui->add2ndDoseNameAP->clear();
+    ui->add2ndDoseBatchAP->clear();
+    ui->add2ndDoseDateAP->clear();
+    ui->addCertificateAP->clear();
+    ui->addQRCodeAP->clear();
+    ui->addTestResultsAP->clear();
+    ui->addUserPictureAP->clear();
+
+    ui->stackedWidget->setCurrentIndex(1);
+}
 
 
 /// Display List of All Users & Info Functions
@@ -1043,6 +1072,31 @@ void MainWindow::saveEdit()
     }
 } /// End of saveEdit()
 
+void MainWindow::pbCancelEdit()
+{
+    // Clearing input from labels
+    ui->editUserNameEP->clear();
+    ui->editUserPhoneEP->clear();
+    ui->editUserEmailEP->clear();
+    ui->editUserDOBEP->clear();
+    ui->showUserNHIFS->clear();
+    ui->editUserEmergencyEP->clear();
+    ui->editUserNotesEP->clear();
+    ui->editUserVaccineSBEP->clear();
+    ui->editUserCVNEP->clear();
+    ui->edit1stDoseNameEP->clear();
+    ui->edit1stDoseBatchEP->clear();
+    ui->edit1stDoseDateEP->clear();
+    ui->edit2ndDoseNameEP->clear();
+    ui->edit2ndDoseBatchEP->clear();
+    ui->edit1stDoseDateEP->clear();
+    ui->editCertificateEP->clear();
+    ui->editQRCodeEP->clear();
+    ui->editTestResultsEP->clear();
+    ui->editUserPictureEP->clear();
+
+    ui->stackedWidget->setCurrentIndex(1);
+}
 
 /// Citizen Report Functions
 ///*********************************************************
@@ -1137,6 +1191,7 @@ void MainWindow::searchCategory()
     }
 
 } /// End of searchCategory()
+
 
 // Function to logout
 void MainWindow::logout()
