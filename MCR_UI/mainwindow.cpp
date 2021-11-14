@@ -1124,7 +1124,7 @@ void MainWindow::pbReports()
     while(!read.atEnd())
     {
         // Reading from file and seperating info at text.split()
-        QString text = read.readLine();
+        QString text = read.readAll();
         QStringList info = text.split("|");
 
         // Add read information to ui list widget
