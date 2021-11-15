@@ -47,6 +47,7 @@ public:
     QLabel *enterDetailsTextLP;
     QLabel *myAccountTitleLP;
     QLabel *labelErrorLP;
+    QLabel *enterDetailsTextLP_2;
     QPushButton *pbLoginLP;
     QPushButton *pbCircleLoginLP;
     QLabel *iconArrowLP;
@@ -143,8 +144,10 @@ public:
     QLabel *labelContactCP;
     QLabel *labelPreferredNameCP;
     QLabel *labelPreferredContactCP;
-    QLineEdit *editPreferredContactCP;
     QLineEdit *editPreferredNameCP;
+    QLabel *labelPreferredContactCP_2;
+    QLineEdit *editPreferredContactCP;
+    QComboBox *cbContactMethodCP;
     QFrame *userMedicalFrameCP;
     QLabel *labelMedicalInfoCP;
     QLabel *labelAboutMessageCP;
@@ -154,6 +157,8 @@ public:
     QLineEdit *editReportSubjectCP;
     QComboBox *cbReportCategoryCP;
     QPushButton *pbSendMessageCP;
+    QFrame *frame;
+    QComboBox *cbReportCategoryCP_2;
     QLabel *myVaccinesHeadingCP;
     QPushButton *pbGetVaccinatedLinkCP;
     QLabel *homeSubHeadingCP_2;
@@ -423,7 +428,7 @@ public:
         enterDetailsTextLP->setObjectName(QString::fromUtf8("enterDetailsTextLP"));
         enterDetailsTextLP->setGeometry(QRect(41, 80, 331, 31));
         QFont font4;
-        font4.setFamilies({QString::fromUtf8("Quicksand")});
+        font4.setFamilies({QString::fromUtf8("Avenir Next")});
         font4.setBold(false);
         enterDetailsTextLP->setFont(font4);
         enterDetailsTextLP->setStyleSheet(QString::fromUtf8("color: #F8FBFF;\n"
@@ -439,10 +444,31 @@ public:
         labelErrorLP = new QLabel(accountLoginFrameLP);
         labelErrorLP->setObjectName(QString::fromUtf8("labelErrorLP"));
         labelErrorLP->setGeometry(QRect(30, 350, 331, 31));
-        labelErrorLP->setFont(font4);
-        labelErrorLP->setStyleSheet(QString::fromUtf8("color: #F8FBFF;\n"
+        QFont font5;
+        font5.setFamilies({QString::fromUtf8("Arial Rounded MT Bold")});
+        font5.setBold(false);
+        labelErrorLP->setFont(font5);
+        labelErrorLP->setStyleSheet(QString::fromUtf8("color:rgba(255, 200, 83, 0.99);\n"
 "font-weight: 100;\n"
 "font-size: 18px;"));
+        enterDetailsTextLP_2 = new QLabel(accountLoginFrameLP);
+        enterDetailsTextLP_2->setObjectName(QString::fromUtf8("enterDetailsTextLP_2"));
+        enterDetailsTextLP_2->setGeometry(QRect(40, 107, 331, 31));
+        QFont font6;
+        font6.setFamilies({QString::fromUtf8("Avenir Next")});
+        font6.setBold(false);
+        font6.setKerning(false);
+        enterDetailsTextLP_2->setFont(font6);
+        enterDetailsTextLP_2->setStyleSheet(QString::fromUtf8("color: #F8FBFF;\n"
+"font-weight: 100;\n"
+"font-size: 14px;"));
+        enterDetailsTextLP_2->raise();
+        editNHILP->raise();
+        editEmailLP->raise();
+        editAccessNumberLP->raise();
+        enterDetailsTextLP->raise();
+        myAccountTitleLP->raise();
+        labelErrorLP->raise();
         pbLoginLP = new QPushButton(loginPage);
         pbLoginLP->setObjectName(QString::fromUtf8("pbLoginLP"));
         pbLoginLP->setGeometry(QRect(730, 650, 351, 111));
@@ -461,14 +487,15 @@ public:
 "font-size: 33px;\n"
 "color: #2B528C;\n"
 "}"));
+        pbLoginLP->setAutoDefault(false);
         pbLoginLP->setFlat(false);
         pbCircleLoginLP = new QPushButton(loginPage);
         pbCircleLoginLP->setObjectName(QString::fromUtf8("pbCircleLoginLP"));
         pbCircleLoginLP->setGeometry(QRect(1014, 680, 51, 51));
-        QFont font5;
-        font5.setFamilies({QString::fromUtf8("Arial Rounded MT Bold")});
-        font5.setBold(true);
-        pbCircleLoginLP->setFont(font5);
+        QFont font7;
+        font7.setFamilies({QString::fromUtf8("Arial Rounded MT Bold")});
+        font7.setBold(true);
+        pbCircleLoginLP->setFont(font7);
         pbCircleLoginLP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background: rgba(236, 151, 69, 0.88);\n"
 "border-radius: 25px;\n"
@@ -578,10 +605,10 @@ public:
         labelHeyThereHP = new QLabel(userHomeHelloBarHP);
         labelHeyThereHP->setObjectName(QString::fromUtf8("labelHeyThereHP"));
         labelHeyThereHP->setGeometry(QRect(18, 229, 101, 31));
-        QFont font6;
-        font6.setFamilies({QString::fromUtf8("Avenir Next")});
-        font6.setBold(false);
-        labelHeyThereHP->setFont(font6);
+        QFont font8;
+        font8.setFamilies({QString::fromUtf8("Avenir Next")});
+        font8.setBold(false);
+        labelHeyThereHP->setFont(font8);
         labelHeyThereHP->setStyleSheet(QString::fromUtf8("color: #2B528C;\n"
 "font-weight: 400;\n"
 "font-size: 18px;\n"
@@ -617,10 +644,10 @@ public:
         homeSubHeadingHP = new QLabel(userHomeDisplayFrameHP);
         homeSubHeadingHP->setObjectName(QString::fromUtf8("homeSubHeadingHP"));
         homeSubHeadingHP->setGeometry(QRect(21, 50, 481, 51));
-        QFont font7;
-        font7.setFamilies({QString::fromUtf8("Avenir Next")});
-        font7.setBold(false);
-        homeSubHeadingHP->setFont(font7);
+        QFont font9;
+        font9.setFamilies({QString::fromUtf8("Avenir Next")});
+        font9.setBold(false);
+        homeSubHeadingHP->setFont(font9);
         homeSubHeadingHP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 18px;\n"
 "color: #2B528C;\n"
@@ -645,9 +672,9 @@ public:
         communityCasesFrameHP = new QFrame(userHomeDisplayFrameHP);
         communityCasesFrameHP->setObjectName(QString::fromUtf8("communityCasesFrameHP"));
         communityCasesFrameHP->setGeometry(QRect(500, 590, 351, 171));
-        QFont font8;
-        font8.setFamilies({QString::fromUtf8("Avenir Next")});
-        communityCasesFrameHP->setFont(font8);
+        QFont font10;
+        font10.setFamilies({QString::fromUtf8("Avenir Next")});
+        communityCasesFrameHP->setFont(font10);
         communityCasesFrameHP->setStyleSheet(QString::fromUtf8("background: rgba(254, 206, 103, 0.55);\n"
 "border-radius: 50px;"));
         communityCasesFrameHP->setFrameShape(QFrame::StyledPanel);
@@ -662,10 +689,10 @@ public:
         alerLevelUpdatesTitleHP = new QLabel(userHomeDisplayFrameHP);
         alerLevelUpdatesTitleHP->setObjectName(QString::fromUtf8("alerLevelUpdatesTitleHP"));
         alerLevelUpdatesTitleHP->setGeometry(QRect(25, 110, 431, 50));
-        QFont font9;
-        font9.setFamilies({QString::fromUtf8("Avenir Next")});
-        font9.setBold(false);
-        alerLevelUpdatesTitleHP->setFont(font9);
+        QFont font11;
+        font11.setFamilies({QString::fromUtf8("Avenir Next")});
+        font11.setBold(false);
+        alerLevelUpdatesTitleHP->setFont(font11);
         alerLevelUpdatesTitleHP->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
 "font-size: 23px;\n"
 "color:#2B528C;\n"
@@ -674,7 +701,7 @@ public:
         vaccineStatsTitleHP = new QLabel(userHomeDisplayFrameHP);
         vaccineStatsTitleHP->setObjectName(QString::fromUtf8("vaccineStatsTitleHP"));
         vaccineStatsTitleHP->setGeometry(QRect(500, 120, 181, 30));
-        vaccineStatsTitleHP->setFont(font9);
+        vaccineStatsTitleHP->setFont(font11);
         vaccineStatsTitleHP->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
 "font-size: 23px;\n"
 "color:#2B528C;\n"
@@ -683,7 +710,7 @@ public:
         communityCasesTitleHP = new QLabel(userHomeDisplayFrameHP);
         communityCasesTitleHP->setObjectName(QString::fromUtf8("communityCasesTitleHP"));
         communityCasesTitleHP->setGeometry(QRect(500, 550, 431, 30));
-        communityCasesTitleHP->setFont(font9);
+        communityCasesTitleHP->setFont(font11);
         communityCasesTitleHP->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
 "font-size: 23px;\n"
 "color:#2B528C;\n"
@@ -728,7 +755,7 @@ public:
         labelHeyTherePP = new QLabel(userHomeHelloBarPP);
         labelHeyTherePP->setObjectName(QString::fromUtf8("labelHeyTherePP"));
         labelHeyTherePP->setGeometry(QRect(18, 229, 101, 31));
-        labelHeyTherePP->setFont(font6);
+        labelHeyTherePP->setFont(font8);
         labelHeyTherePP->setStyleSheet(QString::fromUtf8("color: #2B528C;\n"
 "font-weight: 400;\n"
 "font-size: 18px;\n"
@@ -815,7 +842,7 @@ public:
         homeSubHeadingPP = new QLabel(userHomeDisplayFramePP);
         homeSubHeadingPP->setObjectName(QString::fromUtf8("homeSubHeadingPP"));
         homeSubHeadingPP->setGeometry(QRect(21, 55, 481, 51));
-        homeSubHeadingPP->setFont(font7);
+        homeSubHeadingPP->setFont(font9);
         homeSubHeadingPP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 18px;\n"
 "color: #2B528C;\n"
@@ -840,10 +867,10 @@ public:
         showUserNamePP = new QLabel(userInfoFramePP);
         showUserNamePP->setObjectName(QString::fromUtf8("showUserNamePP"));
         showUserNamePP->setGeometry(QRect(20, 10, 301, 30));
-        QFont font10;
-        font10.setFamilies({QString::fromUtf8("Arial Rounded MT Bold")});
-        font10.setBold(false);
-        showUserNamePP->setFont(font10);
+        QFont font12;
+        font12.setFamilies({QString::fromUtf8("Arial Rounded MT Bold")});
+        font12.setBold(false);
+        showUserNamePP->setFont(font12);
         showUserNamePP->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
 "font-size: 23px;\n"
 "color:#2B528C;\n"
@@ -853,7 +880,7 @@ public:
         labelUserDOBPP = new QLabel(userInfoFramePP);
         labelUserDOBPP->setObjectName(QString::fromUtf8("labelUserDOBPP"));
         labelUserDOBPP->setGeometry(QRect(20, 50, 331, 20));
-        labelUserDOBPP->setFont(font7);
+        labelUserDOBPP->setFont(font9);
         labelUserDOBPP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -882,7 +909,7 @@ public:
         labelUserNumberPP = new QLabel(userInfoFramePP);
         labelUserNumberPP->setObjectName(QString::fromUtf8("labelUserNumberPP"));
         labelUserNumberPP->setGeometry(QRect(15, 120, 331, 20));
-        labelUserNumberPP->setFont(font7);
+        labelUserNumberPP->setFont(font9);
         labelUserNumberPP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -901,7 +928,7 @@ public:
         labelUserEmailPP = new QLabel(userInfoFramePP);
         labelUserEmailPP->setObjectName(QString::fromUtf8("labelUserEmailPP"));
         labelUserEmailPP->setGeometry(QRect(15, 190, 331, 20));
-        labelUserEmailPP->setFont(font7);
+        labelUserEmailPP->setFont(font9);
         labelUserEmailPP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -920,7 +947,7 @@ public:
         labelUserEmercencyContactPP = new QLabel(userInfoFramePP);
         labelUserEmercencyContactPP->setObjectName(QString::fromUtf8("labelUserEmercencyContactPP"));
         labelUserEmercencyContactPP->setGeometry(QRect(15, 260, 331, 20));
-        labelUserEmercencyContactPP->setFont(font7);
+        labelUserEmercencyContactPP->setFont(font9);
         labelUserEmercencyContactPP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -942,7 +969,7 @@ public:
         showDose1NamePP = new QLabel(vaccineDose1FramePP);
         showDose1NamePP->setObjectName(QString::fromUtf8("showDose1NamePP"));
         showDose1NamePP->setGeometry(QRect(160, 40, 281, 21));
-        showDose1NamePP->setFont(font10);
+        showDose1NamePP->setFont(font12);
         showDose1NamePP->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
 "font-size: 18px;\n"
 "color:#2B528C;\n"
@@ -952,7 +979,7 @@ public:
         showDose1BatchPP = new QLabel(vaccineDose1FramePP);
         showDose1BatchPP->setObjectName(QString::fromUtf8("showDose1BatchPP"));
         showDose1BatchPP->setGeometry(QRect(160, 80, 61, 20));
-        showDose1BatchPP->setFont(font7);
+        showDose1BatchPP->setFont(font9);
         showDose1BatchPP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -961,7 +988,7 @@ public:
         showDose1DatePP = new QLabel(vaccineDose1FramePP);
         showDose1DatePP->setObjectName(QString::fromUtf8("showDose1DatePP"));
         showDose1DatePP->setGeometry(QRect(250, 80, 161, 20));
-        showDose1DatePP->setFont(font7);
+        showDose1DatePP->setFont(font9);
         showDose1DatePP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -979,7 +1006,7 @@ public:
         labelVaccinesPP = new QLabel(userHomeDisplayFramePP);
         labelVaccinesPP->setObjectName(QString::fromUtf8("labelVaccinesPP"));
         labelVaccinesPP->setGeometry(QRect(400, 120, 410, 30));
-        labelVaccinesPP->setFont(font10);
+        labelVaccinesPP->setFont(font12);
         labelVaccinesPP->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
 "font-size: 23px;\n"
 "color:#2B528C;\n"
@@ -989,7 +1016,7 @@ public:
         labelMyDocsPP = new QLabel(userHomeDisplayFramePP);
         labelMyDocsPP->setObjectName(QString::fromUtf8("labelMyDocsPP"));
         labelMyDocsPP->setGeometry(QRect(400, 483, 431, 30));
-        labelMyDocsPP->setFont(font10);
+        labelMyDocsPP->setFont(font12);
         labelMyDocsPP->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
 "font-size: 23px;\n"
 "color:#2B528C;\n"
@@ -1013,7 +1040,7 @@ public:
         showDose2BatchPP = new QLabel(vaccineDose2FramePP);
         showDose2BatchPP->setObjectName(QString::fromUtf8("showDose2BatchPP"));
         showDose2BatchPP->setGeometry(QRect(160, 80, 71, 20));
-        showDose2BatchPP->setFont(font7);
+        showDose2BatchPP->setFont(font9);
         showDose2BatchPP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -1022,7 +1049,7 @@ public:
         showDose2NamePP = new QLabel(vaccineDose2FramePP);
         showDose2NamePP->setObjectName(QString::fromUtf8("showDose2NamePP"));
         showDose2NamePP->setGeometry(QRect(160, 40, 271, 21));
-        showDose2NamePP->setFont(font10);
+        showDose2NamePP->setFont(font12);
         showDose2NamePP->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
 "font-size: 18px;\n"
 "color:#2B528C;\n"
@@ -1032,7 +1059,7 @@ public:
         showDose2DatePP = new QLabel(vaccineDose2FramePP);
         showDose2DatePP->setObjectName(QString::fromUtf8("showDose2DatePP"));
         showDose2DatePP->setGeometry(QRect(240, 80, 171, 20));
-        showDose2DatePP->setFont(font7);
+        showDose2DatePP->setFont(font9);
         showDose2DatePP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -1050,7 +1077,7 @@ public:
         userMedicalFramePP = new QFrame(userHomeDisplayFramePP);
         userMedicalFramePP->setObjectName(QString::fromUtf8("userMedicalFramePP"));
         userMedicalFramePP->setGeometry(QRect(20, 473, 351, 291));
-        userMedicalFramePP->setFont(font8);
+        userMedicalFramePP->setFont(font10);
         userMedicalFramePP->setStyleSheet(QString::fromUtf8("background: rgba(254, 206, 103, 0.55);\n"
 "border-radius: 40px;"));
         userMedicalFramePP->setFrameShape(QFrame::StyledPanel);
@@ -1058,7 +1085,7 @@ public:
         labelUserNHIPP = new QLabel(userMedicalFramePP);
         labelUserNHIPP->setObjectName(QString::fromUtf8("labelUserNHIPP"));
         labelUserNHIPP->setGeometry(QRect(15, 62, 331, 20));
-        labelUserNHIPP->setFont(font7);
+        labelUserNHIPP->setFont(font9);
         labelUserNHIPP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -1068,7 +1095,7 @@ public:
         labelUserVaccStatusPP = new QLabel(userMedicalFramePP);
         labelUserVaccStatusPP->setObjectName(QString::fromUtf8("labelUserVaccStatusPP"));
         labelUserVaccStatusPP->setGeometry(QRect(10, 202, 331, 20));
-        labelUserVaccStatusPP->setFont(font7);
+        labelUserVaccStatusPP->setFont(font9);
         labelUserVaccStatusPP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -1096,7 +1123,7 @@ public:
         labelUserCVNPP = new QLabel(userMedicalFramePP);
         labelUserCVNPP->setObjectName(QString::fromUtf8("labelUserCVNPP"));
         labelUserCVNPP->setGeometry(QRect(15, 132, 331, 20));
-        labelUserCVNPP->setFont(font7);
+        labelUserCVNPP->setFont(font9);
         labelUserCVNPP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -1114,10 +1141,10 @@ public:
         labelMedicalInfoPP = new QLabel(userMedicalFramePP);
         labelMedicalInfoPP->setObjectName(QString::fromUtf8("labelMedicalInfoPP"));
         labelMedicalInfoPP->setGeometry(QRect(20, 10, 311, 30));
-        QFont font11;
-        font11.setFamilies({QString::fromUtf8("Arial Rounded MT Bold")});
-        font11.setBold(false);
-        labelMedicalInfoPP->setFont(font11);
+        QFont font13;
+        font13.setFamilies({QString::fromUtf8("Arial Rounded MT Bold")});
+        font13.setBold(false);
+        labelMedicalInfoPP->setFont(font13);
         labelMedicalInfoPP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 23px;\n"
 "color:#2B528C;\n"
@@ -1126,7 +1153,7 @@ public:
         testResultFramePP = new QFrame(userHomeDisplayFramePP);
         testResultFramePP->setObjectName(QString::fromUtf8("testResultFramePP"));
         testResultFramePP->setGeometry(QRect(400, 540, 131, 201));
-        testResultFramePP->setFont(font8);
+        testResultFramePP->setFont(font10);
         testResultFramePP->setStyleSheet(QString::fromUtf8("background: #F2F8FC;\n"
 "border-radius: 20px;"));
         testResultFramePP->setFrameShape(QFrame::StyledPanel);
@@ -1139,7 +1166,7 @@ public:
         qrCodeFramePP = new QFrame(userHomeDisplayFramePP);
         qrCodeFramePP->setObjectName(QString::fromUtf8("qrCodeFramePP"));
         qrCodeFramePP->setGeometry(QRect(720, 540, 131, 201));
-        qrCodeFramePP->setFont(font8);
+        qrCodeFramePP->setFont(font10);
         qrCodeFramePP->setStyleSheet(QString::fromUtf8("background: #F2F8FC;\n"
 "border-radius: 20px;"));
         qrCodeFramePP->setFrameShape(QFrame::StyledPanel);
@@ -1159,7 +1186,7 @@ public:
         certificateFramePP = new QFrame(userHomeDisplayFramePP);
         certificateFramePP->setObjectName(QString::fromUtf8("certificateFramePP"));
         certificateFramePP->setGeometry(QRect(560, 540, 131, 201));
-        certificateFramePP->setFont(font8);
+        certificateFramePP->setFont(font10);
         certificateFramePP->setStyleSheet(QString::fromUtf8("background: #F2F8FC;\n"
 "border-radius: 20px;"));
         certificateFramePP->setFrameShape(QFrame::StyledPanel);
@@ -1173,7 +1200,7 @@ public:
         labelClickEnlargePP = new QLabel(userHomeDisplayFramePP);
         labelClickEnlargePP->setObjectName(QString::fromUtf8("labelClickEnlargePP"));
         labelClickEnlargePP->setGeometry(QRect(400, 514, 431, 20));
-        labelClickEnlargePP->setFont(font7);
+        labelClickEnlargePP->setFont(font9);
         labelClickEnlargePP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 14px;\n"
 "color:#2B528C;\n"
@@ -1183,7 +1210,7 @@ public:
         labelTestResultTextPP = new QLabel(userHomeDisplayFramePP);
         labelTestResultTextPP->setObjectName(QString::fromUtf8("labelTestResultTextPP"));
         labelTestResultTextPP->setGeometry(QRect(400, 750, 131, 20));
-        labelTestResultTextPP->setFont(font7);
+        labelTestResultTextPP->setFont(font9);
         labelTestResultTextPP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -1194,7 +1221,7 @@ public:
         labelCertificatePP = new QLabel(userHomeDisplayFramePP);
         labelCertificatePP->setObjectName(QString::fromUtf8("labelCertificatePP"));
         labelCertificatePP->setGeometry(QRect(560, 750, 131, 20));
-        labelCertificatePP->setFont(font7);
+        labelCertificatePP->setFont(font9);
         labelCertificatePP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -1204,7 +1231,7 @@ public:
         labelQRCodeTextPP = new QLabel(userHomeDisplayFramePP);
         labelQRCodeTextPP->setObjectName(QString::fromUtf8("labelQRCodeTextPP"));
         labelQRCodeTextPP->setGeometry(QRect(720, 750, 131, 20));
-        labelQRCodeTextPP->setFont(font7);
+        labelQRCodeTextPP->setFont(font9);
         labelQRCodeTextPP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -1215,7 +1242,7 @@ public:
         pbEnlargeResultsPP = new QPushButton(userHomeDisplayFramePP);
         pbEnlargeResultsPP->setObjectName(QString::fromUtf8("pbEnlargeResultsPP"));
         pbEnlargeResultsPP->setGeometry(QRect(500, 710, 31, 31));
-        pbEnlargeResultsPP->setFont(font9);
+        pbEnlargeResultsPP->setFont(font11);
         pbEnlargeResultsPP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background: #2B528C;\n"
 "font-weight: 300;\n"
@@ -1231,7 +1258,7 @@ public:
         pbEnlargeCertificatePP = new QPushButton(userHomeDisplayFramePP);
         pbEnlargeCertificatePP->setObjectName(QString::fromUtf8("pbEnlargeCertificatePP"));
         pbEnlargeCertificatePP->setGeometry(QRect(660, 710, 31, 31));
-        pbEnlargeCertificatePP->setFont(font9);
+        pbEnlargeCertificatePP->setFont(font11);
         pbEnlargeCertificatePP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background: #2B528C;\n"
 "font-weight: 300;\n"
@@ -1247,7 +1274,7 @@ public:
         pbEnlargeQRPP = new QPushButton(userHomeDisplayFramePP);
         pbEnlargeQRPP->setObjectName(QString::fromUtf8("pbEnlargeQRPP"));
         pbEnlargeQRPP->setGeometry(QRect(820, 710, 31, 31));
-        pbEnlargeQRPP->setFont(font9);
+        pbEnlargeQRPP->setFont(font11);
         pbEnlargeQRPP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background: #2B528C;\n"
 "font-weight: 300;\n"
@@ -1353,7 +1380,7 @@ public:
         homeSubHeadingCP = new QLabel(userHomeDisplayFrameCP);
         homeSubHeadingCP->setObjectName(QString::fromUtf8("homeSubHeadingCP"));
         homeSubHeadingCP->setGeometry(QRect(21, 55, 481, 51));
-        homeSubHeadingCP->setFont(font7);
+        homeSubHeadingCP->setFont(font9);
         homeSubHeadingCP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 18px;\n"
 "color: #2B528C;\n"
@@ -1370,7 +1397,7 @@ public:
 ""));
         userInfoFrameCP = new QFrame(userHomeDisplayFrameCP);
         userInfoFrameCP->setObjectName(QString::fromUtf8("userInfoFrameCP"));
-        userInfoFrameCP->setGeometry(QRect(500, 119, 351, 211));
+        userInfoFrameCP->setGeometry(QRect(500, 119, 351, 281));
         userInfoFrameCP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
 "border-radius: 40px;"));
         userInfoFrameCP->setFrameShape(QFrame::StyledPanel);
@@ -1378,7 +1405,7 @@ public:
         labelContactCP = new QLabel(userInfoFrameCP);
         labelContactCP->setObjectName(QString::fromUtf8("labelContactCP"));
         labelContactCP->setGeometry(QRect(20, 10, 301, 30));
-        labelContactCP->setFont(font11);
+        labelContactCP->setFont(font13);
         labelContactCP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 23px;\n"
 "color:#2B528C;\n"
@@ -1386,8 +1413,8 @@ public:
         labelContactCP->setAlignment(Qt::AlignCenter);
         labelPreferredNameCP = new QLabel(userInfoFrameCP);
         labelPreferredNameCP->setObjectName(QString::fromUtf8("labelPreferredNameCP"));
-        labelPreferredNameCP->setGeometry(QRect(20, 60, 331, 20));
-        labelPreferredNameCP->setFont(font7);
+        labelPreferredNameCP->setGeometry(QRect(30, 60, 331, 20));
+        labelPreferredNameCP->setFont(font9);
         labelPreferredNameCP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -1396,24 +1423,14 @@ public:
 ""));
         labelPreferredContactCP = new QLabel(userInfoFrameCP);
         labelPreferredContactCP->setObjectName(QString::fromUtf8("labelPreferredContactCP"));
-        labelPreferredContactCP->setGeometry(QRect(15, 130, 331, 20));
-        labelPreferredContactCP->setFont(font7);
+        labelPreferredContactCP->setGeometry(QRect(29, 130, 331, 20));
+        labelPreferredContactCP->setFont(font9);
         labelPreferredContactCP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
 "background: rgba(254, 206, 103, 0.00);\n"
 "\n"
 ""));
-        editPreferredContactCP = new QLineEdit(userInfoFrameCP);
-        editPreferredContactCP->setObjectName(QString::fromUtf8("editPreferredContactCP"));
-        editPreferredContactCP->setGeometry(QRect(20, 150, 311, 31));
-        editPreferredContactCP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
-"{background: #F8FBFF;\n"
-"border-radius: 15;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"color: #2B528C;\n"
-"font-size: 16px; \n"
-"padding-left: 3px;}"));
         editPreferredNameCP = new QLineEdit(userInfoFrameCP);
         editPreferredNameCP->setObjectName(QString::fromUtf8("editPreferredNameCP"));
         editPreferredNameCP->setGeometry(QRect(20, 80, 311, 31));
@@ -1422,12 +1439,46 @@ public:
 "border-radius: 15;\n"
 "border-color: rgba(104, 160, 229, 0.33);\n"
 "color: #2B528C;\n"
-"font-size: 16px; \n"
+"font-size: 14px; \n"
 "padding-left: 3px;}"));
+        labelPreferredContactCP_2 = new QLabel(userInfoFrameCP);
+        labelPreferredContactCP_2->setObjectName(QString::fromUtf8("labelPreferredContactCP_2"));
+        labelPreferredContactCP_2->setGeometry(QRect(30, 200, 281, 20));
+        labelPreferredContactCP_2->setFont(font9);
+        labelPreferredContactCP_2->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 16px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+"\n"
+""));
+        editPreferredContactCP = new QLineEdit(userInfoFrameCP);
+        editPreferredContactCP->setObjectName(QString::fromUtf8("editPreferredContactCP"));
+        editPreferredContactCP->setGeometry(QRect(25, 220, 301, 31));
+        editPreferredContactCP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
+"{background: #F8FBFF;\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"color: #2B528C;\n"
+"font-size: 14px; \n"
+"padding-left: 3px;}"));
+        cbContactMethodCP = new QComboBox(userInfoFrameCP);
+        cbContactMethodCP->addItem(QString());
+        cbContactMethodCP->addItem(QString());
+        cbContactMethodCP->addItem(QString());
+        cbContactMethodCP->setObjectName(QString::fromUtf8("cbContactMethodCP"));
+        cbContactMethodCP->setGeometry(QRect(20, 150, 311, 31));
+        cbContactMethodCP->setFont(font10);
+        cbContactMethodCP->setStyleSheet(QString::fromUtf8("QComboBox\n"
+"{background: #F8FBFF;\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"color: #2B528C;\n"
+"font-size: 14px; \n"
+"padding-left: 8px;}"));
         userMedicalFrameCP = new QFrame(userHomeDisplayFrameCP);
         userMedicalFrameCP->setObjectName(QString::fromUtf8("userMedicalFrameCP"));
         userMedicalFrameCP->setGeometry(QRect(20, 120, 461, 651));
-        userMedicalFrameCP->setFont(font8);
+        userMedicalFrameCP->setFont(font10);
         userMedicalFrameCP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
 "border-radius: 40px;"));
         userMedicalFrameCP->setFrameShape(QFrame::StyledPanel);
@@ -1435,7 +1486,7 @@ public:
         labelMedicalInfoCP = new QLabel(userMedicalFrameCP);
         labelMedicalInfoCP->setObjectName(QString::fromUtf8("labelMedicalInfoCP"));
         labelMedicalInfoCP->setGeometry(QRect(20, 14, 431, 30));
-        labelMedicalInfoCP->setFont(font11);
+        labelMedicalInfoCP->setFont(font13);
         labelMedicalInfoCP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 23px;\n"
 "color:#2B528C;\n"
@@ -1444,7 +1495,7 @@ public:
         labelAboutMessageCP = new QLabel(userMedicalFrameCP);
         labelAboutMessageCP->setObjectName(QString::fromUtf8("labelAboutMessageCP"));
         labelAboutMessageCP->setGeometry(QRect(20, 60, 331, 20));
-        labelAboutMessageCP->setFont(font7);
+        labelAboutMessageCP->setFont(font9);
         labelAboutMessageCP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -1454,7 +1505,7 @@ public:
         labelMessageSubjectCP = new QLabel(userMedicalFrameCP);
         labelMessageSubjectCP->setObjectName(QString::fromUtf8("labelMessageSubjectCP"));
         labelMessageSubjectCP->setGeometry(QRect(20, 130, 331, 20));
-        labelMessageSubjectCP->setFont(font7);
+        labelMessageSubjectCP->setFont(font9);
         labelMessageSubjectCP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -1464,7 +1515,7 @@ public:
         labelMessageDetailsCP = new QLabel(userMedicalFrameCP);
         labelMessageDetailsCP->setObjectName(QString::fromUtf8("labelMessageDetailsCP"));
         labelMessageDetailsCP->setGeometry(QRect(20, 198, 331, 20));
-        labelMessageDetailsCP->setFont(font7);
+        labelMessageDetailsCP->setFont(font9);
         labelMessageDetailsCP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -1478,7 +1529,7 @@ public:
 "border-radius: 20;\n"
 "border-color: rgba(104, 160, 229, 0.33);\n"
 "color: #2B528C;\n"
-"font-size: 16px; \n"
+"font-size: 14px; \n"
 "padding-left: 5px;"));
         editReportSubjectCP = new QLineEdit(userMedicalFrameCP);
         editReportSubjectCP->setObjectName(QString::fromUtf8("editReportSubjectCP"));
@@ -1488,7 +1539,7 @@ public:
 "border-radius: 15;\n"
 "border-color: rgba(104, 160, 229, 0.33);\n"
 "color: #2B528C;\n"
-"font-size: 16px; \n"
+"font-size: 14px; \n"
 "padding-left: 3px;}"));
         cbReportCategoryCP = new QComboBox(userMedicalFrameCP);
         cbReportCategoryCP->addItem(QString());
@@ -1498,12 +1549,13 @@ public:
         cbReportCategoryCP->addItem(QString());
         cbReportCategoryCP->setObjectName(QString::fromUtf8("cbReportCategoryCP"));
         cbReportCategoryCP->setGeometry(QRect(21, 90, 421, 31));
+        cbReportCategoryCP->setFont(font10);
         cbReportCategoryCP->setStyleSheet(QString::fromUtf8("QComboBox\n"
 "{background: #F8FBFF;\n"
 "border-radius: 15;\n"
 "border-color: rgba(104, 160, 229, 0.33);\n"
 "color: #2B528C;\n"
-"font-size: 16px; \n"
+"font-size: 14px; \n"
 "padding-left: 3px;}"));
         pbSendMessageCP = new QPushButton(userMedicalFrameCP);
         pbSendMessageCP->setObjectName(QString::fromUtf8("pbSendMessageCP"));
@@ -1521,18 +1573,46 @@ public:
 "{\n"
 "font-size: 18px;\n"
 "}"));
+        frame = new QFrame(userMedicalFrameCP);
+        frame->setObjectName(QString::fromUtf8("frame"));
+        frame->setGeometry(QRect(19, 90, 431, 31));
+        frame->setStyleSheet(QString::fromUtf8("QFrame\n"
+"{background: #F8FBFF;\n"
+"border-radius: 15;\n"
+"\n"
+"color: #2B528C;\n"
+"font-size: 16px; \n"
+"padding-left: 3px;}"));
+        frame->setFrameShape(QFrame::StyledPanel);
+        frame->setFrameShadow(QFrame::Raised);
+        cbReportCategoryCP_2 = new QComboBox(frame);
+        cbReportCategoryCP_2->addItem(QString());
+        cbReportCategoryCP_2->addItem(QString());
+        cbReportCategoryCP_2->addItem(QString());
+        cbReportCategoryCP_2->addItem(QString());
+        cbReportCategoryCP_2->addItem(QString());
+        cbReportCategoryCP_2->setObjectName(QString::fromUtf8("cbReportCategoryCP_2"));
+        cbReportCategoryCP_2->setGeometry(QRect(0, 0, 421, 31));
+        cbReportCategoryCP_2->setStyleSheet(QString::fromUtf8("QComboBox\n"
+"{background: #F8FBFF;\n"
+"border-radius: 15;\n"
+"\n"
+"color: #2B528C;\n"
+"font-size: 16px; \n"
+"padding-left: 3px;}"));
+        cbReportCategoryCP->raise();
+        frame->raise();
         editReportSubjectCP->raise();
         editReportDetailsCP->raise();
         labelMedicalInfoCP->raise();
         labelAboutMessageCP->raise();
         labelMessageSubjectCP->raise();
         labelMessageDetailsCP->raise();
-        cbReportCategoryCP->raise();
         pbSendMessageCP->raise();
         myVaccinesHeadingCP = new QLabel(userHomeDisplayFrameCP);
         myVaccinesHeadingCP->setObjectName(QString::fromUtf8("myVaccinesHeadingCP"));
-        myVaccinesHeadingCP->setGeometry(QRect(500, 360, 410, 30));
-        myVaccinesHeadingCP->setFont(font10);
+        myVaccinesHeadingCP->setGeometry(QRect(500, 410, 410, 30));
+        myVaccinesHeadingCP->setFont(font12);
         myVaccinesHeadingCP->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
 "font-size: 23px;\n"
 "color:#2B528C;\n"
@@ -1540,7 +1620,7 @@ public:
 ""));
         pbGetVaccinatedLinkCP = new QPushButton(userHomeDisplayFrameCP);
         pbGetVaccinatedLinkCP->setObjectName(QString::fromUtf8("pbGetVaccinatedLinkCP"));
-        pbGetVaccinatedLinkCP->setGeometry(QRect(500, 440, 351, 91));
+        pbGetVaccinatedLinkCP->setGeometry(QRect(500, 490, 351, 81));
         pbGetVaccinatedLinkCP->setFont(font1);
         pbGetVaccinatedLinkCP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "color: #2B528C;\n"
@@ -1559,8 +1639,8 @@ public:
 "}"));
         homeSubHeadingCP_2 = new QLabel(userHomeDisplayFrameCP);
         homeSubHeadingCP_2->setObjectName(QString::fromUtf8("homeSubHeadingCP_2"));
-        homeSubHeadingCP_2->setGeometry(QRect(500, 390, 300, 30));
-        homeSubHeadingCP_2->setFont(font7);
+        homeSubHeadingCP_2->setGeometry(QRect(500, 440, 300, 30));
+        homeSubHeadingCP_2->setFont(font9);
         homeSubHeadingCP_2->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 18px;\n"
 "color: #2B528C;\n"
@@ -1568,7 +1648,7 @@ public:
 ""));
         pbGetTestedLinkCP = new QPushButton(userHomeDisplayFrameCP);
         pbGetTestedLinkCP->setObjectName(QString::fromUtf8("pbGetTestedLinkCP"));
-        pbGetTestedLinkCP->setGeometry(QRect(500, 560, 351, 91));
+        pbGetTestedLinkCP->setGeometry(QRect(500, 590, 351, 81));
         pbGetTestedLinkCP->setFont(font1);
         pbGetTestedLinkCP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "color: #2B528C;\n"
@@ -1587,7 +1667,7 @@ public:
 "}"));
         pbLearnMoreLinkCP = new QPushButton(userHomeDisplayFrameCP);
         pbLearnMoreLinkCP->setObjectName(QString::fromUtf8("pbLearnMoreLinkCP"));
-        pbLearnMoreLinkCP->setGeometry(QRect(500, 680, 351, 91));
+        pbLearnMoreLinkCP->setGeometry(QRect(500, 690, 351, 81));
         pbLearnMoreLinkCP->setFont(font1);
         pbLearnMoreLinkCP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "color: #2B528C;\n"
@@ -1628,7 +1708,7 @@ public:
         labelHeyThereCP = new QLabel(userHomeHelloBarCP);
         labelHeyThereCP->setObjectName(QString::fromUtf8("labelHeyThereCP"));
         labelHeyThereCP->setGeometry(QRect(18, 229, 101, 31));
-        labelHeyThereCP->setFont(font6);
+        labelHeyThereCP->setFont(font8);
         labelHeyThereCP->setStyleSheet(QString::fromUtf8("color: #2B528C;\n"
 "font-weight: 400;\n"
 "font-size: 18px;\n"
@@ -1660,7 +1740,7 @@ public:
         enlargeTestResultsPage->setObjectName(QString::fromUtf8("enlargeTestResultsPage"));
         userHomeHelloBarFS = new QFrame(enlargeTestResultsPage);
         userHomeHelloBarFS->setObjectName(QString::fromUtf8("userHomeHelloBarFS"));
-        userHomeHelloBarFS->setGeometry(QRect(-10, 430, 211, 511));
+        userHomeHelloBarFS->setGeometry(QRect(0, 430, 211, 511));
         userHomeHelloBarFS->setStyleSheet(QString::fromUtf8("background: rgba(104, 160, 229, 0.33);\n"
 "border-radius: 105px;"));
         userHomeHelloBarFS->setFrameShape(QFrame::StyledPanel);
@@ -1681,7 +1761,7 @@ public:
         labelHeyThereFS = new QLabel(userHomeHelloBarFS);
         labelHeyThereFS->setObjectName(QString::fromUtf8("labelHeyThereFS"));
         labelHeyThereFS->setGeometry(QRect(18, 229, 101, 31));
-        labelHeyThereFS->setFont(font6);
+        labelHeyThereFS->setFont(font8);
         labelHeyThereFS->setStyleSheet(QString::fromUtf8("color: #2B528C;\n"
 "font-weight: 400;\n"
 "font-size: 18px;\n"
@@ -1706,7 +1786,7 @@ public:
 "}"));
         userProfileBlueMenuBarFS = new QFrame(enlargeTestResultsPage);
         userProfileBlueMenuBarFS->setObjectName(QString::fromUtf8("userProfileBlueMenuBarFS"));
-        userProfileBlueMenuBarFS->setGeometry(QRect(-10, -100, 211, 741));
+        userProfileBlueMenuBarFS->setGeometry(QRect(0, -100, 211, 741));
         userProfileBlueMenuBarFS->setStyleSheet(QString::fromUtf8(" background: #2B528C;\n"
 "border-radius: 105px;"));
         userProfileBlueMenuBarFS->setFrameShape(QFrame::StyledPanel);
@@ -1772,7 +1852,7 @@ public:
         homeSubHeadingFS = new QLabel(userHomeDisplayFrameFS);
         homeSubHeadingFS->setObjectName(QString::fromUtf8("homeSubHeadingFS"));
         homeSubHeadingFS->setGeometry(QRect(21, 55, 481, 51));
-        homeSubHeadingFS->setFont(font7);
+        homeSubHeadingFS->setFont(font9);
         homeSubHeadingFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 18px;\n"
 "color: #2B528C;\n"
@@ -1797,7 +1877,7 @@ public:
         showUserNameFS = new QLabel(userInfoFrameFS);
         showUserNameFS->setObjectName(QString::fromUtf8("showUserNameFS"));
         showUserNameFS->setGeometry(QRect(20, 10, 301, 30));
-        showUserNameFS->setFont(font10);
+        showUserNameFS->setFont(font12);
         showUserNameFS->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
 "font-size: 23px;\n"
 "color:#2B528C;\n"
@@ -1807,7 +1887,7 @@ public:
         userDOBHeadingFS = new QLabel(userInfoFrameFS);
         userDOBHeadingFS->setObjectName(QString::fromUtf8("userDOBHeadingFS"));
         userDOBHeadingFS->setGeometry(QRect(20, 50, 331, 20));
-        userDOBHeadingFS->setFont(font7);
+        userDOBHeadingFS->setFont(font9);
         userDOBHeadingFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -1836,7 +1916,7 @@ public:
         userNumberHeadingFS = new QLabel(userInfoFrameFS);
         userNumberHeadingFS->setObjectName(QString::fromUtf8("userNumberHeadingFS"));
         userNumberHeadingFS->setGeometry(QRect(15, 120, 331, 20));
-        userNumberHeadingFS->setFont(font7);
+        userNumberHeadingFS->setFont(font9);
         userNumberHeadingFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -1855,7 +1935,7 @@ public:
         userEmailHeadingFS = new QLabel(userInfoFrameFS);
         userEmailHeadingFS->setObjectName(QString::fromUtf8("userEmailHeadingFS"));
         userEmailHeadingFS->setGeometry(QRect(15, 190, 331, 20));
-        userEmailHeadingFS->setFont(font7);
+        userEmailHeadingFS->setFont(font9);
         userEmailHeadingFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -1874,7 +1954,7 @@ public:
         userEmercencyContactHeadingFS = new QLabel(userInfoFrameFS);
         userEmercencyContactHeadingFS->setObjectName(QString::fromUtf8("userEmercencyContactHeadingFS"));
         userEmercencyContactHeadingFS->setGeometry(QRect(15, 260, 331, 20));
-        userEmercencyContactHeadingFS->setFont(font7);
+        userEmercencyContactHeadingFS->setFont(font9);
         userEmercencyContactHeadingFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -1896,7 +1976,7 @@ public:
         showDose1NameFS = new QLabel(vaccineDose1FrameFS);
         showDose1NameFS->setObjectName(QString::fromUtf8("showDose1NameFS"));
         showDose1NameFS->setGeometry(QRect(160, 40, 281, 21));
-        showDose1NameFS->setFont(font10);
+        showDose1NameFS->setFont(font12);
         showDose1NameFS->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
 "font-size: 18px;\n"
 "color:#2B528C;\n"
@@ -1906,7 +1986,7 @@ public:
         showDose1BatchFS = new QLabel(vaccineDose1FrameFS);
         showDose1BatchFS->setObjectName(QString::fromUtf8("showDose1BatchFS"));
         showDose1BatchFS->setGeometry(QRect(160, 80, 61, 20));
-        showDose1BatchFS->setFont(font7);
+        showDose1BatchFS->setFont(font9);
         showDose1BatchFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -1915,7 +1995,7 @@ public:
         showDose1DateFS = new QLabel(vaccineDose1FrameFS);
         showDose1DateFS->setObjectName(QString::fromUtf8("showDose1DateFS"));
         showDose1DateFS->setGeometry(QRect(250, 80, 161, 20));
-        showDose1DateFS->setFont(font7);
+        showDose1DateFS->setFont(font9);
         showDose1DateFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -1933,7 +2013,7 @@ public:
         myVaccinesHeadingFS = new QLabel(userHomeDisplayFrameFS);
         myVaccinesHeadingFS->setObjectName(QString::fromUtf8("myVaccinesHeadingFS"));
         myVaccinesHeadingFS->setGeometry(QRect(400, 120, 410, 30));
-        myVaccinesHeadingFS->setFont(font10);
+        myVaccinesHeadingFS->setFont(font12);
         myVaccinesHeadingFS->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
 "font-size: 23px;\n"
 "color:#2B528C;\n"
@@ -1943,7 +2023,7 @@ public:
         myDocsHeadingFS = new QLabel(userHomeDisplayFrameFS);
         myDocsHeadingFS->setObjectName(QString::fromUtf8("myDocsHeadingFS"));
         myDocsHeadingFS->setGeometry(QRect(400, 483, 431, 30));
-        myDocsHeadingFS->setFont(font10);
+        myDocsHeadingFS->setFont(font12);
         myDocsHeadingFS->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
 "font-size: 23px;\n"
 "color:#2B528C;\n"
@@ -1967,7 +2047,7 @@ public:
         showDose2BatchFS = new QLabel(vaccineDose2FrameFS);
         showDose2BatchFS->setObjectName(QString::fromUtf8("showDose2BatchFS"));
         showDose2BatchFS->setGeometry(QRect(160, 80, 71, 20));
-        showDose2BatchFS->setFont(font7);
+        showDose2BatchFS->setFont(font9);
         showDose2BatchFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -1976,7 +2056,7 @@ public:
         showDose2NameFS = new QLabel(vaccineDose2FrameFS);
         showDose2NameFS->setObjectName(QString::fromUtf8("showDose2NameFS"));
         showDose2NameFS->setGeometry(QRect(160, 40, 271, 21));
-        showDose2NameFS->setFont(font10);
+        showDose2NameFS->setFont(font12);
         showDose2NameFS->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
 "font-size: 18px;\n"
 "color:#2B528C;\n"
@@ -1986,7 +2066,7 @@ public:
         showDose2DateFS = new QLabel(vaccineDose2FrameFS);
         showDose2DateFS->setObjectName(QString::fromUtf8("showDose2DateFS"));
         showDose2DateFS->setGeometry(QRect(240, 80, 171, 20));
-        showDose2DateFS->setFont(font7);
+        showDose2DateFS->setFont(font9);
         showDose2DateFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -2004,7 +2084,7 @@ public:
         userMedicalFrameFS = new QFrame(userHomeDisplayFrameFS);
         userMedicalFrameFS->setObjectName(QString::fromUtf8("userMedicalFrameFS"));
         userMedicalFrameFS->setGeometry(QRect(20, 473, 351, 291));
-        userMedicalFrameFS->setFont(font8);
+        userMedicalFrameFS->setFont(font10);
         userMedicalFrameFS->setStyleSheet(QString::fromUtf8("background: rgba(254, 206, 103, 0.55);\n"
 "border-radius: 40px;"));
         userMedicalFrameFS->setFrameShape(QFrame::StyledPanel);
@@ -2012,7 +2092,7 @@ public:
         userNHIHeadingFS = new QLabel(userMedicalFrameFS);
         userNHIHeadingFS->setObjectName(QString::fromUtf8("userNHIHeadingFS"));
         userNHIHeadingFS->setGeometry(QRect(15, 62, 331, 20));
-        userNHIHeadingFS->setFont(font7);
+        userNHIHeadingFS->setFont(font9);
         userNHIHeadingFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -2022,7 +2102,7 @@ public:
         userVaccStatusHeadingFS = new QLabel(userMedicalFrameFS);
         userVaccStatusHeadingFS->setObjectName(QString::fromUtf8("userVaccStatusHeadingFS"));
         userVaccStatusHeadingFS->setGeometry(QRect(10, 202, 331, 20));
-        userVaccStatusHeadingFS->setFont(font7);
+        userVaccStatusHeadingFS->setFont(font9);
         userVaccStatusHeadingFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -2050,7 +2130,7 @@ public:
         userCVNHeadingFS = new QLabel(userMedicalFrameFS);
         userCVNHeadingFS->setObjectName(QString::fromUtf8("userCVNHeadingFS"));
         userCVNHeadingFS->setGeometry(QRect(15, 132, 331, 20));
-        userCVNHeadingFS->setFont(font7);
+        userCVNHeadingFS->setFont(font9);
         userCVNHeadingFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -2068,7 +2148,7 @@ public:
         medicalInfoHeadingFS = new QLabel(userMedicalFrameFS);
         medicalInfoHeadingFS->setObjectName(QString::fromUtf8("medicalInfoHeadingFS"));
         medicalInfoHeadingFS->setGeometry(QRect(20, 10, 311, 30));
-        medicalInfoHeadingFS->setFont(font11);
+        medicalInfoHeadingFS->setFont(font13);
         medicalInfoHeadingFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 23px;\n"
 "color:#2B528C;\n"
@@ -2077,7 +2157,7 @@ public:
         testResultFrameFS = new QFrame(userHomeDisplayFrameFS);
         testResultFrameFS->setObjectName(QString::fromUtf8("testResultFrameFS"));
         testResultFrameFS->setGeometry(QRect(400, 540, 131, 201));
-        testResultFrameFS->setFont(font8);
+        testResultFrameFS->setFont(font10);
         testResultFrameFS->setStyleSheet(QString::fromUtf8("background: #F2F8FC;\n"
 "border-radius: 50px;"));
         testResultFrameFS->setFrameShape(QFrame::StyledPanel);
@@ -2090,7 +2170,7 @@ public:
         qrCodeFrameFS = new QFrame(userHomeDisplayFrameFS);
         qrCodeFrameFS->setObjectName(QString::fromUtf8("qrCodeFrameFS"));
         qrCodeFrameFS->setGeometry(QRect(720, 540, 131, 201));
-        qrCodeFrameFS->setFont(font8);
+        qrCodeFrameFS->setFont(font10);
         qrCodeFrameFS->setStyleSheet(QString::fromUtf8("background: #F2F8FC;\n"
 "border-radius: 50px;"));
         qrCodeFrameFS->setFrameShape(QFrame::StyledPanel);
@@ -2103,7 +2183,7 @@ public:
         certificateFrameFS = new QFrame(userHomeDisplayFrameFS);
         certificateFrameFS->setObjectName(QString::fromUtf8("certificateFrameFS"));
         certificateFrameFS->setGeometry(QRect(560, 540, 131, 201));
-        certificateFrameFS->setFont(font8);
+        certificateFrameFS->setFont(font10);
         certificateFrameFS->setStyleSheet(QString::fromUtf8("background: #F2F8FC;\n"
 "border-radius: 50px;"));
         certificateFrameFS->setFrameShape(QFrame::StyledPanel);
@@ -2116,7 +2196,7 @@ public:
         myDocsSubFS = new QLabel(userHomeDisplayFrameFS);
         myDocsSubFS->setObjectName(QString::fromUtf8("myDocsSubFS"));
         myDocsSubFS->setGeometry(QRect(400, 514, 431, 20));
-        myDocsSubFS->setFont(font7);
+        myDocsSubFS->setFont(font9);
         myDocsSubFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 14px;\n"
 "color:#2B528C;\n"
@@ -2126,7 +2206,7 @@ public:
         testResultTextFS = new QLabel(userHomeDisplayFrameFS);
         testResultTextFS->setObjectName(QString::fromUtf8("testResultTextFS"));
         testResultTextFS->setGeometry(QRect(400, 750, 131, 20));
-        testResultTextFS->setFont(font7);
+        testResultTextFS->setFont(font9);
         testResultTextFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -2137,7 +2217,7 @@ public:
         certificateTextFS = new QLabel(userHomeDisplayFrameFS);
         certificateTextFS->setObjectName(QString::fromUtf8("certificateTextFS"));
         certificateTextFS->setGeometry(QRect(560, 750, 131, 20));
-        certificateTextFS->setFont(font7);
+        certificateTextFS->setFont(font9);
         certificateTextFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -2147,7 +2227,7 @@ public:
         qrCodeTextFS = new QLabel(userHomeDisplayFrameFS);
         qrCodeTextFS->setObjectName(QString::fromUtf8("qrCodeTextFS"));
         qrCodeTextFS->setGeometry(QRect(720, 750, 131, 20));
-        qrCodeTextFS->setFont(font7);
+        qrCodeTextFS->setFont(font9);
         qrCodeTextFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
 "color:#2B528C;\n"
@@ -2158,7 +2238,7 @@ public:
         pbEnlargeResultsFS = new QPushButton(userHomeDisplayFrameFS);
         pbEnlargeResultsFS->setObjectName(QString::fromUtf8("pbEnlargeResultsFS"));
         pbEnlargeResultsFS->setGeometry(QRect(500, 540, 31, 31));
-        pbEnlargeResultsFS->setFont(font9);
+        pbEnlargeResultsFS->setFont(font11);
         pbEnlargeResultsFS->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background: #2B528C;\n"
 "font-weight: 300;\n"
@@ -2174,7 +2254,7 @@ public:
         pbEnlargeCertificateFS = new QPushButton(userHomeDisplayFrameFS);
         pbEnlargeCertificateFS->setObjectName(QString::fromUtf8("pbEnlargeCertificateFS"));
         pbEnlargeCertificateFS->setGeometry(QRect(660, 540, 31, 31));
-        pbEnlargeCertificateFS->setFont(font9);
+        pbEnlargeCertificateFS->setFont(font11);
         pbEnlargeCertificateFS->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background: #2B528C;\n"
 "font-weight: 300;\n"
@@ -2190,7 +2270,7 @@ public:
         pbEnlargeQRFS = new QPushButton(userHomeDisplayFrameFS);
         pbEnlargeQRFS->setObjectName(QString::fromUtf8("pbEnlargeQRFS"));
         pbEnlargeQRFS->setGeometry(QRect(820, 540, 31, 31));
-        pbEnlargeQRFS->setFont(font9);
+        pbEnlargeQRFS->setFont(font11);
         pbEnlargeQRFS->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background: #2B528C;\n"
 "font-weight: 300;\n"
@@ -2206,7 +2286,7 @@ public:
         closeImageTextFS = new QLabel(userHomeDisplayFrameFS);
         closeImageTextFS->setObjectName(QString::fromUtf8("closeImageTextFS"));
         closeImageTextFS->setGeometry(QRect(812, 752, 121, 20));
-        closeImageTextFS->setFont(font7);
+        closeImageTextFS->setFont(font9);
         closeImageTextFS->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 10px;\n"
 "color:#2B528C;\n"
@@ -2234,10 +2314,10 @@ public:
         pbFullScreenFS = new QPushButton(frameFS2);
         pbFullScreenFS->setObjectName(QString::fromUtf8("pbFullScreenFS"));
         pbFullScreenFS->setGeometry(QRect(723, 732, 91, 31));
-        QFont font12;
-        font12.setFamilies({QString::fromUtf8("Avenir Next")});
-        font12.setBold(true);
-        pbFullScreenFS->setFont(font12);
+        QFont font14;
+        font14.setFamilies({QString::fromUtf8("Avenir Next")});
+        font14.setBold(true);
+        pbFullScreenFS->setFont(font14);
         pbFullScreenFS->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "color: #2B528C;\n"
 "font-weight: 500;\n"
@@ -2253,7 +2333,7 @@ public:
         pbCloseImageFS = new QPushButton(frameFS2);
         pbCloseImageFS->setObjectName(QString::fromUtf8("pbCloseImageFS"));
         pbCloseImageFS->setGeometry(QRect(750, 40, 31, 31));
-        pbCloseImageFS->setFont(font12);
+        pbCloseImageFS->setFont(font14);
         pbCloseImageFS->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "color: #2B528C;\n"
 "font-weight: 500;\n"
@@ -2294,9 +2374,9 @@ public:
         showLargeTestsFS->raise();
         stackedWidget->addWidget(enlargeTestResultsPage);
         userHomeWhiteBackgroundFS->raise();
-        userHomeHelloBarFS->raise();
-        userProfileBlueMenuBarFS->raise();
         userHomeDisplayFrameFS->raise();
+        userProfileBlueMenuBarFS->raise();
+        userHomeHelloBarFS->raise();
         UserLogin->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(UserLogin);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -2304,7 +2384,8 @@ public:
 
         retranslateUi(UserLogin);
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(3);
+        pbLoginLP->setDefault(true);
 
 
         QMetaObject::connectSlotsByName(UserLogin);
@@ -2326,6 +2407,7 @@ public:
         enterDetailsTextLP->setText(QCoreApplication::translate("UserLogin", "Enter your details to continue:", nullptr));
         myAccountTitleLP->setText(QCoreApplication::translate("UserLogin", "My Account", nullptr));
         labelErrorLP->setText(QString());
+        enterDetailsTextLP_2->setText(QCoreApplication::translate("UserLogin", "Login is case sensitive.", nullptr));
         pbLoginLP->setText(QCoreApplication::translate("UserLogin", "Let's Go!", nullptr));
         pbCircleLoginLP->setText(QCoreApplication::translate("UserLogin", "Let's Go!", nullptr));
         iconArrowLP->setText(QString());
@@ -2399,7 +2481,12 @@ public:
         homeTitleCP->setText(QCoreApplication::translate("UserLogin", "Contact Us", nullptr));
         labelContactCP->setText(QCoreApplication::translate("UserLogin", "My Contact Details", nullptr));
         labelPreferredNameCP->setText(QCoreApplication::translate("UserLogin", "Preferred Name", nullptr));
-        labelPreferredContactCP->setText(QCoreApplication::translate("UserLogin", "Preferred Contact", nullptr));
+        labelPreferredContactCP->setText(QCoreApplication::translate("UserLogin", "Preferred Contact Method", nullptr));
+        labelPreferredContactCP_2->setText(QCoreApplication::translate("UserLogin", "Contact Details", nullptr));
+        cbContactMethodCP->setItemText(0, QCoreApplication::translate("UserLogin", "E-mail", nullptr));
+        cbContactMethodCP->setItemText(1, QCoreApplication::translate("UserLogin", "Phone Call", nullptr));
+        cbContactMethodCP->setItemText(2, QCoreApplication::translate("UserLogin", "Text Message", nullptr));
+
         labelMedicalInfoCP->setText(QCoreApplication::translate("UserLogin", "Message Details", nullptr));
         labelAboutMessageCP->setText(QCoreApplication::translate("UserLogin", "What is your message about?", nullptr));
         labelMessageSubjectCP->setText(QCoreApplication::translate("UserLogin", "Message Subject", nullptr));
@@ -2411,6 +2498,12 @@ public:
         cbReportCategoryCP->setItemText(4, QCoreApplication::translate("UserLogin", "Other", nullptr));
 
         pbSendMessageCP->setText(QCoreApplication::translate("UserLogin", "Send Message", nullptr));
+        cbReportCategoryCP_2->setItemText(0, QCoreApplication::translate("UserLogin", "General Enquiries", nullptr));
+        cbReportCategoryCP_2->setItemText(1, QCoreApplication::translate("UserLogin", "COVID-19 Vaccine", nullptr));
+        cbReportCategoryCP_2->setItemText(2, QCoreApplication::translate("UserLogin", "Change/Update Personal Details", nullptr));
+        cbReportCategoryCP_2->setItemText(3, QCoreApplication::translate("UserLogin", "My COVID Record Application", nullptr));
+        cbReportCategoryCP_2->setItemText(4, QCoreApplication::translate("UserLogin", "Other", nullptr));
+
         myVaccinesHeadingCP->setText(QCoreApplication::translate("UserLogin", "Need Help?", nullptr));
         pbGetVaccinatedLinkCP->setText(QCoreApplication::translate("UserLogin", "Get Vaccinated", nullptr));
         homeSubHeadingCP_2->setText(QCoreApplication::translate("UserLogin", "You can find more information here.", nullptr));

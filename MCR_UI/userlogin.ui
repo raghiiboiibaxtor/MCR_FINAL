@@ -3437,7 +3437,7 @@ padding-left: 3px;}</string>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QComboBox" name="cbReportCategoryCP">
+        <widget class="QComboBox" name="cbReportCategoryCP_2">
          <property name="geometry">
           <rect>
            <x>0</x>
@@ -3482,6 +3482,7 @@ padding-left: 3px;}</string>
          </item>
         </widget>
        </widget>
+       <zorder>cbReportCategoryCP</zorder>
        <zorder>frame</zorder>
        <zorder>editReportSubjectCP</zorder>
        <zorder>editReportDetailsCP</zorder>
@@ -5560,9 +5561,9 @@ border-radius: 25;}</string>
       </widget>
      </widget>
      <zorder>userHomeWhiteBackgroundFS</zorder>
-     <zorder>userHomeHelloBarFS</zorder>
-     <zorder>userProfileBlueMenuBarFS</zorder>
      <zorder>userHomeDisplayFrameFS</zorder>
+     <zorder>userProfileBlueMenuBarFS</zorder>
+     <zorder>userHomeHelloBarFS</zorder>
     </widget>
    </widget>
   </widget>

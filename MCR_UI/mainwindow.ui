@@ -32,7 +32,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="adminHomePage">
      <widget class="QFrame" name="userHomeHelloBarHP">
@@ -3301,25 +3301,6 @@ font-size: 12px;
 padding-left: 3px;}</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="addUserCVNAP">
-        <property name="geometry">
-         <rect>
-          <x>330</x>
-          <y>123</y>
-          <width>291</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QLineEdit
-{background: rgba(104, 160, 229, 0.55);
-border-radius: 15;
-border-color: rgba(104, 160, 229, 0.33);
-color:#2B528C;
-font-size: 12px; 
-padding-left: 3px;}</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="addUserEmergencyAP">
         <property name="geometry">
          <rect>
@@ -3977,7 +3958,7 @@ padding-left: 3px;}
         </item>
         <item>
          <property name="text">
-          <string>Vaccinated</string>
+          <string>Fully Vaccinated</string>
          </property>
         </item>
        </widget>
@@ -4001,6 +3982,28 @@ color:#2B528C;</string>
          <string>Change</string>
         </property>
        </widget>
+       <widget class="QLabel" name="addUserCVNAP">
+        <property name="geometry">
+         <rect>
+          <x>330</x>
+          <y>122</y>
+          <width>291</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel
+{background: rgba(104, 160, 229, 0.55);
+border-radius: 15;
+border-color: rgba(104, 160, 229, 0.33);
+color:#2B528C;
+font-size: 12px; 
+padding-left: 3px;}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
        <zorder>addTestResultsAP</zorder>
        <zorder>vaccineDose2FrameAP</zorder>
        <zorder>labelNHIAP</zorder>
@@ -4015,7 +4018,6 @@ color:#2B528C;</string>
        <zorder>labelConfidentialAP</zorder>
        <zorder>labelUnauthorisedAP</zorder>
        <zorder>addUserNHIAP</zorder>
-       <zorder>addUserCVNAP</zorder>
        <zorder>addUserEmergencyAP</zorder>
        <zorder>addNotesAP</zorder>
        <zorder>addUserDOBAP</zorder>
@@ -4038,6 +4040,7 @@ color:#2B528C;</string>
        <zorder>addVaccStatusAP</zorder>
        <zorder>pbChangeUserPictureAP</zorder>
        <zorder>pbAddUserPictureAP</zorder>
+       <zorder>addUserCVNAP</zorder>
       </widget>
       <widget class="QListWidget" name="listAllUsersAP">
        <property name="geometry">
@@ -4114,42 +4117,13 @@ color:#2B528C;
 </string>
        </property>
        <property name="text">
-        <string>Add User information by clicking the grey text</string>
+        <string>Add User information by clicking the text</string>
        </property>
       </widget>
       <widget class="QLabel" name="labelSelectRP_2">
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>130</y>
-         <width>261</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Avenir Next</family>
-         <pointsize>-1</pointsize>
-         <weight>25</weight>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font-weight: 200;
-font-size: 12px;
-color:#2B528C;
-background: rgba(254, 206, 103, 0.00);
-
-</string>
-       </property>
-       <property name="text">
-        <string>Added users will appear here.</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="labelSelectRP_3">
-       <property name="geometry">
-        <rect>
-         <x>220</x>
          <y>130</y>
          <width>261</width>
          <height>20</height>
@@ -4230,7 +4204,6 @@ color:#2B528C;</string>
       <zorder>userInfoFrameAP</zorder>
       <zorder>listAllUsersAP</zorder>
       <zorder>labelSelectRP_2</zorder>
-      <zorder>labelSelectRP_3</zorder>
       <zorder>labelCancelAP</zorder>
       <zorder>pbCancelAP</zorder>
      </widget>
@@ -5787,25 +5760,6 @@ background: rgba(254, 206, 103, 0.00);
          <string>Unauthorised access and changes will result in legal action.</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="editUserCVNEP">
-        <property name="geometry">
-         <rect>
-          <x>330</x>
-          <y>130</y>
-          <width>291</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QLineEdit
-{background: #F8FBFF;
-border-radius: 15;
-border-color: rgba(104, 160, 229, 0.33);
-color: #2B528C;
-font-size: 12px; 
-padding-left: 3px;}</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="editUserEmergencyEP">
         <property name="geometry">
          <rect>
@@ -6680,7 +6634,7 @@ color:#2B528C;</string>
          <rect>
           <x>604</x>
           <y>38</y>
-          <width>31</width>
+          <width>41</width>
           <height>21</height>
          </rect>
         </property>
@@ -6703,6 +6657,27 @@ background: rgba(254, 206, 103, 0.00);
          <string>Cancel</string>
         </property>
        </widget>
+       <widget class="QLabel" name="showUserCVNEP">
+        <property name="geometry">
+         <rect>
+          <x>330</x>
+          <y>130</y>
+          <width>291</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: rgba(254, 206, 103, 0.88);
+border-radius: 15;
+border-color: rgba(104, 160, 229, 0.33);
+color: #2B528C;
+font-size: 12px; 
+padding-left: 3px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
        <zorder>editTestResultsEP</zorder>
        <zorder>editQRCodeEP</zorder>
        <zorder>vaccineDose1FrameEP</zorder>
@@ -6720,7 +6695,6 @@ background: rgba(254, 206, 103, 0.00);
        <zorder>pbSaveEditEP</zorder>
        <zorder>labelConfidentialEP</zorder>
        <zorder>labelUnauthorisedEP</zorder>
-       <zorder>editUserCVNEP</zorder>
        <zorder>editUserEmergencyEP</zorder>
        <zorder>labelTestResultsEP</zorder>
        <zorder>labelCertificateEP</zorder>
@@ -6742,6 +6716,7 @@ background: rgba(254, 206, 103, 0.00);
        <zorder>pbEditUserPictureEP</zorder>
        <zorder>pbCancelEP</zorder>
        <zorder>labelCancelEP</zorder>
+       <zorder>showUserCVNEP</zorder>
       </widget>
       <widget class="QPushButton" name="pbSearchEP">
        <property name="geometry">
@@ -8824,9 +8799,9 @@ padding-top: 10px;
       </property>
      </widget>
      <zorder>userHomeWhiteBackgroundFS</zorder>
-     <zorder>userHomeHelloBarFS</zorder>
      <zorder>userProfileBlueMenuBarFS</zorder>
      <zorder>userHomeDisplayFrameFS</zorder>
+     <zorder>userHomeHelloBarFS</zorder>
     </widget>
    </widget>
   </widget>

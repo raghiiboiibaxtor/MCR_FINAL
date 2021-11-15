@@ -346,7 +346,7 @@ void UserLogin::submitReport()
         /// Windows File Path
         //QFile outputFile("GeneralEnquiries.txt");
         /// Mac File Path
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/GeneralEnquiries.txt");
 
         addDetails.replace(QString("\n"), QString ("<br>"));
         QString paragraph(addDetails);
@@ -374,7 +374,7 @@ void UserLogin::submitReport()
         /// Windows File Path
         //QFile outputFile("COVID19Vaccine.txt");
         /// Mac File Path
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/COVID19Vaccine.txt");
 
         addDetails.replace(QString("\n"), QString ("<br>"));
         QString paragraph(addDetails);
@@ -402,7 +402,7 @@ void UserLogin::submitReport()
         /// Windows File Path
         //QFile outputFile("ChangePersonalDetails.txt");
         /// Mac File Path
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/ChangePersonalDetails.txt");
 
         addDetails.replace(QString("\n"), QString ("<br>"));
         QString paragraph(addDetails);
@@ -430,7 +430,7 @@ void UserLogin::submitReport()
         /// Windows File Path
         //QFile outputFile("COVIDRecordApp.txt");
         /// Mac File Path
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/COVIDRecordApp.txt");
 
         addDetails.replace(QString("\n"), QString ("<br>"));
         QString paragraph(addDetails);
@@ -458,7 +458,7 @@ void UserLogin::submitReport()
         /// Windows File Path
         //QFile outputFile("Other.txt");
         /// Mac File Path
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Other.txt");
 
         addDetails.replace(QString("\n"), QString ("<br>"));
         QString paragraph(addDetails);
@@ -473,7 +473,7 @@ void UserLogin::submitReport()
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << paragraph << endl; //Qt::endl;
+        out << paragraph << Qt::endl; //Qt::endl;
 
         // Flushing file and then closing.
         out.flush();
