@@ -68,7 +68,6 @@ UserLogin::UserLogin(QWidget *parent):QMainWindow(parent), ui(new Ui::UserLogin)
     connect(ui->pbEnlargeCertificatePP, &QPushButton::clicked, this, &UserLogin::pbShowCertificate);
     connect(ui->pbEnlargeQRPP, &QPushButton::clicked, this, &UserLogin::pbShowQRCode);
     connect(ui->pbEnlargeResultsPP, &QPushButton::clicked, this, &UserLogin::pbShowTestResult);
-    connect(ui->pbFullScreenFS, &QPushButton::clicked, this, &UserLogin::pbFullScreen);
     connect(ui->pbCloseImageFS, &QPushButton::clicked, this, &UserLogin::pbClose);
 
     connect(ui->pbSendMessageCP, &QPushButton::clicked, this, &UserLogin::submitReport);
@@ -134,8 +133,8 @@ void UserLogin::login()
     }
     else if(NHI != "NHIAdmin")
     {
-        QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
-        //QFile inputFile("Citizens.txt");
+        //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+        QFile inputFile("Citizens.txt");
         inputFile.open(QIODevice::ReadOnly | QIODevice::Text);
         QTextStream read(&inputFile);
 
@@ -299,14 +298,6 @@ void UserLogin::pbClose()
     ui->stackedWidget->setCurrentIndex(2);
 } /// End of pbClose()
 
-// Function to make images full screen
-void UserLogin::pbFullScreen()
-{
-    ui->showLargeTestsFS->showFullScreen();
-    ui->pbCloseImageFS->show();
-    ui->closeImageTextFS->show();
-}
-
 /// Report Functions
 ///*********************************************************
 
@@ -345,12 +336,12 @@ void UserLogin::submitReport()
         QMessageBox::information(this, "More Details Required",
                                        "Please ensure the Subject and Message has been entered...");
     }
-
+    /*
     // Writing to file
     /// Windows File Path
-    //QFile outputFile("UserReports.txt");
+    QFile outputFile("UserReports.txt");
     /// Mac File Path
-    QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+    //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
 
     QTextStream out(&outputFile);
     outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -361,13 +352,119 @@ void UserLogin::submitReport()
         out << reportList.at(i)->getContact() << "|";
         out << reportList.at(i)->getCategory() << "|";
         out << reportList.at(i)->getSubject() << "|";
-        out << reportList.at(i)->getDetails()<< "|" << Qt::endl; //Qt::endl;
+        out << reportList.at(i)->getDetails()<< "|" << endl; //Qt::endl;
        }
 
 
     // Flushing file and then closing.
     out.flush();
-    outputFile.close();
+    outputFile.close(); */
+    if (addCategory == "General Enquiries")
+    {
+        // Writing to file
+        /// Windows File Path
+        QFile outputFile("GeneralEnquiries.txt");
+        /// Mac File Path
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+
+        QTextStream out(&outputFile);
+        outputFile.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text);
+
+        out << addName << "|";
+        out << addContact << "|";
+        out << addCategory << "|";
+        out << addSubject << "|";
+        out << addDetails << "|" << endl; //Qt::endl;
+
+        // Flushing file and then closing.
+        out.flush();
+        outputFile.close();
+    }
+    else if (addCategory == "COVID-19 Vaccine")
+    {
+        // Writing to file
+        /// Windows File Path
+        QFile outputFile("COVID19Vaccine.txt");
+        /// Mac File Path
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+
+        QTextStream out(&outputFile);
+        outputFile.open(QIODevice::WriteOnly | QIODevice::Append |QIODevice::Text);
+
+        out << addName << "|";
+        out << addContact << "|";
+        out << addCategory << "|";
+        out << addSubject << "|";
+        out << addDetails << "|" << endl; //Qt::endl;
+
+        // Flushing file and then closing.
+        out.flush();
+        outputFile.close();
+    }
+    else if (addCategory == "Change/Update Personal Details")
+    {
+        // Writing to file
+        /// Windows File Path
+        QFile outputFile("ChangePersonalDetails.txt");
+        /// Mac File Path
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+
+        QTextStream out(&outputFile);
+        outputFile.open(QIODevice::WriteOnly | QIODevice::Append |QIODevice::Text);
+
+        out << addName << "|";
+        out << addContact << "|";
+        out << addCategory << "|";
+        out << addSubject << "|";
+        out << addDetails << "|" << endl; //Qt::endl;
+
+        // Flushing file and then closing.
+        out.flush();
+        outputFile.close();
+    }
+    else if (addCategory == "My COVID Record Application")
+    {
+        // Writing to file
+        /// Windows File Path
+        QFile outputFile("COVIDRecordApp.txt");
+        /// Mac File Path
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+
+        QTextStream out(&outputFile);
+        outputFile.open(QIODevice::WriteOnly | QIODevice::Append |QIODevice::Text);
+
+        out << addName << "|";
+        out << addContact << "|";
+        out << addCategory << "|";
+        out << addSubject << "|";
+        out << addDetails << "|" << endl; //Qt::endl;
+
+        // Flushing file and then closing.
+        out.flush();
+        outputFile.close();
+    }
+    else
+    {
+        // Writing to file
+        /// Windows File Path
+        QFile outputFile("Other.txt");
+        /// Mac File Path
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+
+        QTextStream out(&outputFile);
+        outputFile.open(QIODevice::WriteOnly | QIODevice::Append |QIODevice::Text);
+
+        out << addName << "|";
+        out << addContact << "|";
+        out << addCategory << "|";
+        out << addSubject << "|";
+        out << addDetails << "|" << endl; //Qt::endl;
+
+        // Flushing file and then closing.
+        out.flush();
+        outputFile.close();
+    }
+
 
     // Clear input from labels
     ui->editReportSubjectCP->clear();

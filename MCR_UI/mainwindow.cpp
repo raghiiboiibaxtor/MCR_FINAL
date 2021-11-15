@@ -44,50 +44,50 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->pbChangeUserPictureEP->hide();
     // Constructing File Path Directories
    //Mac Create Directory
-   QDir pathDir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files");
+   /*QDir pathDir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files");
        if(!pathDir.exists())
        {
            QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files");
-       }
+       }*/
 
        // File path for Vaccine Certificates
-       //QDir pathDir0("./VaccineCertificates");
-       QDir pathDir0("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates");
+       QDir pathDir0("./VaccineCertificates");
+       //QDir pathDir0("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates");
        if(!pathDir0.exists())
        {
            //create it!
-           //QDir().mkdir("./VaccineCertificates");
-           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates");
+           QDir().mkdir("./VaccineCertificates");
+           //QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates");
        }
 
        // File path for QRCodes
-       //QDir pathDir1("./QRCodes");
-       QDir pathDir1("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes");
+       QDir pathDir1("./QRCodes");
+       //QDir pathDir1("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes");
        if(!pathDir1.exists())
        {
            //create it!
-           //QDir().mkdir("./QRCodes");
-           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes");
+           QDir().mkdir("./QRCodes");
+           //QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes");
        }
 
        // File path for Test Results
-       //QDir pathDir2("./TestResults");
-       QDir pathDir2("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
+       QDir pathDir2("./TestResults");
+       //QDir pathDir2("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
        if(!pathDir2.exists())
        {
            //create it!
-           //QDir().mkdir("./TestResults");
-           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
+           QDir().mkdir("./TestResults");
+           //QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
        }
 
        // File path for User Profile Pictures
-       //QDir pathDir3("./UserProfilePictures");
-       QDir pathDir3("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserProfilePictures");
+       QDir pathDir3("./UserProfilePictures");
+       //QDir pathDir3("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserProfilePictures");
        if(!pathDir3.exists())
        {
            //create it!
-           //QDir().mkdir("./UserProfilePictures");
-           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
+           QDir().mkdir("./UserProfilePictures");
+           //QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
        }
 
 
@@ -154,7 +154,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     connect(ui->pbLargeCertificateAUP, &QPushButton::clicked, this, &MainWindow::pbShowCertificate);
     connect(ui->pbLargeQRCodeAUP, &QPushButton::clicked, this, &MainWindow::pbShowQRCode);
     connect(ui->pbLargeTestResultAUP, &QPushButton::clicked, this, &MainWindow::pbShowTestResult);
-    connect(ui->pbFullScreenFS, &QPushButton::clicked, this, &MainWindow::pbFullScreen);
+    //connect(ui->pbFullScreenFS, &QPushButton::clicked, this, &MainWindow::pbFullScreen);
     connect(ui->pbCloseImageFS, &QPushButton::clicked, this, &MainWindow::pbClose);
     /// Edit User connections
     connect(ui->pbEditUserAUP, &QPushButton::clicked, this, &MainWindow::editUser);
@@ -256,12 +256,12 @@ void MainWindow::addCertificateImage()
         ui->pbChangeCertificateAP->show();
 
         certificateImageSave = "./vaccineCertificates/" + shortName;
-        //QFile outputFile("vaxCertificates.txt");
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates/vaxCertificates.txt");
+        QFile outputFile("vaxCertificates.txt");
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates/vaxCertificates.txt");
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
         // Writing to file
-        out << certificateImageSave << Qt::endl;
+        out << certificateImageSave << endl;
 
     // Flushing file and then closing.
     out.flush();
@@ -299,7 +299,7 @@ void MainWindow::addQRCodeImage()
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
         // Writing to file
-        out << qrCodeImageSave << Qt::endl;
+        out << qrCodeImageSave << endl;
 
     // Flushing file and then closing.
     out.flush();
@@ -336,7 +336,7 @@ void MainWindow::addTestResultImage()
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
         // Writing to file
-        out << testResultImageSave << Qt::endl;
+        out << testResultImageSave << endl;
     // Flushing file and then closing.
     out.flush();
     outputFile.close();
@@ -401,9 +401,9 @@ void MainWindow::saveUser()
         ui->listAllUsersAP->addItem(ptrNewCitizen->getNHI());
         // Writing to file
         /// Windows File Path
-        //QFile outputFile("Citizens.txt");
+        QFile outputFile("Citizens.txt");
         /// Mac File Path
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -428,7 +428,7 @@ void MainWindow::saveUser()
                 out << userList.at(i)->getCertificate() << "|";
                 out << userList.at(i)->getQRCode() << "|";
                 out << userList.at(i)->getTestResult() << "|";
-                out << userList.at(i)->getCitizenImage() << Qt::endl;
+                out << userList.at(i)->getCitizenImage() << endl;
                }
             // Flushing file and then closing.
             out.flush();
@@ -523,8 +523,8 @@ void MainWindow::pbAllUsers()
     ui->stackedWidget->setCurrentIndex(1);
 
     // Open file for reading
-    QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
-    //QFile inputFile("Citizens.txt");
+    //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+    QFile inputFile("Citizens.txt");
     inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
     QTextStream read(&inputFile);
 
@@ -753,10 +753,10 @@ void MainWindow:: editUser()
         // Changing UI page
         ui->stackedWidget->setCurrentIndex(4);
 
-        ptrCurrentCitizen = userList.at(listNum);        
+        ptrCurrentCitizen = userList.at(listNum);
 
             if (ptrCurrentCitizen != nullptr)
-           {          
+           {
                 // Populating labels with existing info
                 ui->editUserNameEP->setText(ptrCurrentCitizen->getName());
                 ui->editUserPhoneEP->setText(ptrCurrentCitizen->getContactNumber());
@@ -955,9 +955,9 @@ void MainWindow::saveEdit()
 
         // Writing edit to file
         /// Windows File Path
-        //QFile outputFile("Citizens.txt");
+        QFile outputFile("Citizens.txt");
         /// Mac File Path
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -982,7 +982,7 @@ void MainWindow::saveEdit()
                 out << userList.at(i)->getCertificate() << "|";
                 out << userList.at(i)->getQRCode() << "|";
                 out << userList.at(i)->getTestResult() << "|";
-                out << userList.at(i)->getCitizenImage() << Qt::endl;
+                out << userList.at(i)->getCitizenImage() << endl;
                }
             // Flushing file and then closing.
             out.flush();
@@ -1107,8 +1107,8 @@ void MainWindow::pbReports()
     ui->stackedWidget->setCurrentIndex(3);
 
     // Open file for reading
-    QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
-    //QFile inputFile("UserReports.txt");
+    //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+    QFile inputFile("GeneralEnquiries.txt");
     inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
     QTextStream read(&inputFile);
 
@@ -1128,7 +1128,7 @@ void MainWindow::pbReports()
         QStringList info = text.split("|");
 
         // Add read information to ui list widget
-        ui->listAllReportsRP->addItem(info.at(2)); // Display subject in list widget
+        ui->listAllReportsRP->addItem(info.at(3)); // Display subject in list widget
 
         // Adding file information to vector
         citizenReport* temp = new citizenReport(info.at(0), info.at(1), info.at(2), info.at(3), info.at(4));
@@ -1162,7 +1162,7 @@ void MainWindow::searchCategory()
 {
     QString search = ui->cbReportCategoryRP->currentText();
 
-    if(search !="")
+    /*if(search !="")
     {
         // Loop to remove highlight on orginal search before highlighting next search
         for (int i=0; i < ui->listAllReportsRP->count(); i++)
@@ -1188,6 +1188,196 @@ void MainWindow::searchCategory()
             QListWidgetItem* category = ui->listAllReportsRP->item(i);
             category->setBackground(Qt::transparent);
         }
+    }*/
+
+    if (search == "General Enquiries")
+    {
+        // Writing to file
+        /// Windows File Path
+        QFile inputFile("GeneralEnquiries.txt");
+        /// Mac File Path
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+        inputFile.open(QIODevice::ReadOnly |QIODevice::Text);
+        QTextStream read(&inputFile);
+
+        // Clearing existing data from vector
+       for (int i = 0; i< reportList.size(); i++)
+        {
+            delete reportList.at(i);
+        }
+        // Clearing UI
+        reportList.clear();
+        ui->listAllReportsRP->clear();
+
+        while(!read.atEnd())
+        {
+            // Reading from file and seperating info at text.split()
+            QString text = read.readAll();
+            QStringList info = text.split("|");
+
+            // Add read information to ui list widget
+            ui->listAllReportsRP->addItem(info.at(3)); // Display subject in list widget
+
+            // Adding file information to vector
+            citizenReport* temp = new citizenReport(info.at(0), info.at(1), info.at(2), info.at(3), info.at(4));
+            reportList.push_back(temp);
+        } // End while
+
+
+        // Flushing file and then closing.
+        read.flush();
+        inputFile.close();
+    }
+    else if (search == "COVID-19 Vaccine")
+    {
+        // Writing to file
+        /// Windows File Path
+        QFile inputFile("COVID19Vaccine.txt");
+        /// Mac File Path
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+        inputFile.open(QIODevice::ReadOnly |QIODevice::Text);
+        QTextStream read(&inputFile);
+
+
+        // Clearing existing data from vector
+       for (int i = 0; i< reportList.size(); i++)
+        {
+            delete reportList.at(i);
+        }
+        // Clearing UI
+        reportList.clear();
+        ui->listAllReportsRP->clear();
+
+        while(!read.atEnd())
+        {
+            // Reading from file and seperating info at text.split()
+            QString text = read.readAll();
+            QStringList info = text.split("|");
+
+            // Add read information to ui list widget
+            ui->listAllReportsRP->addItem(info.at(3)); // Display subject in list widget
+
+            // Adding file information to vector
+            citizenReport* temp = new citizenReport(info.at(0), info.at(1), info.at(2), info.at(3), info.at(4));
+            reportList.push_back(temp);
+        } // End while
+
+
+        // Flushing file and then closing.
+        read.flush();
+        inputFile.close();
+    }
+    else if (search == "Change/Update Personal Details")
+    {
+        // Writing to file
+        /// Windows File Path
+        QFile inputFile("ChangePersonalDetails.txt");
+        /// Mac File Path
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+        inputFile.open(QIODevice::ReadOnly |QIODevice::Text);
+        QTextStream read(&inputFile);
+
+        // Clearing existing data from vector
+       for (int i = 0; i< reportList.size(); i++)
+        {
+            delete reportList.at(i);
+        }
+        // Clearing UI
+        reportList.clear();
+        ui->listAllReportsRP->clear();
+
+        while(!read.atEnd())
+        {
+            // Reading from file and seperating info at text.split()
+            QString text = read.readLine();
+            QStringList info = text.split("|");
+
+            // Add read information to ui list widget
+            ui->listAllReportsRP->addItem(info.at(3)); // Display subject in list widget
+
+            // Adding file information to vector
+            citizenReport* temp = new citizenReport(info.at(0), info.at(1), info.at(2), info.at(3), info.at(4));
+            reportList.push_back(temp);
+        } // End while
+
+        // Flushing file and then closing.
+        read.flush();
+        inputFile.close();
+    }
+    else if (search == "My COVID Record Application")
+    {
+        // Writing to file
+        /// Windows File Path
+        QFile inputFile("COVIDRecordApp.txt");
+        /// Mac File Path
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+        inputFile.open(QIODevice::ReadOnly |QIODevice::Text);
+        QTextStream read(&inputFile);
+
+        // Clearing existing data from vector
+       for (int i = 0; i< reportList.size(); i++)
+        {
+            delete reportList.at(i);
+        }
+        // Clearing UI
+        reportList.clear();
+        ui->listAllReportsRP->clear();
+
+        while(!read.atEnd())
+        {
+            // Reading from file and seperating info at text.split()
+            QString text = read.readAll();
+            QStringList info = text.split("|");
+
+            // Add read information to ui list widget
+            ui->listAllReportsRP->addItem(info.at(3)); // Display subject in list widget
+
+            // Adding file information to vector
+            citizenReport* temp = new citizenReport(info.at(0), info.at(1), info.at(2), info.at(3), info.at(4));
+            reportList.push_back(temp);
+        } // End while
+
+
+        // Flushing file and then closing.
+        read.flush();
+        inputFile.close();
+    }
+    else
+    {
+        // Writing to file
+        /// Windows File Path
+        QFile inputFile("Other.txt");
+        /// Mac File Path
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+        inputFile.open(QIODevice::ReadOnly |QIODevice::Text);
+        QTextStream read(&inputFile);
+
+        // Clearing existing data from vector
+       for (int i = 0; i< reportList.size(); i++)
+        {
+            delete reportList.at(i);
+        }
+        // Clearing UI
+        reportList.clear();
+        ui->listAllReportsRP->clear();
+
+        while(!read.atEnd())
+        {
+            // Reading from file and seperating info at text.split()
+            QString text = read.readAll();
+            QStringList info = text.split("|");
+
+            // Add read information to ui list widget
+            ui->listAllReportsRP->addItem(info.at(3)); // Display subject in list widget
+
+            // Adding file information to vector
+            citizenReport* temp = new citizenReport(info.at(0), info.at(1), info.at(2), info.at(3), info.at(4));
+            reportList.push_back(temp);
+        } // End while
+
+        // Flushing file and then closing.
+        read.flush();
+        inputFile.close();
     }
 
 } /// End of searchCategory()
