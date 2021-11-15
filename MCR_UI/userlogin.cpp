@@ -473,7 +473,7 @@ void UserLogin::submitReport()
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << paragraph << endl; //Qt::endl;
+        out << paragraph << Qt::endl; //Qt::endl;
 
         // Flushing file and then closing.
         out.flush();
