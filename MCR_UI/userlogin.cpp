@@ -96,9 +96,10 @@ UserLogin::UserLogin(citizenReport*& ptrNewReport, QWidget *parent) : QMainWindo
 // PROGRAM FUNCTIONS
 //*********************************************************
 
+// Press Enter to login function
 void UserLogin::keyPressEvent(QKeyEvent* ptrPressEnter)
 {
-if(ptrPressEnter->key() == Qt::Key_Return) login();
+if(ptrPressEnter->key() == Qt::Key_Return)login();
 }
 
 // Function to login
@@ -133,8 +134,8 @@ void UserLogin::login()
     }
     else if(NHI != "NHIAdmin")
     {
-        //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
-        QFile inputFile("Citizens.txt");
+        QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+        //QFile inputFile("Citizens.txt");
         inputFile.open(QIODevice::ReadOnly | QIODevice::Text);
         QTextStream read(&inputFile);
 
@@ -322,6 +323,7 @@ void UserLogin::submitReport()
     QString addCategory = ui->cbReportCategoryCP->currentText();
     QString addSubject = ui->editReportSubjectCP->text();
     QString addDetails = ui->editReportDetailsCP->toPlainText();
+    QString addContactMethod = ui->cbContactMethodCP->currentText();
 
     if (addSubject.trimmed() != "" && addDetails.trimmed() != "")
     {
@@ -336,45 +338,25 @@ void UserLogin::submitReport()
         QMessageBox::information(this, "More Details Required",
                                        "Please ensure the Subject and Message has been entered...");
     }
-    /*
-    // Writing to file
-    /// Windows File Path
-    QFile outputFile("UserReports.txt");
-    /// Mac File Path
-    //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
 
-    QTextStream out(&outputFile);
-    outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
-
-    for (int i = 0; i < reportList.size(); i++)
-       {
-        out << reportList.at(i)->getName() << "|";
-        out << reportList.at(i)->getContact() << "|";
-        out << reportList.at(i)->getCategory() << "|";
-        out << reportList.at(i)->getSubject() << "|";
-        out << reportList.at(i)->getDetails()<< "|" << endl; //Qt::endl;
-       }
-
-
-    // Flushing file and then closing.
-    out.flush();
-    outputFile.close(); */
+    // Starting if Else Block to determine which file information will be written to.
     if (addCategory == "General Enquiries")
     {
         // Writing to file
         /// Windows File Path
-        QFile outputFile("GeneralEnquiries.txt");
+        //QFile outputFile("GeneralEnquiries.txt");
         /// Mac File Path
-        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text);
 
         out << addName << "|";
+        out << addContactMethod << "|";
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << addDetails << "|" << endl; //Qt::endl;
+        out << addDetails << "|" << Qt::endl; //endl;
 
         // Flushing file and then closing.
         out.flush();
@@ -384,18 +366,19 @@ void UserLogin::submitReport()
     {
         // Writing to file
         /// Windows File Path
-        QFile outputFile("COVID19Vaccine.txt");
+        //QFile outputFile("COVID19Vaccine.txt");
         /// Mac File Path
-        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Append |QIODevice::Text);
 
         out << addName << "|";
+        out << addContactMethod << "|";
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << addDetails << "|" << endl; //Qt::endl;
+        out << addDetails << "|" << Qt::endl; //endl;
 
         // Flushing file and then closing.
         out.flush();
@@ -405,18 +388,19 @@ void UserLogin::submitReport()
     {
         // Writing to file
         /// Windows File Path
-        QFile outputFile("ChangePersonalDetails.txt");
+        //QFile outputFile("ChangePersonalDetails.txt");
         /// Mac File Path
-        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Append |QIODevice::Text);
 
         out << addName << "|";
+        out << addContactMethod << "|";
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << addDetails << "|" << endl; //Qt::endl;
+        out << addDetails << "|" << Qt::endl; //endl;
 
         // Flushing file and then closing.
         out.flush();
@@ -426,18 +410,19 @@ void UserLogin::submitReport()
     {
         // Writing to file
         /// Windows File Path
-        QFile outputFile("COVIDRecordApp.txt");
+        //QFile outputFile("COVIDRecordApp.txt");
         /// Mac File Path
-        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Append |QIODevice::Text);
 
         out << addName << "|";
+        out << addContactMethod << "|";
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << addDetails << "|" << endl; //Qt::endl;
+        out << addDetails << "|" << Qt::endl; //endl;
 
         // Flushing file and then closing.
         out.flush();
@@ -447,18 +432,19 @@ void UserLogin::submitReport()
     {
         // Writing to file
         /// Windows File Path
-        QFile outputFile("Other.txt");
+        //QFile outputFile("Other.txt");
         /// Mac File Path
-        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Append |QIODevice::Text);
 
         out << addName << "|";
+        out << addContactMethod << "|";
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << addDetails << "|" << endl; //Qt::endl;
+        out << addDetails << "|" << Qt::endl; //endl;
 
         // Flushing file and then closing.
         out.flush();

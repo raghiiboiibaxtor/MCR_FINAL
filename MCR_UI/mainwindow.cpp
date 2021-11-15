@@ -262,7 +262,7 @@ void MainWindow::addCertificateImage()
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
         // Writing to file
-        out << certificateImageSave << endl;
+        out << certificateImageSave << Qt::endl;
 
     // Flushing file and then closing.
     out.flush();
@@ -300,7 +300,7 @@ void MainWindow::addQRCodeImage()
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
         // Writing to file
-        out << qrCodeImageSave << endl;
+        out << qrCodeImageSave << Qt::endl;
 
     // Flushing file and then closing.
     out.flush();
@@ -337,7 +337,7 @@ void MainWindow::addTestResultImage()
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
         // Writing to file
-        out << testResultImageSave << endl;
+        out << testResultImageSave << Qt::endl;
     // Flushing file and then closing.
     out.flush();
     outputFile.close();
@@ -429,7 +429,7 @@ void MainWindow::saveUser()
                 out << userList.at(i)->getCertificate() << "|";
                 out << userList.at(i)->getQRCode() << "|";
                 out << userList.at(i)->getTestResult() << "|";
-                out << userList.at(i)->getCitizenImage() << endl;
+                out << userList.at(i)->getCitizenImage() << Qt::endl;
                }
             // Flushing file and then closing.
             out.flush();
@@ -1055,7 +1055,7 @@ void MainWindow::saveEdit()
                 out << userList.at(i)->getCertificate() << "|";
                 out << userList.at(i)->getQRCode() << "|";
                 out << userList.at(i)->getTestResult() << "|";
-                out << userList.at(i)->getCitizenImage() << endl;
+                out << userList.at(i)->getCitizenImage() << Qt::endl;
                }
             // Flushing file and then closing.
             out.flush();

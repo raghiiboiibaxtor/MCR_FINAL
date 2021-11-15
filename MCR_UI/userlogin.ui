@@ -32,7 +32,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="loginPage">
      <widget class="QLabel" name="loginWhiteBackgroundLP">
@@ -415,7 +415,7 @@ padding-left: 3px;
        </property>
        <property name="font">
         <font>
-         <family>Quicksand</family>
+         <family>Avenir Next</family>
          <pointsize>-1</pointsize>
          <weight>12</weight>
          <bold>false</bold>
@@ -467,14 +467,14 @@ font-size: 33px;</string>
        </property>
        <property name="font">
         <font>
-         <family>Quicksand</family>
+         <family>Arial Rounded MT Bold</family>
          <pointsize>-1</pointsize>
          <weight>12</weight>
          <bold>false</bold>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: #F8FBFF;
+        <string notr="true">color:rgba(255, 200, 83, 0.99);
 font-weight: 100;
 font-size: 18px;</string>
        </property>
@@ -482,6 +482,40 @@ font-size: 18px;</string>
         <string/>
        </property>
       </widget>
+      <widget class="QLabel" name="enterDetailsTextLP_2">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>107</y>
+         <width>331</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Avenir Next</family>
+         <pointsize>-1</pointsize>
+         <weight>12</weight>
+         <bold>false</bold>
+         <kerning>false</kerning>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #F8FBFF;
+font-weight: 100;
+font-size: 14px;</string>
+       </property>
+       <property name="text">
+        <string>Login is case sensitive.</string>
+       </property>
+      </widget>
+      <zorder>enterDetailsTextLP_2</zorder>
+      <zorder>editNHILP</zorder>
+      <zorder>editEmailLP</zorder>
+      <zorder>editAccessNumberLP</zorder>
+      <zorder>enterDetailsTextLP</zorder>
+      <zorder>myAccountTitleLP</zorder>
+      <zorder>labelErrorLP</zorder>
      </widget>
      <widget class="QPushButton" name="pbLoginLP">
       <property name="geometry">
@@ -2907,7 +2941,7 @@ background: rgba(104, 160, 229, 0.00);
          <x>500</x>
          <y>119</y>
          <width>351</width>
-         <height>211</height>
+         <height>281</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -2953,7 +2987,7 @@ background: rgba(254, 206, 103, 0.00);</string>
        <widget class="QLabel" name="labelPreferredNameCP">
         <property name="geometry">
          <rect>
-          <x>20</x>
+          <x>30</x>
           <y>60</y>
           <width>331</width>
           <height>20</height>
@@ -2982,7 +3016,7 @@ background: rgba(254, 206, 103, 0.00);
        <widget class="QLabel" name="labelPreferredContactCP">
         <property name="geometry">
          <rect>
-          <x>15</x>
+          <x>29</x>
           <y>130</y>
           <width>331</width>
           <height>20</height>
@@ -3005,26 +3039,7 @@ background: rgba(254, 206, 103, 0.00);
 </string>
         </property>
         <property name="text">
-         <string>Preferred Contact</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="editPreferredContactCP">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>150</y>
-          <width>311</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QLineEdit
-{background: #F8FBFF;
-border-radius: 15;
-border-color: rgba(104, 160, 229, 0.33);
-color: #2B528C;
-font-size: 16px; 
-padding-left: 3px;}</string>
+         <string>Preferred Contact Method</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="editPreferredNameCP">
@@ -3042,9 +3057,97 @@ padding-left: 3px;}</string>
 border-radius: 15;
 border-color: rgba(104, 160, 229, 0.33);
 color: #2B528C;
-font-size: 16px; 
+font-size: 14px; 
 padding-left: 3px;}</string>
         </property>
+       </widget>
+       <widget class="QLabel" name="labelPreferredContactCP_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>200</y>
+          <width>281</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Avenir Next</family>
+          <pointsize>-1</pointsize>
+          <weight>25</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-weight: 200;
+font-size: 16px;
+color:#2B528C;
+background: rgba(254, 206, 103, 0.00);
+
+</string>
+        </property>
+        <property name="text">
+         <string>Contact Details</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editPreferredContactCP">
+        <property name="geometry">
+         <rect>
+          <x>25</x>
+          <y>220</y>
+          <width>301</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit
+{background: #F8FBFF;
+border-radius: 15;
+border-color: rgba(104, 160, 229, 0.33);
+color: #2B528C;
+font-size: 14px; 
+padding-left: 3px;}</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cbContactMethodCP">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>150</y>
+          <width>311</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Avenir Next</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QComboBox
+{background: #F8FBFF;
+border-radius: 15;
+border-color: rgba(104, 160, 229, 0.33);
+color: #2B528C;
+font-size: 14px; 
+padding-left: 8px;}</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>E-mail</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Phone Call</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Text Message</string>
+         </property>
+        </item>
        </widget>
       </widget>
       <widget class="QFrame" name="userMedicalFrameCP">
@@ -3202,7 +3305,7 @@ background: rgba(254, 206, 103, 0.00);
 border-radius: 20;
 border-color: rgba(104, 160, 229, 0.33);
 color: #2B528C;
-font-size: 16px; 
+font-size: 14px; 
 padding-left: 5px;</string>
         </property>
        </widget>
@@ -3221,7 +3324,7 @@ padding-left: 5px;</string>
 border-radius: 15;
 border-color: rgba(104, 160, 229, 0.33);
 color: #2B528C;
-font-size: 16px; 
+font-size: 14px; 
 padding-left: 3px;}</string>
         </property>
        </widget>
@@ -3234,13 +3337,19 @@ padding-left: 3px;}</string>
           <height>31</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Avenir Next</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
         <property name="styleSheet">
          <string notr="true">QComboBox
 {background: #F8FBFF;
 border-radius: 15;
 border-color: rgba(104, 160, 229, 0.33);
 color: #2B528C;
-font-size: 16px; 
+font-size: 14px; 
 padding-left: 3px;}</string>
         </property>
         <item>
@@ -3317,7 +3426,7 @@ font-size: 18px;
        <property name="geometry">
         <rect>
          <x>500</x>
-         <y>360</y>
+         <y>410</y>
          <width>410</width>
          <height>30</height>
         </rect>
@@ -3345,9 +3454,9 @@ color:#2B528C;
        <property name="geometry">
         <rect>
          <x>500</x>
-         <y>440</y>
+         <y>490</y>
          <width>351</width>
-         <height>91</height>
+         <height>81</height>
         </rect>
        </property>
        <property name="font">
@@ -3383,7 +3492,7 @@ color: #2B528C;
        <property name="geometry">
         <rect>
          <x>500</x>
-         <y>390</y>
+         <y>440</y>
          <width>300</width>
          <height>30</height>
         </rect>
@@ -3411,9 +3520,9 @@ background: rgba(104, 160, 229, 0.00);
        <property name="geometry">
         <rect>
          <x>500</x>
-         <y>560</y>
+         <y>590</y>
          <width>351</width>
-         <height>91</height>
+         <height>81</height>
         </rect>
        </property>
        <property name="font">
@@ -3449,9 +3558,9 @@ color: #2B528C;
        <property name="geometry">
         <rect>
          <x>500</x>
-         <y>680</y>
+         <y>690</y>
          <width>351</width>
-         <height>91</height>
+         <height>81</height>
         </rect>
        </property>
        <property name="font">

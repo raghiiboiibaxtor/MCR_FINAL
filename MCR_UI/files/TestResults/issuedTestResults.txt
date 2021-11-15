@@ -1,4 +1,0 @@
-./testResults/testResultPositive.png
-./testResults/testResultPositive.png
-./testResults/testResultPositive.png
-./testResults/testResultPositive.png
