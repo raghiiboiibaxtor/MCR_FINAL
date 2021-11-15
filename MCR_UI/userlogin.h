@@ -5,6 +5,7 @@
 #include <QVector>
 #include <QMainWindow>
 #include <QString>
+#include <QKeyEvent>
 #include "mainwindow.h"
 #include "citizenreport.h"
 #include "classcitizen.h"
@@ -27,6 +28,8 @@ private:
     QVector<citizenReport*> reportList;
     citizenReport **ptrNewReport;
 
+   protected:
+   void keyPressEvent(QKeyEvent* ptrPressEnter);
 
 
 public:

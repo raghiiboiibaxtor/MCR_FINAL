@@ -21,7 +21,7 @@ UserLogin::UserLogin(QWidget *parent):QMainWindow(parent), ui(new Ui::UserLogin)
 {
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(0);
-
+    ui->pbLoginLP->setDefault(true);
     // Home page display image
     QPixmap pixmap(":/res/images/imgHome1.png");
     ui->imgHomeLP->setPixmap(pixmap);
@@ -97,6 +97,10 @@ UserLogin::UserLogin(citizenReport*& ptrNewReport, QWidget *parent) : QMainWindo
 // PROGRAM FUNCTIONS
 //*********************************************************
 
+void UserLogin::keyPressEvent(QKeyEvent* ptrPressEnter)
+{
+if(ptrPressEnter->key() == Qt::Key_Return) login();
+}
 
 // Function to login
 void UserLogin::login()
