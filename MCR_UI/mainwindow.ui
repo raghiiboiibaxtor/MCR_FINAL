@@ -2198,42 +2198,6 @@ background: rgba(196, 219, 244, 0.77);
         <string>-</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pbQuickAddAUP">
-       <property name="geometry">
-        <rect>
-         <x>140</x>
-         <y>711</y>
-         <width>31</width>
-         <height>30</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Arial Rounded MT Bold</family>
-         <pointsize>-1</pointsize>
-         <weight>62</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton{
-color:#2B528C;
-background: #2B528C;
-font-weight: 500;
-border-radius: 15px;
-background: #C4DBF4;
-border-color: rgba(104, 160, 229, 0.00);
-font-size: 16px; 
-}
-QPushButton:hover
-{
-background: rgba(196, 219, 244, 0.77);
-}</string>
-       </property>
-       <property name="text">
-        <string>+</string>
-       </property>
-      </widget>
       <widget class="QLabel" name="showUserNameAUP_2">
        <property name="geometry">
         <rect>
@@ -2322,38 +2286,6 @@ background: #F2F8FC;
         <string>Remove</string>
        </property>
       </widget>
-      <widget class="QLabel" name="labelConfidentialAUP_4">
-       <property name="geometry">
-        <rect>
-         <x>136</x>
-         <y>742</y>
-         <width>40</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Avenir Next</family>
-         <pointsize>-1</pointsize>
-         <weight>25</weight>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font-weight: 200;
-font-size: 12px;
-color:#2B528C;
-background: #F2F8FC;
-
-</string>
-       </property>
-       <property name="text">
-        <string>Add</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
       <zorder>labelConfidentialAUP_2</zorder>
       <zorder>showUserNameAUP_2</zorder>
       <zorder>listAllUsersAUP</zorder>
@@ -2363,9 +2295,7 @@ background: #F2F8FC;
       <zorder>pbSearchAUP</zorder>
       <zorder>labelSearchUserAUP</zorder>
       <zorder>pbQuickRemoveAUP</zorder>
-      <zorder>pbQuickAddAUP</zorder>
       <zorder>labelConfidentialAUP_3</zorder>
-      <zorder>labelConfidentialAUP_4</zorder>
      </widget>
      <widget class="QFrame" name="userHomeHelloBarAUP">
       <property name="geometry">

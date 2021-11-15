@@ -152,8 +152,9 @@ public:
     QLabel *labelMessageDetailsCP;
     QPlainTextEdit *editReportDetailsCP;
     QLineEdit *editReportSubjectCP;
-    QComboBox *cbReportCategoryCP;
     QPushButton *pbSendMessageCP;
+    QFrame *frame;
+    QComboBox *cbReportCategoryCP;
     QLabel *myVaccinesHeadingCP;
     QPushButton *pbGetVaccinatedLinkCP;
     QLabel *homeSubHeadingCP_2;
@@ -1501,21 +1502,6 @@ public:
 "color: #2B528C;\n"
 "font-size: 16px; \n"
 "padding-left: 3px;}"));
-        cbReportCategoryCP = new QComboBox(userMedicalFrameCP);
-        cbReportCategoryCP->addItem(QString());
-        cbReportCategoryCP->addItem(QString());
-        cbReportCategoryCP->addItem(QString());
-        cbReportCategoryCP->addItem(QString());
-        cbReportCategoryCP->addItem(QString());
-        cbReportCategoryCP->setObjectName(QString::fromUtf8("cbReportCategoryCP"));
-        cbReportCategoryCP->setGeometry(QRect(21, 90, 421, 31));
-        cbReportCategoryCP->setStyleSheet(QString::fromUtf8("QComboBox\n"
-"{background: #F8FBFF;\n"
-"border-radius: 15;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"color: #2B528C;\n"
-"font-size: 16px; \n"
-"padding-left: 3px;}"));
         pbSendMessageCP = new QPushButton(userMedicalFrameCP);
         pbSendMessageCP->setObjectName(QString::fromUtf8("pbSendMessageCP"));
         pbSendMessageCP->setGeometry(QRect(260, 584, 181, 51));
@@ -1532,13 +1518,40 @@ public:
 "{\n"
 "font-size: 18px;\n"
 "}"));
+        frame = new QFrame(userMedicalFrameCP);
+        frame->setObjectName(QString::fromUtf8("frame"));
+        frame->setGeometry(QRect(19, 90, 431, 31));
+        frame->setStyleSheet(QString::fromUtf8("QFrame\n"
+"{background: #F8FBFF;\n"
+"border-radius: 15;\n"
+"\n"
+"color: #2B528C;\n"
+"font-size: 16px; \n"
+"padding-left: 3px;}"));
+        frame->setFrameShape(QFrame::StyledPanel);
+        frame->setFrameShadow(QFrame::Raised);
+        cbReportCategoryCP = new QComboBox(frame);
+        cbReportCategoryCP->addItem(QString());
+        cbReportCategoryCP->addItem(QString());
+        cbReportCategoryCP->addItem(QString());
+        cbReportCategoryCP->addItem(QString());
+        cbReportCategoryCP->addItem(QString());
+        cbReportCategoryCP->setObjectName(QString::fromUtf8("cbReportCategoryCP"));
+        cbReportCategoryCP->setGeometry(QRect(0, 0, 421, 31));
+        cbReportCategoryCP->setStyleSheet(QString::fromUtf8("QComboBox\n"
+"{background: #F8FBFF;\n"
+"border-radius: 15;\n"
+"\n"
+"color: #2B528C;\n"
+"font-size: 16px; \n"
+"padding-left: 3px;}"));
+        frame->raise();
         editReportSubjectCP->raise();
         editReportDetailsCP->raise();
         labelMedicalInfoCP->raise();
         labelAboutMessageCP->raise();
         labelMessageSubjectCP->raise();
         labelMessageDetailsCP->raise();
-        cbReportCategoryCP->raise();
         pbSendMessageCP->raise();
         myVaccinesHeadingCP = new QLabel(userHomeDisplayFrameCP);
         myVaccinesHeadingCP->setObjectName(QString::fromUtf8("myVaccinesHeadingCP"));
@@ -2316,7 +2329,7 @@ public:
 
         retranslateUi(UserLogin);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(3);
         pbLoginLP->setDefault(true);
 
 
@@ -2417,13 +2430,13 @@ public:
         labelAboutMessageCP->setText(QApplication::translate("UserLogin", "What is your message about?", nullptr));
         labelMessageSubjectCP->setText(QApplication::translate("UserLogin", "Message Subject", nullptr));
         labelMessageDetailsCP->setText(QApplication::translate("UserLogin", "My Message", nullptr));
+        pbSendMessageCP->setText(QApplication::translate("UserLogin", "Send Message", nullptr));
         cbReportCategoryCP->setItemText(0, QApplication::translate("UserLogin", "General Enquiries", nullptr));
         cbReportCategoryCP->setItemText(1, QApplication::translate("UserLogin", "COVID-19 Vaccine", nullptr));
         cbReportCategoryCP->setItemText(2, QApplication::translate("UserLogin", "Change/Update Personal Details", nullptr));
         cbReportCategoryCP->setItemText(3, QApplication::translate("UserLogin", "My COVID Record Application", nullptr));
         cbReportCategoryCP->setItemText(4, QApplication::translate("UserLogin", "Other", nullptr));
 
-        pbSendMessageCP->setText(QApplication::translate("UserLogin", "Send Message", nullptr));
         myVaccinesHeadingCP->setText(QApplication::translate("UserLogin", "Need Help?", nullptr));
         pbGetVaccinatedLinkCP->setText(QApplication::translate("UserLogin", "Get Vaccinated", nullptr));
         homeSubHeadingCP_2->setText(QApplication::translate("UserLogin", "You can find more information here.", nullptr));

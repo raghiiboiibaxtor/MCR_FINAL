@@ -110,11 +110,11 @@ void UserLogin::login()
 
     // Check if login input matches, if not, an error message will be displayed
     // If correct, directed to Home Page
-    if (NHI == "NHIAdmin") // Admin Login Check Loop
+    if (NHI == "1") // Admin Login Check Loop
     {
-        if (email == "admin@mycovidrecord.co.nz")
+        if (email == "1")
         {
-            if (accessNumber == "4242")
+            if (accessNumber == "1")
             {
                 this->hide();
                 // Displays Admin Home Page
@@ -336,29 +336,7 @@ void UserLogin::submitReport()
         QMessageBox::information(this, "More Details Required",
                                        "Please ensure the Subject and Message has been entered...");
     }
-    /*
-    // Writing to file
-    /// Windows File Path
-    QFile outputFile("UserReports.txt");
-    /// Mac File Path
-    //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
 
-    QTextStream out(&outputFile);
-    outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
-
-    for (int i = 0; i < reportList.size(); i++)
-       {
-        out << reportList.at(i)->getName() << "|";
-        out << reportList.at(i)->getContact() << "|";
-        out << reportList.at(i)->getCategory() << "|";
-        out << reportList.at(i)->getSubject() << "|";
-        out << reportList.at(i)->getDetails()<< "|" << endl; //Qt::endl;
-       }
-
-
-    // Flushing file and then closing.
-    out.flush();
-    outputFile.close(); */
     if (addCategory == "General Enquiries")
     {
         // Writing to file
@@ -367,6 +345,11 @@ void UserLogin::submitReport()
         /// Mac File Path
         //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
 
+        addDetails.replace(QString("\n"), QString ("<br>"));
+        QString paragraph(addDetails);
+
+        //inputFile.seek(0);
+
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text);
 
@@ -374,7 +357,7 @@ void UserLogin::submitReport()
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << addDetails << "|" << endl; //Qt::endl;
+        out << paragraph << endl; //Qt::endl;
 
         // Flushing file and then closing.
         out.flush();
@@ -388,14 +371,19 @@ void UserLogin::submitReport()
         /// Mac File Path
         //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
 
+        addDetails.replace(QString("\n"), QString ("<br>"));
+        QString paragraph(addDetails);
+
+        //inputFile.seek(0);
+
         QTextStream out(&outputFile);
-        outputFile.open(QIODevice::WriteOnly | QIODevice::Append |QIODevice::Text);
+        outputFile.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text);
 
         out << addName << "|";
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << addDetails << "|" << endl; //Qt::endl;
+        out << paragraph << endl; //Qt::endl;
 
         // Flushing file and then closing.
         out.flush();
@@ -409,14 +397,19 @@ void UserLogin::submitReport()
         /// Mac File Path
         //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
 
+        addDetails.replace(QString("\n"), QString ("<br>"));
+        QString paragraph(addDetails);
+
+        //inputFile.seek(0);
+
         QTextStream out(&outputFile);
-        outputFile.open(QIODevice::WriteOnly | QIODevice::Append |QIODevice::Text);
+        outputFile.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text);
 
         out << addName << "|";
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << addDetails << "|" << endl; //Qt::endl;
+        out << paragraph << endl; //Qt::endl;
 
         // Flushing file and then closing.
         out.flush();
@@ -430,14 +423,19 @@ void UserLogin::submitReport()
         /// Mac File Path
         //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
 
+        addDetails.replace(QString("\n"), QString ("<br>"));
+        QString paragraph(addDetails);
+
+        //inputFile.seek(0);
+
         QTextStream out(&outputFile);
-        outputFile.open(QIODevice::WriteOnly | QIODevice::Append |QIODevice::Text);
+        outputFile.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text);
 
         out << addName << "|";
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << addDetails << "|" << endl; //Qt::endl;
+        out << paragraph << endl; //Qt::endl;
 
         // Flushing file and then closing.
         out.flush();
@@ -451,20 +449,24 @@ void UserLogin::submitReport()
         /// Mac File Path
         //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
 
+        addDetails.replace(QString("\n"), QString ("<br>"));
+        QString paragraph(addDetails);
+
+        //inputFile.seek(0);
+
         QTextStream out(&outputFile);
-        outputFile.open(QIODevice::WriteOnly | QIODevice::Append |QIODevice::Text);
+        outputFile.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text);
 
         out << addName << "|";
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << addDetails << "|" << endl; //Qt::endl;
+        out << paragraph << endl; //Qt::endl;
 
         // Flushing file and then closing.
         out.flush();
         outputFile.close();
     }
-
 
     // Clear input from labels
     ui->editReportSubjectCP->clear();

@@ -32,7 +32,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="loginPage">
      <widget class="QLabel" name="loginWhiteBackgroundLP">
@@ -3225,50 +3225,6 @@ font-size: 16px;
 padding-left: 3px;}</string>
         </property>
        </widget>
-       <widget class="QComboBox" name="cbReportCategoryCP">
-        <property name="geometry">
-         <rect>
-          <x>21</x>
-          <y>90</y>
-          <width>421</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QComboBox
-{background: #F8FBFF;
-border-radius: 15;
-border-color: rgba(104, 160, 229, 0.33);
-color: #2B528C;
-font-size: 16px; 
-padding-left: 3px;}</string>
-        </property>
-        <item>
-         <property name="text">
-          <string>General Enquiries</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>COVID-19 Vaccine</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Change/Update Personal Details</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>My COVID Record Application</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Other</string>
-         </property>
-        </item>
-       </widget>
        <widget class="QPushButton" name="pbSendMessageCP">
         <property name="geometry">
          <rect>
@@ -3304,13 +3260,82 @@ font-size: 18px;
          <string>Send Message</string>
         </property>
        </widget>
+       <widget class="QFrame" name="frame">
+        <property name="geometry">
+         <rect>
+          <x>19</x>
+          <y>90</y>
+          <width>431</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame
+{background: #F8FBFF;
+border-radius: 15;
+
+color: #2B528C;
+font-size: 16px; 
+padding-left: 3px;}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QComboBox" name="cbReportCategoryCP">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>421</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox
+{background: #F8FBFF;
+border-radius: 15;
+
+color: #2B528C;
+font-size: 16px; 
+padding-left: 3px;}</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>General Enquiries</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>COVID-19 Vaccine</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Change/Update Personal Details</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>My COVID Record Application</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Other</string>
+          </property>
+         </item>
+        </widget>
+       </widget>
+       <zorder>frame</zorder>
        <zorder>editReportSubjectCP</zorder>
        <zorder>editReportDetailsCP</zorder>
        <zorder>labelMedicalInfoCP</zorder>
        <zorder>labelAboutMessageCP</zorder>
        <zorder>labelMessageSubjectCP</zorder>
        <zorder>labelMessageDetailsCP</zorder>
-       <zorder>cbReportCategoryCP</zorder>
        <zorder>pbSendMessageCP</zorder>
       </widget>
       <widget class="QLabel" name="myVaccinesHeadingCP">
