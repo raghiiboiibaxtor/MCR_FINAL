@@ -69,6 +69,7 @@ public:
     void selectReportDetails();
     void searchCategory();
 
+    void pbRemoveUser();
     void logout();
     ~MainWindow();
 };

@@ -156,6 +156,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     connect(ui->pbLargeTestResultAUP, &QPushButton::clicked, this, &MainWindow::pbShowTestResult);
     connect(ui->pbFullScreenFS, &QPushButton::clicked, this, &MainWindow::pbFullScreen);
     connect(ui->pbCloseImageFS, &QPushButton::clicked, this, &MainWindow::pbClose);
+    connect(ui->pbQuickRemoveAUP,&QPushButton::clicked, this, &MainWindow::pbRemoveUser);
     /// Edit User connections
     connect(ui->pbEditUserAUP, &QPushButton::clicked, this, &MainWindow::editUser);
     connect(ui->pbEditCertificateEP, &QPushButton::clicked, this, &MainWindow::editCertificateImage);
@@ -737,6 +738,78 @@ void MainWindow::pbFullScreen()
     ui->showLargeTestsFS->showFullScreen();
     ui->pbCloseImageFS->show();
     ui->closeImageTextFS->show();
+}
+
+void MainWindow::pbRemoveUser()
+{
+    int index = ui->listAllUsersAUP->currentRow();
+
+        if (index >= 0)
+        {
+            //remove from vector
+            classCitizen* ptrRemoveCitizen = userList.at(index);
+            delete ptrRemoveCitizen;
+            userList.removeAt(index);
+
+            // Writing edit to file
+            /// Windows File Path
+            //QFile outputFile("Citizens.txt");
+            /// Mac File Path
+            QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+
+            QTextStream out(&outputFile);
+            outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
+
+                for (int i = 0; i < userList.size(); i++)
+                {
+                 out << userList.at(i)->getName() << "|";
+                 out << userList.at(i)->getContactNumber() << "|";
+                 out << userList.at(i)->getEmailAddress() << "|";
+                 out << userList.at(i)->getDateOfBirth() << "|";
+                 out << userList.at(i)->getNHI() << "|";
+                 out << userList.at(i)->getEmergencyContact() << "|";
+                 out << userList.at(i)->getAdditionalNotes() << "|";
+                 out << userList.at(i)->getVaccineStatus() << "|";
+                 out << userList.at(i)->getCVN()<< "|";
+                 out << userList.at(i)->getVaccineName1() << "|";
+                 out << userList.at(i)->getBatchNumber1() << "|";
+                 out << userList.at(i)->getDateGiven1() << "|";
+                 out << userList.at(i)->getVaccineName2() << "|";
+                 out << userList.at(i)->getBatchNumber2() << "|";
+                 out << userList.at(i)->getDateGiven2() << "|";
+                 out << userList.at(i)->getCertificate() << "|";
+                 out << userList.at(i)->getQRCode() << "|";
+                 out << userList.at(i)->getTestResult() << "|";
+                 out << userList.at(i)->getCitizenImage() << "|" << Qt::endl;
+                }
+             // Flushing file and then closing.
+             out.flush();
+             outputFile.close();
+
+            //remove from list widget in the UI
+            delete ui->listAllUsersAUP->currentItem();
+        }
+
+        // Clearing Ui labels
+        ui->showUserNameAUP->clear();
+        ui->showUserPhoneAUP->clear();
+        ui->showUserEmailAUP->clear();
+        ui->showUserDOBAUP->clear();
+        ui->showUserNHIAUP->clear();
+        ui->showUserEmergencyAUP->clear();
+        ui->showUserNotesAUP->clear();
+        ui->showUserCVNAUP->clear();
+        ui->show1stDoseNameAUP->clear();
+        ui->show1stDoseBatchAUP->clear();
+        ui->show1stDoseDateAUP->clear();
+        ui->show2ndDoseNameAUP->clear();
+        ui->show2ndDoseBatchAUP->clear();
+        ui->show2ndDoseDateAUP->clear();
+        ui->showCertificateAUP->clear();
+        ui->showQRCodeAUP->clear();
+        ui->showTestResultsAUP->clear();
+        ui->showUserPictureAUP->clear();
+
 }
 
 
