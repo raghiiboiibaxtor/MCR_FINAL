@@ -110,6 +110,10 @@ public:
     QPushButton *pbSearchAUP;
     QLineEdit *labelSearchUserAUP;
     QListWidget *listAllUsersAUP;
+    QPushButton *pbQuickRemoveAUP;
+    QLabel *showUserNameAUP_2;
+    QLabel *labelConfidentialAUP_2;
+    QLabel *labelConfidentialAUP_3;
     QFrame *userHomeHelloBarAUP;
     QLabel *displayPictureAUP;
     QLabel *labelAdminAUP;
@@ -1203,7 +1207,7 @@ public:
 "}"));
         listAllUsersAUP = new QListWidget(userHomeDisplayFrameAUP);
         listAllUsersAUP->setObjectName(QString::fromUtf8("listAllUsersAUP"));
-        listAllUsersAUP->setGeometry(QRect(20, 150, 181, 621));
+        listAllUsersAUP->setGeometry(QRect(20, 200, 181, 571));
         listAllUsersAUP->setStyleSheet(QString::fromUtf8("background: #F2F8FC;\n"
 "border-radius: 20px;\n"
 "font-weight: 200;\n"
@@ -1213,12 +1217,62 @@ public:
 "padding-right: 8px;\n"
 "padding-top: 10px;\n"
 ""));
+        pbQuickRemoveAUP = new QPushButton(userHomeDisplayFrameAUP);
+        pbQuickRemoveAUP->setObjectName(QString::fromUtf8("pbQuickRemoveAUP"));
+        pbQuickRemoveAUP->setGeometry(QRect(48, 711, 31, 31));
+        pbQuickRemoveAUP->setFont(font);
+        pbQuickRemoveAUP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"color:#2B528C;\n"
+"background: #2B528C;\n"
+"font-weight: 500;\n"
+"border-radius: 15px;\n"
+"background: #C4DBF4;\n"
+"border-color: rgba(104, 160, 229, 0.00);\n"
+"font-size: 23px; \n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"background: rgba(196, 219, 244, 0.77);\n"
+"}"));
+        showUserNameAUP_2 = new QLabel(userHomeDisplayFrameAUP);
+        showUserNameAUP_2->setObjectName(QString::fromUtf8("showUserNameAUP_2"));
+        showUserNameAUP_2->setGeometry(QRect(20, 150, 331, 20));
+        showUserNameAUP_2->setFont(font5);
+        showUserNameAUP_2->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
+"font-size: 18px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        showUserNameAUP_2->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        labelConfidentialAUP_2 = new QLabel(userHomeDisplayFrameAUP);
+        labelConfidentialAUP_2->setObjectName(QString::fromUtf8("labelConfidentialAUP_2"));
+        labelConfidentialAUP_2->setGeometry(QRect(20, 170, 181, 30));
+        labelConfidentialAUP_2->setFont(font2);
+        labelConfidentialAUP_2->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        labelConfidentialAUP_3 = new QLabel(userHomeDisplayFrameAUP);
+        labelConfidentialAUP_3->setObjectName(QString::fromUtf8("labelConfidentialAUP_3"));
+        labelConfidentialAUP_3->setGeometry(QRect(41, 743, 50, 20));
+        labelConfidentialAUP_3->setFont(font2);
+        labelConfidentialAUP_3->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: #F2F8FC;\n"
+"\n"
+""));
+        labelConfidentialAUP_2->raise();
+        showUserNameAUP_2->raise();
         listAllUsersAUP->raise();
         homeSubHeadingAUP->raise();
         homeTitleAUP->raise();
         userInfoFrameAUP->raise();
         pbSearchAUP->raise();
         labelSearchUserAUP->raise();
+        pbQuickRemoveAUP->raise();
+        labelConfidentialAUP_3->raise();
         userHomeHelloBarAUP = new QFrame(adminAllUsersPage);
         userHomeHelloBarAUP->setObjectName(QString::fromUtf8("userHomeHelloBarAUP"));
         userHomeHelloBarAUP->setGeometry(QRect(0, 430, 211, 511));
@@ -3755,7 +3809,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(3);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -3825,6 +3879,10 @@ public:
         labelClickEnlargeAUP->setText(QApplication::translate("MainWindow", "Click '+' to enlarge images.", nullptr));
         pbSearchAUP->setText(QApplication::translate("MainWindow", "Search", nullptr));
         labelSearchUserAUP->setPlaceholderText(QApplication::translate("MainWindow", "Search by NHI Number", nullptr));
+        pbQuickRemoveAUP->setText(QApplication::translate("MainWindow", "-", nullptr));
+        showUserNameAUP_2->setText(QApplication::translate("MainWindow", "All Users", nullptr));
+        labelConfidentialAUP_2->setText(QApplication::translate("MainWindow", "Existing users will apear here.", nullptr));
+        labelConfidentialAUP_3->setText(QApplication::translate("MainWindow", "Remove", nullptr));
         displayPictureAUP->setText(QApplication::translate("MainWindow", "displayPicture", nullptr));
         labelAdminAUP->setText(QApplication::translate("MainWindow", "Administrator!", nullptr));
         labelHeyThereAUP->setText(QApplication::translate("MainWindow", "Hey there,", nullptr));

@@ -753,9 +753,9 @@ void MainWindow::pbRemoveUser()
 
             // Writing edit to file
             /// Windows File Path
-            //QFile outputFile("Citizens.txt");
+            QFile outputFile("Citizens.txt");
             /// Mac File Path
-            QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+            //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
 
             QTextStream out(&outputFile);
             outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -780,7 +780,7 @@ void MainWindow::pbRemoveUser()
                  out << userList.at(i)->getCertificate() << "|";
                  out << userList.at(i)->getQRCode() << "|";
                  out << userList.at(i)->getTestResult() << "|";
-                 out << userList.at(i)->getCitizenImage() << "|" << Qt::endl;
+                 out << userList.at(i)->getCitizenImage() << "|" << endl; //Qt::endl;
                 }
              // Flushing file and then closing.
              out.flush();
@@ -1197,7 +1197,7 @@ void MainWindow::pbReports()
     while(!read.atEnd())
     {
         // Reading from file and seperating info at text.split()
-        QString text = read.readAll();
+        QString text = read.readLine();
         QStringList info = text.split("|");
 
         // Add read information to ui list widget
@@ -1235,34 +1235,6 @@ void MainWindow::searchCategory()
 {
     QString search = ui->cbReportCategoryRP->currentText();
 
-    /*if(search !="")
-    {
-        // Loop to remove highlight on orginal search before highlighting next search
-        for (int i=0; i < ui->listAllReportsRP->count(); i++)
-        {
-            QListWidgetItem* report = ui->listAllReportsRP->item(i);
-            report->setBackground(Qt::transparent);
-        }
-
-        QList<QListWidgetItem*> list = ui->listAllReportsRP->findItems(search, Qt::MatchContains);
-
-        // Loop to highlight matching users
-        for (int i = 0; i <list.count(); i++)
-        {
-            QListWidgetItem* category = list.at(i);
-            category->setBackground(Qt::cyan);
-        }
-    }
-    else
-    {
-        // Loop to remove highlight
-        for (int i = 0; i < ui->listAllReportsRP->count(); i++)
-        {
-            QListWidgetItem* category = ui->listAllReportsRP->item(i);
-            category->setBackground(Qt::transparent);
-        }
-    }*/
-
     if (search == "General Enquiries")
     {
         // Writing to file
@@ -1285,7 +1257,7 @@ void MainWindow::searchCategory()
         while(!read.atEnd())
         {
             // Reading from file and seperating info at text.split()
-            QString text = read.readAll();
+            QString text = read.readLine();
             QStringList info = text.split("|");
 
             // Add read information to ui list widget
@@ -1324,7 +1296,7 @@ void MainWindow::searchCategory()
         while(!read.atEnd())
         {
             // Reading from file and seperating info at text.split()
-            QString text = read.readAll();
+            QString text = read.readLine();
             QStringList info = text.split("|");
 
             // Add read information to ui list widget
@@ -1399,7 +1371,7 @@ void MainWindow::searchCategory()
         while(!read.atEnd())
         {
             // Reading from file and seperating info at text.split()
-            QString text = read.readAll();
+            QString text = read.readLine();
             QStringList info = text.split("|");
 
             // Add read information to ui list widget
