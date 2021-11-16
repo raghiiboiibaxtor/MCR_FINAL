@@ -32,7 +32,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="loginPage">
      <widget class="QLabel" name="loginWhiteBackgroundLP">
@@ -804,7 +804,10 @@ border-radius: 105px;</string>
 border-radius: 80px;</string>
        </property>
        <property name="text">
-        <string>displayPicture</string>
+        <string/>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -1175,7 +1178,7 @@ border-radius: 105px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLabel" name="displayPicturePP">
+      <widget class="QLabel" name="showUserPicturePP">
        <property name="geometry">
         <rect>
          <x>25</x>
@@ -1189,7 +1192,10 @@ border-radius: 105px;</string>
 border-radius: 80px;</string>
        </property>
        <property name="text">
-        <string>displayPicture</string>
+        <string/>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -3682,7 +3688,7 @@ border-radius: 105px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLabel" name="displayPictureCP">
+      <widget class="QLabel" name="showUserPictureCP">
        <property name="geometry">
         <rect>
          <x>25</x>
@@ -3696,7 +3702,10 @@ border-radius: 105px;</string>
 border-radius: 80px;</string>
        </property>
        <property name="text">
-        <string>displayPicture</string>
+        <string/>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -3819,7 +3828,7 @@ border-radius: 105px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLabel" name="displayPictureFS">
+      <widget class="QLabel" name="showUserPictureFS">
        <property name="geometry">
         <rect>
          <x>25</x>
@@ -3833,7 +3842,10 @@ border-radius: 105px;</string>
 border-radius: 80px;</string>
        </property>
        <property name="text">
-        <string>displayPicture</string>
+        <string/>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
        </property>
       </widget>
       <widget class="QLabel" name="labelUserNameFS">
