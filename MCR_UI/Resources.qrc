@@ -8,5 +8,13 @@
         <file>images/vaccineCertificate.png</file>
         <file>images/QRCodeImage.png</file>
         <file>images/qrCode.png</file>
+        <file>images/adminProfilePicture.png</file>
+        <file>images/userProfile.png</file>
+        <file>images/userProfile1.png</file>
+        <file>images/userProfile2.png</file>
+        <file>images/userProfile3.png</file>
+        <file>images/userProfile4.png</file>
+        <file>images/userProfile5.png</file>
+        <file>images/userProfile6.png</file>
     </qresource>
 </RCC>

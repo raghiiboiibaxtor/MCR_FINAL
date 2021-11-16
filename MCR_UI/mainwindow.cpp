@@ -43,6 +43,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->pbChangeQRCodeAP->hide();
     ui->pbChangeTestResultsAP->hide();
     ui->pbChangeUserPictureEP->hide();
+
     // Constructing File Path Directories
    //Mac Create Directory
    QDir pathDir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files");
@@ -91,7 +92,20 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
            QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
        }
 
-
+    //Constructing Admin Profile Picture
+       QPixmap pixmap1(":/res/images/adminProfilePicture.png");
+       ui->displayPictureHP->setPixmap(pixmap1);
+       ui->displayPictureHP->setScaledContents(true);
+       ui->displayPictureAUP->setPixmap(pixmap1);
+       ui->displayPictureAUP->setScaledContents(true);
+       ui->displayPictureAP->setPixmap(pixmap1);
+       ui->displayPictureAP->setScaledContents(true);
+       ui->displayPictureEP->setPixmap(pixmap1);
+       ui->displayPictureEP->setScaledContents(true);
+       ui->displayPictureRP->setPixmap(pixmap1);
+       ui->displayPictureRP->setScaledContents(true);
+       ui->displayPictureFS->setPixmap(pixmap1);
+       ui->displayPictureFS->setScaledContents(true);
 
     // Manual UI-Function Connections
 
