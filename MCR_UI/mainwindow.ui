@@ -32,7 +32,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="adminHomePage">
      <widget class="QFrame" name="userHomeHelloBarHP">
@@ -4637,6 +4637,34 @@ color:#2B528C;
         </property>
        </widget>
       </widget>
+      <widget class="QLabel" name="labelTransparentListAP">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>150</y>
+         <width>181</width>
+         <height>621</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>ForbiddenCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: rgba(254, 206, 103, 0.00);
+border-radius: 20px;
+font-weight: 200;
+font-size: 14px;
+color: #2B528C;
+padding-left: 8px;
+padding-top: 10px;
+padding-right: 8px;
+padding-bottom: 80px;
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
       <zorder>listAllUsersAP</zorder>
       <zorder>userInfoFrameAP</zorder>
       <zorder>alerLevelUpdatesTitle_2</zorder>
@@ -4645,6 +4673,7 @@ color:#2B528C;
       <zorder>labelSelectRP_2</zorder>
       <zorder>pbCancelAP</zorder>
       <zorder>frame_4</zorder>
+      <zorder>labelTransparentListAP</zorder>
      </widget>
      <zorder>userHomeWhiteBackgroundAP</zorder>
      <zorder>userProfileBlueMenuBarAP</zorder>
@@ -5999,6 +6028,9 @@ background: rgba(104, 160, 229, 0.00);
          <width>181</width>
          <height>621</height>
         </rect>
+       </property>
+       <property name="cursor" stdset="0">
+        <cursorShape>ForbiddenCursor</cursorShape>
        </property>
        <property name="styleSheet">
         <string notr="true">background: #F2F8FC;
@@ -7698,6 +7730,43 @@ color:#2B528C;
         </property>
        </widget>
       </widget>
+      <widget class="QLabel" name="labelTransparentListEP">
+       <property name="geometry">
+        <rect>
+         <x>19</x>
+         <y>150</y>
+         <width>181</width>
+         <height>621</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>ForbiddenCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: rgba(254, 206, 103, 0.00);
+border-radius: 20px;
+font-weight: 200;
+font-size: 14px;
+color: #2B528C;
+padding-left: 8px;
+padding-top: 10px;
+padding-right: 8px;
+padding-bottom: 80px;
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <zorder>homeSubHeadingEP</zorder>
+      <zorder>homeTitleEP</zorder>
+      <zorder>listAllUsersEP</zorder>
+      <zorder>userInfoFrameAP_4</zorder>
+      <zorder>alerLevelUpdatesTitle_3</zorder>
+      <zorder>labelSelectRP_3</zorder>
+      <zorder>pbCancelEP</zorder>
+      <zorder>labelTransparentListEP</zorder>
+      <zorder>frame_3</zorder>
      </widget>
      <widget class="QLabel" name="userHomeWhiteBackgroundEP">
       <property name="geometry">
@@ -9636,6 +9705,7 @@ padding-top: 10px;
      <zorder>userHomeDisplayFrameFS</zorder>
      <zorder>userHomeHelloBarFS</zorder>
     </widget>
+    <widget class="QWidget" name="page"/>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>

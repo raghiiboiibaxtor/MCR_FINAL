@@ -53,6 +53,45 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->labelDeleteAP->hide();
     //**********************************
 
+    // Autoloading File information into the vector
+    // Open file for reading
+    QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+    //QFile inputFile("Citizens.txt");
+    inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
+    QTextStream read(&inputFile);
+
+    // Clearing existing data from vector
+   for (int i = 0; i< userList.size(); i++)
+    {
+        delete userList.at(i);
+    }
+   // Clearing ui
+    userList.clear();
+    ui->listAllUsersAUP->clear();
+    ui->listAllUsersEP->clear();
+    ui->listAllUsersAP->clear();
+
+   while(!read.atEnd()) // Start while loop to read file and push info to vec
+   {
+       // Reading from file and seperating info at text.split()
+        QString text = read.readLine();
+        QStringList info = text.split("|");
+
+       // Add read information to ui
+       ui->listAllUsersAUP->addItem(info.at(4));
+       ui->listAllUsersEP->addItem(info.at(4));
+       ui->listAllUsersAP->addItem(info.at(4));
+
+       // Adding file information to vector
+       classCitizen* temp = new classCitizen(info.at(0), info.at(1), info.at(2), info.at(3), info.at(4), info.at(5), info.at(6), info.at(7), info.at(8), info.at(9),
+                                             info.at(10), info.at(11), info.at(12), info.at(13), info.at(14), info.at(15), info.at(16), info.at(17), info.at(18));
+       userList.push_back(temp);
+   } // End while
+
+   // Flushing file and then closing.
+   read.flush();
+   inputFile.close();
+
     // Constructing File Path Directories
    //Mac Create Directory
    QDir pathDir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files");
@@ -174,11 +213,12 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     /// All Users connections
     connect(ui->pbAllUsersHP, &QPushButton::clicked, this, &MainWindow::pbAllUsers);
     connect(ui->listAllUsersAUP, &QListWidget::itemClicked, this, &MainWindow::selectUserDetails);
+    connect(ui->listAllUsersAP, &QListWidget::itemClicked, this, &MainWindow::selectUserDetails);
+
     connect(ui->pbSearchAUP, &QPushButton::clicked, this, &MainWindow::searchUser);
     connect(ui->pbLargeCertificateAUP, &QPushButton::clicked, this, &MainWindow::pbShowCertificate);
     connect(ui->pbLargeQRCodeAUP, &QPushButton::clicked, this, &MainWindow::pbShowQRCode);
     connect(ui->pbLargeTestResultAUP, &QPushButton::clicked, this, &MainWindow::pbShowTestResult);
-    //connect(ui->pbFullScreenFS, &QPushButton::clicked, this, &MainWindow::pbFullScreen);
     connect(ui->pbCloseImageFS, &QPushButton::clicked, this, &MainWindow::pbClose);
     connect(ui->pbQuickRemoveAUP,&QPushButton::clicked, this, &MainWindow::pbRemoveUser);
     /// Edit User connections
@@ -235,7 +275,6 @@ void MainWindow::pbHome()
 
 } // End of pbHome()
 
-
 /// Add New User Functions
 ///*********************************************************
 
@@ -253,52 +292,14 @@ void MainWindow::addNewUser()
          ui->listAllUsersEP->addItem(newCitizen->getName());
          ui->listAllUsersAP->addItem(newCitizen->getName());
     }
-
-    // Open file for reading
-    //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
-    QFile inputFile("Citizens.txt");
-    inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
-    QTextStream read(&inputFile);
-
-    // Clearing existing data from vector
-   for (int i = 0; i< userList.size(); i++)
-    {
-        delete userList.at(i);
-    }
-   // Clearing ui
-    userList.clear();
-    ui->listAllUsersAUP->clear();
-    ui->listAllUsersEP->clear();
-    ui->listAllUsersAP->clear();
-
-   while(!read.atEnd()) // Start while loop to read file and push info to vec
-   {
-       // Reading from file and seperating info at text.split()
-        QString text = read.readLine();
-        QStringList info = text.split("|");
-
-       // Add read information to ui
-       ui->listAllUsersAUP->addItem(info.at(4));
-       ui->listAllUsersEP->addItem(info.at(4));
-       ui->listAllUsersAP->addItem(info.at(4));
-
-       // Adding file information to vector
-       classCitizen* temp = new classCitizen(info.at(0), info.at(1), info.at(2), info.at(3), info.at(4), info.at(5), info.at(6), info.at(7), info.at(8), info.at(9),
-                                             info.at(10), info.at(11), info.at(12), info.at(13), info.at(14), info.at(15), info.at(16), info.at(17), info.at(18));
-       userList.push_back(temp);
-   } // End while
-
-   // Flushing file and then closing.
-   read.flush();
-   inputFile.close();
-
-    // CVN generator for each new user
+    // CVN generator for each new user (vector CVN will be set by copying this text in the saveUser())
     int randNum = QRandomGenerator::global()->bounded(00000000, 50000000);
 
     QString number = QString::number(randNum);
     QString cvn = "CV"+ number;
 
     ui->addUserCVNAP->setText(cvn);
+
 } /// End of addNewUser()
 
 // Function to add Vaccine Certificate Image
@@ -336,7 +337,6 @@ void MainWindow::addCertificateImage()
     // Flushing file and then closing.
     out.flush();
     outputFile.close();
-
     }
 } /// End of addCertificateImage()
 
@@ -410,7 +410,6 @@ void MainWindow::addTestResultImage()
     // Flushing file and then closing.
     out.flush();
     outputFile.close();
-
     }
 } /// End of addTestResultImage()
 
@@ -600,44 +599,6 @@ void MainWindow::pbAllUsers()
 {
     ui->stackedWidget->setCurrentIndex(1);
 
-    // Open file for reading
-    QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
-    //QFile inputFile("Citizens.txt");
-    inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
-    QTextStream read(&inputFile);
-
-    // Clearing existing data from vector
-   for (int i = 0; i< userList.size(); i++)
-    {
-        delete userList.at(i);
-    }
-   // Clearing ui
-    userList.clear();
-    ui->listAllUsersAUP->clear();
-    ui->listAllUsersEP->clear();
-    ui->listAllUsersAP->clear();
-
-   while(!read.atEnd()) // Start while loop to read file and push info to vec
-   {
-       // Reading from file and seperating info at text.split()
-        QString text = read.readLine();
-        QStringList info = text.split("|");
-
-       // Add read information to ui
-       ui->listAllUsersAUP->addItem(info.at(4));
-       ui->listAllUsersEP->addItem(info.at(4));
-       ui->listAllUsersAP->addItem(info.at(4));
-
-       // Adding file information to vector
-       classCitizen* temp = new classCitizen(info.at(0), info.at(1), info.at(2), info.at(3), info.at(4), info.at(5), info.at(6), info.at(7), info.at(8), info.at(9),
-                                             info.at(10), info.at(11), info.at(12), info.at(13), info.at(14), info.at(15), info.at(16), info.at(17), info.at(18));
-       userList.push_back(temp);
-   } // End while
-
-   // Flushing file and then closing.
-   read.flush();
-   inputFile.close();
-
 } // End of pbAllUsers()
 
 
@@ -645,11 +606,18 @@ void MainWindow::pbAllUsers()
 void MainWindow::selectUserDetails()
 {
     int index = ui->listAllUsersAUP->currentRow();
-    int index2 = ui->listAllUsersEP->currentRow();
-    int index3 = ui->listAllUsersAP->currentRow();
 
-    if (index >= 0 || index2 >= 0 || index3 >= 0)
+    QListWidgetItem* userAP = ui->listAllUsersAP->item(index);
+    userAP->setBackground(Qt::blue);
+    userAP->setForeground(Qt::white);
+
+    QListWidgetItem* userEP = ui->listAllUsersEP->item(index);
+    userEP->setBackground(Qt::blue);
+    userEP->setForeground(Qt::white);
+
+    if (index >= 0)
     {
+
         classCitizen *selectedUser = userList.at(index);
         ui->showUserNameAUP->setText(selectedUser->getName());
         ui->showUserPhoneAUP->setText(selectedUser->getContactNumber());
@@ -690,7 +658,6 @@ void MainWindow::selectUserDetails()
         ui->showUserPictureAUP->setPixmap(pixmap3);
         ui->showUserPictureAUP->setScaledContents(true);
     }
-
 } /// End of selectUserDetails()
 
 // Function to search for user in list widget
@@ -724,20 +691,27 @@ void MainWindow::searchUser()
         // Loop to highlight matching users
         for (int i = 0; i <list.count(); i++)
         {
-            QListWidgetItem* item = list.at(i);
-            item->setBackground(Qt::cyan);
+            QListWidgetItem* user = list.at(i);
+            user->setBackground(Qt::blue);
+            user->setForeground(Qt::white);
+            ui->listAllUsersAP->item(i);
+            ui->labelSearchUserAUP->clear();
         }
 
         for (int i = 0; i <addList.count(); i++)
         {
-            QListWidgetItem* item = addList.at(i);
-            item->setBackground(Qt::cyan);
+            QListWidgetItem* user = addList.at(i);
+            user->setBackground(Qt::blue);
+            user->setForeground(Qt::white);
+            ui->labelSearchUserAUP->clear();
         }
 
         for (int i = 0; i <editList.count(); i++)
         {
-            QListWidgetItem* item = editList.at(i);
-            item->setBackground(Qt::cyan);
+            QListWidgetItem* user = editList.at(i);
+            user->setBackground(Qt::blue);
+            user->setForeground(Qt::white);
+            ui->labelSearchUserAUP->clear();
         }
     }
     else if (search == "")
@@ -763,6 +737,7 @@ void MainWindow::searchUser()
             item->setBackground(Qt::transparent);
         }
     }
+
 } /// End of searchUser()
 
 // Function to show Enlarged Certificate Image
@@ -1531,3 +1506,4 @@ MainWindow::~MainWindow()
 
     delete ui;
 }
+

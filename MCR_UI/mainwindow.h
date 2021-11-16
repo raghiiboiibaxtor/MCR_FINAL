@@ -72,6 +72,7 @@ public:
     void pbRemoveUser();
     void logout();
     ~MainWindow();
+
 };
 #endif // MAINWINDOW_H
 

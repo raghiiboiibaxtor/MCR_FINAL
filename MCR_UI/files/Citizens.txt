@@ -1,1 +1,2 @@
-lalalalala goo||rose@rose.com||5553||||CV6216831|||||||./vaccineCertificates/vaccineCertificate.png|./qrCodes/qrCode.png|./testResults/testResultPositive.png|./userProfilePictures/adminProfilePicture.png
+Raghiiboii Baxtor||raghii@gmail.com||NHI123|||Select Vaccine Status|CV17184753||||||||||
+Test User||test@||Test|||Select Vaccine Status|CV12083465||||||||||

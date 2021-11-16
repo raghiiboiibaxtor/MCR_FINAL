@@ -110,11 +110,11 @@ void UserLogin::login()
 
     // Check if login input matches, if not, an error message will be displayed
     // If correct, directed to Home Page
-    if (NHI == "NHIAdmin") // Admin Login Check Loop
+    if (NHI == "1") // Admin Login Check Loop
     {
-        if (email == "admin@mycovidrecord.co.nz")
+        if (email == "1")
         {
-            if (accessNumber == "4242")
+            if (accessNumber == "1")
             {
                 this->hide();
                 // Displays Admin Home Page
