@@ -391,6 +391,15 @@ void MainWindow::addUserPicture()
         ui->pbChangeUserPictureAP->show();
 
         userProfilePictureSave = "./userProfilePictures/" + shortName;
+
+        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/userProfilePictures/ProfilePictures.txt");
+        QTextStream out(&outputFile);
+        outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
+        // Writing to file
+        out << userProfilePictureSave << Qt::endl;
+    // Flushing file and then closing.
+    out.flush();
+    outputFile.close();
     }
 } /// End of addUserPicture()
 

@@ -804,7 +804,10 @@ border-radius: 105px;</string>
 border-radius: 80px;</string>
        </property>
        <property name="text">
-        <string>displayPicture</string>
+        <string/>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -1189,7 +1192,10 @@ border-radius: 105px;</string>
 border-radius: 80px;</string>
        </property>
        <property name="text">
-        <string>displayPicture</string>
+        <string/>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -3696,7 +3702,10 @@ border-radius: 105px;</string>
 border-radius: 80px;</string>
        </property>
        <property name="text">
-        <string>displayPicture</string>
+        <string/>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -3833,7 +3842,10 @@ border-radius: 105px;</string>
 border-radius: 80px;</string>
        </property>
        <property name="text">
-        <string>displayPicture</string>
+        <string/>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
        </property>
       </widget>
       <widget class="QLabel" name="labelUserNameFS">
