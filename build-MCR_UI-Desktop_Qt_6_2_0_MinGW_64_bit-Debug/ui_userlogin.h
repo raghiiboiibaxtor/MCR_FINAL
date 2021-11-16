@@ -74,7 +74,7 @@ public:
     QWidget *userProfile;
     QLabel *userHomeWhiteBackgroundPP;
     QFrame *userHomeHelloBarPP;
-    QLabel *displayPicturePP;
+    QLabel *showUserPicturePP;
     QLabel *labelUserNamePP;
     QLabel *labelHeyTherePP;
     QPushButton *pbLogoutPP;
@@ -155,23 +155,22 @@ public:
     QLabel *labelMessageDetailsCP;
     QPlainTextEdit *editReportDetailsCP;
     QLineEdit *editReportSubjectCP;
-    QComboBox *cbReportCategoryCP;
     QPushButton *pbSendMessageCP;
     QFrame *frame;
-    QComboBox *cbReportCategoryCP_2;
+    QComboBox *cbReportCategoryCP;
     QLabel *myVaccinesHeadingCP;
     QPushButton *pbGetVaccinatedLinkCP;
     QLabel *homeSubHeadingCP_2;
     QPushButton *pbGetTestedLinkCP;
     QPushButton *pbLearnMoreLinkCP;
     QFrame *userHomeHelloBarCP;
-    QLabel *displayPictureCP;
+    QLabel *showUserPictureCP;
     QLabel *labelUserNameCP;
     QLabel *labelHeyThereCP;
     QPushButton *pbLogoutCP;
     QWidget *enlargeTestResultsPage;
     QFrame *userHomeHelloBarFS;
-    QLabel *displayPictureFS;
+    QLabel *showUserPictureFS;
     QLabel *labelUserNameFS;
     QLabel *labelHeyThereFS;
     QPushButton *pbLogoutFS;
@@ -232,9 +231,7 @@ public:
     QFrame *frameFS;
     QLabel *showLargeTestsFS;
     QFrame *frameFS2;
-    QPushButton *pbFullScreenFS;
     QPushButton *pbCloseImageFS;
-    QLabel *labelFS;
     QLabel *showLargeCertificateFS;
     QLabel *showLargeQRCodeImageFS;
     QLabel *showLargeQRFS;
@@ -593,6 +590,7 @@ public:
         showUserPictureHP->setGeometry(QRect(25, 25, 161, 161));
         showUserPictureHP->setStyleSheet(QString::fromUtf8("background: rgba(248, 251, 255, 0.99);\n"
 "border-radius: 80px;"));
+        showUserPictureHP->setScaledContents(true);
         showUserPictureHP->setAlignment(Qt::AlignCenter);
         labelUserNameHP = new QLabel(userHomeHelloBarHP);
         labelUserNameHP->setObjectName(QString::fromUtf8("labelUserNameHP"));
@@ -738,12 +736,13 @@ public:
 "border-radius: 105px;"));
         userHomeHelloBarPP->setFrameShape(QFrame::StyledPanel);
         userHomeHelloBarPP->setFrameShadow(QFrame::Raised);
-        displayPicturePP = new QLabel(userHomeHelloBarPP);
-        displayPicturePP->setObjectName(QString::fromUtf8("displayPicturePP"));
-        displayPicturePP->setGeometry(QRect(25, 25, 161, 161));
-        displayPicturePP->setStyleSheet(QString::fromUtf8("background: rgba(248, 251, 255, 0.99);\n"
+        showUserPicturePP = new QLabel(userHomeHelloBarPP);
+        showUserPicturePP->setObjectName(QString::fromUtf8("showUserPicturePP"));
+        showUserPicturePP->setGeometry(QRect(25, 25, 161, 161));
+        showUserPicturePP->setStyleSheet(QString::fromUtf8("background: rgba(248, 251, 255, 0.99);\n"
 "border-radius: 80px;"));
-        displayPicturePP->setAlignment(Qt::AlignCenter);
+        showUserPicturePP->setScaledContents(true);
+        showUserPicturePP->setAlignment(Qt::AlignCenter);
         labelUserNamePP = new QLabel(userHomeHelloBarPP);
         labelUserNamePP->setObjectName(QString::fromUtf8("labelUserNamePP"));
         labelUserNamePP->setGeometry(QRect(18, 259, 191, 31));
@@ -978,7 +977,7 @@ public:
         showDose1NamePP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         showDose1BatchPP = new QLabel(vaccineDose1FramePP);
         showDose1BatchPP->setObjectName(QString::fromUtf8("showDose1BatchPP"));
-        showDose1BatchPP->setGeometry(QRect(160, 80, 61, 20));
+        showDose1BatchPP->setGeometry(QRect(160, 80, 151, 20));
         showDose1BatchPP->setFont(font9);
         showDose1BatchPP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
@@ -987,7 +986,7 @@ public:
 ""));
         showDose1DatePP = new QLabel(vaccineDose1FramePP);
         showDose1DatePP->setObjectName(QString::fromUtf8("showDose1DatePP"));
-        showDose1DatePP->setGeometry(QRect(250, 80, 161, 20));
+        showDose1DatePP->setGeometry(QRect(310, 80, 101, 20));
         showDose1DatePP->setFont(font9);
         showDose1DatePP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
@@ -1039,7 +1038,7 @@ public:
         vaccineIcon2FramePP->setAlignment(Qt::AlignCenter);
         showDose2BatchPP = new QLabel(vaccineDose2FramePP);
         showDose2BatchPP->setObjectName(QString::fromUtf8("showDose2BatchPP"));
-        showDose2BatchPP->setGeometry(QRect(160, 80, 71, 20));
+        showDose2BatchPP->setGeometry(QRect(160, 80, 151, 20));
         showDose2BatchPP->setFont(font9);
         showDose2BatchPP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
@@ -1058,7 +1057,7 @@ public:
         showDose2NamePP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         showDose2DatePP = new QLabel(vaccineDose2FramePP);
         showDose2DatePP->setObjectName(QString::fromUtf8("showDose2DatePP"));
-        showDose2DatePP->setGeometry(QRect(240, 80, 171, 20));
+        showDose2DatePP->setGeometry(QRect(310, 80, 101, 20));
         showDose2DatePP->setFont(font9);
         showDose2DatePP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 16px;\n"
@@ -1541,22 +1540,6 @@ public:
 "color: #2B528C;\n"
 "font-size: 14px; \n"
 "padding-left: 3px;}"));
-        cbReportCategoryCP = new QComboBox(userMedicalFrameCP);
-        cbReportCategoryCP->addItem(QString());
-        cbReportCategoryCP->addItem(QString());
-        cbReportCategoryCP->addItem(QString());
-        cbReportCategoryCP->addItem(QString());
-        cbReportCategoryCP->addItem(QString());
-        cbReportCategoryCP->setObjectName(QString::fromUtf8("cbReportCategoryCP"));
-        cbReportCategoryCP->setGeometry(QRect(21, 90, 421, 31));
-        cbReportCategoryCP->setFont(font10);
-        cbReportCategoryCP->setStyleSheet(QString::fromUtf8("QComboBox\n"
-"{background: #F8FBFF;\n"
-"border-radius: 15;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"color: #2B528C;\n"
-"font-size: 14px; \n"
-"padding-left: 3px;}"));
         pbSendMessageCP = new QPushButton(userMedicalFrameCP);
         pbSendMessageCP->setObjectName(QString::fromUtf8("pbSendMessageCP"));
         pbSendMessageCP->setGeometry(QRect(260, 584, 181, 51));
@@ -1575,7 +1558,7 @@ public:
 "}"));
         frame = new QFrame(userMedicalFrameCP);
         frame->setObjectName(QString::fromUtf8("frame"));
-        frame->setGeometry(QRect(19, 90, 431, 31));
+        frame->setGeometry(QRect(19, 90, 421, 31));
         frame->setStyleSheet(QString::fromUtf8("QFrame\n"
 "{background: #F8FBFF;\n"
 "border-radius: 15;\n"
@@ -1585,22 +1568,22 @@ public:
 "padding-left: 3px;}"));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
-        cbReportCategoryCP_2 = new QComboBox(frame);
-        cbReportCategoryCP_2->addItem(QString());
-        cbReportCategoryCP_2->addItem(QString());
-        cbReportCategoryCP_2->addItem(QString());
-        cbReportCategoryCP_2->addItem(QString());
-        cbReportCategoryCP_2->addItem(QString());
-        cbReportCategoryCP_2->setObjectName(QString::fromUtf8("cbReportCategoryCP_2"));
-        cbReportCategoryCP_2->setGeometry(QRect(0, 0, 421, 31));
-        cbReportCategoryCP_2->setStyleSheet(QString::fromUtf8("QComboBox\n"
+        cbReportCategoryCP = new QComboBox(frame);
+        cbReportCategoryCP->addItem(QString());
+        cbReportCategoryCP->addItem(QString());
+        cbReportCategoryCP->addItem(QString());
+        cbReportCategoryCP->addItem(QString());
+        cbReportCategoryCP->addItem(QString());
+        cbReportCategoryCP->setObjectName(QString::fromUtf8("cbReportCategoryCP"));
+        cbReportCategoryCP->setGeometry(QRect(0, 0, 411, 31));
+        cbReportCategoryCP->setFont(font10);
+        cbReportCategoryCP->setStyleSheet(QString::fromUtf8("QComboBox\n"
 "{background: #F8FBFF;\n"
 "border-radius: 15;\n"
-"\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
 "color: #2B528C;\n"
-"font-size: 16px; \n"
+"font-size: 14px; \n"
 "padding-left: 3px;}"));
-        cbReportCategoryCP->raise();
         frame->raise();
         editReportSubjectCP->raise();
         editReportDetailsCP->raise();
@@ -1691,12 +1674,13 @@ public:
 "border-radius: 105px;"));
         userHomeHelloBarCP->setFrameShape(QFrame::StyledPanel);
         userHomeHelloBarCP->setFrameShadow(QFrame::Raised);
-        displayPictureCP = new QLabel(userHomeHelloBarCP);
-        displayPictureCP->setObjectName(QString::fromUtf8("displayPictureCP"));
-        displayPictureCP->setGeometry(QRect(25, 25, 161, 161));
-        displayPictureCP->setStyleSheet(QString::fromUtf8("background: rgba(248, 251, 255, 0.99);\n"
+        showUserPictureCP = new QLabel(userHomeHelloBarCP);
+        showUserPictureCP->setObjectName(QString::fromUtf8("showUserPictureCP"));
+        showUserPictureCP->setGeometry(QRect(25, 25, 161, 161));
+        showUserPictureCP->setStyleSheet(QString::fromUtf8("background: rgba(248, 251, 255, 0.99);\n"
 "border-radius: 80px;"));
-        displayPictureCP->setAlignment(Qt::AlignCenter);
+        showUserPictureCP->setScaledContents(true);
+        showUserPictureCP->setAlignment(Qt::AlignCenter);
         labelUserNameCP = new QLabel(userHomeHelloBarCP);
         labelUserNameCP->setObjectName(QString::fromUtf8("labelUserNameCP"));
         labelUserNameCP->setGeometry(QRect(18, 259, 191, 31));
@@ -1745,11 +1729,12 @@ public:
 "border-radius: 105px;"));
         userHomeHelloBarFS->setFrameShape(QFrame::StyledPanel);
         userHomeHelloBarFS->setFrameShadow(QFrame::Raised);
-        displayPictureFS = new QLabel(userHomeHelloBarFS);
-        displayPictureFS->setObjectName(QString::fromUtf8("displayPictureFS"));
-        displayPictureFS->setGeometry(QRect(25, 25, 161, 161));
-        displayPictureFS->setStyleSheet(QString::fromUtf8("background: rgba(248, 251, 255, 0.99);\n"
+        showUserPictureFS = new QLabel(userHomeHelloBarFS);
+        showUserPictureFS->setObjectName(QString::fromUtf8("showUserPictureFS"));
+        showUserPictureFS->setGeometry(QRect(25, 25, 161, 161));
+        showUserPictureFS->setStyleSheet(QString::fromUtf8("background: rgba(248, 251, 255, 0.99);\n"
 "border-radius: 80px;"));
+        showUserPictureFS->setScaledContents(true);
         labelUserNameFS = new QLabel(userHomeHelloBarFS);
         labelUserNameFS->setObjectName(QString::fromUtf8("labelUserNameFS"));
         labelUserNameFS->setGeometry(QRect(18, 259, 191, 31));
@@ -2311,28 +2296,12 @@ public:
 "border: 0px;"));
         frameFS2->setFrameShape(QFrame::StyledPanel);
         frameFS2->setFrameShadow(QFrame::Raised);
-        pbFullScreenFS = new QPushButton(frameFS2);
-        pbFullScreenFS->setObjectName(QString::fromUtf8("pbFullScreenFS"));
-        pbFullScreenFS->setGeometry(QRect(723, 732, 91, 31));
-        QFont font14;
-        font14.setFamilies({QString::fromUtf8("Avenir Next")});
-        font14.setBold(true);
-        pbFullScreenFS->setFont(font14);
-        pbFullScreenFS->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"color: #2B528C;\n"
-"font-weight: 500;\n"
-"border-radius: 15px;\n"
-"background:  white;\n"
-"font-size: 12px; \n"
-"}\n"
-"QPushButton:hover\n"
-"{\n"
-"font-size: 13px;\n"
-"\n"
-"}"));
         pbCloseImageFS = new QPushButton(frameFS2);
         pbCloseImageFS->setObjectName(QString::fromUtf8("pbCloseImageFS"));
         pbCloseImageFS->setGeometry(QRect(750, 40, 31, 31));
+        QFont font14;
+        font14.setFamilies({QString::fromUtf8("Avenir Next")});
+        font14.setBold(true);
         pbCloseImageFS->setFont(font14);
         pbCloseImageFS->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "color: #2B528C;\n"
@@ -2346,12 +2315,6 @@ public:
 "font-size: 13px;\n"
 "\n"
 "}"));
-        labelFS = new QLabel(frameFS2);
-        labelFS->setObjectName(QString::fromUtf8("labelFS"));
-        labelFS->setGeometry(QRect(752, 77, 31, 16));
-        labelFS->setStyleSheet(QString::fromUtf8("background: rgba(43, 82, 140, 0.00);\n"
-"font-size: 10px;\n"
-"color:white;"));
         showLargeCertificateFS = new QLabel(frameFS);
         showLargeCertificateFS->setObjectName(QString::fromUtf8("showLargeCertificateFS"));
         showLargeCertificateFS->setGeometry(QRect(200, 80, 471, 641));
@@ -2384,7 +2347,7 @@ public:
 
         retranslateUi(UserLogin);
 
-        stackedWidget->setCurrentIndex(3);
+        stackedWidget->setCurrentIndex(2);
         pbLoginLP->setDefault(true);
 
 
@@ -2415,7 +2378,7 @@ public:
         pbHomeHP->setText(QCoreApplication::translate("UserLogin", "Home", nullptr));
         pbProfileHP->setText(QCoreApplication::translate("UserLogin", "My Profile", nullptr));
         pbContactHP->setText(QCoreApplication::translate("UserLogin", "Contact Us", nullptr));
-        showUserPictureHP->setText(QCoreApplication::translate("UserLogin", "displayPicture", nullptr));
+        showUserPictureHP->setText(QString());
         labelUserNameHP->setText(QCoreApplication::translate("UserLogin", "Username!", nullptr));
         labelHeyThereHP->setText(QCoreApplication::translate("UserLogin", "Hey there,", nullptr));
         pbLogoutHP->setText(QCoreApplication::translate("UserLogin", "Logout", nullptr));
@@ -2425,14 +2388,14 @@ public:
         vaccineStatsTitleHP->setText(QCoreApplication::translate("UserLogin", "Vaccine Statistics", nullptr));
         communityCasesTitleHP->setText(QCoreApplication::translate("UserLogin", "Community Cases ", nullptr));
         userHomeWhiteBackgroundPP->setText(QString());
-        displayPicturePP->setText(QCoreApplication::translate("UserLogin", "displayPicture", nullptr));
+        showUserPicturePP->setText(QString());
         labelUserNamePP->setText(QCoreApplication::translate("UserLogin", "Username!", nullptr));
         labelHeyTherePP->setText(QCoreApplication::translate("UserLogin", "Hey there,", nullptr));
         pbLogoutPP->setText(QCoreApplication::translate("UserLogin", "Logout", nullptr));
         pbHomePP->setText(QCoreApplication::translate("UserLogin", "Home", nullptr));
         pbProfilePP->setText(QCoreApplication::translate("UserLogin", "My Profile", nullptr));
         pbContactPP->setText(QCoreApplication::translate("UserLogin", "Contact Us", nullptr));
-        homeSubHeadingPP->setText(QCoreApplication::translate("UserLogin", "Track your COVID-19 Vaccines,  test results and more.", nullptr));
+        homeSubHeadingPP->setText(QCoreApplication::translate("UserLogin", "Track your COVID-19 Vaccines, test results and more.", nullptr));
         homeTitlePP->setText(QCoreApplication::translate("UserLogin", "My Profile", nullptr));
         showUserNamePP->setText(QCoreApplication::translate("UserLogin", "My Full Name", nullptr));
         labelUserDOBPP->setText(QCoreApplication::translate("UserLogin", "Birthday", nullptr));
@@ -2491,29 +2454,23 @@ public:
         labelAboutMessageCP->setText(QCoreApplication::translate("UserLogin", "What is your message about?", nullptr));
         labelMessageSubjectCP->setText(QCoreApplication::translate("UserLogin", "Message Subject", nullptr));
         labelMessageDetailsCP->setText(QCoreApplication::translate("UserLogin", "My Message", nullptr));
+        pbSendMessageCP->setText(QCoreApplication::translate("UserLogin", "Send Message", nullptr));
         cbReportCategoryCP->setItemText(0, QCoreApplication::translate("UserLogin", "General Enquiries", nullptr));
         cbReportCategoryCP->setItemText(1, QCoreApplication::translate("UserLogin", "COVID-19 Vaccine", nullptr));
         cbReportCategoryCP->setItemText(2, QCoreApplication::translate("UserLogin", "Change/Update Personal Details", nullptr));
         cbReportCategoryCP->setItemText(3, QCoreApplication::translate("UserLogin", "My COVID Record Application", nullptr));
         cbReportCategoryCP->setItemText(4, QCoreApplication::translate("UserLogin", "Other", nullptr));
 
-        pbSendMessageCP->setText(QCoreApplication::translate("UserLogin", "Send Message", nullptr));
-        cbReportCategoryCP_2->setItemText(0, QCoreApplication::translate("UserLogin", "General Enquiries", nullptr));
-        cbReportCategoryCP_2->setItemText(1, QCoreApplication::translate("UserLogin", "COVID-19 Vaccine", nullptr));
-        cbReportCategoryCP_2->setItemText(2, QCoreApplication::translate("UserLogin", "Change/Update Personal Details", nullptr));
-        cbReportCategoryCP_2->setItemText(3, QCoreApplication::translate("UserLogin", "My COVID Record Application", nullptr));
-        cbReportCategoryCP_2->setItemText(4, QCoreApplication::translate("UserLogin", "Other", nullptr));
-
         myVaccinesHeadingCP->setText(QCoreApplication::translate("UserLogin", "Need Help?", nullptr));
         pbGetVaccinatedLinkCP->setText(QCoreApplication::translate("UserLogin", "Get Vaccinated", nullptr));
         homeSubHeadingCP_2->setText(QCoreApplication::translate("UserLogin", "You can find more information here.", nullptr));
         pbGetTestedLinkCP->setText(QCoreApplication::translate("UserLogin", "Get Tested", nullptr));
         pbLearnMoreLinkCP->setText(QCoreApplication::translate("UserLogin", "Learn More", nullptr));
-        displayPictureCP->setText(QCoreApplication::translate("UserLogin", "displayPicture", nullptr));
+        showUserPictureCP->setText(QString());
         labelUserNameCP->setText(QCoreApplication::translate("UserLogin", "Username!", nullptr));
         labelHeyThereCP->setText(QCoreApplication::translate("UserLogin", "Hey there,", nullptr));
         pbLogoutCP->setText(QCoreApplication::translate("UserLogin", "Logout", nullptr));
-        displayPictureFS->setText(QCoreApplication::translate("UserLogin", "displayPicture", nullptr));
+        showUserPictureFS->setText(QString());
         labelUserNameFS->setText(QCoreApplication::translate("UserLogin", "Username!", nullptr));
         labelHeyThereFS->setText(QCoreApplication::translate("UserLogin", "Hey there,", nullptr));
         pbLogoutFS->setText(QCoreApplication::translate("UserLogin", "Logout", nullptr));
@@ -2563,9 +2520,7 @@ public:
         pbEnlargeQRFS->setText(QCoreApplication::translate("UserLogin", "+", nullptr));
         closeImageTextFS->setText(QCoreApplication::translate("UserLogin", "Close", nullptr));
         showLargeTestsFS->setText(QString());
-        pbFullScreenFS->setText(QCoreApplication::translate("UserLogin", "Full Screen", nullptr));
         pbCloseImageFS->setText(QCoreApplication::translate("UserLogin", "X", nullptr));
-        labelFS->setText(QCoreApplication::translate("UserLogin", "Close", nullptr));
         showLargeCertificateFS->setText(QString());
         showLargeQRCodeImageFS->setText(QString());
         showLargeQRFS->setText(QString());

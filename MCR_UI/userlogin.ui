@@ -1461,7 +1461,7 @@ background: rgba(104, 160, 229, 0.00);
 </string>
        </property>
        <property name="text">
-        <string>Track your COVID-19 Vaccines,  test results and more.</string>
+        <string>Track your COVID-19 Vaccines, test results and more.</string>
        </property>
       </widget>
       <widget class="QLabel" name="homeTitlePP">
@@ -5378,41 +5378,6 @@ border: 0px;</string>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QPushButton" name="pbFullScreenFS">
-         <property name="geometry">
-          <rect>
-           <x>723</x>
-           <y>732</y>
-           <width>91</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Avenir Next</family>
-           <pointsize>-1</pointsize>
-           <weight>62</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton{
-color: #2B528C;
-font-weight: 500;
-border-radius: 15px;
-background:  white;
-font-size: 12px; 
-}
-QPushButton:hover
-{
-font-size: 13px;
-
-}</string>
-         </property>
-         <property name="text">
-          <string>Full Screen</string>
-         </property>
-        </widget>
         <widget class="QPushButton" name="pbCloseImageFS">
          <property name="geometry">
           <rect>

@@ -786,7 +786,7 @@ background: rgba(104, 160, 229, 0.00);
 </string>
        </property>
        <property name="text">
-        <string>These users are now available for editing.</string>
+        <string>View all users and their information.</string>
        </property>
       </widget>
       <widget class="QLabel" name="homeTitleAUP">
@@ -5002,7 +5002,7 @@ background: rgba(104, 160, 229, 0.00);
 </string>
        </property>
        <property name="text">
-        <string>Fill in the form below to contact us.</string>
+        <string>View reports submitted by users.</string>
        </property>
       </widget>
       <widget class="QLabel" name="homeTitleRP">
@@ -6452,55 +6452,6 @@ padding-left: 3px;}</string>
          <string>example@email.com</string>
         </property>
        </widget>
-       <widget class="QComboBox" name="editUserVaccineSBEP">
-        <property name="geometry">
-         <rect>
-          <x>21</x>
-          <y>200</y>
-          <width>281</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Avenir Next</family>
-          <pointsize>-1</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QComboBox
-{background: #F8FBFF;
-border-radius: 15;
-color: #2B528C;
-font-size: 12px; 
-padding-left: 3px;}
-
-</string>
-        </property>
-        <property name="placeholderText">
-         <string/>
-        </property>
-        <item>
-         <property name="text">
-          <string>Select Vaccine Status</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Not Vaccinated</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Partially Vaccinated</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Fully Vaccinated</string>
-         </property>
-        </item>
-       </widget>
        <widget class="QLabel" name="labelEmergencyAP_7">
         <property name="geometry">
          <rect>
@@ -7476,6 +7427,55 @@ border-radius: 5;
          <string/>
         </property>
        </widget>
+       <widget class="QComboBox" name="editUserVaccineSBEP">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>200</y>
+          <width>281</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Avenir Next</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QComboBox
+{background: #F8FBFF;
+border-radius: 15;
+color: #2B528C;
+font-size: 12px; 
+padding-left: 3px;}
+
+</string>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+        <item>
+         <property name="text">
+          <string>Select Vaccine Status</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Not Vaccinated</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Partially Vaccinated</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Fully Vaccinated</string>
+         </property>
+        </item>
+       </widget>
        <zorder>editQRCodeEP</zorder>
        <zorder>editCertificateEP</zorder>
        <zorder>labelNHIAP_12</zorder>
@@ -7494,7 +7494,6 @@ border-radius: 5;
        <zorder>editUserNameEP</zorder>
        <zorder>pbChangeUserPictureEP</zorder>
        <zorder>editUserEmailEP</zorder>
-       <zorder>editUserVaccineSBEP</zorder>
        <zorder>labelEmergencyAP_7</zorder>
        <zorder>labelClickEditAP_4</zorder>
        <zorder>labelVaccinesAP_4</zorder>
@@ -7520,6 +7519,7 @@ border-radius: 5;
        <zorder>editQRCodeEP_2</zorder>
        <zorder>pbEditQRCodeEP</zorder>
        <zorder>pbChangeQRCodeEP</zorder>
+       <zorder>editUserVaccineSBEP</zorder>
       </widget>
       <widget class="QLabel" name="alerLevelUpdatesTitle_3">
        <property name="geometry">

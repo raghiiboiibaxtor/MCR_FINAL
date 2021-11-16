@@ -254,6 +254,44 @@ void MainWindow::addNewUser()
          ui->listAllUsersAP->addItem(newCitizen->getName());
     }
 
+    // Open file for reading
+    //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+    QFile inputFile("Citizens.txt");
+    inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
+    QTextStream read(&inputFile);
+
+    // Clearing existing data from vector
+   for (int i = 0; i< userList.size(); i++)
+    {
+        delete userList.at(i);
+    }
+   // Clearing ui
+    userList.clear();
+    ui->listAllUsersAUP->clear();
+    ui->listAllUsersEP->clear();
+    ui->listAllUsersAP->clear();
+
+   while(!read.atEnd()) // Start while loop to read file and push info to vec
+   {
+       // Reading from file and seperating info at text.split()
+        QString text = read.readLine();
+        QStringList info = text.split("|");
+
+       // Add read information to ui
+       ui->listAllUsersAUP->addItem(info.at(4));
+       ui->listAllUsersEP->addItem(info.at(4));
+       ui->listAllUsersAP->addItem(info.at(4));
+
+       // Adding file information to vector
+       classCitizen* temp = new classCitizen(info.at(0), info.at(1), info.at(2), info.at(3), info.at(4), info.at(5), info.at(6), info.at(7), info.at(8), info.at(9),
+                                             info.at(10), info.at(11), info.at(12), info.at(13), info.at(14), info.at(15), info.at(16), info.at(17), info.at(18));
+       userList.push_back(temp);
+   } // End while
+
+   // Flushing file and then closing.
+   read.flush();
+   inputFile.close();
+
     // CVN generator for each new user
     int randNum = QRandomGenerator::global()->bounded(00000000, 50000000);
 
@@ -1108,7 +1146,7 @@ void MainWindow::saveEdit()
             ui->showUserNHIFS->clear();
             ui->editUserEmergencyEP->clear();
             ui->editUserNotesEP->clear();
-            ui->editUserVaccineSBEP->clear();
+            ui->editUserVaccineSBEP->setCurrentText("Select Vaccine Status");
             ui->showUserCVNEP->clear();
             ui->edit1stDoseNameEP->clear();
             ui->edit1stDoseBatchEP->clear();
