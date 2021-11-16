@@ -211,6 +211,12 @@ void UserLogin::login()
                     QPixmap pixmap3(temp->getCitizenImage());
                     ui->showUserPictureHP->setPixmap(pixmap3);
                     ui->showUserPictureHP->setScaledContents(true);
+                    ui->showUserPicturePP->setPixmap(pixmap3);
+                    ui->showUserPicturePP->setScaledContents(true);
+                    ui->showUserPictureCP->setPixmap(pixmap3);
+                    ui->showUserPictureCP->setScaledContents(true);
+                    ui->showUserPictureFS->setPixmap(pixmap3);
+                    ui->showUserPictureFS->setScaledContents(true);
 
                     // Change page index to User Home Page
                     ui->stackedWidget->setCurrentIndex(1);
