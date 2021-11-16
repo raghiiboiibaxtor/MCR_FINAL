@@ -31,7 +31,6 @@ UserLogin::UserLogin(QWidget *parent):QMainWindow(parent), ui(new Ui::UserLogin)
     //ui->labelConfirmation->hide();
     ui->showLargeTestsFS->hide();
     ui->pbCloseImageFS->hide();
-    ui->pbFullScreenFS->hide();
 
     // Manual UI -> Function Connections
     connect(ui->pbLoginLP, &QPushButton::clicked, this, &UserLogin::login);
@@ -367,7 +366,7 @@ void UserLogin::submitReport()
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << paragraph << endl; //Qt::endl;
+        out << paragraph << Qt::endl; //Qt::endl;
 
         // Flushing file and then closing.
         out.flush();
@@ -396,7 +395,7 @@ void UserLogin::submitReport()
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << paragraph << endl; //Qt::endl;
+        out << paragraph << Qt::endl; //Qt::endl;
 
 
         // Flushing file and then closing.
@@ -424,7 +423,7 @@ void UserLogin::submitReport()
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << paragraph << endl; //Qt::endl;
+        out << paragraph << Qt::endl; //Qt::endl;
 
 
         // Flushing file and then closing.
@@ -452,7 +451,7 @@ void UserLogin::submitReport()
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << paragraph << endl; //Qt::endl;
+        out << paragraph << Qt::endl; //Qt::endl;
 
         // Flushing file and then closing.
         out.flush();
@@ -480,7 +479,7 @@ void UserLogin::submitReport()
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << paragraph << endl; //Qt::endl;
+        out << paragraph << Qt::endl; //Qt::endl;
 
         // Flushing file and then closing.
         out.flush();
@@ -524,12 +523,16 @@ void UserLogin::covidRecordLink()
 // Function to logout
 void UserLogin::logout()
 {
-    UserLogin *login;
-    close();
-    //Displays Login window
-    login = new UserLogin(this);
-    login->show();
-} // E/nd of logout()
+    int reply = QMessageBox::question(this, "Logout", "Are you sure you want to logout?", QMessageBox::Yes, QMessageBox::No);
+    if (reply == QMessageBox::Yes)
+    {
+        UserLogin *login;
+        close();
+        //Displays Login window
+        login = new UserLogin(this);
+        login->show();
+    }
+} // End of logout()
 
 
 /// Destructor : End of Program.

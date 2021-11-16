@@ -45,7 +45,6 @@ public:
     void pbShowCertificate();
     void pbShowQRCode();
     void pbShowTestResult();
-    void pbFullScreen();
     void pbClose();
 
     void pbContactUs();
