@@ -434,9 +434,9 @@ void MainWindow::saveUser()
         ui->listAllUsersAP->addItem(ptrNewCitizen->getNHI());
         // Writing to file
         /// Windows File Path
-        //QFile outputFile("Citizens.txt");
+        QFile outputFile("Citizens.txt");
         /// Mac File Path
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -556,8 +556,8 @@ void MainWindow::pbAllUsers()
     ui->stackedWidget->setCurrentIndex(1);
 
     // Open file for reading
-    QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
-    //QFile inputFile("Citizens.txt");
+    //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+    QFile inputFile("Citizens.txt");
     inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
     QTextStream read(&inputFile);
 
@@ -776,7 +776,10 @@ void MainWindow::pbRemoveUser()
 {
     int index = ui->listAllUsersAUP->currentRow();
 
-        if (index >= 0)
+    if (index >= 0)
+    {
+        int reply = QMessageBox::question(this, "Remove User", "Are you sure you want to remove this user?", QMessageBox::Yes, QMessageBox::No);
+        if (reply == QMessageBox::Yes)
         {
             //remove from vector
             classCitizen* ptrRemoveCitizen = userList.at(index);
@@ -785,9 +788,9 @@ void MainWindow::pbRemoveUser()
 
             // Writing edit to file
             /// Windows File Path
-            //QFile outputFile("Citizens.txt");
+            QFile outputFile("Citizens.txt");
             /// Mac File Path
-            QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+            //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
 
             QTextStream out(&outputFile);
             outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -822,26 +825,27 @@ void MainWindow::pbRemoveUser()
             delete ui->listAllUsersAUP->currentItem();
         }
 
-        // Clearing Ui labels
-        ui->showUserNameAUP->clear();
-        ui->showUserPhoneAUP->clear();
-        ui->showUserEmailAUP->clear();
-        ui->showUserDOBAUP->clear();
-        ui->showUserNHIAUP->clear();
-        ui->showUserEmergencyAUP->clear();
-        ui->showUserNotesAUP->clear();
-        ui->showUserCVNAUP->clear();
-        ui->show1stDoseNameAUP->clear();
-        ui->show1stDoseBatchAUP->clear();
-        ui->show1stDoseDateAUP->clear();
-        ui->show2ndDoseNameAUP->clear();
-        ui->show2ndDoseBatchAUP->clear();
-        ui->show2ndDoseDateAUP->clear();
-        ui->showCertificateAUP->clear();
-        ui->showQRCodeAUP->clear();
-        ui->showTestResultsAUP->clear();
-        ui->showUserPictureAUP->clear();
+    }
 
+    // Clearing Ui labels
+    ui->showUserNameAUP->clear();
+    ui->showUserPhoneAUP->clear();
+    ui->showUserEmailAUP->clear();
+    ui->showUserDOBAUP->clear();
+    ui->showUserNHIAUP->clear();
+    ui->showUserEmergencyAUP->clear();
+    ui->showUserNotesAUP->clear();
+    ui->showUserCVNAUP->clear();
+    ui->show1stDoseNameAUP->clear();
+    ui->show1stDoseBatchAUP->clear();
+    ui->show1stDoseDateAUP->clear();
+    ui->show2ndDoseNameAUP->clear();
+    ui->show2ndDoseBatchAUP->clear();
+    ui->show2ndDoseDateAUP->clear();
+    ui->showCertificateAUP->clear();
+    ui->showQRCodeAUP->clear();
+    ui->showTestResultsAUP->clear();
+    ui->showUserPictureAUP->clear();
 }
 
 
@@ -1464,11 +1468,16 @@ void MainWindow::searchCategory()
 // Function to logout
 void MainWindow::logout()
 {
-    UserLogin *login;
-    close();
-    //Displays Login window
-    login = new UserLogin(this);
-    login->show();
+    int reply = QMessageBox::question(this, "Remove User", "Are you sure you want to logout?", QMessageBox::Yes, QMessageBox::No);
+    if (reply == QMessageBox::Yes)
+    {
+        UserLogin *login;
+        close();
+        //Displays Login window
+        login = new UserLogin(this);
+        login->show();
+    }
+
 } // End of logout()
 
 
