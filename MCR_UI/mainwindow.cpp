@@ -84,7 +84,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 
        // File path for User Profile Pictures
        //QDir pathDir3("./UserProfilePictures");
-       QDir pathDir3("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserProfilePictures");
+       QDir pathDir3("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/userProfilePictures");
        if(!pathDir3.exists())
        {
            //create it!
@@ -1038,6 +1038,7 @@ void MainWindow::saveEdit()
     ui->editTestResultsEP->setPixmap(pixmap2);
     QPixmap pixmap3(ptrCurrentCitizen->getCitizenImage());
     ui->editUserPictureEP->setPixmap(pixmap3);
+    ui->editUserPictureEP->setScaledContents(true);
 
 
     if(editName.trimmed() != "" && editEmail.trimmed() != "")
