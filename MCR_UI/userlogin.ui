@@ -32,7 +32,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="loginPage">
      <widget class="QLabel" name="loginWhiteBackgroundLP">
@@ -1818,7 +1818,7 @@ color:#2B528C;
          <rect>
           <x>160</x>
           <y>80</y>
-          <width>61</width>
+          <width>151</width>
           <height>20</height>
          </rect>
         </property>
@@ -1844,9 +1844,9 @@ color:#2B528C;
        <widget class="QLabel" name="showDose1DatePP">
         <property name="geometry">
          <rect>
-          <x>250</x>
+          <x>310</x>
           <y>80</y>
-          <width>161</width>
+          <width>101</width>
           <height>20</height>
          </rect>
         </property>
@@ -2004,7 +2004,7 @@ border-radius: 50px;</string>
          <rect>
           <x>160</x>
           <y>80</y>
-          <width>71</width>
+          <width>151</width>
           <height>20</height>
          </rect>
         </property>
@@ -2061,9 +2061,9 @@ color:#2B528C;
        <widget class="QLabel" name="showDose2DatePP">
         <property name="geometry">
          <rect>
-          <x>240</x>
+          <x>310</x>
           <y>80</y>
-          <width>171</width>
+          <width>101</width>
           <height>20</height>
          </rect>
         </property>
@@ -3334,56 +3334,6 @@ font-size: 14px;
 padding-left: 3px;}</string>
         </property>
        </widget>
-       <widget class="QComboBox" name="cbReportCategoryCP">
-        <property name="geometry">
-         <rect>
-          <x>21</x>
-          <y>90</y>
-          <width>421</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Avenir Next</family>
-          <pointsize>-1</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QComboBox
-{background: #F8FBFF;
-border-radius: 15;
-border-color: rgba(104, 160, 229, 0.33);
-color: #2B528C;
-font-size: 14px; 
-padding-left: 3px;}</string>
-        </property>
-        <item>
-         <property name="text">
-          <string>General Enquiries</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>COVID-19 Vaccine</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Change/Update Personal Details</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>My COVID Record Application</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Other</string>
-         </property>
-        </item>
-       </widget>
        <widget class="QPushButton" name="pbSendMessageCP">
         <property name="geometry">
          <rect>
@@ -3424,7 +3374,7 @@ font-size: 18px;
          <rect>
           <x>19</x>
           <y>90</y>
-          <width>431</width>
+          <width>421</width>
           <height>31</height>
          </rect>
         </property>
@@ -3443,22 +3393,28 @@ padding-left: 3px;}</string>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QComboBox" name="cbReportCategoryCP_2">
+        <widget class="QComboBox" name="cbReportCategoryCP">
          <property name="geometry">
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>421</width>
+           <width>411</width>
            <height>31</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Avenir Next</family>
+           <pointsize>-1</pointsize>
+          </font>
          </property>
          <property name="styleSheet">
           <string notr="true">QComboBox
 {background: #F8FBFF;
 border-radius: 15;
-
+border-color: rgba(104, 160, 229, 0.33);
 color: #2B528C;
-font-size: 16px; 
+font-size: 14px; 
 padding-left: 3px;}</string>
          </property>
          <item>
@@ -3488,7 +3444,6 @@ padding-left: 3px;}</string>
          </item>
         </widget>
        </widget>
-       <zorder>cbReportCategoryCP</zorder>
        <zorder>frame</zorder>
        <zorder>editReportSubjectCP</zorder>
        <zorder>editReportDetailsCP</zorder>
@@ -5491,24 +5446,6 @@ font-size: 13px;
          </property>
          <property name="text">
           <string>X</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="labelFS">
-         <property name="geometry">
-          <rect>
-           <x>752</x>
-           <y>77</y>
-           <width>31</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background: rgba(43, 82, 140, 0.00);
-font-size: 10px;
-color:white;</string>
-         </property>
-         <property name="text">
-          <string>Close</string>
          </property>
         </widget>
        </widget>

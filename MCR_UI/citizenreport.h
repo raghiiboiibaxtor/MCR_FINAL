@@ -11,21 +11,24 @@ class citizenReport //: public classCitizen
 private:
     QString preferredName;
     QString preferredContact;
+    QString contactDetails;
     QString reportCategory;
     QString reportSubject;
     QString reportDetails;
 
 public:
-    explicit citizenReport(QString preferredName, QString preferredContact, QString reportCategory, QString reportSubject, QString reportDetails);
+    explicit citizenReport(QString preferredName, QString preferredContact, QString contactDetails, QString reportCategory, QString reportSubject, QString reportDetails);
 
     QString getName();
     QString getContact();
+    QString getContactDetails();
     QString getCategory();
     QString getSubject();
     QString getDetails();
 
     void setName(QString preferredName);
     void setContact(QString preferredContact);
+    void setContactDetails(QString contactDetails);
     void setCategory(QString reportCategory);
     void setSubject(QString reportSubject);
     void setDetails(QString reportDetails);

@@ -1,10 +1,11 @@
 #include "citizenreport.h"
 #include <QString>
 
-citizenReport::citizenReport(QString preferredName, QString preferredContact, QString reportCategory, QString reportSubject, QString reportDetails)
+citizenReport::citizenReport(QString preferredName, QString preferredContact, QString contactDetails, QString reportCategory, QString reportSubject, QString reportDetails)
 {
     this->preferredName = preferredName;
     this->preferredContact = preferredContact;
+    this->contactDetails = contactDetails;
     this->reportCategory = reportCategory;
     this->reportSubject = reportSubject;
     this->reportDetails = reportDetails;
@@ -18,6 +19,11 @@ QString citizenReport::getName()
 QString citizenReport::getContact()
 {
     return preferredContact;
+}
+
+QString citizenReport::getContactDetails()
+{
+    return contactDetails;
 }
 
 
@@ -44,6 +50,11 @@ void citizenReport::setName(QString preferredName)
 void citizenReport::setContact(QString preferredContact)
 {
     this->preferredContact = preferredContact;
+}
+
+void citizenReport::setContactDetails(QString contactDetails)
+{
+    this->contactDetails = contactDetails;
 }
 
 void citizenReport::setCategory(QString reportCategory)

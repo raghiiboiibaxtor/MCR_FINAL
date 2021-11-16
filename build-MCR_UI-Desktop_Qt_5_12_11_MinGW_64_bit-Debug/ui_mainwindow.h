@@ -67,15 +67,12 @@ public:
     QLabel *showUserNHIAUP;
     QLabel *showUserEmergencyAUP;
     QLabel *labelEmergencyAUP;
-    QLabel *showUserNotesAUP;
-    QLabel *labelAdditionalNotesAUP;
     QLabel *showUserPictureAUP;
     QLabel *labelCVNAUP;
     QLabel *showUserCVNAUP;
     QLabel *showUserDOBAUP;
     QLabel *showUserPhoneAUP;
     QLabel *showUserEmailAUP;
-    QLabel *showUserVaccStatusAUP;
     QLabel *labelVaccineAUP;
     QLabel *labelDocumentationAUP;
     QFrame *vaccineDose1FrameAUP;
@@ -107,13 +104,19 @@ public:
     QLabel *labelQRCodeAUP;
     QFrame *userPictureFrameAUP;
     QLabel *labelClickEnlargeAUP;
+    QLabel *labelClickEditAP_3;
+    QLabel *showUserNotesAUP;
+    QLabel *labelAdditionalNotesAUP;
+    QLabel *labelAlertConfidentialAP_2;
+    QLabel *showUserVaccStatusAUP;
     QPushButton *pbSearchAUP;
     QLineEdit *labelSearchUserAUP;
     QListWidget *listAllUsersAUP;
-    QPushButton *pbQuickRemoveAUP;
     QLabel *showUserNameAUP_2;
     QLabel *labelConfidentialAUP_2;
-    QLabel *labelConfidentialAUP_3;
+    QFrame *frame_5;
+    QPushButton *pbQuickRemoveAUP;
+    QLabel *labelConfidentialAUP_12;
     QFrame *userHomeHelloBarAUP;
     QLabel *displayPictureAUP;
     QLabel *labelAdminAUP;
@@ -135,61 +138,67 @@ public:
     QFrame *userHomeDisplayFrameAP;
     QLabel *homeSubHeadingAP;
     QLabel *homeTitleAP;
+    QListWidget *listAllUsersAP;
+    QLabel *alerLevelUpdatesTitle_2;
+    QLabel *labelSelectRP_2;
+    QPushButton *pbCancelAP;
     QFrame *userInfoFrameAP;
-    QLabel *labelNHIAP;
+    QLabel *labelNHIAP_7;
     QLabel *labelEmergencyAP;
     QLabel *labelAdditionalNotesAP;
     QLabel *addUserPictureAP;
     QLabel *labelCVNAP;
+    QPushButton *pbSaveAP;
+    QLabel *labelConfidentialAP;
+    QLabel *labelUnauthorisedAP;
+    QLineEdit *addUserNHIAP;
+    QLineEdit *addUserEmergencyAP;
+    QPlainTextEdit *addNotesAP;
+    QLineEdit *addUserDOBAP;
+    QLineEdit *addUserPhoneAP;
+    QPushButton *pbAddUserPictureAP;
+    QLineEdit *addUserNameAP;
+    QPushButton *pbChangeUserPictureAP;
+    QLabel *addUserCVNAP;
+    QLineEdit *addUserEmailAP;
+    QComboBox *addVaccStatusAP;
+    QLabel *labelVaccineStatusAP;
+    QLabel *labelClickEditAP;
     QLabel *labelVaccinesAP;
-    QLabel *labelDocumentationAP;
     QFrame *vaccineDose1FrameAP;
     QLabel *vaccineIcon1FrameAP;
     QLabel *imgVaccineIcon1AP;
     QLineEdit *add1stDoseNameAP;
     QLineEdit *add1stDoseBatchAP;
     QLineEdit *add1stDoseDateAP;
-    QPushButton *pbSaveAP;
-    QLabel *labelConfidentialAP;
-    QLabel *labelUnauthorisedAP;
-    QLineEdit *addUserNHIAP;
-    QLineEdit *addUserCVNAP;
-    QLineEdit *addUserEmergencyAP;
-    QPlainTextEdit *addNotesAP;
-    QLineEdit *addUserDOBAP;
-    QLineEdit *addUserPhoneAP;
-    QLineEdit *addUserEmailAP;
-    QLabel *labelTestResultsAP;
-    QLabel *labelCertificateAP;
-    QLabel *labelQRCodeAP;
     QFrame *vaccineDose2FrameAP;
     QLabel *vaccineIcon2FrameAP;
     QLabel *imgVaccineIcon2AP;
     QLineEdit *add2ndDoseNameAP;
     QLineEdit *add2ndDoseBatchAP;
     QLineEdit *add2ndDoseDateAP;
-    QLabel *labelClickUploadAP;
-    QPushButton *pbAddUserPictureAP;
-    QLineEdit *addUserNameAP;
-    QLabel *labelClickEditAP;
-    QLabel *addQRCodeAP;
+    QLabel *labelQRCodeAP;
     QPushButton *pbAddQRCodeAP;
-    QPushButton *pbAddTestResultsAP;
-    QPushButton *pbAddCertificateAP;
-    QLabel *addCertificateAP;
-    QLabel *addTestResultsAP;
-    QPushButton *pbChangeQRCodeAP;
-    QPushButton *pbChangeCertificateAP;
     QPushButton *pbChangeTestResultsAP;
-    QComboBox *addVaccStatusAP;
-    QPushButton *pbChangeUserPictureAP;
-    QListWidget *listAllUsersAP;
-    QLabel *alerLevelUpdatesTitle_2;
-    QLabel *alerLevelUpdatesTitle_3;
-    QLabel *labelSelectRP_2;
-    QLabel *labelSelectRP_3;
-    QLabel *labelCancelAP;
-    QPushButton *pbCancelAP;
+    QPushButton *pbAddCertificateAP;
+    QLabel *labelDocumentationAP;
+    QLabel *addTestResultsAP;
+    QLabel *labelClickUploadAP;
+    QLabel *addCertificateAP;
+    QPushButton *pbAddTestResultsAP;
+    QLabel *addQRCodeAP;
+    QPushButton *pbChangeQRCodeAP;
+    QLabel *labelTestResultsAP;
+    QLabel *labelCertificateAP;
+    QPushButton *pbChangeCertificateAP;
+    QLabel *labelBirthdayAP;
+    QLabel *labelNameAP;
+    QLabel *labelNumberAP;
+    QLabel *labelEmailAP;
+    QLabel *labelAlertConfidentialAP;
+    QFrame *frame_4;
+    QPushButton *pbQuickRemoveAP;
+    QLabel *labelDeleteAP;
     QWidget *adminReportsPage;
     QLabel *userHomeWhiteBackgroundRP;
     QFrame *userProfileBlueMenuBarRP;
@@ -222,6 +231,9 @@ public:
     QListWidget *listAllReportsRP;
     QPushButton *pbSearchCategoryRP;
     QComboBox *cbReportCategoryRP;
+    QFrame *frame_6;
+    QPushButton *pbQuickRemoveRP;
+    QLabel *labelDeleteRP;
     QWidget *adminEditUserPage;
     QFrame *userHomeHelloBarEP;
     QLabel *displayPictureEP;
@@ -236,59 +248,67 @@ public:
     QFrame *userHomeDisplayFrameEP;
     QLabel *homeSubHeadingEP;
     QLabel *homeTitleEP;
-    QFrame *userInfoFrameEP;
-    QLabel *labelNHIEP;
-    QLabel *labelEmergencyEP;
-    QLabel *labelAdditionalNotesEP;
+    QListWidget *listAllUsersEP;
+    QFrame *userInfoFrameAP_4;
+    QLabel *labelNHIAP_12;
+    QLabel *labelEmergencyAP_6;
+    QLabel *labelAdditionalNotesAP_4;
     QLabel *editUserPictureEP;
-    QLabel *labelCVNEP;
-    QLabel *labelVaccineEP;
-    QLabel *labelDocumentationEP;
+    QLabel *labelCVNAP_4;
     QPushButton *pbSaveEditEP;
-    QLabel *labelConfidentialEP;
-    QLabel *labelUnauthorisedEP;
-    QLineEdit *editUserCVNEP;
+    QLabel *labelConfidentialAP_6;
+    QLabel *labelUnauthorisedAP_4;
     QLineEdit *editUserEmergencyEP;
     QPlainTextEdit *editUserNotesEP;
     QLineEdit *editUserDOBEP;
     QLineEdit *editUserPhoneEP;
+    QPushButton *pbEditUserPictureEP;
+    QLineEdit *editUserNameEP;
+    QPushButton *pbChangeUserPictureEP;
     QLineEdit *editUserEmailEP;
-    QLabel *labelTestResultsEP;
-    QLabel *labelCertificateEP;
-    QLabel *labeQRCodeEP;
-    QFrame *vaccineDose2FrameEP;
-    QLabel *vaccineIcon2FrameEP;
-    QLabel *imgVaccineIcon2EP;
-    QLineEdit *edit2ndDoseNameEP;
-    QLineEdit *edit2ndDoseBatchEP;
-    QLineEdit *edit2ndDoseDateEP;
-    QFrame *vaccineDose1FrameEP;
-    QLabel *vaccineIcon1FrameEP;
-    QLabel *imgVaccineIcon1EP;
+    QComboBox *editUserVaccineSBEP;
+    QLabel *labelEmergencyAP_7;
+    QLabel *labelClickEditAP_4;
+    QLabel *labelVaccinesAP_4;
+    QFrame *vaccineDose1FrameAP_4;
+    QLabel *vaccineIcon1FrameAP_4;
+    QLabel *imgVaccineIcon1AP_4;
     QLineEdit *edit1stDoseNameEP;
     QLineEdit *edit1stDoseBatchEP;
     QLineEdit *edit1stDoseDateEP;
-    QLabel *labelClickChangeEP;
-    QPushButton *pbEditUserPictureEP;
-    QComboBox *editUserVaccineSBEP;
-    QPushButton *pbEditTestResultsEP;
-    QLabel *editCertificateEP;
-    QLabel *editTestResultsEP;
+    QFrame *vaccineDose2FrameAP_4;
+    QLabel *vaccineIcon2FrameAP_4;
+    QLabel *imgVaccineIcon2AP_4;
+    QLineEdit *edit2ndDoseNameEP;
+    QLineEdit *edit2ndDoseBatchEP;
+    QLineEdit *edit2ndDoseDateEP;
+    QLabel *labelQRCodeEP;
     QPushButton *pbEditQRCodeEP;
-    QLabel *editQRCodeEP;
-    QPushButton *pbEditCertificateEP;
-    QLabel *labelClickEditEP;
-    QLineEdit *editUserNameEP;
-    QLabel *showNHIEP;
     QPushButton *pbChangeTestResultsEP;
-    QPushButton *pbChangeCertificateEP;
+    QPushButton *pbEditCertificateEP;
+    QLabel *labelDocumentationAP_4;
+    QLabel *editTestResultsEP;
+    QLabel *labelClickUploadAP_4;
+    QLabel *editCertificateEP;
+    QPushButton *pbEditTestResultsEP;
+    QLabel *editQRCodeEP;
     QPushButton *pbChangeQRCodeEP;
-    QPushButton *pbChangeUserPictureEP;
+    QLabel *labelTestResultsEP;
+    QLabel *labelCertificateEP;
+    QPushButton *pbChangeCertificateEP;
+    QLabel *labelNHIAP_13;
+    QLabel *labelNameEP;
+    QLabel *labelNHIAP_15;
+    QLabel *labelNHIAP_16;
+    QLabel *labelConfidentialAP_7;
+    QLabel *showNHIEP;
+    QLabel *showUserCVNEP;
+    QLabel *alerLevelUpdatesTitle_3;
+    QLabel *labelSelectRP_3;
     QPushButton *pbCancelEP;
-    QLabel *labelCancelEP;
-    QPushButton *pbSearchEP;
-    QLineEdit *editSearchEP;
-    QListWidget *listAllUsersEP;
+    QFrame *frame_3;
+    QPushButton *pbQuickRemoveEP;
+    QLabel *labelDeleteEP;
     QLabel *userHomeWhiteBackgroundEP;
     QWidget *adminEnlargeImagesPage;
     QFrame *userHomeHelloBarFS;
@@ -305,9 +325,7 @@ public:
     QFrame *frameFS;
     QLabel *showLargeTestsFS;
     QFrame *frameFS2;
-    QPushButton *pbFullScreenFS;
     QPushButton *pbCloseImageFS;
-    QLabel *closeImageTextFS;
     QLabel *showLargeCertificateFS;
     QLabel *showLargeQRCodeImageFS;
     QLabel *showLargeQRFS;
@@ -370,7 +388,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1102, 810);
+        MainWindow->resize(1101, 812);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/res/images/iconVaccine.png"), QSize(), QIcon::Normal, QIcon::On);
         MainWindow->setWindowIcon(icon);
@@ -717,7 +735,7 @@ public:
         userInfoFrameAUP->setFrameShadow(QFrame::Raised);
         showUserNameAUP = new QLabel(userInfoFrameAUP);
         showUserNameAUP->setObjectName(QString::fromUtf8("showUserNameAUP"));
-        showUserNameAUP->setGeometry(QRect(120, 20, 331, 41));
+        showUserNameAUP->setGeometry(QRect(120, 11, 331, 41));
         QFont font5;
         font5.setFamily(QString::fromUtf8("Arial Rounded MT Bold"));
         font5.setBold(false);
@@ -731,16 +749,17 @@ public:
         showUserNameAUP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         labelNHIAUP = new QLabel(userInfoFrameAUP);
         labelNHIAUP->setObjectName(QString::fromUtf8("labelNHIAUP"));
-        labelNHIAUP->setGeometry(QRect(25, 110, 101, 20));
+        labelNHIAUP->setGeometry(QRect(120, 90, 101, 20));
         labelNHIAUP->setFont(font2);
         labelNHIAUP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 14px;\n"
+"font-size: 12px;\n"
 "color:#2B528C;\n"
 "\n"
 ""));
         showUserNHIAUP = new QLabel(userInfoFrameAUP);
         showUserNHIAUP->setObjectName(QString::fromUtf8("showUserNHIAUP"));
-        showUserNHIAUP->setGeometry(QRect(20, 130, 281, 31));
+        showUserNHIAUP->setGeometry(QRect(115, 110, 221, 31));
+        showUserNHIAUP->setFont(font3);
         showUserNHIAUP->setStyleSheet(QString::fromUtf8("QLabel \n"
 "{background: #DFF1FE;\n"
 "border-radius: 15;\n"
@@ -750,7 +769,7 @@ public:
 "padding-left: 3px;}"));
         showUserEmergencyAUP = new QLabel(userInfoFrameAUP);
         showUserEmergencyAUP->setObjectName(QString::fromUtf8("showUserEmergencyAUP"));
-        showUserEmergencyAUP->setGeometry(QRect(20, 190, 601, 31));
+        showUserEmergencyAUP->setGeometry(QRect(20, 170, 601, 31));
         showUserEmergencyAUP->setStyleSheet(QString::fromUtf8("QLabel \n"
 "{background: #DFF1FE;\n"
 "border-radius: 15;\n"
@@ -760,50 +779,30 @@ public:
 "padding-left: 3px;}"));
         labelEmergencyAUP = new QLabel(userInfoFrameAUP);
         labelEmergencyAUP->setObjectName(QString::fromUtf8("labelEmergencyAUP"));
-        labelEmergencyAUP->setGeometry(QRect(25, 170, 321, 20));
+        labelEmergencyAUP->setGeometry(QRect(25, 150, 321, 20));
         labelEmergencyAUP->setFont(font2);
         labelEmergencyAUP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 14px;\n"
-"color:#2B528C;\n"
-"\n"
-""));
-        showUserNotesAUP = new QLabel(userInfoFrameAUP);
-        showUserNotesAUP->setObjectName(QString::fromUtf8("showUserNotesAUP"));
-        showUserNotesAUP->setGeometry(QRect(20, 250, 601, 91));
-        showUserNotesAUP->setStyleSheet(QString::fromUtf8("QLabel \n"
-"{background: #DFF1FE;\n"
-"border-radius: 20;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-" color:#2B528C;\n"
-"font-size: 12px; \n"
-"padding-left: 3px;}"));
-        showUserNotesAUP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
-        labelAdditionalNotesAUP = new QLabel(userInfoFrameAUP);
-        labelAdditionalNotesAUP->setObjectName(QString::fromUtf8("labelAdditionalNotesAUP"));
-        labelAdditionalNotesAUP->setGeometry(QRect(25, 230, 321, 20));
-        labelAdditionalNotesAUP->setFont(font2);
-        labelAdditionalNotesAUP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 14px;\n"
+"font-size: 12px;\n"
 "color:#2B528C;\n"
 "\n"
 ""));
         showUserPictureAUP = new QLabel(userInfoFrameAUP);
         showUserPictureAUP->setObjectName(QString::fromUtf8("showUserPictureAUP"));
-        showUserPictureAUP->setGeometry(QRect(20, 11, 81, 81));
+        showUserPictureAUP->setGeometry(QRect(26, 16, 70, 70));
         showUserPictureAUP->setStyleSheet(QString::fromUtf8("background: rgba(248, 251, 255, 0.99);\n"
-"border-radius: 40px;"));
+"border-radius: 35px;"));
         showUserPictureAUP->setAlignment(Qt::AlignCenter);
         labelCVNAUP = new QLabel(userInfoFrameAUP);
         labelCVNAUP->setObjectName(QString::fromUtf8("labelCVNAUP"));
-        labelCVNAUP->setGeometry(QRect(335, 110, 281, 20));
+        labelCVNAUP->setGeometry(QRect(350, 90, 271, 20));
         labelCVNAUP->setFont(font2);
         labelCVNAUP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 14px;\n"
+"font-size: 12px;\n"
 "color:#2B528C;\n"
 "background: rgba(254, 206, 103, 0.00);"));
         showUserCVNAUP = new QLabel(userInfoFrameAUP);
         showUserCVNAUP->setObjectName(QString::fromUtf8("showUserCVNAUP"));
-        showUserCVNAUP->setGeometry(QRect(330, 130, 291, 31));
+        showUserCVNAUP->setGeometry(QRect(349, 110, 271, 31));
         showUserCVNAUP->setStyleSheet(QString::fromUtf8("QLabel \n"
 "{background: #DFF1FE;\n"
 "border-radius: 15;\n"
@@ -813,7 +812,7 @@ public:
 "padding-left: 3px;}"));
         showUserDOBAUP = new QLabel(userInfoFrameAUP);
         showUserDOBAUP->setObjectName(QString::fromUtf8("showUserDOBAUP"));
-        showUserDOBAUP->setGeometry(QRect(120, 63, 111, 20));
+        showUserDOBAUP->setGeometry(QRect(120, 54, 91, 20));
         showUserDOBAUP->setFont(font2);
         showUserDOBAUP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 14px;\n"
@@ -822,7 +821,7 @@ public:
 ""));
         showUserPhoneAUP = new QLabel(userInfoFrameAUP);
         showUserPhoneAUP->setObjectName(QString::fromUtf8("showUserPhoneAUP"));
-        showUserPhoneAUP->setGeometry(QRect(240, 63, 121, 20));
+        showUserPhoneAUP->setGeometry(QRect(230, 54, 111, 20));
         showUserPhoneAUP->setFont(font2);
         showUserPhoneAUP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 14px;\n"
@@ -831,49 +830,38 @@ public:
 ""));
         showUserEmailAUP = new QLabel(userInfoFrameAUP);
         showUserEmailAUP->setObjectName(QString::fromUtf8("showUserEmailAUP"));
-        showUserEmailAUP->setGeometry(QRect(384, 63, 241, 20));
+        showUserEmailAUP->setGeometry(QRect(354, 54, 271, 20));
         showUserEmailAUP->setFont(font2);
         showUserEmailAUP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 14px;\n"
 "color:#2B528C;\n"
 "\n"
 ""));
-        showUserVaccStatusAUP = new QLabel(userInfoFrameAUP);
-        showUserVaccStatusAUP->setObjectName(QString::fromUtf8("showUserVaccStatusAUP"));
-        showUserVaccStatusAUP->setGeometry(QRect(480, 20, 141, 31));
-        showUserVaccStatusAUP->setStyleSheet(QString::fromUtf8("QLabel \n"
-"{background: #DFF1FE;\n"
-"border-radius: 15;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-" color:#2B528C;\n"
-"font-size: 12px; \n"
-"padding-left: 3px;}"));
-        showUserVaccStatusAUP->setAlignment(Qt::AlignCenter);
         labelVaccineAUP = new QLabel(userInfoFrameAUP);
         labelVaccineAUP->setObjectName(QString::fromUtf8("labelVaccineAUP"));
-        labelVaccineAUP->setGeometry(QRect(33, 351, 181, 31));
+        labelVaccineAUP->setGeometry(QRect(28, 225, 181, 20));
         QFont font6;
         font6.setFamily(QString::fromUtf8("Arial Rounded MT Bold"));
         font6.setBold(false);
         font6.setWeight(25);
         labelVaccineAUP->setFont(font6);
         labelVaccineAUP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 18px;\n"
+"font-size: 16px;\n"
 "color:#2B528C;\n"
 "background: rgba(254, 206, 103, 0.00);"));
         labelVaccineAUP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         labelDocumentationAUP = new QLabel(userInfoFrameAUP);
         labelDocumentationAUP->setObjectName(QString::fromUtf8("labelDocumentationAUP"));
-        labelDocumentationAUP->setGeometry(QRect(314, 350, 201, 31));
+        labelDocumentationAUP->setGeometry(QRect(314, 220, 201, 31));
         labelDocumentationAUP->setFont(font6);
         labelDocumentationAUP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 18px;\n"
+"font-size: 16px;\n"
 "color:#2B528C;\n"
 "background: rgba(254, 206, 103, 0.00);"));
         labelDocumentationAUP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         vaccineDose1FrameAUP = new QFrame(userInfoFrameAUP);
         vaccineDose1FrameAUP->setObjectName(QString::fromUtf8("vaccineDose1FrameAUP"));
-        vaccineDose1FrameAUP->setGeometry(QRect(20, 396, 271, 61));
+        vaccineDose1FrameAUP->setGeometry(QRect(20, 266, 271, 61));
         vaccineDose1FrameAUP->setStyleSheet(QString::fromUtf8("background: #DFF1FE;\n"
 "border-radius: 30px;"));
         vaccineDose1FrameAUP->setFrameShape(QFrame::StyledPanel);
@@ -896,7 +884,7 @@ public:
         show1stDoseNameAUP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         show1stDoseBatchAUP = new QLabel(vaccineDose1FrameAUP);
         show1stDoseBatchAUP->setObjectName(QString::fromUtf8("show1stDoseBatchAUP"));
-        show1stDoseBatchAUP->setGeometry(QRect(70, 30, 71, 20));
+        show1stDoseBatchAUP->setGeometry(QRect(70, 30, 101, 20));
         show1stDoseBatchAUP->setFont(font2);
         show1stDoseBatchAUP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 12px;\n"
@@ -905,7 +893,7 @@ public:
 ""));
         show1stDoseDateAUP = new QLabel(vaccineDose1FrameAUP);
         show1stDoseDateAUP->setObjectName(QString::fromUtf8("show1stDoseDateAUP"));
-        show1stDoseDateAUP->setGeometry(QRect(141, 30, 101, 20));
+        show1stDoseDateAUP->setGeometry(QRect(171, 30, 71, 20));
         show1stDoseDateAUP->setFont(font2);
         show1stDoseDateAUP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 12px;\n"
@@ -923,7 +911,7 @@ public:
         imgVaccineIcon1AUP->setAlignment(Qt::AlignCenter);
         vaccineDose2FrameAUP = new QFrame(userInfoFrameAUP);
         vaccineDose2FrameAUP->setObjectName(QString::fromUtf8("vaccineDose2FrameAUP"));
-        vaccineDose2FrameAUP->setGeometry(QRect(20, 466, 271, 61));
+        vaccineDose2FrameAUP->setGeometry(QRect(20, 346, 271, 61));
         vaccineDose2FrameAUP->setStyleSheet(QString::fromUtf8("background: #DFF1FE;\n"
 "border-radius: 30px;"));
         vaccineDose2FrameAUP->setFrameShape(QFrame::StyledPanel);
@@ -946,7 +934,7 @@ public:
         show2ndDoseNameAUP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         show2ndDoseBatchAUP = new QLabel(vaccineDose2FrameAUP);
         show2ndDoseBatchAUP->setObjectName(QString::fromUtf8("show2ndDoseBatchAUP"));
-        show2ndDoseBatchAUP->setGeometry(QRect(70, 30, 71, 20));
+        show2ndDoseBatchAUP->setGeometry(QRect(70, 30, 101, 20));
         show2ndDoseBatchAUP->setFont(font2);
         show2ndDoseBatchAUP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 12px;\n"
@@ -955,7 +943,7 @@ public:
 ""));
         show2ndDoseDateAUP = new QLabel(vaccineDose2FrameAUP);
         show2ndDoseDateAUP->setObjectName(QString::fromUtf8("show2ndDoseDateAUP"));
-        show2ndDoseDateAUP->setGeometry(QRect(141, 30, 101, 20));
+        show2ndDoseDateAUP->setGeometry(QRect(171, 30, 71, 20));
         show2ndDoseDateAUP->setFont(font2);
         show2ndDoseDateAUP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 12px;\n"
@@ -973,7 +961,7 @@ public:
         imgVaccineIcon2AUP->setAlignment(Qt::AlignCenter);
         pbEditUserAUP = new QPushButton(userInfoFrameAUP);
         pbEditUserAUP->setObjectName(QString::fromUtf8("pbEditUserAUP"));
-        pbEditUserAUP->setGeometry(QRect(438, 550, 181, 51));
+        pbEditUserAUP->setGeometry(QRect(438, 552, 181, 51));
         pbEditUserAUP->setFont(font);
         pbEditUserAUP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background: #2B528C;\n"
@@ -983,13 +971,11 @@ public:
 "border-color: rgba(104, 160, 229, 0.33);\n"
 "font-size: 16px; \n"
 "}\n"
-"QPushButton:hover\n"
-"{\n"
-"font-size: 18px;\n"
-"}"));
+"QPushButton:hover{\n"
+"background: rgba(104, 160, 229, 0.88);}"));
         labelConfidentialAUP = new QLabel(userInfoFrameAUP);
         labelConfidentialAUP->setObjectName(QString::fromUtf8("labelConfidentialAUP"));
-        labelConfidentialAUP->setGeometry(QRect(30, 560, 201, 21));
+        labelConfidentialAUP->setGeometry(QRect(30, 565, 201, 21));
         labelConfidentialAUP->setFont(font2);
         labelConfidentialAUP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 12px;\n"
@@ -998,7 +984,7 @@ public:
 ""));
         labelUnauthorisedAUP = new QLabel(userInfoFrameAUP);
         labelUnauthorisedAUP->setObjectName(QString::fromUtf8("labelUnauthorisedAUP"));
-        labelUnauthorisedAUP->setGeometry(QRect(30, 580, 381, 21));
+        labelUnauthorisedAUP->setGeometry(QRect(30, 582, 381, 21));
         labelUnauthorisedAUP->setFont(font2);
         labelUnauthorisedAUP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 12px;\n"
@@ -1007,7 +993,7 @@ public:
 ""));
         certificateFrameAUP = new QFrame(userInfoFrameAUP);
         certificateFrameAUP->setObjectName(QString::fromUtf8("certificateFrameAUP"));
-        certificateFrameAUP->setGeometry(QRect(423, 394, 91, 111));
+        certificateFrameAUP->setGeometry(QRect(423, 274, 91, 111));
         certificateFrameAUP->setFont(font3);
         certificateFrameAUP->setStyleSheet(QString::fromUtf8("background: #DFF1FE;\n"
 "border-radius: 45px;"));
@@ -1036,8 +1022,8 @@ public:
 "}"));
         labelCertificateAUP = new QLabel(userInfoFrameAUP);
         labelCertificateAUP->setObjectName(QString::fromUtf8("labelCertificateAUP"));
-        labelCertificateAUP->setGeometry(QRect(425, 510, 91, 20));
-        labelCertificateAUP->setFont(font2);
+        labelCertificateAUP->setGeometry(QRect(425, 390, 91, 20));
+        labelCertificateAUP->setFont(font6);
         labelCertificateAUP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 12px;\n"
 "color:#2B528C;\n"
@@ -1046,7 +1032,7 @@ public:
         labelCertificateAUP->setAlignment(Qt::AlignCenter);
         testResultFrameAUP = new QFrame(userInfoFrameAUP);
         testResultFrameAUP->setObjectName(QString::fromUtf8("testResultFrameAUP"));
-        testResultFrameAUP->setGeometry(QRect(314, 395, 91, 111));
+        testResultFrameAUP->setGeometry(QRect(314, 275, 91, 111));
         testResultFrameAUP->setFont(font3);
         testResultFrameAUP->setStyleSheet(QString::fromUtf8("background: #DFF1FE;\n"
 "border-radius: 45px;"));
@@ -1075,7 +1061,7 @@ public:
 "}"));
         QRCodeFrameAUP = new QFrame(userInfoFrameAUP);
         QRCodeFrameAUP->setObjectName(QString::fromUtf8("QRCodeFrameAUP"));
-        QRCodeFrameAUP->setGeometry(QRect(530, 394, 91, 111));
+        QRCodeFrameAUP->setGeometry(QRect(530, 274, 91, 111));
         QRCodeFrameAUP->setFont(font3);
         QRCodeFrameAUP->setStyleSheet(QString::fromUtf8("background: #DFF1FE;\n"
 "border-radius: 45px;"));
@@ -1104,8 +1090,8 @@ public:
 "}"));
         labelTestResultAUP = new QLabel(userInfoFrameAUP);
         labelTestResultAUP->setObjectName(QString::fromUtf8("labelTestResultAUP"));
-        labelTestResultAUP->setGeometry(QRect(314, 511, 91, 20));
-        labelTestResultAUP->setFont(font2);
+        labelTestResultAUP->setGeometry(QRect(314, 391, 91, 20));
+        labelTestResultAUP->setFont(font6);
         labelTestResultAUP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 12px;\n"
 "color:#2B528C;\n"
@@ -1114,8 +1100,8 @@ public:
         labelTestResultAUP->setAlignment(Qt::AlignCenter);
         labelQRCodeAUP = new QLabel(userInfoFrameAUP);
         labelQRCodeAUP->setObjectName(QString::fromUtf8("labelQRCodeAUP"));
-        labelQRCodeAUP->setGeometry(QRect(531, 510, 91, 20));
-        labelQRCodeAUP->setFont(font2);
+        labelQRCodeAUP->setGeometry(QRect(531, 390, 91, 20));
+        labelQRCodeAUP->setFont(font6);
         labelQRCodeAUP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 12px;\n"
 "color:#2B528C;\n"
@@ -1132,13 +1118,63 @@ public:
         userPictureFrameAUP->setFrameShadow(QFrame::Raised);
         labelClickEnlargeAUP = new QLabel(userInfoFrameAUP);
         labelClickEnlargeAUP->setObjectName(QString::fromUtf8("labelClickEnlargeAUP"));
-        labelClickEnlargeAUP->setGeometry(QRect(314, 374, 201, 21));
+        labelClickEnlargeAUP->setGeometry(QRect(314, 244, 201, 21));
         labelClickEnlargeAUP->setFont(font2);
         labelClickEnlargeAUP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 10px;\n"
 "color:#2B528C;\n"
 "\n"
 ""));
+        labelClickEditAP_3 = new QLabel(userInfoFrameAUP);
+        labelClickEditAP_3->setObjectName(QString::fromUtf8("labelClickEditAP_3"));
+        labelClickEditAP_3->setGeometry(QRect(29, 250, 261, 10));
+        labelClickEditAP_3->setFont(font2);
+        labelClickEditAP_3->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 10px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        showUserNotesAUP = new QLabel(userInfoFrameAUP);
+        showUserNotesAUP->setObjectName(QString::fromUtf8("showUserNotesAUP"));
+        showUserNotesAUP->setGeometry(QRect(20, 443, 601, 91));
+        showUserNotesAUP->setStyleSheet(QString::fromUtf8("QLabel \n"
+"{background: #DFF1FE;\n"
+"border-radius: 30;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+" color:#2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 12px;}"));
+        showUserNotesAUP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+        labelAdditionalNotesAUP = new QLabel(userInfoFrameAUP);
+        labelAdditionalNotesAUP->setObjectName(QString::fromUtf8("labelAdditionalNotesAUP"));
+        labelAdditionalNotesAUP->setGeometry(QRect(25, 420, 141, 20));
+        labelAdditionalNotesAUP->setFont(font6);
+        labelAdditionalNotesAUP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 16px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        labelAlertConfidentialAP_2 = new QLabel(userInfoFrameAUP);
+        labelAlertConfidentialAP_2->setObjectName(QString::fromUtf8("labelAlertConfidentialAP_2"));
+        labelAlertConfidentialAP_2->setGeometry(QRect(30, 548, 201, 21));
+        labelAlertConfidentialAP_2->setFont(font2);
+        labelAlertConfidentialAP_2->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+"\n"
+""));
+        showUserVaccStatusAUP = new QLabel(userInfoFrameAUP);
+        showUserVaccStatusAUP->setObjectName(QString::fromUtf8("showUserVaccStatusAUP"));
+        showUserVaccStatusAUP->setGeometry(QRect(451, 16, 171, 31));
+        showUserVaccStatusAUP->setStyleSheet(QString::fromUtf8("QLabel \n"
+"{background: #DFF1FE;\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+" color:#2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}"));
+        showUserVaccStatusAUP->setAlignment(Qt::AlignCenter);
         labelClickEnlargeAUP->raise();
         userPictureFrameAUP->raise();
         showUserNameAUP->raise();
@@ -1146,15 +1182,12 @@ public:
         showUserNHIAUP->raise();
         showUserEmergencyAUP->raise();
         labelEmergencyAUP->raise();
-        showUserNotesAUP->raise();
-        labelAdditionalNotesAUP->raise();
         showUserPictureAUP->raise();
         labelCVNAUP->raise();
         showUserCVNAUP->raise();
         showUserDOBAUP->raise();
         showUserPhoneAUP->raise();
         showUserEmailAUP->raise();
-        showUserVaccStatusAUP->raise();
         labelVaccineAUP->raise();
         labelDocumentationAUP->raise();
         vaccineDose1FrameAUP->raise();
@@ -1168,23 +1201,27 @@ public:
         QRCodeFrameAUP->raise();
         labelTestResultAUP->raise();
         labelQRCodeAUP->raise();
+        labelClickEditAP_3->raise();
+        showUserNotesAUP->raise();
+        labelAdditionalNotesAUP->raise();
+        labelAlertConfidentialAP_2->raise();
+        showUserVaccStatusAUP->raise();
         pbSearchAUP = new QPushButton(userHomeDisplayFrameAUP);
         pbSearchAUP->setObjectName(QString::fromUtf8("pbSearchAUP"));
         pbSearchAUP->setGeometry(QRect(730, 100, 131, 31));
         pbSearchAUP->setFont(font);
         pbSearchAUP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"color:#2B528C;\n"
-"background: #2B528C;\n"
+"color:  rgba(248, 251, 255, 0.99);\n"
 "font-weight: 500;\n"
 "border-radius: 15px;\n"
-"background: #C4DBF4;\n"
+"background: #2B528C;\n"
 "border-color: rgba(104, 160, 229, 0.00);\n"
-"font-size: 16px; \n"
+"font-size: 14px; \n"
 "}\n"
 "QPushButton:hover\n"
 "{\n"
-"background: rgba(196, 219, 244, 0.77);\n"
-"}"));
+"background: rgba(104, 160, 229, 0.88);}\n"
+""));
         labelSearchUserAUP = new QLineEdit(userHomeDisplayFrameAUP);
         labelSearchUserAUP->setObjectName(QString::fromUtf8("labelSearchUserAUP"));
         labelSearchUserAUP->setGeometry(QRect(20, 100, 701, 31));
@@ -1207,7 +1244,7 @@ public:
 "}"));
         listAllUsersAUP = new QListWidget(userHomeDisplayFrameAUP);
         listAllUsersAUP->setObjectName(QString::fromUtf8("listAllUsersAUP"));
-        listAllUsersAUP->setGeometry(QRect(20, 200, 181, 571));
+        listAllUsersAUP->setGeometry(QRect(20, 190, 181, 581));
         listAllUsersAUP->setStyleSheet(QString::fromUtf8("background: #F2F8FC;\n"
 "border-radius: 20px;\n"
 "font-weight: 200;\n"
@@ -1216,24 +1253,8 @@ public:
 "padding-left: 8px;\n"
 "padding-right: 8px;\n"
 "padding-top: 10px;\n"
+"padding-bottom: 80px;\n"
 ""));
-        pbQuickRemoveAUP = new QPushButton(userHomeDisplayFrameAUP);
-        pbQuickRemoveAUP->setObjectName(QString::fromUtf8("pbQuickRemoveAUP"));
-        pbQuickRemoveAUP->setGeometry(QRect(48, 711, 31, 31));
-        pbQuickRemoveAUP->setFont(font);
-        pbQuickRemoveAUP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"color:#2B528C;\n"
-"background: #2B528C;\n"
-"font-weight: 500;\n"
-"border-radius: 15px;\n"
-"background: #C4DBF4;\n"
-"border-color: rgba(104, 160, 229, 0.00);\n"
-"font-size: 23px; \n"
-"}\n"
-"QPushButton:hover\n"
-"{\n"
-"background: rgba(196, 219, 244, 0.77);\n"
-"}"));
         showUserNameAUP_2 = new QLabel(userHomeDisplayFrameAUP);
         showUserNameAUP_2->setObjectName(QString::fromUtf8("showUserNameAUP_2"));
         showUserNameAUP_2->setGeometry(QRect(20, 150, 331, 20));
@@ -1246,33 +1267,56 @@ public:
         showUserNameAUP_2->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         labelConfidentialAUP_2 = new QLabel(userHomeDisplayFrameAUP);
         labelConfidentialAUP_2->setObjectName(QString::fromUtf8("labelConfidentialAUP_2"));
-        labelConfidentialAUP_2->setGeometry(QRect(20, 170, 181, 30));
+        labelConfidentialAUP_2->setGeometry(QRect(20, 163, 181, 30));
         labelConfidentialAUP_2->setFont(font2);
         labelConfidentialAUP_2->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 12px;\n"
 "color:#2B528C;\n"
 "\n"
 ""));
-        labelConfidentialAUP_3 = new QLabel(userHomeDisplayFrameAUP);
-        labelConfidentialAUP_3->setObjectName(QString::fromUtf8("labelConfidentialAUP_3"));
-        labelConfidentialAUP_3->setGeometry(QRect(41, 743, 50, 20));
-        labelConfidentialAUP_3->setFont(font2);
-        labelConfidentialAUP_3->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 12px;\n"
+        frame_5 = new QFrame(userHomeDisplayFrameAUP);
+        frame_5->setObjectName(QString::fromUtf8("frame_5"));
+        frame_5->setGeometry(QRect(20, 690, 181, 81));
+        frame_5->setStyleSheet(QString::fromUtf8("background: #F2F8FC;\n"
+"border-radius: 20px;\n"
+""));
+        frame_5->setFrameShape(QFrame::StyledPanel);
+        frame_5->setFrameShadow(QFrame::Raised);
+        pbQuickRemoveAUP = new QPushButton(frame_5);
+        pbQuickRemoveAUP->setObjectName(QString::fromUtf8("pbQuickRemoveAUP"));
+        pbQuickRemoveAUP->setGeometry(QRect(18, 15, 141, 31));
+        pbQuickRemoveAUP->setFont(font);
+        pbQuickRemoveAUP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"color:  rgba(248, 251, 255, 0.99);\n"
+"font-weight: 500;\n"
+"border-radius: 15px;\n"
+"background: #2B528C;\n"
+"border-color: rgba(104, 160, 229, 0.00);\n"
+"font-size: 14px; \n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"background: rgba(104, 160, 229, 0.88);}\n"
+""));
+        labelConfidentialAUP_12 = new QLabel(frame_5);
+        labelConfidentialAUP_12->setObjectName(QString::fromUtf8("labelConfidentialAUP_12"));
+        labelConfidentialAUP_12->setGeometry(QRect(14, 50, 141, 16));
+        labelConfidentialAUP_12->setFont(font2);
+        labelConfidentialAUP_12->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 10px;\n"
 "color:#2B528C;\n"
-"background: #F2F8FC;\n"
 "\n"
 ""));
+        labelConfidentialAUP_12->setAlignment(Qt::AlignCenter);
+        listAllUsersAUP->raise();
         labelConfidentialAUP_2->raise();
         showUserNameAUP_2->raise();
-        listAllUsersAUP->raise();
         homeSubHeadingAUP->raise();
         homeTitleAUP->raise();
         userInfoFrameAUP->raise();
         pbSearchAUP->raise();
         labelSearchUserAUP->raise();
-        pbQuickRemoveAUP->raise();
-        labelConfidentialAUP_3->raise();
+        frame_5->raise();
         userHomeHelloBarAUP = new QFrame(adminAllUsersPage);
         userHomeHelloBarAUP->setObjectName(QString::fromUtf8("userHomeHelloBarAUP"));
         userHomeHelloBarAUP->setGeometry(QRect(0, 430, 211, 511));
@@ -1477,36 +1521,83 @@ public:
 "color:#2B528C;\n"
 "background: rgba(104, 160, 229, 0.00);\n"
 ""));
+        listAllUsersAP = new QListWidget(userHomeDisplayFrameAP);
+        listAllUsersAP->setObjectName(QString::fromUtf8("listAllUsersAP"));
+        listAllUsersAP->setGeometry(QRect(20, 150, 181, 621));
+        listAllUsersAP->setStyleSheet(QString::fromUtf8("background: #F2F8FC;\n"
+"border-radius: 20px;\n"
+"font-weight: 200;\n"
+"font-size: 14px;\n"
+"color: #2B528C;\n"
+"padding-left: 8px;\n"
+"padding-top: 10px;\n"
+"padding-right: 8px;\n"
+"padding-bottom: 80px;\n"
+"line-height: 3px;\n"
+""));
+        alerLevelUpdatesTitle_2 = new QLabel(userHomeDisplayFrameAP);
+        alerLevelUpdatesTitle_2->setObjectName(QString::fromUtf8("alerLevelUpdatesTitle_2"));
+        alerLevelUpdatesTitle_2->setGeometry(QRect(20, 103, 171, 31));
+        alerLevelUpdatesTitle_2->setFont(font5);
+        alerLevelUpdatesTitle_2->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
+"font-size: 18px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        labelSelectRP_2 = new QLabel(userHomeDisplayFrameAP);
+        labelSelectRP_2->setObjectName(QString::fromUtf8("labelSelectRP_2"));
+        labelSelectRP_2->setGeometry(QRect(22, 127, 181, 20));
+        labelSelectRP_2->setFont(font2);
+        labelSelectRP_2->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+"\n"
+""));
+        pbCancelAP = new QPushButton(userHomeDisplayFrameAP);
+        pbCancelAP->setObjectName(QString::fromUtf8("pbCancelAP"));
+        pbCancelAP->setGeometry(QRect(835, 109, 31, 31));
+        pbCancelAP->setFont(font6);
+        pbCancelAP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background: #2B528C;\n"
+"border-radius: 15px;\n"
+"font-weight: 200;\n"
+"font-size: 10px;\n"
+"color:  rgba(248, 251, 255, 0.99);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"}"));
         userInfoFrameAP = new QFrame(userHomeDisplayFrameAP);
         userInfoFrameAP->setObjectName(QString::fromUtf8("userInfoFrameAP"));
-        userInfoFrameAP->setGeometry(QRect(220, 150, 641, 621));
+        userInfoFrameAP->setGeometry(QRect(220, 110, 641, 661));
         userInfoFrameAP->setStyleSheet(QString::fromUtf8("background: #DFF1FE;\n"
 "border-radius: 40px;"));
         userInfoFrameAP->setFrameShape(QFrame::StyledPanel);
         userInfoFrameAP->setFrameShadow(QFrame::Raised);
-        labelNHIAP = new QLabel(userInfoFrameAP);
-        labelNHIAP->setObjectName(QString::fromUtf8("labelNHIAP"));
-        labelNHIAP->setGeometry(QRect(25, 103, 101, 20));
-        labelNHIAP->setFont(font2);
-        labelNHIAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 14px;\n"
+        labelNHIAP_7 = new QLabel(userInfoFrameAP);
+        labelNHIAP_7->setObjectName(QString::fromUtf8("labelNHIAP_7"));
+        labelNHIAP_7->setGeometry(QRect(25, 126, 101, 20));
+        labelNHIAP_7->setFont(font2);
+        labelNHIAP_7->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
 "color:#2B528C;\n"
 "background: rgba(254, 206, 103, 0.00);\n"
 ""));
         labelEmergencyAP = new QLabel(userInfoFrameAP);
         labelEmergencyAP->setObjectName(QString::fromUtf8("labelEmergencyAP"));
-        labelEmergencyAP->setGeometry(QRect(25, 162, 321, 20));
+        labelEmergencyAP->setGeometry(QRect(347, 178, 121, 20));
         labelEmergencyAP->setFont(font2);
         labelEmergencyAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 14px;\n"
+"font-size: 12px;\n"
 "color:#2B528C;\n"
 "background: rgba(254, 206, 103, 0.00);"));
         labelAdditionalNotesAP = new QLabel(userInfoFrameAP);
         labelAdditionalNotesAP->setObjectName(QString::fromUtf8("labelAdditionalNotesAP"));
-        labelAdditionalNotesAP->setGeometry(QRect(25, 223, 321, 20));
-        labelAdditionalNotesAP->setFont(font2);
+        labelAdditionalNotesAP->setGeometry(QRect(25, 443, 321, 20));
+        labelAdditionalNotesAP->setFont(font6);
         labelAdditionalNotesAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 14px;\n"
+"font-size: 16px;\n"
 "color:#2B528C;\n"
 "background: rgba(254, 206, 103, 0.00);"));
         addUserPictureAP = new QLabel(userInfoFrameAP);
@@ -1516,33 +1607,195 @@ public:
 "border-radius: 40px;"));
         labelCVNAP = new QLabel(userInfoFrameAP);
         labelCVNAP->setObjectName(QString::fromUtf8("labelCVNAP"));
-        labelCVNAP->setGeometry(QRect(335, 103, 281, 20));
+        labelCVNAP->setGeometry(QRect(345, 126, 271, 20));
         labelCVNAP->setFont(font2);
         labelCVNAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 14px;\n"
+"font-size: 12px;\n"
 "color:#2B528C;\n"
 "background: rgba(254, 206, 103, 0.00);"));
+        pbSaveAP = new QPushButton(userInfoFrameAP);
+        pbSaveAP->setObjectName(QString::fromUtf8("pbSaveAP"));
+        pbSaveAP->setGeometry(QRect(440, 589, 181, 51));
+        pbSaveAP->setFont(font);
+        pbSaveAP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background: #2B528C;\n"
+"font-weight: 500;\n"
+"border-radius: 25px;\n"
+"color:  rgba(248, 251, 255, 0.99);\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"font-size: 16px; \n"
+"}\n"
+"QPushButton:hover{\n"
+"background: rgba(104, 160, 229, 0.88);}"));
+        labelConfidentialAP = new QLabel(userInfoFrameAP);
+        labelConfidentialAP->setObjectName(QString::fromUtf8("labelConfidentialAP"));
+        labelConfidentialAP->setGeometry(QRect(30, 604, 201, 21));
+        labelConfidentialAP->setFont(font2);
+        labelConfidentialAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+"\n"
+""));
+        labelUnauthorisedAP = new QLabel(userInfoFrameAP);
+        labelUnauthorisedAP->setObjectName(QString::fromUtf8("labelUnauthorisedAP"));
+        labelUnauthorisedAP->setGeometry(QRect(30, 621, 381, 21));
+        labelUnauthorisedAP->setFont(font2);
+        labelUnauthorisedAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        addUserNHIAP = new QLineEdit(userInfoFrameAP);
+        addUserNHIAP->setObjectName(QString::fromUtf8("addUserNHIAP"));
+        addUserNHIAP->setGeometry(QRect(20, 146, 281, 31));
+        addUserNHIAP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
+"{background: rgba(104, 160, 229, 0.55);\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"color:#2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}"));
+        addUserEmergencyAP = new QLineEdit(userInfoFrameAP);
+        addUserEmergencyAP->setObjectName(QString::fromUtf8("addUserEmergencyAP"));
+        addUserEmergencyAP->setGeometry(QRect(340, 200, 281, 31));
+        addUserEmergencyAP->setFont(font1);
+        addUserEmergencyAP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
+"{background: #F8FBFF;\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"color: #2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}"));
+        addNotesAP = new QPlainTextEdit(userInfoFrameAP);
+        addNotesAP->setObjectName(QString::fromUtf8("addNotesAP"));
+        addNotesAP->setGeometry(QRect(20, 466, 601, 101));
+        addNotesAP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
+"border-radius: 30;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"color:#2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 12px;"));
+        addUserDOBAP = new QLineEdit(userInfoFrameAP);
+        addUserDOBAP->setObjectName(QString::fromUtf8("addUserDOBAP"));
+        addUserDOBAP->setGeometry(QRect(121, 90, 101, 31));
+        addUserDOBAP->setFont(font3);
+        addUserDOBAP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
+"{background: #F8FBFF;\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"color: #2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}"));
+        addUserPhoneAP = new QLineEdit(userInfoFrameAP);
+        addUserPhoneAP->setObjectName(QString::fromUtf8("addUserPhoneAP"));
+        addUserPhoneAP->setGeometry(QRect(232, 90, 101, 31));
+        addUserPhoneAP->setFont(font3);
+        addUserPhoneAP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
+"{background: #F8FBFF;\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"color: #2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}"));
+        pbAddUserPictureAP = new QPushButton(userInfoFrameAP);
+        pbAddUserPictureAP->setObjectName(QString::fromUtf8("pbAddUserPictureAP"));
+        pbAddUserPictureAP->setGeometry(QRect(30, 20, 61, 61));
+        pbAddUserPictureAP->setStyleSheet(QString::fromUtf8("QPushButton{background: #C4DBF4;\n"
+"border-radius: 30px;\n"
+"font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;}\n"
+"\n"
+"QPushButton:hover{\n"
+"background: rgba(104, 160, 229, 0.55);}"));
+        addUserNameAP = new QLineEdit(userInfoFrameAP);
+        addUserNameAP->setObjectName(QString::fromUtf8("addUserNameAP"));
+        addUserNameAP->setGeometry(QRect(120, 30, 501, 31));
+        addUserNameAP->setFont(font3);
+        addUserNameAP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
+"{background: #F8FBFF;\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"color: #2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}"));
+        pbChangeUserPictureAP = new QPushButton(userInfoFrameAP);
+        pbChangeUserPictureAP->setObjectName(QString::fromUtf8("pbChangeUserPictureAP"));
+        pbChangeUserPictureAP->setGeometry(QRect(21, 73, 81, 21));
+        pbChangeUserPictureAP->setStyleSheet(QString::fromUtf8("QPushButton{background: #C4DBF4;\n"
+"border-radius: 10px;\n"
+"font-weight: 200;\n"
+"font-size: 10px;\n"
+"color:#2B528C;}\n"
+"QPushButton:hover{\n"
+"background: rgba(104, 160, 229, 0.55);}"));
+        addUserCVNAP = new QLabel(userInfoFrameAP);
+        addUserCVNAP->setObjectName(QString::fromUtf8("addUserCVNAP"));
+        addUserCVNAP->setGeometry(QRect(340, 145, 281, 31));
+        addUserCVNAP->setStyleSheet(QString::fromUtf8("QLabel\n"
+"{background: rgba(104, 160, 229, 0.55);\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"color:#2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}"));
+        addUserEmailAP = new QLineEdit(userInfoFrameAP);
+        addUserEmailAP->setObjectName(QString::fromUtf8("addUserEmailAP"));
+        addUserEmailAP->setGeometry(QRect(342, 90, 281, 31));
+        addUserEmailAP->setFont(font3);
+        addUserEmailAP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
+"{background: #F8FBFF;\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"color: #2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}"));
+        addVaccStatusAP = new QComboBox(userInfoFrameAP);
+        addVaccStatusAP->addItem(QString());
+        addVaccStatusAP->addItem(QString());
+        addVaccStatusAP->addItem(QString());
+        addVaccStatusAP->addItem(QString());
+        addVaccStatusAP->setObjectName(QString::fromUtf8("addVaccStatusAP"));
+        addVaccStatusAP->setGeometry(QRect(21, 200, 281, 31));
+        addVaccStatusAP->setFont(font3);
+        addVaccStatusAP->setStyleSheet(QString::fromUtf8("QComboBox\n"
+"{background: #F8FBFF;\n"
+"border-radius: 15;\n"
+"color: #2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}\n"
+"\n"
+""));
+        labelVaccineStatusAP = new QLabel(userInfoFrameAP);
+        labelVaccineStatusAP->setObjectName(QString::fromUtf8("labelVaccineStatusAP"));
+        labelVaccineStatusAP->setGeometry(QRect(25, 178, 171, 20));
+        labelVaccineStatusAP->setFont(font2);
+        labelVaccineStatusAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);"));
+        labelClickEditAP = new QLabel(userInfoFrameAP);
+        labelClickEditAP->setObjectName(QString::fromUtf8("labelClickEditAP"));
+        labelClickEditAP->setGeometry(QRect(30, 264, 261, 21));
+        labelClickEditAP->setFont(font2);
+        labelClickEditAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 10px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
         labelVaccinesAP = new QLabel(userInfoFrameAP);
         labelVaccinesAP->setObjectName(QString::fromUtf8("labelVaccinesAP"));
-        labelVaccinesAP->setGeometry(QRect(26, 333, 181, 31));
+        labelVaccinesAP->setGeometry(QRect(28, 240, 181, 31));
         labelVaccinesAP->setFont(font6);
         labelVaccinesAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 18px;\n"
+"font-size: 16px;\n"
 "color:#2B528C;\n"
 "background: rgba(254, 206, 103, 0.00);"));
         labelVaccinesAP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
-        labelDocumentationAP = new QLabel(userInfoFrameAP);
-        labelDocumentationAP->setObjectName(QString::fromUtf8("labelDocumentationAP"));
-        labelDocumentationAP->setGeometry(QRect(319, 332, 211, 31));
-        labelDocumentationAP->setFont(font6);
-        labelDocumentationAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 18px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);"));
-        labelDocumentationAP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         vaccineDose1FrameAP = new QFrame(userInfoFrameAP);
         vaccineDose1FrameAP->setObjectName(QString::fromUtf8("vaccineDose1FrameAP"));
-        vaccineDose1FrameAP->setGeometry(QRect(20, 425, 271, 61));
+        vaccineDose1FrameAP->setGeometry(QRect(20, 291, 271, 61));
         vaccineDose1FrameAP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
 "border-radius: 30px;"));
         vaccineDose1FrameAP->setFrameShape(QFrame::StyledPanel);
@@ -1573,7 +1826,7 @@ public:
         add1stDoseNameAP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         add1stDoseBatchAP = new QLineEdit(vaccineDose1FrameAP);
         add1stDoseBatchAP->setObjectName(QString::fromUtf8("add1stDoseBatchAP"));
-        add1stDoseBatchAP->setGeometry(QRect(67, 27, 61, 24));
+        add1stDoseBatchAP->setGeometry(QRect(67, 27, 111, 24));
         add1stDoseBatchAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 12px;\n"
 "color:#2B528C;\n"
@@ -1588,152 +1841,9 @@ public:
 "\n"
 ""));
         add1stDoseDateAP->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        vaccineIcon1FrameAP->raise();
-        imgVaccineIcon1AP->raise();
-        add1stDoseBatchAP->raise();
-        add1stDoseDateAP->raise();
-        add1stDoseNameAP->raise();
-        pbSaveAP = new QPushButton(userInfoFrameAP);
-        pbSaveAP->setObjectName(QString::fromUtf8("pbSaveAP"));
-        pbSaveAP->setGeometry(QRect(443, 553, 181, 51));
-        pbSaveAP->setFont(font);
-        pbSaveAP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background: #2B528C;\n"
-"font-weight: 500;\n"
-"border-radius: 25px;\n"
-"color:  rgba(248, 251, 255, 0.99);\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"font-size: 16px; \n"
-"}\n"
-"QPushButton:hover\n"
-"{\n"
-"font-size: 18px;\n"
-"}"));
-        labelConfidentialAP = new QLabel(userInfoFrameAP);
-        labelConfidentialAP->setObjectName(QString::fromUtf8("labelConfidentialAP"));
-        labelConfidentialAP->setGeometry(QRect(30, 573, 201, 21));
-        labelConfidentialAP->setFont(font2);
-        labelConfidentialAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);\n"
-"\n"
-""));
-        labelUnauthorisedAP = new QLabel(userInfoFrameAP);
-        labelUnauthorisedAP->setObjectName(QString::fromUtf8("labelUnauthorisedAP"));
-        labelUnauthorisedAP->setGeometry(QRect(30, 590, 381, 21));
-        labelUnauthorisedAP->setFont(font2);
-        labelUnauthorisedAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);\n"
-""));
-        addUserNHIAP = new QLineEdit(userInfoFrameAP);
-        addUserNHIAP->setObjectName(QString::fromUtf8("addUserNHIAP"));
-        addUserNHIAP->setGeometry(QRect(20, 123, 271, 31));
-        addUserNHIAP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
-"{background: rgba(104, 160, 229, 0.55);\n"
-"border-radius: 15;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"color:#2B528C;\n"
-"font-size: 12px; \n"
-"padding-left: 3px;}"));
-        addUserCVNAP = new QLineEdit(userInfoFrameAP);
-        addUserCVNAP->setObjectName(QString::fromUtf8("addUserCVNAP"));
-        addUserCVNAP->setGeometry(QRect(330, 123, 291, 31));
-        addUserCVNAP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
-"{background: rgba(104, 160, 229, 0.55);\n"
-"border-radius: 15;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"color:#2B528C;\n"
-"font-size: 12px; \n"
-"padding-left: 3px;}"));
-        addUserEmergencyAP = new QLineEdit(userInfoFrameAP);
-        addUserEmergencyAP->setObjectName(QString::fromUtf8("addUserEmergencyAP"));
-        addUserEmergencyAP->setGeometry(QRect(20, 182, 601, 31));
-        addUserEmergencyAP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
-"{background: #F8FBFF;\n"
-"border-radius: 15;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"color: #2B528C;\n"
-"font-size: 12px; \n"
-"padding-left: 3px;}"));
-        addNotesAP = new QPlainTextEdit(userInfoFrameAP);
-        addNotesAP->setObjectName(QString::fromUtf8("addNotesAP"));
-        addNotesAP->setGeometry(QRect(20, 243, 601, 81));
-        addNotesAP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
-"border-radius: 20;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"color:#2B528C;\n"
-"font-size: 12px; \n"
-"padding-left: 5px;"));
-        addUserDOBAP = new QLineEdit(userInfoFrameAP);
-        addUserDOBAP->setObjectName(QString::fromUtf8("addUserDOBAP"));
-        addUserDOBAP->setGeometry(QRect(120, 60, 111, 31));
-        addUserDOBAP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
-"{background: #F8FBFF;\n"
-"border-radius: 15;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"color: #2B528C;\n"
-"font-size: 12px; \n"
-"padding-left: 3px;}"));
-        addUserPhoneAP = new QLineEdit(userInfoFrameAP);
-        addUserPhoneAP->setObjectName(QString::fromUtf8("addUserPhoneAP"));
-        addUserPhoneAP->setGeometry(QRect(241, 60, 131, 31));
-        addUserPhoneAP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
-"{background: #F8FBFF;\n"
-"border-radius: 15;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"color: #2B528C;\n"
-"font-size: 12px; \n"
-"padding-left: 3px;}"));
-        addUserEmailAP = new QLineEdit(userInfoFrameAP);
-        addUserEmailAP->setObjectName(QString::fromUtf8("addUserEmailAP"));
-        addUserEmailAP->setGeometry(QRect(380, 60, 241, 31));
-        addUserEmailAP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
-"{background: #F8FBFF;\n"
-"border-radius: 15;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"color: #2B528C;\n"
-"font-size: 12px; \n"
-"padding-left: 3px;}"));
-        labelTestResultsAP = new QLabel(userInfoFrameAP);
-        labelTestResultsAP->setObjectName(QString::fromUtf8("labelTestResultsAP"));
-        labelTestResultsAP->setGeometry(QRect(320, 507, 91, 20));
-        QFont font7;
-        font7.setFamily(QString::fromUtf8("Avenir Next"));
-        font7.setBold(true);
-        font7.setWeight(62);
-        labelTestResultsAP->setFont(font7);
-        labelTestResultsAP->setStyleSheet(QString::fromUtf8("font-weight: 500;\n"
-"font-size: 12px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);\n"
-""));
-        labelTestResultsAP->setAlignment(Qt::AlignCenter);
-        labelCertificateAP = new QLabel(userInfoFrameAP);
-        labelCertificateAP->setObjectName(QString::fromUtf8("labelCertificateAP"));
-        labelCertificateAP->setGeometry(QRect(430, 506, 91, 20));
-        labelCertificateAP->setFont(font7);
-        labelCertificateAP->setStyleSheet(QString::fromUtf8("font-weight: 500;\n"
-"font-size: 12px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);\n"
-""));
-        labelCertificateAP->setAlignment(Qt::AlignCenter);
-        labelQRCodeAP = new QLabel(userInfoFrameAP);
-        labelQRCodeAP->setObjectName(QString::fromUtf8("labelQRCodeAP"));
-        labelQRCodeAP->setGeometry(QRect(540, 506, 81, 20));
-        labelQRCodeAP->setFont(font7);
-        labelQRCodeAP->setStyleSheet(QString::fromUtf8("font-weight: 500;\n"
-"font-size: 12px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);\n"
-""));
-        labelQRCodeAP->setAlignment(Qt::AlignCenter);
         vaccineDose2FrameAP = new QFrame(userInfoFrameAP);
         vaccineDose2FrameAP->setObjectName(QString::fromUtf8("vaccineDose2FrameAP"));
-        vaccineDose2FrameAP->setGeometry(QRect(20, 495, 271, 61));
+        vaccineDose2FrameAP->setGeometry(QRect(20, 362, 271, 61));
         vaccineDose2FrameAP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
 "border-radius: 30px;"));
         vaccineDose2FrameAP->setFrameShape(QFrame::StyledPanel);
@@ -1764,7 +1874,7 @@ public:
         add2ndDoseNameAP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         add2ndDoseBatchAP = new QLineEdit(vaccineDose2FrameAP);
         add2ndDoseBatchAP->setObjectName(QString::fromUtf8("add2ndDoseBatchAP"));
-        add2ndDoseBatchAP->setGeometry(QRect(67, 30, 61, 24));
+        add2ndDoseBatchAP->setGeometry(QRect(67, 30, 111, 24));
         add2ndDoseBatchAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 12px;\n"
 "color:#2B528C;\n"
@@ -1779,245 +1889,269 @@ public:
 "\n"
 ""));
         add2ndDoseDateAP->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        labelQRCodeAP = new QLabel(userInfoFrameAP);
+        labelQRCodeAP->setObjectName(QString::fromUtf8("labelQRCodeAP"));
+        labelQRCodeAP->setGeometry(QRect(540, 410, 81, 20));
+        labelQRCodeAP->setFont(font);
+        labelQRCodeAP->setStyleSheet(QString::fromUtf8("font-weight: 500;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        labelQRCodeAP->setAlignment(Qt::AlignCenter);
+        pbAddQRCodeAP = new QPushButton(userInfoFrameAP);
+        pbAddQRCodeAP->setObjectName(QString::fromUtf8("pbAddQRCodeAP"));
+        pbAddQRCodeAP->setGeometry(QRect(540, 300, 71, 91));
+        pbAddQRCodeAP->setFont(font2);
+        pbAddQRCodeAP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background: #C4DBF4;\n"
+"border-radius: 35px;\n"
+"font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;}\n"
+"\n"
+"QPushButton:hover{\n"
+"background: rgba(104, 160, 229, 0.55);}"));
+        pbChangeTestResultsAP = new QPushButton(userInfoFrameAP);
+        pbChangeTestResultsAP->setObjectName(QString::fromUtf8("pbChangeTestResultsAP"));
+        pbChangeTestResultsAP->setGeometry(QRect(330, 385, 71, 21));
+        pbChangeTestResultsAP->setFont(font2);
+        pbChangeTestResultsAP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
+"border-radius: 10px;\n"
+"font-weight: 200;\n"
+"font-size: 10px;\n"
+"color:#2B528C;"));
+        pbAddCertificateAP = new QPushButton(userInfoFrameAP);
+        pbAddCertificateAP->setObjectName(QString::fromUtf8("pbAddCertificateAP"));
+        pbAddCertificateAP->setGeometry(QRect(435, 300, 71, 91));
+        pbAddCertificateAP->setFont(font2);
+        pbAddCertificateAP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background: #C4DBF4;\n"
+"border-radius: 35px;\n"
+"font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;}\n"
+"\n"
+"QPushButton:hover{\n"
+"background: rgba(104, 160, 229, 0.55);}"));
+        labelDocumentationAP = new QLabel(userInfoFrameAP);
+        labelDocumentationAP->setObjectName(QString::fromUtf8("labelDocumentationAP"));
+        labelDocumentationAP->setGeometry(QRect(320, 240, 211, 31));
+        labelDocumentationAP->setFont(font6);
+        labelDocumentationAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 16px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);"));
+        labelDocumentationAP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        addTestResultsAP = new QLabel(userInfoFrameAP);
+        addTestResultsAP->setObjectName(QString::fromUtf8("addTestResultsAP"));
+        addTestResultsAP->setGeometry(QRect(319, 291, 91, 111));
+        addTestResultsAP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
+"border-radius: 45;\n"
+""));
         labelClickUploadAP = new QLabel(userInfoFrameAP);
         labelClickUploadAP->setObjectName(QString::fromUtf8("labelClickUploadAP"));
-        labelClickUploadAP->setGeometry(QRect(319, 356, 221, 21));
+        labelClickUploadAP->setGeometry(QRect(320, 264, 221, 21));
         labelClickUploadAP->setFont(font2);
         labelClickUploadAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 10px;\n"
 "color:#2B528C;\n"
 "background: rgba(254, 206, 103, 0.00);\n"
 ""));
-        pbAddUserPictureAP = new QPushButton(userInfoFrameAP);
-        pbAddUserPictureAP->setObjectName(QString::fromUtf8("pbAddUserPictureAP"));
-        pbAddUserPictureAP->setGeometry(QRect(30, 20, 61, 61));
-        pbAddUserPictureAP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
-"border-radius: 30px;\n"
-"font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;"));
-        addUserNameAP = new QLineEdit(userInfoFrameAP);
-        addUserNameAP->setObjectName(QString::fromUtf8("addUserNameAP"));
-        addUserNameAP->setGeometry(QRect(120, 20, 451, 31));
-        addUserNameAP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
-"{background: #F8FBFF;\n"
-"border-radius: 15;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"color: #2B528C;\n"
-"font-size: 12px; \n"
-"padding-left: 3px;}"));
-        labelClickEditAP = new QLabel(userInfoFrameAP);
-        labelClickEditAP->setObjectName(QString::fromUtf8("labelClickEditAP"));
-        labelClickEditAP->setGeometry(QRect(28, 357, 171, 21));
-        labelClickEditAP->setFont(font2);
-        labelClickEditAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 10px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);\n"
-""));
-        addQRCodeAP = new QLabel(userInfoFrameAP);
-        addQRCodeAP->setObjectName(QString::fromUtf8("addQRCodeAP"));
-        addQRCodeAP->setGeometry(QRect(530, 390, 91, 111));
-        addQRCodeAP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
-"border-radius: 45;\n"
-""));
-        pbAddQRCodeAP = new QPushButton(userInfoFrameAP);
-        pbAddQRCodeAP->setObjectName(QString::fromUtf8("pbAddQRCodeAP"));
-        pbAddQRCodeAP->setGeometry(QRect(540, 400, 71, 91));
-        pbAddQRCodeAP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
-"border-radius: 35px;\n"
-"font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;"));
-        pbAddTestResultsAP = new QPushButton(userInfoFrameAP);
-        pbAddTestResultsAP->setObjectName(QString::fromUtf8("pbAddTestResultsAP"));
-        pbAddTestResultsAP->setGeometry(QRect(329, 401, 71, 91));
-        pbAddTestResultsAP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
-"border-radius: 35px;\n"
-"font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;"));
-        pbAddCertificateAP = new QPushButton(userInfoFrameAP);
-        pbAddCertificateAP->setObjectName(QString::fromUtf8("pbAddCertificateAP"));
-        pbAddCertificateAP->setGeometry(QRect(435, 400, 71, 91));
-        pbAddCertificateAP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
-"border-radius: 35px;\n"
-"font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;"));
         addCertificateAP = new QLabel(userInfoFrameAP);
         addCertificateAP->setObjectName(QString::fromUtf8("addCertificateAP"));
-        addCertificateAP->setGeometry(QRect(425, 390, 91, 111));
+        addCertificateAP->setGeometry(QRect(425, 290, 91, 111));
         addCertificateAP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
 "border-radius: 45;\n"
 ""));
-        addTestResultsAP = new QLabel(userInfoFrameAP);
-        addTestResultsAP->setObjectName(QString::fromUtf8("addTestResultsAP"));
-        addTestResultsAP->setGeometry(QRect(319, 391, 91, 111));
-        addTestResultsAP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
+        pbAddTestResultsAP = new QPushButton(userInfoFrameAP);
+        pbAddTestResultsAP->setObjectName(QString::fromUtf8("pbAddTestResultsAP"));
+        pbAddTestResultsAP->setGeometry(QRect(329, 301, 71, 91));
+        pbAddTestResultsAP->setFont(font2);
+        pbAddTestResultsAP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background: #C4DBF4;\n"
+"border-radius: 35px;\n"
+"font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;}\n"
+"\n"
+"QPushButton:hover{\n"
+"background: rgba(104, 160, 229, 0.55);}"));
+        addQRCodeAP = new QLabel(userInfoFrameAP);
+        addQRCodeAP->setObjectName(QString::fromUtf8("addQRCodeAP"));
+        addQRCodeAP->setGeometry(QRect(530, 290, 91, 111));
+        addQRCodeAP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
 "border-radius: 45;\n"
 ""));
         pbChangeQRCodeAP = new QPushButton(userInfoFrameAP);
         pbChangeQRCodeAP->setObjectName(QString::fromUtf8("pbChangeQRCodeAP"));
-        pbChangeQRCodeAP->setGeometry(QRect(532, 485, 91, 21));
+        pbChangeQRCodeAP->setGeometry(QRect(542, 385, 71, 21));
+        pbChangeQRCodeAP->setFont(font2);
         pbChangeQRCodeAP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
 "border-radius: 10px;\n"
 "font-weight: 200;\n"
 "font-size: 10px;\n"
 "color:#2B528C;"));
+        labelTestResultsAP = new QLabel(userInfoFrameAP);
+        labelTestResultsAP->setObjectName(QString::fromUtf8("labelTestResultsAP"));
+        labelTestResultsAP->setGeometry(QRect(320, 411, 91, 20));
+        labelTestResultsAP->setFont(font6);
+        labelTestResultsAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        labelTestResultsAP->setAlignment(Qt::AlignCenter);
+        labelCertificateAP = new QLabel(userInfoFrameAP);
+        labelCertificateAP->setObjectName(QString::fromUtf8("labelCertificateAP"));
+        labelCertificateAP->setGeometry(QRect(430, 411, 91, 20));
+        labelCertificateAP->setFont(font);
+        labelCertificateAP->setStyleSheet(QString::fromUtf8("font-weight: 500;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        labelCertificateAP->setAlignment(Qt::AlignCenter);
         pbChangeCertificateAP = new QPushButton(userInfoFrameAP);
         pbChangeCertificateAP->setObjectName(QString::fromUtf8("pbChangeCertificateAP"));
-        pbChangeCertificateAP->setGeometry(QRect(426, 485, 91, 21));
+        pbChangeCertificateAP->setGeometry(QRect(436, 385, 71, 21));
+        pbChangeCertificateAP->setFont(font2);
         pbChangeCertificateAP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
 "border-radius: 10px;\n"
 "font-weight: 200;\n"
 "font-size: 10px;\n"
 "color:#2B528C;"));
-        pbChangeTestResultsAP = new QPushButton(userInfoFrameAP);
-        pbChangeTestResultsAP->setObjectName(QString::fromUtf8("pbChangeTestResultsAP"));
-        pbChangeTestResultsAP->setGeometry(QRect(320, 485, 91, 21));
-        pbChangeTestResultsAP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
-"border-radius: 10px;\n"
-"font-weight: 200;\n"
-"font-size: 10px;\n"
-"color:#2B528C;"));
-        addVaccStatusAP = new QComboBox(userInfoFrameAP);
-        addVaccStatusAP->addItem(QString());
-        addVaccStatusAP->addItem(QString());
-        addVaccStatusAP->addItem(QString());
-        addVaccStatusAP->setObjectName(QString::fromUtf8("addVaccStatusAP"));
-        addVaccStatusAP->setGeometry(QRect(20, 384, 271, 31));
-        addVaccStatusAP->setStyleSheet(QString::fromUtf8("QComboBox\n"
-"{background: #F8FBFF;\n"
-"border-radius: 15;\n"
-"color: #2B528C;\n"
-"font-size: 12px; \n"
-"padding-left: 3px;}\n"
+        labelBirthdayAP = new QLabel(userInfoFrameAP);
+        labelBirthdayAP->setObjectName(QString::fromUtf8("labelBirthdayAP"));
+        labelBirthdayAP->setGeometry(QRect(125, 70, 101, 20));
+        labelBirthdayAP->setFont(font2);
+        labelBirthdayAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        labelNameAP = new QLabel(userInfoFrameAP);
+        labelNameAP->setObjectName(QString::fromUtf8("labelNameAP"));
+        labelNameAP->setGeometry(QRect(125, 10, 101, 20));
+        labelNameAP->setFont(font2);
+        labelNameAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        labelNumberAP = new QLabel(userInfoFrameAP);
+        labelNumberAP->setObjectName(QString::fromUtf8("labelNumberAP"));
+        labelNumberAP->setGeometry(QRect(235, 70, 101, 20));
+        labelNumberAP->setFont(font2);
+        labelNumberAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        labelEmailAP = new QLabel(userInfoFrameAP);
+        labelEmailAP->setObjectName(QString::fromUtf8("labelEmailAP"));
+        labelEmailAP->setGeometry(QRect(350, 69, 90, 20));
+        labelEmailAP->setFont(font2);
+        labelEmailAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        labelAlertConfidentialAP = new QLabel(userInfoFrameAP);
+        labelAlertConfidentialAP->setObjectName(QString::fromUtf8("labelAlertConfidentialAP"));
+        labelAlertConfidentialAP->setGeometry(QRect(30, 586, 201, 21));
+        labelAlertConfidentialAP->setFont(font2);
+        labelAlertConfidentialAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
 "\n"
 ""));
-        pbChangeUserPictureAP = new QPushButton(userInfoFrameAP);
-        pbChangeUserPictureAP->setObjectName(QString::fromUtf8("pbChangeUserPictureAP"));
-        pbChangeUserPictureAP->setGeometry(QRect(21, 73, 81, 21));
-        pbChangeUserPictureAP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
-"border-radius: 10px;\n"
-"font-weight: 200;\n"
-"font-size: 10px;\n"
-"color:#2B528C;"));
-        addTestResultsAP->raise();
-        vaccineDose2FrameAP->raise();
-        labelNHIAP->raise();
+        addQRCodeAP->raise();
+        addCertificateAP->raise();
+        labelNHIAP_7->raise();
         labelEmergencyAP->raise();
         labelAdditionalNotesAP->raise();
         addUserPictureAP->raise();
         labelCVNAP->raise();
-        labelVaccinesAP->raise();
-        labelDocumentationAP->raise();
-        vaccineDose1FrameAP->raise();
         pbSaveAP->raise();
         labelConfidentialAP->raise();
         labelUnauthorisedAP->raise();
         addUserNHIAP->raise();
-        addUserCVNAP->raise();
         addUserEmergencyAP->raise();
         addNotesAP->raise();
         addUserDOBAP->raise();
         addUserPhoneAP->raise();
+        pbAddUserPictureAP->raise();
+        addUserNameAP->raise();
+        pbChangeUserPictureAP->raise();
+        addUserCVNAP->raise();
         addUserEmailAP->raise();
+        addVaccStatusAP->raise();
+        labelVaccineStatusAP->raise();
+        labelClickEditAP->raise();
+        labelVaccinesAP->raise();
+        vaccineDose1FrameAP->raise();
+        vaccineDose2FrameAP->raise();
+        labelQRCodeAP->raise();
+        pbAddQRCodeAP->raise();
+        pbAddCertificateAP->raise();
+        labelDocumentationAP->raise();
+        addTestResultsAP->raise();
+        labelClickUploadAP->raise();
+        pbAddTestResultsAP->raise();
+        pbChangeQRCodeAP->raise();
         labelTestResultsAP->raise();
         labelCertificateAP->raise();
-        labelQRCodeAP->raise();
-        labelClickUploadAP->raise();
-        addUserNameAP->raise();
-        labelClickEditAP->raise();
-        addQRCodeAP->raise();
-        addCertificateAP->raise();
-        pbChangeQRCodeAP->raise();
         pbChangeCertificateAP->raise();
+        labelBirthdayAP->raise();
+        labelNameAP->raise();
+        labelNumberAP->raise();
+        labelEmailAP->raise();
+        labelAlertConfidentialAP->raise();
         pbChangeTestResultsAP->raise();
-        pbAddTestResultsAP->raise();
-        pbAddCertificateAP->raise();
-        pbAddQRCodeAP->raise();
-        addVaccStatusAP->raise();
-        pbChangeUserPictureAP->raise();
-        pbAddUserPictureAP->raise();
-        listAllUsersAP = new QListWidget(userHomeDisplayFrameAP);
-        listAllUsersAP->setObjectName(QString::fromUtf8("listAllUsersAP"));
-        listAllUsersAP->setGeometry(QRect(20, 150, 181, 621));
-        listAllUsersAP->setStyleSheet(QString::fromUtf8("background: #F2F8FC;\n"
+        frame_4 = new QFrame(userHomeDisplayFrameAP);
+        frame_4->setObjectName(QString::fromUtf8("frame_4"));
+        frame_4->setGeometry(QRect(20, 690, 181, 81));
+        frame_4->setStyleSheet(QString::fromUtf8("background: #F2F8FC;\n"
 "border-radius: 20px;\n"
-"font-weight: 200;\n"
-"font-size: 14px;\n"
-"color: #2B528C;\n"
-"padding-left: 8px;\n"
-"padding-top: 10px;\n"
-"padding-right: 8px;\n"
-"line-height: 3px;\n"
 ""));
-        alerLevelUpdatesTitle_2 = new QLabel(userHomeDisplayFrameAP);
-        alerLevelUpdatesTitle_2->setObjectName(QString::fromUtf8("alerLevelUpdatesTitle_2"));
-        alerLevelUpdatesTitle_2->setGeometry(QRect(20, 103, 171, 31));
-        alerLevelUpdatesTitle_2->setFont(font4);
-        alerLevelUpdatesTitle_2->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
-"font-size: 18px;\n"
-"color:#2B528C;\n"
-"\n"
+        frame_4->setFrameShape(QFrame::StyledPanel);
+        frame_4->setFrameShadow(QFrame::Raised);
+        pbQuickRemoveAP = new QPushButton(frame_4);
+        pbQuickRemoveAP->setObjectName(QString::fromUtf8("pbQuickRemoveAP"));
+        pbQuickRemoveAP->setGeometry(QRect(18, 15, 141, 31));
+        pbQuickRemoveAP->setFont(font);
+        pbQuickRemoveAP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"color:  rgba(248, 251, 255, 0.99);\n"
+"font-weight: 500;\n"
+"border-radius: 15px;\n"
+"background: #2B528C;\n"
+"border-color: rgba(104, 160, 229, 0.00);\n"
+"font-size: 14px; \n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"background: rgba(104, 160, 229, 0.88);}\n"
 ""));
-        alerLevelUpdatesTitle_3 = new QLabel(userHomeDisplayFrameAP);
-        alerLevelUpdatesTitle_3->setObjectName(QString::fromUtf8("alerLevelUpdatesTitle_3"));
-        alerLevelUpdatesTitle_3->setGeometry(QRect(221, 103, 431, 31));
-        alerLevelUpdatesTitle_3->setFont(font4);
-        alerLevelUpdatesTitle_3->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
-"font-size: 18px;\n"
-"color:#2B528C;\n"
-"\n"
-""));
-        labelSelectRP_2 = new QLabel(userHomeDisplayFrameAP);
-        labelSelectRP_2->setObjectName(QString::fromUtf8("labelSelectRP_2"));
-        labelSelectRP_2->setGeometry(QRect(20, 130, 261, 20));
-        labelSelectRP_2->setFont(font2);
-        labelSelectRP_2->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);\n"
-"\n"
-""));
-        labelSelectRP_3 = new QLabel(userHomeDisplayFrameAP);
-        labelSelectRP_3->setObjectName(QString::fromUtf8("labelSelectRP_3"));
-        labelSelectRP_3->setGeometry(QRect(220, 130, 261, 20));
-        labelSelectRP_3->setFont(font2);
-        labelSelectRP_3->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);\n"
-"\n"
-""));
-        labelCancelAP = new QLabel(userHomeDisplayFrameAP);
-        labelCancelAP->setObjectName(QString::fromUtf8("labelCancelAP"));
-        labelCancelAP->setGeometry(QRect(824, 188, 31, 21));
-        labelCancelAP->setFont(font2);
-        labelCancelAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+        labelDeleteAP = new QLabel(frame_4);
+        labelDeleteAP->setObjectName(QString::fromUtf8("labelDeleteAP"));
+        labelDeleteAP->setGeometry(QRect(14, 50, 141, 16));
+        labelDeleteAP->setFont(font2);
+        labelDeleteAP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 10px;\n"
 "color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);\n"
+"\n"
 ""));
-        pbCancelAP = new QPushButton(userHomeDisplayFrameAP);
-        pbCancelAP->setObjectName(QString::fromUtf8("pbCancelAP"));
-        pbCancelAP->setGeometry(QRect(820, 150, 41, 41));
-        pbCancelAP->setStyleSheet(QString::fromUtf8("background: rgba(104, 160, 229, 0.55);\n"
-"border-radius: 20px;\n"
-"font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;"));
+        labelDeleteAP->setAlignment(Qt::AlignCenter);
+        listAllUsersAP->raise();
+        userInfoFrameAP->raise();
         alerLevelUpdatesTitle_2->raise();
-        alerLevelUpdatesTitle_3->raise();
         homeSubHeadingAP->raise();
         homeTitleAP->raise();
-        userInfoFrameAP->raise();
-        listAllUsersAP->raise();
         labelSelectRP_2->raise();
-        labelSelectRP_3->raise();
-        labelCancelAP->raise();
         pbCancelAP->raise();
+        frame_4->raise();
         stackedWidget->addWidget(adminAddUserPage);
         userHomeWhiteBackgroundAP->raise();
         userProfileBlueMenuBarAP->raise();
@@ -2330,24 +2464,24 @@ public:
 "padding-left: 8px;\n"
 "padding-top: 10px;\n"
 "padding-right: 8px;\n"
+"padding-bottom: 80px;\n"
 ""));
         pbSearchCategoryRP = new QPushButton(userHomeDisplayFrameRP);
         pbSearchCategoryRP->setObjectName(QString::fromUtf8("pbSearchCategoryRP"));
         pbSearchCategoryRP->setGeometry(QRect(730, 105, 121, 31));
         pbSearchCategoryRP->setFont(font);
         pbSearchCategoryRP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"color:#2B528C;\n"
-"background: #2B528C;\n"
+"color:  rgba(248, 251, 255, 0.99);\n"
 "font-weight: 500;\n"
 "border-radius: 15px;\n"
-"background: #C4DBF4;\n"
+"background: #2B528C;\n"
 "border-color: rgba(104, 160, 229, 0.00);\n"
-"font-size: 18px; \n"
+"font-size: 14px; \n"
 "}\n"
 "QPushButton:hover\n"
 "{\n"
-"background: rgba(196, 219, 244, 0.77);\n"
-"}"));
+"background: rgba(104, 160, 229, 0.88);}\n"
+""));
         cbReportCategoryRP = new QComboBox(userHomeDisplayFrameRP);
         cbReportCategoryRP->addItem(QString());
         cbReportCategoryRP->addItem(QString());
@@ -2365,6 +2499,40 @@ public:
 "padding-left: 3px;}\n"
 "\n"
 ""));
+        frame_6 = new QFrame(userHomeDisplayFrameRP);
+        frame_6->setObjectName(QString::fromUtf8("frame_6"));
+        frame_6->setGeometry(QRect(20, 670, 261, 101));
+        frame_6->setStyleSheet(QString::fromUtf8("background: #F2F8FC;\n"
+"border-radius: 20px;\n"
+""));
+        frame_6->setFrameShape(QFrame::StyledPanel);
+        frame_6->setFrameShadow(QFrame::Raised);
+        pbQuickRemoveRP = new QPushButton(frame_6);
+        pbQuickRemoveRP->setObjectName(QString::fromUtf8("pbQuickRemoveRP"));
+        pbQuickRemoveRP->setGeometry(QRect(20, 30, 221, 31));
+        pbQuickRemoveRP->setFont(font);
+        pbQuickRemoveRP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"color:  rgba(248, 251, 255, 0.99);\n"
+"font-weight: 500;\n"
+"border-radius: 15px;\n"
+"background: #2B528C;\n"
+"border-color: rgba(104, 160, 229, 0.00);\n"
+"font-size: 14px; \n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"background: rgba(104, 160, 229, 0.88);}\n"
+""));
+        labelDeleteRP = new QLabel(frame_6);
+        labelDeleteRP->setObjectName(QString::fromUtf8("labelDeleteRP"));
+        labelDeleteRP->setGeometry(QRect(56, 65, 141, 16));
+        labelDeleteRP->setFont(font2);
+        labelDeleteRP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 10px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        labelDeleteRP->setAlignment(Qt::AlignCenter);
         userMedicalFrameRP->raise();
         homeSubHeadingRP->raise();
         homeTitleRP->raise();
@@ -2374,6 +2542,7 @@ public:
         listAllReportsRP->raise();
         pbSearchCategoryRP->raise();
         cbReportCategoryRP->raise();
+        frame_6->raise();
         stackedWidget->addWidget(adminReportsPage);
         adminEditUserPage = new QWidget();
         adminEditUserPage->setObjectName(QString::fromUtf8("adminEditUserPage"));
@@ -2523,515 +2692,6 @@ public:
 "color:#2B528C;\n"
 "background: rgba(104, 160, 229, 0.00);\n"
 ""));
-        userInfoFrameEP = new QFrame(userHomeDisplayFrameEP);
-        userInfoFrameEP->setObjectName(QString::fromUtf8("userInfoFrameEP"));
-        userInfoFrameEP->setGeometry(QRect(220, 150, 641, 621));
-        userInfoFrameEP->setStyleSheet(QString::fromUtf8("background: rgba(254, 206, 103, 0.55);\n"
-"border-radius: 50px;"));
-        userInfoFrameEP->setFrameShape(QFrame::StyledPanel);
-        userInfoFrameEP->setFrameShadow(QFrame::Raised);
-        labelNHIEP = new QLabel(userInfoFrameEP);
-        labelNHIEP->setObjectName(QString::fromUtf8("labelNHIEP"));
-        labelNHIEP->setGeometry(QRect(25, 110, 101, 20));
-        labelNHIEP->setFont(font2);
-        labelNHIEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 14px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);\n"
-""));
-        labelEmergencyEP = new QLabel(userInfoFrameEP);
-        labelEmergencyEP->setObjectName(QString::fromUtf8("labelEmergencyEP"));
-        labelEmergencyEP->setGeometry(QRect(25, 170, 321, 20));
-        labelEmergencyEP->setFont(font2);
-        labelEmergencyEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 14px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);"));
-        labelAdditionalNotesEP = new QLabel(userInfoFrameEP);
-        labelAdditionalNotesEP->setObjectName(QString::fromUtf8("labelAdditionalNotesEP"));
-        labelAdditionalNotesEP->setGeometry(QRect(25, 230, 321, 20));
-        labelAdditionalNotesEP->setFont(font2);
-        labelAdditionalNotesEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 14px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);"));
-        editUserPictureEP = new QLabel(userInfoFrameEP);
-        editUserPictureEP->setObjectName(QString::fromUtf8("editUserPictureEP"));
-        editUserPictureEP->setGeometry(QRect(20, 10, 81, 81));
-        editUserPictureEP->setStyleSheet(QString::fromUtf8("background: rgba(248, 251, 255, 0.99);\n"
-"border-radius: 40px;"));
-        labelCVNEP = new QLabel(userInfoFrameEP);
-        labelCVNEP->setObjectName(QString::fromUtf8("labelCVNEP"));
-        labelCVNEP->setGeometry(QRect(335, 110, 281, 20));
-        labelCVNEP->setFont(font2);
-        labelCVNEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 14px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);"));
-        labelVaccineEP = new QLabel(userInfoFrameEP);
-        labelVaccineEP->setObjectName(QString::fromUtf8("labelVaccineEP"));
-        labelVaccineEP->setGeometry(QRect(33, 337, 181, 31));
-        labelVaccineEP->setFont(font6);
-        labelVaccineEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 18px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);"));
-        labelVaccineEP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
-        labelDocumentationEP = new QLabel(userInfoFrameEP);
-        labelDocumentationEP->setObjectName(QString::fromUtf8("labelDocumentationEP"));
-        labelDocumentationEP->setGeometry(QRect(314, 336, 211, 31));
-        labelDocumentationEP->setFont(font6);
-        labelDocumentationEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 18px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);"));
-        labelDocumentationEP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
-        pbSaveEditEP = new QPushButton(userInfoFrameEP);
-        pbSaveEditEP->setObjectName(QString::fromUtf8("pbSaveEditEP"));
-        pbSaveEditEP->setGeometry(QRect(438, 550, 181, 51));
-        pbSaveEditEP->setFont(font);
-        pbSaveEditEP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background: rgba(254, 206, 103, 0.88);\n"
-"font-weight: 500;\n"
-"border-radius: 25px;\n"
-"color:  #2B528C;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"font-size: 16px; \n"
-"}\n"
-"QPushButton:hover\n"
-"{\n"
-"font-size: 18px;\n"
-"}"));
-        labelConfidentialEP = new QLabel(userInfoFrameEP);
-        labelConfidentialEP->setObjectName(QString::fromUtf8("labelConfidentialEP"));
-        labelConfidentialEP->setGeometry(QRect(30, 564, 201, 21));
-        labelConfidentialEP->setFont(font2);
-        labelConfidentialEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);\n"
-"\n"
-""));
-        labelUnauthorisedEP = new QLabel(userInfoFrameEP);
-        labelUnauthorisedEP->setObjectName(QString::fromUtf8("labelUnauthorisedEP"));
-        labelUnauthorisedEP->setGeometry(QRect(30, 580, 381, 21));
-        labelUnauthorisedEP->setFont(font2);
-        labelUnauthorisedEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 10px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);\n"
-""));
-        editUserCVNEP = new QLineEdit(userInfoFrameEP);
-        editUserCVNEP->setObjectName(QString::fromUtf8("editUserCVNEP"));
-        editUserCVNEP->setGeometry(QRect(330, 130, 291, 31));
-        editUserCVNEP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
-"{background: #F8FBFF;\n"
-"border-radius: 15;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"color: #2B528C;\n"
-"font-size: 12px; \n"
-"padding-left: 3px;}"));
-        editUserEmergencyEP = new QLineEdit(userInfoFrameEP);
-        editUserEmergencyEP->setObjectName(QString::fromUtf8("editUserEmergencyEP"));
-        editUserEmergencyEP->setGeometry(QRect(20, 190, 601, 31));
-        editUserEmergencyEP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
-"{background: #F8FBFF;\n"
-"border-radius: 15;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"color: #2B528C;\n"
-"font-size: 12px; \n"
-"padding-left: 3px;}"));
-        editUserNotesEP = new QPlainTextEdit(userInfoFrameEP);
-        editUserNotesEP->setObjectName(QString::fromUtf8("editUserNotesEP"));
-        editUserNotesEP->setGeometry(QRect(20, 250, 601, 81));
-        editUserNotesEP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
-"border-radius: 20;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"color:#2B528C;\n"
-"font-size: 15px; \n"
-"padding-left: 5px;"));
-        editUserNotesEP->setFrameShape(QFrame::NoFrame);
-        editUserNotesEP->setTabChangesFocus(true);
-        editUserDOBEP = new QLineEdit(userInfoFrameEP);
-        editUserDOBEP->setObjectName(QString::fromUtf8("editUserDOBEP"));
-        editUserDOBEP->setGeometry(QRect(120, 60, 111, 31));
-        editUserDOBEP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
-"{background: #F8FBFF;\n"
-"border-radius: 15;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"color: #2B528C;\n"
-"font-size: 12px; \n"
-"padding-left: 3px;}"));
-        editUserPhoneEP = new QLineEdit(userInfoFrameEP);
-        editUserPhoneEP->setObjectName(QString::fromUtf8("editUserPhoneEP"));
-        editUserPhoneEP->setGeometry(QRect(240, 60, 131, 31));
-        editUserPhoneEP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
-"{background: #F8FBFF;\n"
-"border-radius: 15;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"color: #2B528C;\n"
-"font-size: 12px; \n"
-"padding-left: 3px;}"));
-        editUserEmailEP = new QLineEdit(userInfoFrameEP);
-        editUserEmailEP->setObjectName(QString::fromUtf8("editUserEmailEP"));
-        editUserEmailEP->setGeometry(QRect(380, 60, 241, 31));
-        editUserEmailEP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
-"{background: #F8FBFF;\n"
-"border-radius: 15;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"color: #2B528C;\n"
-"font-size: 12px; \n"
-"padding-left: 3px;}"));
-        labelTestResultsEP = new QLabel(userInfoFrameEP);
-        labelTestResultsEP->setObjectName(QString::fromUtf8("labelTestResultsEP"));
-        labelTestResultsEP->setGeometry(QRect(320, 512, 81, 20));
-        labelTestResultsEP->setFont(font7);
-        labelTestResultsEP->setStyleSheet(QString::fromUtf8("font-weight: 500;\n"
-"font-size: 12px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);\n"
-""));
-        labelTestResultsEP->setAlignment(Qt::AlignCenter);
-        labelCertificateEP = new QLabel(userInfoFrameEP);
-        labelCertificateEP->setObjectName(QString::fromUtf8("labelCertificateEP"));
-        labelCertificateEP->setGeometry(QRect(429, 511, 81, 20));
-        labelCertificateEP->setFont(font7);
-        labelCertificateEP->setStyleSheet(QString::fromUtf8("font-weight: 500;\n"
-"font-size: 12px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);\n"
-""));
-        labelCertificateEP->setAlignment(Qt::AlignCenter);
-        labeQRCodeEP = new QLabel(userInfoFrameEP);
-        labeQRCodeEP->setObjectName(QString::fromUtf8("labeQRCodeEP"));
-        labeQRCodeEP->setGeometry(QRect(529, 511, 91, 20));
-        labeQRCodeEP->setFont(font7);
-        labeQRCodeEP->setStyleSheet(QString::fromUtf8("font-weight: 500;\n"
-"font-size: 12px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);\n"
-""));
-        labeQRCodeEP->setAlignment(Qt::AlignCenter);
-        vaccineDose2FrameEP = new QFrame(userInfoFrameEP);
-        vaccineDose2FrameEP->setObjectName(QString::fromUtf8("vaccineDose2FrameEP"));
-        vaccineDose2FrameEP->setGeometry(QRect(20, 490, 271, 61));
-        vaccineDose2FrameEP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
-"border-radius: 30px;"));
-        vaccineDose2FrameEP->setFrameShape(QFrame::StyledPanel);
-        vaccineDose2FrameEP->setFrameShadow(QFrame::Raised);
-        vaccineIcon2FrameEP = new QLabel(vaccineDose2FrameEP);
-        vaccineIcon2FrameEP->setObjectName(QString::fromUtf8("vaccineIcon2FrameEP"));
-        vaccineIcon2FrameEP->setGeometry(QRect(5, 5, 51, 51));
-        vaccineIcon2FrameEP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
-"border-radius: 25px;"));
-        vaccineIcon2FrameEP->setAlignment(Qt::AlignCenter);
-        imgVaccineIcon2EP = new QLabel(vaccineDose2FrameEP);
-        imgVaccineIcon2EP->setObjectName(QString::fromUtf8("imgVaccineIcon2EP"));
-        imgVaccineIcon2EP->setGeometry(QRect(19, 15, 21, 31));
-        imgVaccineIcon2EP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
-"border-radius: 20px;"));
-        imgVaccineIcon2EP->setPixmap(QPixmap(QString::fromUtf8(":/res/images/iconVaccine.png")));
-        imgVaccineIcon2EP->setScaledContents(true);
-        imgVaccineIcon2EP->setAlignment(Qt::AlignCenter);
-        edit2ndDoseNameEP = new QLineEdit(vaccineDose2FrameEP);
-        edit2ndDoseNameEP->setObjectName(QString::fromUtf8("edit2ndDoseNameEP"));
-        edit2ndDoseNameEP->setGeometry(QRect(66, 8, 191, 24));
-        edit2ndDoseNameEP->setFont(font5);
-        edit2ndDoseNameEP->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
-"font-size: 14px;\n"
-"color:#2B528C;\n"
-"\n"
-""));
-        edit2ndDoseBatchEP = new QLineEdit(vaccineDose2FrameEP);
-        edit2ndDoseBatchEP->setObjectName(QString::fromUtf8("edit2ndDoseBatchEP"));
-        edit2ndDoseBatchEP->setGeometry(QRect(67, 27, 61, 24));
-        edit2ndDoseBatchEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;\n"
-"\n"
-""));
-        edit2ndDoseDateEP = new QLineEdit(vaccineDose2FrameEP);
-        edit2ndDoseDateEP->setObjectName(QString::fromUtf8("edit2ndDoseDateEP"));
-        edit2ndDoseDateEP->setGeometry(QRect(160, 30, 91, 20));
-        edit2ndDoseDateEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;\n"
-"\n"
-""));
-        edit2ndDoseDateEP->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        vaccineDose1FrameEP = new QFrame(userInfoFrameEP);
-        vaccineDose1FrameEP->setObjectName(QString::fromUtf8("vaccineDose1FrameEP"));
-        vaccineDose1FrameEP->setGeometry(QRect(20, 420, 271, 61));
-        vaccineDose1FrameEP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
-"border-radius: 30px;"));
-        vaccineDose1FrameEP->setFrameShape(QFrame::StyledPanel);
-        vaccineDose1FrameEP->setFrameShadow(QFrame::Raised);
-        vaccineIcon1FrameEP = new QLabel(vaccineDose1FrameEP);
-        vaccineIcon1FrameEP->setObjectName(QString::fromUtf8("vaccineIcon1FrameEP"));
-        vaccineIcon1FrameEP->setGeometry(QRect(5, 5, 51, 51));
-        vaccineIcon1FrameEP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
-"border-radius: 25px;"));
-        vaccineIcon1FrameEP->setAlignment(Qt::AlignCenter);
-        imgVaccineIcon1EP = new QLabel(vaccineDose1FrameEP);
-        imgVaccineIcon1EP->setObjectName(QString::fromUtf8("imgVaccineIcon1EP"));
-        imgVaccineIcon1EP->setGeometry(QRect(19, 15, 21, 31));
-        imgVaccineIcon1EP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
-"border-radius: 20px;"));
-        imgVaccineIcon1EP->setPixmap(QPixmap(QString::fromUtf8(":/res/images/iconVaccine.png")));
-        imgVaccineIcon1EP->setScaledContents(true);
-        imgVaccineIcon1EP->setAlignment(Qt::AlignCenter);
-        edit1stDoseNameEP = new QLineEdit(vaccineDose1FrameEP);
-        edit1stDoseNameEP->setObjectName(QString::fromUtf8("edit1stDoseNameEP"));
-        edit1stDoseNameEP->setGeometry(QRect(66, 10, 181, 24));
-        edit1stDoseNameEP->setFont(font5);
-        edit1stDoseNameEP->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
-"font-size: 14px;\n"
-"color:#2B528C;\n"
-"\n"
-""));
-        edit1stDoseBatchEP = new QLineEdit(vaccineDose1FrameEP);
-        edit1stDoseBatchEP->setObjectName(QString::fromUtf8("edit1stDoseBatchEP"));
-        edit1stDoseBatchEP->setGeometry(QRect(67, 30, 91, 24));
-        edit1stDoseBatchEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;\n"
-"\n"
-""));
-        edit1stDoseDateEP = new QLineEdit(vaccineDose1FrameEP);
-        edit1stDoseDateEP->setObjectName(QString::fromUtf8("edit1stDoseDateEP"));
-        edit1stDoseDateEP->setGeometry(QRect(150, 30, 101, 20));
-        edit1stDoseDateEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;\n"
-"\n"
-""));
-        edit1stDoseDateEP->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        labelClickChangeEP = new QLabel(userInfoFrameEP);
-        labelClickChangeEP->setObjectName(QString::fromUtf8("labelClickChangeEP"));
-        labelClickChangeEP->setGeometry(QRect(315, 360, 221, 21));
-        labelClickChangeEP->setFont(font2);
-        labelClickChangeEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 10px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);\n"
-""));
-        pbEditUserPictureEP = new QPushButton(userInfoFrameEP);
-        pbEditUserPictureEP->setObjectName(QString::fromUtf8("pbEditUserPictureEP"));
-        pbEditUserPictureEP->setGeometry(QRect(30, 20, 61, 61));
-        pbEditUserPictureEP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
-"border-radius: 30px;\n"
-"font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;"));
-        editUserVaccineSBEP = new QComboBox(userInfoFrameEP);
-        editUserVaccineSBEP->addItem(QString());
-        editUserVaccineSBEP->addItem(QString());
-        editUserVaccineSBEP->addItem(QString());
-        editUserVaccineSBEP->setObjectName(QString::fromUtf8("editUserVaccineSBEP"));
-        editUserVaccineSBEP->setGeometry(QRect(20, 380, 271, 31));
-        editUserVaccineSBEP->setFont(font3);
-        editUserVaccineSBEP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
-"border-radius: 15;\n"
-"color: #2B528C;\n"
-"font-size: 12px; \n"
-"padding-left: 3px;\n"
-""));
-        //editUserVaccineSBEP->setPlaceholderText(QString::fromUtf8("Edit Vaccine Status"));
-        pbEditTestResultsEP = new QPushButton(userInfoFrameEP);
-        pbEditTestResultsEP->setObjectName(QString::fromUtf8("pbEditTestResultsEP"));
-        pbEditTestResultsEP->setGeometry(QRect(324, 407, 71, 91));
-        pbEditTestResultsEP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
-"border-radius: 35px;\n"
-"font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;"));
-        editCertificateEP = new QLabel(userInfoFrameEP);
-        editCertificateEP->setObjectName(QString::fromUtf8("editCertificateEP"));
-        editCertificateEP->setGeometry(QRect(420, 396, 91, 111));
-        editCertificateEP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
-"border-radius: 45;\n"
-""));
-        editTestResultsEP = new QLabel(userInfoFrameEP);
-        editTestResultsEP->setObjectName(QString::fromUtf8("editTestResultsEP"));
-        editTestResultsEP->setGeometry(QRect(314, 397, 91, 111));
-        editTestResultsEP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
-"border-radius: 45;\n"
-""));
-        pbEditQRCodeEP = new QPushButton(userInfoFrameEP);
-        pbEditQRCodeEP->setObjectName(QString::fromUtf8("pbEditQRCodeEP"));
-        pbEditQRCodeEP->setGeometry(QRect(535, 406, 71, 91));
-        pbEditQRCodeEP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
-"border-radius: 35px;\n"
-"font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;"));
-        editQRCodeEP = new QLabel(userInfoFrameEP);
-        editQRCodeEP->setObjectName(QString::fromUtf8("editQRCodeEP"));
-        editQRCodeEP->setGeometry(QRect(525, 396, 91, 111));
-        editQRCodeEP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
-"border-radius: 45;\n"
-""));
-        pbEditCertificateEP = new QPushButton(userInfoFrameEP);
-        pbEditCertificateEP->setObjectName(QString::fromUtf8("pbEditCertificateEP"));
-        pbEditCertificateEP->setGeometry(QRect(430, 406, 71, 91));
-        pbEditCertificateEP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
-"border-radius: 35px;\n"
-"font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;"));
-        labelClickEditEP = new QLabel(userInfoFrameEP);
-        labelClickEditEP->setObjectName(QString::fromUtf8("labelClickEditEP"));
-        labelClickEditEP->setGeometry(QRect(34, 360, 161, 21));
-        labelClickEditEP->setFont(font2);
-        labelClickEditEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 10px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);\n"
-""));
-        editUserNameEP = new QLineEdit(userInfoFrameEP);
-        editUserNameEP->setObjectName(QString::fromUtf8("editUserNameEP"));
-        editUserNameEP->setGeometry(QRect(120, 20, 451, 31));
-        editUserNameEP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
-"{background: #F8FBFF;\n"
-"border-radius: 15;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"color: #2B528C;\n"
-"font-size: 12px; \n"
-"padding-left: 3px;}"));
-        showNHIEP = new QLabel(userInfoFrameEP);
-        showNHIEP->setObjectName(QString::fromUtf8("showNHIEP"));
-        showNHIEP->setGeometry(QRect(20, 130, 271, 31));
-        showNHIEP->setStyleSheet(QString::fromUtf8("background: rgba(254, 206, 103, 0.88);\n"
-"border-radius: 15;\n"
-"border-color: rgba(104, 160, 229, 0.33);\n"
-"color: #2B528C;\n"
-"font-size: 12px; \n"
-"padding-left: 3px;"));
-        pbChangeTestResultsEP = new QPushButton(userInfoFrameEP);
-        pbChangeTestResultsEP->setObjectName(QString::fromUtf8("pbChangeTestResultsEP"));
-        pbChangeTestResultsEP->setGeometry(QRect(314, 490, 91, 21));
-        pbChangeTestResultsEP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
-"border-radius: 10px;\n"
-"font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;"));
-        pbChangeCertificateEP = new QPushButton(userInfoFrameEP);
-        pbChangeCertificateEP->setObjectName(QString::fromUtf8("pbChangeCertificateEP"));
-        pbChangeCertificateEP->setGeometry(QRect(420, 490, 91, 21));
-        pbChangeCertificateEP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
-"border-radius: 10px;\n"
-"font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;"));
-        pbChangeQRCodeEP = new QPushButton(userInfoFrameEP);
-        pbChangeQRCodeEP->setObjectName(QString::fromUtf8("pbChangeQRCodeEP"));
-        pbChangeQRCodeEP->setGeometry(QRect(526, 490, 91, 21));
-        pbChangeQRCodeEP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
-"border-radius: 10px;\n"
-"font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;"));
-        pbChangeUserPictureEP = new QPushButton(userInfoFrameEP);
-        pbChangeUserPictureEP->setObjectName(QString::fromUtf8("pbChangeUserPictureEP"));
-        pbChangeUserPictureEP->setGeometry(QRect(20, 74, 81, 21));
-        pbChangeUserPictureEP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
-"border-radius: 10px;\n"
-"font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;"));
-        pbCancelEP = new QPushButton(userInfoFrameEP);
-        pbCancelEP->setObjectName(QString::fromUtf8("pbCancelEP"));
-        pbCancelEP->setGeometry(QRect(600, 0, 41, 41));
-        pbCancelEP->setStyleSheet(QString::fromUtf8("background: rgba(254, 206, 103, 0.88);\n"
-"border-radius: 20px;\n"
-"font-weight: 200;\n"
-"font-size: 12px;\n"
-"color:#2B528C;"));
-        labelCancelEP = new QLabel(userInfoFrameEP);
-        labelCancelEP->setObjectName(QString::fromUtf8("labelCancelEP"));
-        labelCancelEP->setGeometry(QRect(604, 38, 31, 21));
-        labelCancelEP->setFont(font2);
-        labelCancelEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
-"font-size: 10px;\n"
-"color:#2B528C;\n"
-"background: rgba(254, 206, 103, 0.00);\n"
-""));
-        editTestResultsEP->raise();
-        editQRCodeEP->raise();
-        vaccineDose1FrameEP->raise();
-        editUserEmailEP->raise();
-        editUserPhoneEP->raise();
-        editUserDOBEP->raise();
-        editUserNotesEP->raise();
-        labelNHIEP->raise();
-        labelEmergencyEP->raise();
-        labelAdditionalNotesEP->raise();
-        editUserPictureEP->raise();
-        labelCVNEP->raise();
-        labelVaccineEP->raise();
-        labelDocumentationEP->raise();
-        pbSaveEditEP->raise();
-        labelConfidentialEP->raise();
-        labelUnauthorisedEP->raise();
-        editUserCVNEP->raise();
-        editUserEmergencyEP->raise();
-        labelTestResultsEP->raise();
-        labelCertificateEP->raise();
-        labeQRCodeEP->raise();
-        vaccineDose2FrameEP->raise();
-        labelClickChangeEP->raise();
-        editUserVaccineSBEP->raise();
-        pbEditTestResultsEP->raise();
-        editCertificateEP->raise();
-        labelClickEditEP->raise();
-        editUserNameEP->raise();
-        showNHIEP->raise();
-        pbChangeTestResultsEP->raise();
-        pbChangeCertificateEP->raise();
-        pbEditCertificateEP->raise();
-        pbChangeQRCodeEP->raise();
-        pbEditQRCodeEP->raise();
-        pbChangeUserPictureEP->raise();
-        pbEditUserPictureEP->raise();
-        pbCancelEP->raise();
-        labelCancelEP->raise();
-        pbSearchEP = new QPushButton(userHomeDisplayFrameEP);
-        pbSearchEP->setObjectName(QString::fromUtf8("pbSearchEP"));
-        pbSearchEP->setGeometry(QRect(730, 100, 131, 31));
-        pbSearchEP->setFont(font);
-        pbSearchEP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"color:#2B528C;\n"
-"background: #2B528C;\n"
-"font-weight: 500;\n"
-"border-radius: 15px;\n"
-"background: #C4DBF4;\n"
-"border-color: rgba(104, 160, 229, 0.00);\n"
-"font-size: 16px; \n"
-"}\n"
-"QPushButton:hover\n"
-"{\n"
-"background: rgba(196, 219, 244, 0.77);\n"
-"}"));
-        editSearchEP = new QLineEdit(userHomeDisplayFrameEP);
-        editSearchEP->setObjectName(QString::fromUtf8("editSearchEP"));
-        editSearchEP->setGeometry(QRect(20, 100, 701, 31));
-        editSearchEP->setFont(font3);
-        editSearchEP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
-"{background: #F8FBFF;\n"
-"border-radius: 15;\n"
-"border: 1px solid #C4DBF4;\n"
-"color: #2B528C;\n"
-"font-size: 12px; \n"
-"padding-left: 3px;}\n"
-"\n"
-"QLineEdit:hove{\n"
-"border-color: rgba(104, 160, 229, 0.88);\n"
-"background: #C4DBF4;\n"
-"}\n"
-"\n"
-"QLineEdit:focus{\n"
-"border: 3px solid rgba(104, 160, 229, 0.88);\n"
-"}"));
         listAllUsersEP = new QListWidget(userHomeDisplayFrameEP);
         listAllUsersEP->setObjectName(QString::fromUtf8("listAllUsersEP"));
         listAllUsersEP->setGeometry(QRect(20, 150, 181, 621));
@@ -3043,7 +2703,610 @@ public:
 "padding-left: 8px;\n"
 "padding-top: 10px;\n"
 "padding-right: 8px;\n"
+"padding-bottom: 80px;\n"
 ""));
+        userInfoFrameAP_4 = new QFrame(userHomeDisplayFrameEP);
+        userInfoFrameAP_4->setObjectName(QString::fromUtf8("userInfoFrameAP_4"));
+        userInfoFrameAP_4->setGeometry(QRect(220, 110, 641, 661));
+        userInfoFrameAP_4->setStyleSheet(QString::fromUtf8("background: rgba(254, 206, 103, 0.55);\n"
+"border-radius: 40px;"));
+        userInfoFrameAP_4->setFrameShape(QFrame::StyledPanel);
+        userInfoFrameAP_4->setFrameShadow(QFrame::Raised);
+        labelNHIAP_12 = new QLabel(userInfoFrameAP_4);
+        labelNHIAP_12->setObjectName(QString::fromUtf8("labelNHIAP_12"));
+        labelNHIAP_12->setGeometry(QRect(25, 126, 101, 20));
+        labelNHIAP_12->setFont(font2);
+        labelNHIAP_12->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        labelEmergencyAP_6 = new QLabel(userInfoFrameAP_4);
+        labelEmergencyAP_6->setObjectName(QString::fromUtf8("labelEmergencyAP_6"));
+        labelEmergencyAP_6->setGeometry(QRect(347, 178, 121, 20));
+        labelEmergencyAP_6->setFont(font2);
+        labelEmergencyAP_6->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);"));
+        labelAdditionalNotesAP_4 = new QLabel(userInfoFrameAP_4);
+        labelAdditionalNotesAP_4->setObjectName(QString::fromUtf8("labelAdditionalNotesAP_4"));
+        labelAdditionalNotesAP_4->setGeometry(QRect(25, 443, 321, 20));
+        labelAdditionalNotesAP_4->setFont(font6);
+        labelAdditionalNotesAP_4->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 16px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);"));
+        editUserPictureEP = new QLabel(userInfoFrameAP_4);
+        editUserPictureEP->setObjectName(QString::fromUtf8("editUserPictureEP"));
+        editUserPictureEP->setGeometry(QRect(20, 10, 81, 81));
+        editUserPictureEP->setStyleSheet(QString::fromUtf8("background: rgba(248, 251, 255, 0.99);\n"
+"border-radius: 40px;"));
+        labelCVNAP_4 = new QLabel(userInfoFrameAP_4);
+        labelCVNAP_4->setObjectName(QString::fromUtf8("labelCVNAP_4"));
+        labelCVNAP_4->setGeometry(QRect(345, 126, 271, 20));
+        labelCVNAP_4->setFont(font2);
+        labelCVNAP_4->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);"));
+        pbSaveEditEP = new QPushButton(userInfoFrameAP_4);
+        pbSaveEditEP->setObjectName(QString::fromUtf8("pbSaveEditEP"));
+        pbSaveEditEP->setGeometry(QRect(440, 589, 181, 51));
+        pbSaveEditEP->setFont(font);
+        pbSaveEditEP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background: #2B528C;\n"
+"font-weight: 500;\n"
+"border-radius: 25px;\n"
+"color:  rgba(248, 251, 255, 0.99);\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"font-size: 16px; \n"
+"}\n"
+"QPushButton:hover{\n"
+"background: rgba(104, 160, 229, 0.88);}"));
+        labelConfidentialAP_6 = new QLabel(userInfoFrameAP_4);
+        labelConfidentialAP_6->setObjectName(QString::fromUtf8("labelConfidentialAP_6"));
+        labelConfidentialAP_6->setGeometry(QRect(30, 604, 201, 21));
+        labelConfidentialAP_6->setFont(font2);
+        labelConfidentialAP_6->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+"\n"
+""));
+        labelUnauthorisedAP_4 = new QLabel(userInfoFrameAP_4);
+        labelUnauthorisedAP_4->setObjectName(QString::fromUtf8("labelUnauthorisedAP_4"));
+        labelUnauthorisedAP_4->setGeometry(QRect(30, 621, 381, 21));
+        labelUnauthorisedAP_4->setFont(font2);
+        labelUnauthorisedAP_4->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        editUserEmergencyEP = new QLineEdit(userInfoFrameAP_4);
+        editUserEmergencyEP->setObjectName(QString::fromUtf8("editUserEmergencyEP"));
+        editUserEmergencyEP->setGeometry(QRect(340, 200, 281, 31));
+        editUserEmergencyEP->setFont(font1);
+        editUserEmergencyEP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
+"{background: #F8FBFF;\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"color: #2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}"));
+        editUserNotesEP = new QPlainTextEdit(userInfoFrameAP_4);
+        editUserNotesEP->setObjectName(QString::fromUtf8("editUserNotesEP"));
+        editUserNotesEP->setGeometry(QRect(20, 466, 601, 101));
+        editUserNotesEP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
+"border-radius: 30;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"color:#2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 12px;"));
+        editUserDOBEP = new QLineEdit(userInfoFrameAP_4);
+        editUserDOBEP->setObjectName(QString::fromUtf8("editUserDOBEP"));
+        editUserDOBEP->setGeometry(QRect(121, 90, 101, 31));
+        editUserDOBEP->setFont(font3);
+        editUserDOBEP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
+"{background: #F8FBFF;\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"color: #2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}"));
+        editUserPhoneEP = new QLineEdit(userInfoFrameAP_4);
+        editUserPhoneEP->setObjectName(QString::fromUtf8("editUserPhoneEP"));
+        editUserPhoneEP->setGeometry(QRect(232, 90, 101, 31));
+        editUserPhoneEP->setFont(font3);
+        editUserPhoneEP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
+"{background: #F8FBFF;\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"color: #2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}"));
+        pbEditUserPictureEP = new QPushButton(userInfoFrameAP_4);
+        pbEditUserPictureEP->setObjectName(QString::fromUtf8("pbEditUserPictureEP"));
+        pbEditUserPictureEP->setGeometry(QRect(30, 20, 61, 61));
+        pbEditUserPictureEP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
+"border-radius: 30px;\n"
+"font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;"));
+        editUserNameEP = new QLineEdit(userInfoFrameAP_4);
+        editUserNameEP->setObjectName(QString::fromUtf8("editUserNameEP"));
+        editUserNameEP->setGeometry(QRect(120, 30, 501, 31));
+        editUserNameEP->setFont(font3);
+        editUserNameEP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
+"{background: #F8FBFF;\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"color: #2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}"));
+        pbChangeUserPictureEP = new QPushButton(userInfoFrameAP_4);
+        pbChangeUserPictureEP->setObjectName(QString::fromUtf8("pbChangeUserPictureEP"));
+        pbChangeUserPictureEP->setGeometry(QRect(21, 73, 81, 21));
+        pbChangeUserPictureEP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
+"border-radius: 10px;\n"
+"font-weight: 200;\n"
+"font-size: 10px;\n"
+"color:#2B528C;"));
+        editUserEmailEP = new QLineEdit(userInfoFrameAP_4);
+        editUserEmailEP->setObjectName(QString::fromUtf8("editUserEmailEP"));
+        editUserEmailEP->setGeometry(QRect(342, 90, 281, 31));
+        editUserEmailEP->setFont(font3);
+        editUserEmailEP->setStyleSheet(QString::fromUtf8("QLineEdit\n"
+"{background: #F8FBFF;\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"color: #2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}"));
+        editUserVaccineSBEP = new QComboBox(userInfoFrameAP_4);
+        editUserVaccineSBEP->addItem(QString());
+        editUserVaccineSBEP->addItem(QString());
+        editUserVaccineSBEP->addItem(QString());
+        editUserVaccineSBEP->addItem(QString());
+        editUserVaccineSBEP->setObjectName(QString::fromUtf8("editUserVaccineSBEP"));
+        editUserVaccineSBEP->setGeometry(QRect(21, 200, 281, 31));
+        editUserVaccineSBEP->setFont(font3);
+        editUserVaccineSBEP->setStyleSheet(QString::fromUtf8("QComboBox\n"
+"{background: #F8FBFF;\n"
+"border-radius: 15;\n"
+"color: #2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;}\n"
+"\n"
+""));
+        labelEmergencyAP_7 = new QLabel(userInfoFrameAP_4);
+        labelEmergencyAP_7->setObjectName(QString::fromUtf8("labelEmergencyAP_7"));
+        labelEmergencyAP_7->setGeometry(QRect(25, 178, 131, 20));
+        labelEmergencyAP_7->setFont(font2);
+        labelEmergencyAP_7->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);"));
+        labelClickEditAP_4 = new QLabel(userInfoFrameAP_4);
+        labelClickEditAP_4->setObjectName(QString::fromUtf8("labelClickEditAP_4"));
+        labelClickEditAP_4->setGeometry(QRect(30, 264, 261, 21));
+        labelClickEditAP_4->setFont(font2);
+        labelClickEditAP_4->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 10px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        labelVaccinesAP_4 = new QLabel(userInfoFrameAP_4);
+        labelVaccinesAP_4->setObjectName(QString::fromUtf8("labelVaccinesAP_4"));
+        labelVaccinesAP_4->setGeometry(QRect(28, 240, 181, 31));
+        labelVaccinesAP_4->setFont(font6);
+        labelVaccinesAP_4->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 16px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);"));
+        labelVaccinesAP_4->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        vaccineDose1FrameAP_4 = new QFrame(userInfoFrameAP_4);
+        vaccineDose1FrameAP_4->setObjectName(QString::fromUtf8("vaccineDose1FrameAP_4"));
+        vaccineDose1FrameAP_4->setGeometry(QRect(20, 291, 271, 61));
+        vaccineDose1FrameAP_4->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
+"border-radius: 30px;"));
+        vaccineDose1FrameAP_4->setFrameShape(QFrame::StyledPanel);
+        vaccineDose1FrameAP_4->setFrameShadow(QFrame::Raised);
+        vaccineIcon1FrameAP_4 = new QLabel(vaccineDose1FrameAP_4);
+        vaccineIcon1FrameAP_4->setObjectName(QString::fromUtf8("vaccineIcon1FrameAP_4"));
+        vaccineIcon1FrameAP_4->setGeometry(QRect(5, 5, 51, 51));
+        vaccineIcon1FrameAP_4->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
+"border-radius: 25px;"));
+        vaccineIcon1FrameAP_4->setAlignment(Qt::AlignCenter);
+        imgVaccineIcon1AP_4 = new QLabel(vaccineDose1FrameAP_4);
+        imgVaccineIcon1AP_4->setObjectName(QString::fromUtf8("imgVaccineIcon1AP_4"));
+        imgVaccineIcon1AP_4->setGeometry(QRect(19, 15, 21, 31));
+        imgVaccineIcon1AP_4->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
+"border-radius: 20px;"));
+        imgVaccineIcon1AP_4->setPixmap(QPixmap(QString::fromUtf8(":/res/images/iconVaccine.png")));
+        imgVaccineIcon1AP_4->setScaledContents(true);
+        imgVaccineIcon1AP_4->setAlignment(Qt::AlignCenter);
+        edit1stDoseNameEP = new QLineEdit(vaccineDose1FrameAP_4);
+        edit1stDoseNameEP->setObjectName(QString::fromUtf8("edit1stDoseNameEP"));
+        edit1stDoseNameEP->setGeometry(QRect(68, 8, 191, 24));
+        edit1stDoseNameEP->setFont(font5);
+        edit1stDoseNameEP->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
+"font-size: 14px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        edit1stDoseNameEP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        edit1stDoseBatchEP = new QLineEdit(vaccineDose1FrameAP_4);
+        edit1stDoseBatchEP->setObjectName(QString::fromUtf8("edit1stDoseBatchEP"));
+        edit1stDoseBatchEP->setGeometry(QRect(67, 27, 111, 24));
+        edit1stDoseBatchEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        edit1stDoseDateEP = new QLineEdit(vaccineDose1FrameAP_4);
+        edit1stDoseDateEP->setObjectName(QString::fromUtf8("edit1stDoseDateEP"));
+        edit1stDoseDateEP->setGeometry(QRect(176, 30, 71, 20));
+        edit1stDoseDateEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        edit1stDoseDateEP->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        vaccineDose2FrameAP_4 = new QFrame(userInfoFrameAP_4);
+        vaccineDose2FrameAP_4->setObjectName(QString::fromUtf8("vaccineDose2FrameAP_4"));
+        vaccineDose2FrameAP_4->setGeometry(QRect(20, 362, 271, 61));
+        vaccineDose2FrameAP_4->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
+"border-radius: 30px;"));
+        vaccineDose2FrameAP_4->setFrameShape(QFrame::StyledPanel);
+        vaccineDose2FrameAP_4->setFrameShadow(QFrame::Raised);
+        vaccineIcon2FrameAP_4 = new QLabel(vaccineDose2FrameAP_4);
+        vaccineIcon2FrameAP_4->setObjectName(QString::fromUtf8("vaccineIcon2FrameAP_4"));
+        vaccineIcon2FrameAP_4->setGeometry(QRect(5, 5, 51, 51));
+        vaccineIcon2FrameAP_4->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
+"border-radius: 25px;"));
+        vaccineIcon2FrameAP_4->setAlignment(Qt::AlignCenter);
+        imgVaccineIcon2AP_4 = new QLabel(vaccineDose2FrameAP_4);
+        imgVaccineIcon2AP_4->setObjectName(QString::fromUtf8("imgVaccineIcon2AP_4"));
+        imgVaccineIcon2AP_4->setGeometry(QRect(19, 15, 21, 31));
+        imgVaccineIcon2AP_4->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
+"border-radius: 20px;"));
+        imgVaccineIcon2AP_4->setPixmap(QPixmap(QString::fromUtf8(":/res/images/iconVaccine.png")));
+        imgVaccineIcon2AP_4->setScaledContents(true);
+        imgVaccineIcon2AP_4->setAlignment(Qt::AlignCenter);
+        edit2ndDoseNameEP = new QLineEdit(vaccineDose2FrameAP_4);
+        edit2ndDoseNameEP->setObjectName(QString::fromUtf8("edit2ndDoseNameEP"));
+        edit2ndDoseNameEP->setGeometry(QRect(67, 9, 191, 24));
+        edit2ndDoseNameEP->setFont(font5);
+        edit2ndDoseNameEP->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
+"font-size: 14px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        edit2ndDoseNameEP->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        edit2ndDoseBatchEP = new QLineEdit(vaccineDose2FrameAP_4);
+        edit2ndDoseBatchEP->setObjectName(QString::fromUtf8("edit2ndDoseBatchEP"));
+        edit2ndDoseBatchEP->setGeometry(QRect(67, 30, 111, 24));
+        edit2ndDoseBatchEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        edit2ndDoseDateEP = new QLineEdit(vaccineDose2FrameAP_4);
+        edit2ndDoseDateEP->setObjectName(QString::fromUtf8("edit2ndDoseDateEP"));
+        edit2ndDoseDateEP->setGeometry(QRect(176, 31, 71, 20));
+        edit2ndDoseDateEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        edit2ndDoseDateEP->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        labelQRCodeEP = new QLabel(userInfoFrameAP_4);
+        labelQRCodeEP->setObjectName(QString::fromUtf8("labelQRCodeEP"));
+        labelQRCodeEP->setGeometry(QRect(540, 410, 81, 20));
+        labelQRCodeEP->setFont(font);
+        labelQRCodeEP->setStyleSheet(QString::fromUtf8("font-weight: 500;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        labelQRCodeEP->setAlignment(Qt::AlignCenter);
+        pbEditQRCodeEP = new QPushButton(userInfoFrameAP_4);
+        pbEditQRCodeEP->setObjectName(QString::fromUtf8("pbEditQRCodeEP"));
+        pbEditQRCodeEP->setGeometry(QRect(540, 300, 71, 91));
+        pbEditQRCodeEP->setFont(font2);
+        pbEditQRCodeEP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background: #C4DBF4;\n"
+"border-radius: 35px;\n"
+"font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;}\n"
+"\n"
+"QPushButton:hover{\n"
+"background: rgba(104, 160, 229, 0.55);}"));
+        pbChangeTestResultsEP = new QPushButton(userInfoFrameAP_4);
+        pbChangeTestResultsEP->setObjectName(QString::fromUtf8("pbChangeTestResultsEP"));
+        pbChangeTestResultsEP->setGeometry(QRect(330, 385, 71, 21));
+        pbChangeTestResultsEP->setFont(font2);
+        pbChangeTestResultsEP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
+"border-radius: 10px;\n"
+"font-weight: 200;\n"
+"font-size: 10px;\n"
+"color:#2B528C;"));
+        pbEditCertificateEP = new QPushButton(userInfoFrameAP_4);
+        pbEditCertificateEP->setObjectName(QString::fromUtf8("pbEditCertificateEP"));
+        pbEditCertificateEP->setGeometry(QRect(435, 300, 71, 91));
+        pbEditCertificateEP->setFont(font2);
+        pbEditCertificateEP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background: #C4DBF4;\n"
+"border-radius: 35px;\n"
+"font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;}\n"
+"\n"
+"QPushButton:hover{\n"
+"background: rgba(104, 160, 229, 0.55);}"));
+        labelDocumentationAP_4 = new QLabel(userInfoFrameAP_4);
+        labelDocumentationAP_4->setObjectName(QString::fromUtf8("labelDocumentationAP_4"));
+        labelDocumentationAP_4->setGeometry(QRect(320, 240, 211, 31));
+        labelDocumentationAP_4->setFont(font6);
+        labelDocumentationAP_4->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 16px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);"));
+        labelDocumentationAP_4->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        editTestResultsEP = new QLabel(userInfoFrameAP_4);
+        editTestResultsEP->setObjectName(QString::fromUtf8("editTestResultsEP"));
+        editTestResultsEP->setGeometry(QRect(319, 291, 91, 111));
+        editTestResultsEP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
+"border-radius: 45;\n"
+""));
+        labelClickUploadAP_4 = new QLabel(userInfoFrameAP_4);
+        labelClickUploadAP_4->setObjectName(QString::fromUtf8("labelClickUploadAP_4"));
+        labelClickUploadAP_4->setGeometry(QRect(320, 264, 221, 21));
+        labelClickUploadAP_4->setFont(font2);
+        labelClickUploadAP_4->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 10px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        editCertificateEP = new QLabel(userInfoFrameAP_4);
+        editCertificateEP->setObjectName(QString::fromUtf8("editCertificateEP"));
+        editCertificateEP->setGeometry(QRect(425, 290, 91, 111));
+        editCertificateEP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
+"border-radius: 45;\n"
+""));
+        pbEditTestResultsEP = new QPushButton(userInfoFrameAP_4);
+        pbEditTestResultsEP->setObjectName(QString::fromUtf8("pbEditTestResultsEP"));
+        pbEditTestResultsEP->setGeometry(QRect(329, 301, 71, 91));
+        pbEditTestResultsEP->setFont(font2);
+        pbEditTestResultsEP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background: #C4DBF4;\n"
+"border-radius: 35px;\n"
+"font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;}\n"
+"\n"
+"QPushButton:hover{\n"
+"background: rgba(104, 160, 229, 0.55);}"));
+        editQRCodeEP = new QLabel(userInfoFrameAP_4);
+        editQRCodeEP->setObjectName(QString::fromUtf8("editQRCodeEP"));
+        editQRCodeEP->setGeometry(QRect(530, 290, 91, 111));
+        editQRCodeEP->setStyleSheet(QString::fromUtf8("background: #F8FBFF;\n"
+"border-radius: 45;\n"
+""));
+        pbChangeQRCodeEP = new QPushButton(userInfoFrameAP_4);
+        pbChangeQRCodeEP->setObjectName(QString::fromUtf8("pbChangeQRCodeEP"));
+        pbChangeQRCodeEP->setGeometry(QRect(542, 385, 71, 21));
+        pbChangeQRCodeEP->setFont(font2);
+        pbChangeQRCodeEP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
+"border-radius: 10px;\n"
+"font-weight: 200;\n"
+"font-size: 10px;\n"
+"color:#2B528C;"));
+        labelTestResultsEP = new QLabel(userInfoFrameAP_4);
+        labelTestResultsEP->setObjectName(QString::fromUtf8("labelTestResultsEP"));
+        labelTestResultsEP->setGeometry(QRect(320, 411, 91, 20));
+        labelTestResultsEP->setFont(font6);
+        labelTestResultsEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        labelTestResultsEP->setAlignment(Qt::AlignCenter);
+        labelCertificateEP = new QLabel(userInfoFrameAP_4);
+        labelCertificateEP->setObjectName(QString::fromUtf8("labelCertificateEP"));
+        labelCertificateEP->setGeometry(QRect(430, 411, 91, 20));
+        labelCertificateEP->setFont(font);
+        labelCertificateEP->setStyleSheet(QString::fromUtf8("font-weight: 500;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        labelCertificateEP->setAlignment(Qt::AlignCenter);
+        pbChangeCertificateEP = new QPushButton(userInfoFrameAP_4);
+        pbChangeCertificateEP->setObjectName(QString::fromUtf8("pbChangeCertificateEP"));
+        pbChangeCertificateEP->setGeometry(QRect(436, 385, 71, 21));
+        pbChangeCertificateEP->setFont(font2);
+        pbChangeCertificateEP->setStyleSheet(QString::fromUtf8("background: #C4DBF4;\n"
+"border-radius: 10px;\n"
+"font-weight: 200;\n"
+"font-size: 10px;\n"
+"color:#2B528C;"));
+        labelNHIAP_13 = new QLabel(userInfoFrameAP_4);
+        labelNHIAP_13->setObjectName(QString::fromUtf8("labelNHIAP_13"));
+        labelNHIAP_13->setGeometry(QRect(125, 70, 101, 20));
+        labelNHIAP_13->setFont(font2);
+        labelNHIAP_13->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        labelNameEP = new QLabel(userInfoFrameAP_4);
+        labelNameEP->setObjectName(QString::fromUtf8("labelNameEP"));
+        labelNameEP->setGeometry(QRect(125, 10, 101, 20));
+        labelNameEP->setFont(font2);
+        labelNameEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        labelNHIAP_15 = new QLabel(userInfoFrameAP_4);
+        labelNHIAP_15->setObjectName(QString::fromUtf8("labelNHIAP_15"));
+        labelNHIAP_15->setGeometry(QRect(235, 70, 101, 20));
+        labelNHIAP_15->setFont(font2);
+        labelNHIAP_15->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        labelNHIAP_16 = new QLabel(userInfoFrameAP_4);
+        labelNHIAP_16->setObjectName(QString::fromUtf8("labelNHIAP_16"));
+        labelNHIAP_16->setGeometry(QRect(350, 69, 90, 20));
+        labelNHIAP_16->setFont(font2);
+        labelNHIAP_16->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+""));
+        labelConfidentialAP_7 = new QLabel(userInfoFrameAP_4);
+        labelConfidentialAP_7->setObjectName(QString::fromUtf8("labelConfidentialAP_7"));
+        labelConfidentialAP_7->setGeometry(QRect(30, 586, 201, 21));
+        labelConfidentialAP_7->setFont(font2);
+        labelConfidentialAP_7->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+"\n"
+""));
+        showNHIEP = new QLabel(userInfoFrameAP_4);
+        showNHIEP->setObjectName(QString::fromUtf8("showNHIEP"));
+        showNHIEP->setGeometry(QRect(20, 146, 281, 31));
+        showNHIEP->setStyleSheet(QString::fromUtf8("background: rgba(254, 206, 103, 0.88);\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"color: #2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;"));
+        showUserCVNEP = new QLabel(userInfoFrameAP_4);
+        showUserCVNEP->setObjectName(QString::fromUtf8("showUserCVNEP"));
+        showUserCVNEP->setGeometry(QRect(340, 145, 281, 31));
+        showUserCVNEP->setStyleSheet(QString::fromUtf8("background: rgba(254, 206, 103, 0.88);\n"
+"border-radius: 15;\n"
+"border-color: rgba(104, 160, 229, 0.33);\n"
+"color: #2B528C;\n"
+"font-size: 12px; \n"
+"padding-left: 3px;"));
+        editQRCodeEP->raise();
+        editCertificateEP->raise();
+        labelNHIAP_12->raise();
+        labelEmergencyAP_6->raise();
+        labelAdditionalNotesAP_4->raise();
+        editUserPictureEP->raise();
+        labelCVNAP_4->raise();
+        pbSaveEditEP->raise();
+        labelConfidentialAP_6->raise();
+        labelUnauthorisedAP_4->raise();
+        editUserEmergencyEP->raise();
+        editUserNotesEP->raise();
+        editUserDOBEP->raise();
+        editUserPhoneEP->raise();
+        pbEditUserPictureEP->raise();
+        editUserNameEP->raise();
+        pbChangeUserPictureEP->raise();
+        editUserEmailEP->raise();
+        editUserVaccineSBEP->raise();
+        labelEmergencyAP_7->raise();
+        labelClickEditAP_4->raise();
+        labelVaccinesAP_4->raise();
+        vaccineDose1FrameAP_4->raise();
+        vaccineDose2FrameAP_4->raise();
+        labelQRCodeEP->raise();
+        pbEditQRCodeEP->raise();
+        pbEditCertificateEP->raise();
+        labelDocumentationAP_4->raise();
+        editTestResultsEP->raise();
+        labelClickUploadAP_4->raise();
+        pbEditTestResultsEP->raise();
+        pbChangeQRCodeEP->raise();
+        labelTestResultsEP->raise();
+        labelCertificateEP->raise();
+        pbChangeCertificateEP->raise();
+        labelNHIAP_13->raise();
+        labelNameEP->raise();
+        labelNHIAP_15->raise();
+        labelNHIAP_16->raise();
+        labelConfidentialAP_7->raise();
+        showNHIEP->raise();
+        showUserCVNEP->raise();
+        pbChangeTestResultsEP->raise();
+        alerLevelUpdatesTitle_3 = new QLabel(userHomeDisplayFrameEP);
+        alerLevelUpdatesTitle_3->setObjectName(QString::fromUtf8("alerLevelUpdatesTitle_3"));
+        alerLevelUpdatesTitle_3->setGeometry(QRect(20, 102, 171, 31));
+        alerLevelUpdatesTitle_3->setFont(font5);
+        alerLevelUpdatesTitle_3->setStyleSheet(QString::fromUtf8("font-weight: 300;\n"
+"font-size: 18px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        labelSelectRP_3 = new QLabel(userHomeDisplayFrameEP);
+        labelSelectRP_3->setObjectName(QString::fromUtf8("labelSelectRP_3"));
+        labelSelectRP_3->setGeometry(QRect(22, 127, 181, 20));
+        labelSelectRP_3->setFont(font2);
+        labelSelectRP_3->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 12px;\n"
+"color:#2B528C;\n"
+"background: rgba(254, 206, 103, 0.00);\n"
+"\n"
+""));
+        pbCancelEP = new QPushButton(userHomeDisplayFrameEP);
+        pbCancelEP->setObjectName(QString::fromUtf8("pbCancelEP"));
+        pbCancelEP->setGeometry(QRect(832, 108, 31, 31));
+        pbCancelEP->setFont(font6);
+        pbCancelEP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background: #2B528C;\n"
+"border-radius: 15px;\n"
+"font-weight: 200;\n"
+"font-size: 10px;\n"
+"color:  rgba(248, 251, 255, 0.99);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"}"));
+        frame_3 = new QFrame(userHomeDisplayFrameEP);
+        frame_3->setObjectName(QString::fromUtf8("frame_3"));
+        frame_3->setGeometry(QRect(20, 690, 181, 81));
+        frame_3->setStyleSheet(QString::fromUtf8("background: #F2F8FC;\n"
+"border-radius: 20px;\n"
+""));
+        frame_3->setFrameShape(QFrame::StyledPanel);
+        frame_3->setFrameShadow(QFrame::Raised);
+        pbQuickRemoveEP = new QPushButton(frame_3);
+        pbQuickRemoveEP->setObjectName(QString::fromUtf8("pbQuickRemoveEP"));
+        pbQuickRemoveEP->setGeometry(QRect(18, 15, 141, 31));
+        pbQuickRemoveEP->setFont(font);
+        pbQuickRemoveEP->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"color:  rgba(248, 251, 255, 0.99);\n"
+"font-weight: 500;\n"
+"border-radius: 15px;\n"
+"background: #2B528C;\n"
+"border-color: rgba(104, 160, 229, 0.00);\n"
+"font-size: 14px; \n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"background: rgba(104, 160, 229, 0.88);}\n"
+""));
+        labelDeleteEP = new QLabel(frame_3);
+        labelDeleteEP->setObjectName(QString::fromUtf8("labelDeleteEP"));
+        labelDeleteEP->setGeometry(QRect(14, 50, 141, 16));
+        labelDeleteEP->setFont(font2);
+        labelDeleteEP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
+"font-size: 10px;\n"
+"color:#2B528C;\n"
+"\n"
+""));
+        labelDeleteEP->setAlignment(Qt::AlignCenter);
         userHomeWhiteBackgroundEP = new QLabel(adminEditUserPage);
         userHomeWhiteBackgroundEP->setObjectName(QString::fromUtf8("userHomeWhiteBackgroundEP"));
         userHomeWhiteBackgroundEP->setGeometry(QRect(0, 0, 1101, 791));
@@ -3203,25 +3466,13 @@ public:
 "border: 0px;"));
         frameFS2->setFrameShape(QFrame::StyledPanel);
         frameFS2->setFrameShadow(QFrame::Raised);
-        pbFullScreenFS = new QPushButton(frameFS2);
-        pbFullScreenFS->setObjectName(QString::fromUtf8("pbFullScreenFS"));
-        pbFullScreenFS->setGeometry(QRect(705, 710, 91, 31));
-        pbFullScreenFS->setFont(font7);
-        pbFullScreenFS->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"color: #2B528C;\n"
-"font-weight: 500;\n"
-"border-radius: 15px;\n"
-"background:  white;\n"
-"font-size: 12px; \n"
-"}\n"
-"QPushButton:hover\n"
-"{\n"
-"font-size: 13px;\n"
-"\n"
-"}"));
         pbCloseImageFS = new QPushButton(frameFS2);
         pbCloseImageFS->setObjectName(QString::fromUtf8("pbCloseImageFS"));
         pbCloseImageFS->setGeometry(QRect(750, 40, 31, 31));
+        QFont font7;
+        font7.setFamily(QString::fromUtf8("Avenir Next"));
+        font7.setBold(true);
+        font7.setWeight(62);
         pbCloseImageFS->setFont(font7);
         pbCloseImageFS->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "color: #2B528C;\n"
@@ -3235,12 +3486,6 @@ public:
 "font-size: 13px;\n"
 "\n"
 "}"));
-        closeImageTextFS = new QLabel(frameFS2);
-        closeImageTextFS->setObjectName(QString::fromUtf8("closeImageTextFS"));
-        closeImageTextFS->setGeometry(QRect(752, 77, 31, 16));
-        closeImageTextFS->setStyleSheet(QString::fromUtf8("background: rgba(43, 82, 140, 0.00);\n"
-"font-size: 10px;\n"
-"color:white;"));
         showLargeCertificateFS = new QLabel(frameFS);
         showLargeCertificateFS->setObjectName(QString::fromUtf8("showLargeCertificateFS"));
         showLargeCertificateFS->setGeometry(QRect(200, 80, 471, 641));
@@ -3799,9 +4044,9 @@ public:
         userHomeWhiteBackgroundFS->setStyleSheet(QString::fromUtf8("background: #F2F8FC;"));
         stackedWidget->addWidget(adminEnlargeImagesPage);
         userHomeWhiteBackgroundFS->raise();
-        userHomeHelloBarFS->raise();
         userProfileBlueMenuBarFS->raise();
         userHomeDisplayFrameFS->raise();
+        userHomeHelloBarFS->raise();
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -3809,7 +4054,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(4);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -3843,26 +4088,23 @@ public:
         showUserNHIAUP->setText(QString());
         showUserEmergencyAUP->setText(QString());
         labelEmergencyAUP->setText(QApplication::translate("MainWindow", "Emergency Contact", nullptr));
-        showUserNotesAUP->setText(QString());
-        labelAdditionalNotesAUP->setText(QApplication::translate("MainWindow", "Additional Notes", nullptr));
         showUserPictureAUP->setText(QApplication::translate("MainWindow", "displayPicture", nullptr));
         labelCVNAUP->setText(QApplication::translate("MainWindow", "CV Number", nullptr));
         showUserCVNAUP->setText(QString());
         showUserDOBAUP->setText(QApplication::translate("MainWindow", "Birthday", nullptr));
-        showUserPhoneAUP->setText(QApplication::translate("MainWindow", "Contact Number", nullptr));
-        showUserEmailAUP->setText(QApplication::translate("MainWindow", "Email", nullptr));
-        showUserVaccStatusAUP->setText(QApplication::translate("MainWindow", "Vaccination Status", nullptr));
+        showUserPhoneAUP->setText(QApplication::translate("MainWindow", "Phone", nullptr));
+        showUserEmailAUP->setText(QApplication::translate("MainWindow", "E-mail Address", nullptr));
         labelVaccineAUP->setText(QApplication::translate("MainWindow", "Vaccines Recieved", nullptr));
         labelDocumentationAUP->setText(QApplication::translate("MainWindow", "Documentation", nullptr));
         vaccineIcon1FrameAUP->setText(QString());
         show1stDoseNameAUP->setText(QApplication::translate("MainWindow", "Vaccination Type", nullptr));
-        show1stDoseBatchAUP->setText(QApplication::translate("MainWindow", "Batch #", nullptr));
-        show1stDoseDateAUP->setText(QApplication::translate("MainWindow", "Date Recieved", nullptr));
+        show1stDoseBatchAUP->setText(QApplication::translate("MainWindow", "#Batch", nullptr));
+        show1stDoseDateAUP->setText(QApplication::translate("MainWindow", "DD/MM/YY", nullptr));
         imgVaccineIcon1AUP->setText(QString());
         vaccineIcon2FrameAUP->setText(QString());
         show2ndDoseNameAUP->setText(QApplication::translate("MainWindow", "Vaccination Type", nullptr));
-        show2ndDoseBatchAUP->setText(QApplication::translate("MainWindow", "Batch #", nullptr));
-        show2ndDoseDateAUP->setText(QApplication::translate("MainWindow", "Date Recieved", nullptr));
+        show2ndDoseBatchAUP->setText(QApplication::translate("MainWindow", "#Batch", nullptr));
+        show2ndDoseDateAUP->setText(QApplication::translate("MainWindow", "DD/MM/YY", nullptr));
         imgVaccineIcon2AUP->setText(QString());
         pbEditUserAUP->setText(QApplication::translate("MainWindow", "Edit User", nullptr));
         labelConfidentialAUP->setText(QApplication::translate("MainWindow", "This information is confidential.", nullptr));
@@ -3877,12 +4119,17 @@ public:
         labelTestResultAUP->setText(QApplication::translate("MainWindow", "Test Results", nullptr));
         labelQRCodeAUP->setText(QApplication::translate("MainWindow", "QR Code", nullptr));
         labelClickEnlargeAUP->setText(QApplication::translate("MainWindow", "Click '+' to enlarge images.", nullptr));
+        labelClickEditAP_3->setText(QApplication::translate("MainWindow", "All vaccines recorded to date.", nullptr));
+        showUserNotesAUP->setText(QString());
+        labelAdditionalNotesAUP->setText(QApplication::translate("MainWindow", "Additional Notes", nullptr));
+        labelAlertConfidentialAP_2->setText(QApplication::translate("MainWindow", "*Attention Administrator.", nullptr));
+        showUserVaccStatusAUP->setText(QApplication::translate("MainWindow", "Vaccination Status", nullptr));
         pbSearchAUP->setText(QApplication::translate("MainWindow", "Search", nullptr));
         labelSearchUserAUP->setPlaceholderText(QApplication::translate("MainWindow", "Search by NHI Number", nullptr));
-        pbQuickRemoveAUP->setText(QApplication::translate("MainWindow", "-", nullptr));
-        showUserNameAUP_2->setText(QApplication::translate("MainWindow", "All Users", nullptr));
+        showUserNameAUP_2->setText(QApplication::translate("MainWindow", "View All Users", nullptr));
         labelConfidentialAUP_2->setText(QApplication::translate("MainWindow", "Existing users will apear here.", nullptr));
-        labelConfidentialAUP_3->setText(QApplication::translate("MainWindow", "Remove", nullptr));
+        pbQuickRemoveAUP->setText(QApplication::translate("MainWindow", "Remove", nullptr));
+        labelConfidentialAUP_12->setText(QApplication::translate("MainWindow", "~ Delete this users records.", nullptr));
         displayPictureAUP->setText(QApplication::translate("MainWindow", "displayPicture", nullptr));
         labelAdminAUP->setText(QApplication::translate("MainWindow", "Administrator!", nullptr));
         labelHeyThereAUP->setText(QApplication::translate("MainWindow", "Hey there,", nullptr));
@@ -3899,13 +4146,35 @@ public:
         userHomeWhiteBackgroundAP->setText(QString());
         homeSubHeadingAP->setText(QApplication::translate("MainWindow", "Manage your users information with ease. ", nullptr));
         homeTitleAP->setText(QApplication::translate("MainWindow", "Adding User", nullptr));
-        labelNHIAP->setText(QApplication::translate("MainWindow", "NHI Number", nullptr));
+        alerLevelUpdatesTitle_2->setText(QApplication::translate("MainWindow", "View All Users", nullptr));
+        labelSelectRP_2->setText(QApplication::translate("MainWindow", "Added users will appear here.", nullptr));
+        pbCancelAP->setText(QApplication::translate("MainWindow", "X", nullptr));
+        labelNHIAP_7->setText(QApplication::translate("MainWindow", "NHI Number", nullptr));
         labelEmergencyAP->setText(QApplication::translate("MainWindow", "Emergency Contact", nullptr));
         labelAdditionalNotesAP->setText(QApplication::translate("MainWindow", "Additional Notes", nullptr));
         addUserPictureAP->setText(QString());
         labelCVNAP->setText(QApplication::translate("MainWindow", "CV Number", nullptr));
+        pbSaveAP->setText(QApplication::translate("MainWindow", "Save User", nullptr));
+        labelConfidentialAP->setText(QApplication::translate("MainWindow", "This information is confidential.", nullptr));
+        labelUnauthorisedAP->setText(QApplication::translate("MainWindow", "Unauthorised access and changes will result in legal action.", nullptr));
+        addUserEmergencyAP->setPlaceholderText(QApplication::translate("MainWindow", "First Name & Contact Number", nullptr));
+        addUserDOBAP->setPlaceholderText(QApplication::translate("MainWindow", "DD/MM/YY", nullptr));
+        addUserPhoneAP->setPlaceholderText(QApplication::translate("MainWindow", "012-345-6789", nullptr));
+        pbAddUserPictureAP->setText(QApplication::translate("MainWindow", "Add", nullptr));
+        addUserNameAP->setText(QString());
+        addUserNameAP->setPlaceholderText(QApplication::translate("MainWindow", "First Name & Last Name", nullptr));
+        pbChangeUserPictureAP->setText(QApplication::translate("MainWindow", "Change", nullptr));
+        addUserCVNAP->setText(QString());
+        addUserEmailAP->setPlaceholderText(QApplication::translate("MainWindow", "example@email.com", nullptr));
+        addVaccStatusAP->setItemText(0, QApplication::translate("MainWindow", "Select Vaccine Status", nullptr));
+        addVaccStatusAP->setItemText(1, QApplication::translate("MainWindow", "Not Vaccinated", nullptr));
+        addVaccStatusAP->setItemText(2, QApplication::translate("MainWindow", "Partially Vaccinated", nullptr));
+        addVaccStatusAP->setItemText(3, QApplication::translate("MainWindow", "Fully Vaccinated", nullptr));
+
+        //addVaccStatusAP->setPlaceholderText(QString());
+        //labelVaccineStatusAP->setText(QApplication::translate("MainWindow", "Vaccine Status (Select)", nullptr));
+        labelClickEditAP->setText(QApplication::translate("MainWindow", "Type in the white bubble to edit information.", nullptr));
         labelVaccinesAP->setText(QApplication::translate("MainWindow", "Vaccines Recieved", nullptr));
-        labelDocumentationAP->setText(QApplication::translate("MainWindow", "Documentation", nullptr));
         vaccineIcon1FrameAP->setText(QString());
         imgVaccineIcon1AP->setText(QString());
         add1stDoseNameAP->setText(QString());
@@ -3913,17 +4182,7 @@ public:
         add1stDoseBatchAP->setText(QString());
         add1stDoseBatchAP->setPlaceholderText(QApplication::translate("MainWindow", "Batch", nullptr));
         add1stDoseDateAP->setText(QString());
-        add1stDoseDateAP->setPlaceholderText(QApplication::translate("MainWindow", "Date Recieved", nullptr));
-        pbSaveAP->setText(QApplication::translate("MainWindow", "Save User", nullptr));
-        labelConfidentialAP->setText(QApplication::translate("MainWindow", "This information is confidential.", nullptr));
-        labelUnauthorisedAP->setText(QApplication::translate("MainWindow", "Unauthorised access and changes will result in legal action.", nullptr));
-        addUserEmergencyAP->setPlaceholderText(QApplication::translate("MainWindow", "Full name and phone number", nullptr));
-        addUserDOBAP->setPlaceholderText(QApplication::translate("MainWindow", "Birthday", nullptr));
-        addUserPhoneAP->setPlaceholderText(QApplication::translate("MainWindow", "Phone Number", nullptr));
-        addUserEmailAP->setPlaceholderText(QApplication::translate("MainWindow", "Email Address", nullptr));
-        labelTestResultsAP->setText(QApplication::translate("MainWindow", "Test Results", nullptr));
-        labelCertificateAP->setText(QApplication::translate("MainWindow", "Certificate", nullptr));
-        labelQRCodeAP->setText(QApplication::translate("MainWindow", "QR Code", nullptr));
+        add1stDoseDateAP->setPlaceholderText(QApplication::translate("MainWindow", "DD/MM/YY", nullptr));
         vaccineIcon2FrameAP->setText(QString());
         imgVaccineIcon2AP->setText(QString());
         add2ndDoseNameAP->setText(QString());
@@ -3931,33 +4190,28 @@ public:
         add2ndDoseBatchAP->setText(QString());
         add2ndDoseBatchAP->setPlaceholderText(QApplication::translate("MainWindow", "Batch", nullptr));
         add2ndDoseDateAP->setText(QString());
-        add2ndDoseDateAP->setPlaceholderText(QApplication::translate("MainWindow", "Date Recieved", nullptr));
-        labelClickUploadAP->setText(QApplication::translate("MainWindow", "Click to upload user documentation", nullptr));
-        pbAddUserPictureAP->setText(QApplication::translate("MainWindow", "Add", nullptr));
-        addUserNameAP->setText(QString());
-        addUserNameAP->setPlaceholderText(QApplication::translate("MainWindow", "Add User Full Name", nullptr));
-        labelClickEditAP->setText(QApplication::translate("MainWindow", "Edit Vaccine Information", nullptr));
-        addQRCodeAP->setText(QString());
+        add2ndDoseDateAP->setPlaceholderText(QApplication::translate("MainWindow", "DD/MM/YY", nullptr));
+        labelQRCodeAP->setText(QApplication::translate("MainWindow", "QR Code", nullptr));
         pbAddQRCodeAP->setText(QApplication::translate("MainWindow", "Upload", nullptr));
-        pbAddTestResultsAP->setText(QApplication::translate("MainWindow", "Upload", nullptr));
-        pbAddCertificateAP->setText(QApplication::translate("MainWindow", "Upload", nullptr));
-        addCertificateAP->setText(QString());
-        addTestResultsAP->setText(QString());
-        pbChangeQRCodeAP->setText(QApplication::translate("MainWindow", "Change", nullptr));
-        pbChangeCertificateAP->setText(QApplication::translate("MainWindow", "Change", nullptr));
         pbChangeTestResultsAP->setText(QApplication::translate("MainWindow", "Change", nullptr));
-        addVaccStatusAP->setItemText(0, QApplication::translate("MainWindow", "Not Vaccinated", nullptr));
-        addVaccStatusAP->setItemText(1, QApplication::translate("MainWindow", "Partially Vaccinated", nullptr));
-        addVaccStatusAP->setItemText(2, QApplication::translate("MainWindow", "Vaccinated", nullptr));
-
-        //addVaccStatusAP->setPlaceholderText(QApplication::translate("MainWindow", "Vaccination Status", nullptr));
-        pbChangeUserPictureAP->setText(QApplication::translate("MainWindow", "Change", nullptr));
-        alerLevelUpdatesTitle_2->setText(QApplication::translate("MainWindow", "View All Users", nullptr));
-        alerLevelUpdatesTitle_3->setText(QApplication::translate("MainWindow", "Add User information by clicking the grey text", nullptr));
-        labelSelectRP_2->setText(QApplication::translate("MainWindow", "Added users will appear here.", nullptr));
-        labelSelectRP_3->setText(QApplication::translate("MainWindow", "Added users will appear here.", nullptr));
-        labelCancelAP->setText(QApplication::translate("MainWindow", "Cancel", nullptr));
-        pbCancelAP->setText(QApplication::translate("MainWindow", "X", nullptr));
+        pbAddCertificateAP->setText(QApplication::translate("MainWindow", "Upload", nullptr));
+        labelDocumentationAP->setText(QApplication::translate("MainWindow", "Documentation", nullptr));
+        addTestResultsAP->setText(QString());
+        labelClickUploadAP->setText(QApplication::translate("MainWindow", "Click to upload user documentation", nullptr));
+        addCertificateAP->setText(QString());
+        pbAddTestResultsAP->setText(QApplication::translate("MainWindow", "Upload", nullptr));
+        addQRCodeAP->setText(QString());
+        pbChangeQRCodeAP->setText(QApplication::translate("MainWindow", "Change", nullptr));
+        labelTestResultsAP->setText(QApplication::translate("MainWindow", "Test Results", nullptr));
+        labelCertificateAP->setText(QApplication::translate("MainWindow", "Certificate", nullptr));
+        pbChangeCertificateAP->setText(QApplication::translate("MainWindow", "Change", nullptr));
+        labelBirthdayAP->setText(QApplication::translate("MainWindow", "Birthday", nullptr));
+        labelNameAP->setText(QApplication::translate("MainWindow", "Full Name ", nullptr));
+        labelNumberAP->setText(QApplication::translate("MainWindow", "Phone Number", nullptr));
+        labelEmailAP->setText(QApplication::translate("MainWindow", "E-mail Address", nullptr));
+        labelAlertConfidentialAP->setText(QApplication::translate("MainWindow", "*Attention Administrator.", nullptr));
+        pbQuickRemoveAP->setText(QApplication::translate("MainWindow", "Remove", nullptr));
+        labelDeleteAP->setText(QApplication::translate("MainWindow", "~ Delete this users records.", nullptr));
         userHomeWhiteBackgroundRP->setText(QString());
         pbHomeRP->setText(QApplication::translate("MainWindow", "Home", nullptr));
         pbAllUsersRP->setText(QApplication::translate("MainWindow", "All Users", nullptr));
@@ -3989,6 +4243,8 @@ public:
         cbReportCategoryRP->setItemText(3, QApplication::translate("MainWindow", "My COVID Record Application", nullptr));
         cbReportCategoryRP->setItemText(4, QApplication::translate("MainWindow", "Other", nullptr));
 
+        pbQuickRemoveRP->setText(QApplication::translate("MainWindow", "Remove", nullptr));
+        labelDeleteRP->setText(QApplication::translate("MainWindow", "~ Delete this report.", nullptr));
         displayPictureEP->setText(QApplication::translate("MainWindow", "displayPicture", nullptr));
         labelAdminNameEP->setText(QApplication::translate("MainWindow", "Administrator!", nullptr));
         labelHeyThereEP->setText(QApplication::translate("MainWindow", "Hey there,", nullptr));
@@ -3999,61 +4255,73 @@ public:
         pbReportsEP->setText(QApplication::translate("MainWindow", "Reports", nullptr));
         homeSubHeadingEP->setText(QApplication::translate("MainWindow", "Manage your users information with ease. ", nullptr));
         homeTitleEP->setText(QApplication::translate("MainWindow", "Editing User", nullptr));
-        labelNHIEP->setText(QApplication::translate("MainWindow", "NHI Number", nullptr));
-        labelEmergencyEP->setText(QApplication::translate("MainWindow", "Emergency Contact", nullptr));
-        labelAdditionalNotesEP->setText(QApplication::translate("MainWindow", "Additional Notes", nullptr));
+        labelNHIAP_12->setText(QApplication::translate("MainWindow", "NHI Number", nullptr));
+        labelEmergencyAP_6->setText(QApplication::translate("MainWindow", "Emergency Contact", nullptr));
+        labelAdditionalNotesAP_4->setText(QApplication::translate("MainWindow", "Additional Notes", nullptr));
         editUserPictureEP->setText(QString());
-        labelCVNEP->setText(QApplication::translate("MainWindow", "CV Number", nullptr));
-        labelVaccineEP->setText(QApplication::translate("MainWindow", "Vaccines Recieved", nullptr));
-        labelDocumentationEP->setText(QApplication::translate("MainWindow", "Documentation", nullptr));
-        pbSaveEditEP->setText(QApplication::translate("MainWindow", "Save Changes", nullptr));
-        labelConfidentialEP->setText(QApplication::translate("MainWindow", "This information is confidential.", nullptr));
-        labelUnauthorisedEP->setText(QApplication::translate("MainWindow", "Unauthorised access and changes will result in legal action.", nullptr));
-        editUserEmergencyEP->setPlaceholderText(QApplication::translate("MainWindow", "Please include emergency contact full name and contact phone number.", nullptr));
-        editUserDOBEP->setPlaceholderText(QApplication::translate("MainWindow", "Birthday", nullptr));
-        editUserPhoneEP->setPlaceholderText(QApplication::translate("MainWindow", "Phone Number", nullptr));
-        editUserEmailEP->setPlaceholderText(QApplication::translate("MainWindow", "Email Address", nullptr));
-        labelTestResultsEP->setText(QApplication::translate("MainWindow", "Test Results", nullptr));
-        labelCertificateEP->setText(QApplication::translate("MainWindow", "Certificate", nullptr));
-        labeQRCodeEP->setText(QApplication::translate("MainWindow", "QR Code", nullptr));
-        vaccineIcon2FrameEP->setText(QString());
-        imgVaccineIcon2EP->setText(QString());
-        edit2ndDoseNameEP->setPlaceholderText(QApplication::translate("MainWindow", "Vaccination Type", nullptr));
-        edit2ndDoseBatchEP->setText(QString());
-        edit2ndDoseBatchEP->setPlaceholderText(QApplication::translate("MainWindow", "Batch", nullptr));
-        edit2ndDoseDateEP->setText(QString());
-        edit2ndDoseDateEP->setPlaceholderText(QApplication::translate("MainWindow", "Date Recieved", nullptr));
-        vaccineIcon1FrameEP->setText(QString());
-        imgVaccineIcon1EP->setText(QString());
+        labelCVNAP_4->setText(QApplication::translate("MainWindow", "CV Number", nullptr));
+        pbSaveEditEP->setText(QApplication::translate("MainWindow", "Save Edit", nullptr));
+        labelConfidentialAP_6->setText(QApplication::translate("MainWindow", "This information is confidential.", nullptr));
+        labelUnauthorisedAP_4->setText(QApplication::translate("MainWindow", "Unauthorised access and changes will result in legal action.", nullptr));
+        editUserEmergencyEP->setPlaceholderText(QApplication::translate("MainWindow", "First Name & Contact Number", nullptr));
+        editUserDOBEP->setPlaceholderText(QApplication::translate("MainWindow", "DD/MM/YY", nullptr));
+        editUserPhoneEP->setPlaceholderText(QApplication::translate("MainWindow", "012-345-6789", nullptr));
+        pbEditUserPictureEP->setText(QApplication::translate("MainWindow", "Edit", nullptr));
+        editUserNameEP->setText(QString());
+        editUserNameEP->setPlaceholderText(QApplication::translate("MainWindow", "First Name & Last Name", nullptr));
+        pbChangeUserPictureEP->setText(QApplication::translate("MainWindow", "Change", nullptr));
+        editUserEmailEP->setPlaceholderText(QApplication::translate("MainWindow", "example@email.com", nullptr));
+        editUserVaccineSBEP->setItemText(0, QApplication::translate("MainWindow", "Select Vaccine Status", nullptr));
+        editUserVaccineSBEP->setItemText(1, QApplication::translate("MainWindow", "Not Vaccinated", nullptr));
+        editUserVaccineSBEP->setItemText(2, QApplication::translate("MainWindow", "Partially Vaccinated", nullptr));
+        editUserVaccineSBEP->setItemText(3, QApplication::translate("MainWindow", "Fully Vaccinated", nullptr));
+
+        //editUserVaccineSBEP->setPlaceholderText(QString());
+        //labelEmergencyAP_7->setText(QApplication::translate("MainWindow", "Vaccine Status (Select)", nullptr));
+        labelClickEditAP_4->setText(QApplication::translate("MainWindow", "Type in the white bubble to edit information.", nullptr));
+        labelVaccinesAP_4->setText(QApplication::translate("MainWindow", "Vaccines Recieved", nullptr));
+        vaccineIcon1FrameAP_4->setText(QString());
+        imgVaccineIcon1AP_4->setText(QString());
+        edit1stDoseNameEP->setText(QString());
         edit1stDoseNameEP->setPlaceholderText(QApplication::translate("MainWindow", "Vaccination Type", nullptr));
         edit1stDoseBatchEP->setText(QString());
         edit1stDoseBatchEP->setPlaceholderText(QApplication::translate("MainWindow", "Batch", nullptr));
         edit1stDoseDateEP->setText(QString());
-        edit1stDoseDateEP->setPlaceholderText(QApplication::translate("MainWindow", "Date Recieved", nullptr));
-        labelClickChangeEP->setText(QApplication::translate("MainWindow", "Click to change user documentation", nullptr));
-        pbEditUserPictureEP->setText(QApplication::translate("MainWindow", "Edit", nullptr));
-        editUserVaccineSBEP->setItemText(0, QApplication::translate("MainWindow", "Not Vaccinated", nullptr));
-        editUserVaccineSBEP->setItemText(1, QApplication::translate("MainWindow", "Partially Vaccinated", nullptr));
-        editUserVaccineSBEP->setItemText(2, QApplication::translate("MainWindow", "Fully Vaccinated", nullptr));
-
-        pbEditTestResultsEP->setText(QApplication::translate("MainWindow", "Upload", nullptr));
-        editCertificateEP->setText(QString());
-        editTestResultsEP->setText(QString());
+        edit1stDoseDateEP->setPlaceholderText(QApplication::translate("MainWindow", "DD/MM/YY", nullptr));
+        vaccineIcon2FrameAP_4->setText(QString());
+        imgVaccineIcon2AP_4->setText(QString());
+        edit2ndDoseNameEP->setText(QString());
+        edit2ndDoseNameEP->setPlaceholderText(QApplication::translate("MainWindow", "Vaccination Type", nullptr));
+        edit2ndDoseBatchEP->setText(QString());
+        edit2ndDoseBatchEP->setPlaceholderText(QApplication::translate("MainWindow", "Batch", nullptr));
+        edit2ndDoseDateEP->setText(QString());
+        edit2ndDoseDateEP->setPlaceholderText(QApplication::translate("MainWindow", "DD/MM/YY", nullptr));
+        labelQRCodeEP->setText(QApplication::translate("MainWindow", "QR Code", nullptr));
         pbEditQRCodeEP->setText(QApplication::translate("MainWindow", "Upload", nullptr));
-        editQRCodeEP->setText(QString());
-        pbEditCertificateEP->setText(QApplication::translate("MainWindow", "Upload", nullptr));
-        labelClickEditEP->setText(QApplication::translate("MainWindow", "Edit Vaccine Information", nullptr));
-        editUserNameEP->setText(QString());
-        editUserNameEP->setPlaceholderText(QApplication::translate("MainWindow", "Edit User Name", nullptr));
-        showNHIEP->setText(QString());
         pbChangeTestResultsEP->setText(QApplication::translate("MainWindow", "Change", nullptr));
-        pbChangeCertificateEP->setText(QApplication::translate("MainWindow", "Change", nullptr));
+        pbEditCertificateEP->setText(QApplication::translate("MainWindow", "Upload", nullptr));
+        labelDocumentationAP_4->setText(QApplication::translate("MainWindow", "Documentation", nullptr));
+        editTestResultsEP->setText(QString());
+        labelClickUploadAP_4->setText(QApplication::translate("MainWindow", "Click to upload user documentation", nullptr));
+        editCertificateEP->setText(QString());
+        pbEditTestResultsEP->setText(QApplication::translate("MainWindow", "Upload", nullptr));
+        editQRCodeEP->setText(QString());
         pbChangeQRCodeEP->setText(QApplication::translate("MainWindow", "Change", nullptr));
-        pbChangeUserPictureEP->setText(QApplication::translate("MainWindow", "Change", nullptr));
+        labelTestResultsEP->setText(QApplication::translate("MainWindow", "Test Results", nullptr));
+        labelCertificateEP->setText(QApplication::translate("MainWindow", "Certificate", nullptr));
+        pbChangeCertificateEP->setText(QApplication::translate("MainWindow", "Change", nullptr));
+        labelNHIAP_13->setText(QApplication::translate("MainWindow", "Birthday", nullptr));
+        labelNameEP->setText(QApplication::translate("MainWindow", "Full Name ", nullptr));
+        labelNHIAP_15->setText(QApplication::translate("MainWindow", "Phone Number", nullptr));
+        labelNHIAP_16->setText(QApplication::translate("MainWindow", "E-mail Address", nullptr));
+        labelConfidentialAP_7->setText(QApplication::translate("MainWindow", "*Attention Administrator.", nullptr));
+        showNHIEP->setText(QString());
+        showUserCVNEP->setText(QString());
+        alerLevelUpdatesTitle_3->setText(QApplication::translate("MainWindow", "View All Users", nullptr));
+        labelSelectRP_3->setText(QApplication::translate("MainWindow", "Added users will appear here.", nullptr));
         pbCancelEP->setText(QApplication::translate("MainWindow", "X", nullptr));
-        labelCancelEP->setText(QApplication::translate("MainWindow", "Cancel", nullptr));
-        pbSearchEP->setText(QApplication::translate("MainWindow", "Search", nullptr));
-        editSearchEP->setPlaceholderText(QApplication::translate("MainWindow", "Click to start typing", nullptr));
+        pbQuickRemoveEP->setText(QApplication::translate("MainWindow", "Remove", nullptr));
+        labelDeleteEP->setText(QApplication::translate("MainWindow", "~ Delete this users records.", nullptr));
         userHomeWhiteBackgroundEP->setText(QString());
         displayPictureFS->setText(QApplication::translate("MainWindow", "displayPicture", nullptr));
         labelAdminNameFS->setText(QApplication::translate("MainWindow", "Administrator!", nullptr));
@@ -4064,9 +4332,7 @@ public:
         pbAddUserFS->setText(QApplication::translate("MainWindow", "Add User", nullptr));
         pbReportsFS->setText(QApplication::translate("MainWindow", "Reports", nullptr));
         showLargeTestsFS->setText(QString());
-        pbFullScreenFS->setText(QApplication::translate("MainWindow", "Full Screen", nullptr));
         pbCloseImageFS->setText(QApplication::translate("MainWindow", "X", nullptr));
-        closeImageTextFS->setText(QApplication::translate("MainWindow", "Close", nullptr));
         showLargeCertificateFS->setText(QString());
         showLargeQRCodeImageFS->setText(QString());
         showLargeQRFS->setText(QString());
