@@ -32,7 +32,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="loginPage">
      <widget class="QLabel" name="loginWhiteBackgroundLP">
@@ -482,7 +482,7 @@ font-size: 18px;</string>
         <string/>
        </property>
       </widget>
-      <widget class="QLabel" name="enterDetailsTextLP_2">
+      <widget class="QLabel" name="caseSensitiveLP">
        <property name="geometry">
         <rect>
          <x>40</x>
@@ -509,7 +509,7 @@ font-size: 14px;</string>
         <string>Login is case sensitive.</string>
        </property>
       </widget>
-      <zorder>enterDetailsTextLP_2</zorder>
+      <zorder>caseSensitiveLP</zorder>
       <zorder>editNHILP</zorder>
       <zorder>editEmailLP</zorder>
       <zorder>editAccessNumberLP</zorder>
@@ -1840,7 +1840,7 @@ border-radius: 50px;</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="labelConfidentialAUP">
+       <widget class="QLabel" name="labelConfidentialPP">
         <property name="geometry">
          <rect>
           <x>15</x>
@@ -1868,7 +1868,7 @@ color:#2B528C;
          <string>We value your privacy.</string>
         </property>
        </widget>
-       <widget class="QLabel" name="labelUnauthorisedAUP">
+       <widget class="QLabel" name="labelUnauthorisedPP">
         <property name="geometry">
          <rect>
           <x>16</x>
@@ -1896,7 +1896,7 @@ color:#2B528C;
          <string>All your information is confidential and secure.</string>
         </property>
        </widget>
-       <widget class="QLabel" name="labelUnauthorisedAUP_2">
+       <widget class="QLabel" name="labelContactPP">
         <property name="geometry">
          <rect>
           <x>16</x>
@@ -1924,7 +1924,7 @@ color:#2B528C;
          <string>Please contact us if you have any issues.</string>
         </property>
        </widget>
-       <widget class="QLabel" name="vaccineIcon1FramePP_2">
+       <widget class="QLabel" name="profilePictureFramePP">
         <property name="geometry">
          <rect>
           <x>110</x>
@@ -1947,7 +1947,7 @@ border-radius: 60px;</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <zorder>vaccineIcon1FramePP_2</zorder>
+       <zorder>profilePictureFramePP</zorder>
        <zorder>showUserNamePP</zorder>
        <zorder>labelUserDOBPP</zorder>
        <zorder>showUserDOBPP</zorder>
@@ -1960,9 +1960,9 @@ border-radius: 60px;</string>
        <zorder>showUserNHIPP</zorder>
        <zorder>labelUserNHIPP</zorder>
        <zorder>myUserPicturePP</zorder>
-       <zorder>labelConfidentialAUP</zorder>
-       <zorder>labelUnauthorisedAUP</zorder>
-       <zorder>labelUnauthorisedAUP_2</zorder>
+       <zorder>labelConfidentialPP</zorder>
+       <zorder>labelUnauthorisedPP</zorder>
+       <zorder>labelContactPP</zorder>
       </widget>
       <widget class="QLabel" name="labelVaccinesPP">
        <property name="geometry">
@@ -2831,7 +2831,7 @@ padding-left: 3px;}</string>
         <string/>
        </property>
       </widget>
-      <widget class="QLabel" name="labelClickEnlargePP_2">
+      <widget class="QLabel" name="labelAllVaccInfoPP">
        <property name="geometry">
         <rect>
          <x>403</x>
@@ -2881,7 +2881,7 @@ background: rgba(254, 206, 103, 0.00);
       <zorder>vaccineDose1FramePP</zorder>
       <zorder>labelUserCVNPP</zorder>
       <zorder>showUserCVNPP</zorder>
-      <zorder>labelClickEnlargePP_2</zorder>
+      <zorder>labelAllVaccInfoPP</zorder>
      </widget>
      <zorder>userHomeWhiteBackgroundPP</zorder>
      <zorder>userProfileBlueMenuBarPP</zorder>
@@ -3123,7 +3123,7 @@ border-radius: 40px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="labelContactCP">
+       <widget class="QLabel" name="labelContactDetailsCP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -3230,7 +3230,7 @@ font-size: 14px;
 padding-left: 3px;}</string>
         </property>
        </widget>
-       <widget class="QLabel" name="labelPreferredContactCP_2">
+       <widget class="QLabel" name="labelContactCP">
         <property name="geometry">
          <rect>
           <x>30</x>
@@ -3682,7 +3682,7 @@ color: #2B528C;
         <string>Get Vaccinated</string>
        </property>
       </widget>
-      <widget class="QLabel" name="homeSubHeadingCP_2">
+      <widget class="QLabel" name="labelInfoCP">
        <property name="geometry">
         <rect>
          <x>500</x>
@@ -3786,7 +3786,7 @@ color: #2B528C;
         <string>Learn More</string>
        </property>
       </widget>
-      <widget class="QLabel" name="labelLink1RP">
+      <widget class="QLabel" name="labelLink1CP">
        <property name="geometry">
         <rect>
          <x>780</x>
@@ -3817,7 +3817,7 @@ background: rgba(104, 160, 229, 0.00);
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="labelLink2RP">
+      <widget class="QLabel" name="labelLink2CP">
        <property name="geometry">
         <rect>
          <x>780</x>
@@ -3848,7 +3848,7 @@ background: rgba(104, 160, 229, 0.00);
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="labelLink3RP">
+      <widget class="QLabel" name="labelLink3CP">
        <property name="geometry">
         <rect>
          <x>780</x>

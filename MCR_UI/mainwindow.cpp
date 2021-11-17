@@ -51,8 +51,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 
     // Autoloading File information into the vector
     // Open file for reading
-    QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
-    //QFile inputFile("Citizens.txt");
+    //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+    QFile inputFile("Citizens.txt");
     inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
     QTextStream read(&inputFile);
 
@@ -483,8 +483,6 @@ void MainWindow::saveUser()
         /// Mac File Path
         QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
 
-
-
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
 
@@ -618,7 +616,6 @@ void MainWindow::selectUserDetails()
 
     if (index >= 0)
     {
-
         classCitizen *selectedUser = userList.at(index);
         ui->showUserNameAUP->setText(selectedUser->getName());
         ui->showUserPhoneAUP->setText(selectedUser->getContactNumber());
@@ -724,18 +721,21 @@ void MainWindow::searchUser()
         {
             QListWidgetItem* item = ui->listAllUsersAUP->item(i);
             item->setBackground(Qt::transparent);
+            item->setForeground(Qt::blue);
         }
 
         for (int i = 0; i < ui->listAllUsersAP->count(); i++)
         {
             QListWidgetItem* item = ui->listAllUsersAP->item(i);
             item->setBackground(Qt::transparent);
+            item->setForeground(Qt::blue);
         }
 
         for (int i = 0; i < ui->listAllUsersEP->count(); i++)
         {
             QListWidgetItem* item = ui->listAllUsersEP->item(i);
             item->setBackground(Qt::transparent);
+            item->setForeground(Qt::blue);
         }
     }
 
