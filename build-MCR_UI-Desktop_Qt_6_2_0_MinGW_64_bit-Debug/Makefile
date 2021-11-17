@@ -180,6 +180,7 @@ Makefile: ../MCR_UI/MCR_UI.pro D:/Tess/Qt/6.2.0/mingw81_64/mkspecs/win32-g++/qma
 		D:/Tess/Qt/6.2.0/mingw81_64/mkspecs/features/qt_config.prf \
 		D:/Tess/Qt/6.2.0/mingw81_64/mkspecs/win32-g++/qmake.conf \
 		D:/Tess/Qt/6.2.0/mingw81_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		D:/Tess/Qt/6.2.0/mingw81_64/mkspecs/features/exclusive_builds.prf \
 		D:/Tess/Qt/6.2.0/mingw81_64/mkspecs/features/toolchain.prf \
 		D:/Tess/Qt/6.2.0/mingw81_64/mkspecs/features/default_pre.prf \
@@ -209,7 +210,6 @@ Makefile: ../MCR_UI/MCR_UI.pro D:/Tess/Qt/6.2.0/mingw81_64/mkspecs/win32-g++/qma
 		D:/Tess/Qt/6.2.0/mingw81_64/lib/Qt6Gui.prl \
 		D:/Tess/Qt/6.2.0/mingw81_64/lib/Qt6Core.prl \
 		D:/Tess/Qt/6.2.0/mingw81_64/lib/Qt6EntryPoint.prl \
-		.qmake.stash \
 		D:/Tess/Qt/6.2.0/mingw81_64/mkspecs/features/build_pass.prf \
 		../MCR_UI/Resources.qrc
 	$(QMAKE) -o Makefile ..\MCR_UI\MCR_UI.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -323,6 +323,7 @@ D:/Tess/Qt/6.2.0/mingw81_64/mkspecs/features/qt_functions.prf:
 D:/Tess/Qt/6.2.0/mingw81_64/mkspecs/features/qt_config.prf:
 D:/Tess/Qt/6.2.0/mingw81_64/mkspecs/win32-g++/qmake.conf:
 D:/Tess/Qt/6.2.0/mingw81_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 D:/Tess/Qt/6.2.0/mingw81_64/mkspecs/features/exclusive_builds.prf:
 D:/Tess/Qt/6.2.0/mingw81_64/mkspecs/features/toolchain.prf:
 D:/Tess/Qt/6.2.0/mingw81_64/mkspecs/features/default_pre.prf:
@@ -352,7 +353,6 @@ D:/Tess/Qt/6.2.0/mingw81_64/lib/Qt6Widgets.prl:
 D:/Tess/Qt/6.2.0/mingw81_64/lib/Qt6Gui.prl:
 D:/Tess/Qt/6.2.0/mingw81_64/lib/Qt6Core.prl:
 D:/Tess/Qt/6.2.0/mingw81_64/lib/Qt6EntryPoint.prl:
-.qmake.stash:
 D:/Tess/Qt/6.2.0/mingw81_64/mkspecs/features/build_pass.prf:
 ../MCR_UI/Resources.qrc:
 qmake: FORCE
