@@ -1438,6 +1438,11 @@ background:  rgba(248, 251, 255, 0.12);
         <height>791</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Arial Rounded MT Bold</family>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">background: white;</string>
       </property>
@@ -2479,7 +2484,7 @@ background: rgba(254, 206, 103, 0.00);
        </property>
        <property name="font">
         <font>
-         <family>Avenir Next</family>
+         <family>Arial Rounded MT Bold</family>
          <pointsize>-1</pointsize>
          <weight>37</weight>
          <bold>false</bold>
@@ -2488,11 +2493,10 @@ background: rgba(254, 206, 103, 0.00);
        <property name="styleSheet">
         <string notr="true">QPushButton{
 background: #2B528C;
-font-weight: 300;
 border-radius: 15px;
 color:  rgba(248, 251, 255, 0.99);
 border-color: rgba(104, 160, 229, 0.33);
-font-size: 16px; 
+font-size: 18px; 
 }
 QPushButton:hover{
 background: rgba(104, 160, 229, 0.88);}</string>
@@ -2512,20 +2516,19 @@ background: rgba(104, 160, 229, 0.88);}</string>
        </property>
        <property name="font">
         <font>
-         <family>Avenir Next</family>
+         <family>Arial Rounded MT Bold</family>
          <pointsize>-1</pointsize>
-         <weight>37</weight>
+         <weight>50</weight>
          <bold>false</bold>
         </font>
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
 background: #2B528C;
-font-weight: 300;
 border-radius: 15px;
 color:  rgba(248, 251, 255, 0.99);
 border-color: rgba(104, 160, 229, 0.33);
-font-size: 16px; 
+font-size: 18px; 
 }
 QPushButton:hover{
 background: rgba(104, 160, 229, 0.88);}</string>
@@ -2545,20 +2548,19 @@ background: rgba(104, 160, 229, 0.88);}</string>
        </property>
        <property name="font">
         <font>
-         <family>Avenir Next</family>
+         <family>Arial Rounded MT Bold</family>
          <pointsize>-1</pointsize>
-         <weight>37</weight>
+         <weight>50</weight>
          <bold>false</bold>
         </font>
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
 background: #2B528C;
-font-weight: 300;
 border-radius: 15px;
 color:  rgba(248, 251, 255, 0.99);
 border-color: rgba(104, 160, 229, 0.33);
-font-size: 16px; 
+font-size: 18px; 
 }
 QPushButton:hover{
 background: rgba(104, 160, 229, 0.88);}</string>
