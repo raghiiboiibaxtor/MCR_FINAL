@@ -23,7 +23,7 @@
     <property name="geometry">
      <rect>
       <x>-1</x>
-      <y>-1</y>
+      <y>0</y>
       <width>1101</width>
       <height>791</height>
      </rect>
@@ -32,7 +32,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="loginPage">
      <widget class="QLabel" name="loginWhiteBackgroundLP">
@@ -669,9 +669,9 @@ border-radius: 105px;</string>
       <widget class="QPushButton" name="pbHomeHP">
        <property name="geometry">
         <rect>
-         <x>-81</x>
-         <y>133</y>
-         <width>271</width>
+         <x>-30</x>
+         <y>120</y>
+         <width>211</width>
          <height>51</height>
         </rect>
        </property>
@@ -690,11 +690,14 @@ font-weight: 500;
 border-radius: 25px;
 background:  white;
 font-size: 16px; 
+text-align:left;
+padding-left: 55px;
 }
 QPushButton:hover
 {
-font-size: 17px;
-}</string>
+background: rgba(248, 251, 255, 0.88);
+}
+</string>
        </property>
        <property name="text">
         <string>Home</string>
@@ -703,9 +706,9 @@ font-size: 17px;
       <widget class="QPushButton" name="pbProfileHP">
        <property name="geometry">
         <rect>
-         <x>-50</x>
-         <y>220</y>
-         <width>241</width>
+         <x>-30</x>
+         <y>210</y>
+         <width>211</width>
          <height>51</height>
         </rect>
        </property>
@@ -725,10 +728,12 @@ border-radius: 25px;
 color:  rgba(248, 251, 255, 0.99);
 border-color: rgba(104, 160, 229, 0.33);
 font-size: 16px; 
+text-align: left;
+padding-left: 55px;
 }
 QPushButton:hover
 {
-font-size: 18px;
+background: rgba(248, 251, 255, 0.12);
 }</string>
        </property>
        <property name="text">
@@ -738,9 +743,9 @@ font-size: 18px;
       <widget class="QPushButton" name="pbContactHP">
        <property name="geometry">
         <rect>
-         <x>-40</x>
-         <y>310</y>
-         <width>231</width>
+         <x>-30</x>
+         <y>300</y>
+         <width>211</width>
          <height>51</height>
         </rect>
        </property>
@@ -760,10 +765,12 @@ border-radius: 25px;
 color:  rgba(248, 251, 255, 0.99);
 border-color: rgba(104, 160, 229, 0.33);
 font-size: 16px; 
+text-align: left;
+padding-left: 55px;
 }
 QPushButton:hover
 {
-font-size: 18px;
+background: rgba(248, 251, 255, 0.12);
 }</string>
        </property>
        <property name="text">
@@ -1315,9 +1322,9 @@ border-radius: 105px;</string>
       <widget class="QPushButton" name="pbHomePP">
        <property name="geometry">
         <rect>
-         <x>-81</x>
-         <y>133</y>
-         <width>271</width>
+         <x>-30</x>
+         <y>120</y>
+         <width>211</width>
          <height>51</height>
         </rect>
        </property>
@@ -1337,10 +1344,12 @@ border-radius: 25px;
 color:  rgba(248, 251, 255, 0.99);
 border-color: rgba(104, 160, 229, 0.33);
 font-size: 16px; 
+text-align: left;
+padding-left: 55px;
 }
 QPushButton:hover
 {
-font-size: 18px;
+background: rgba(248, 251, 255, 0.12);
 }</string>
        </property>
        <property name="text">
@@ -1350,9 +1359,9 @@ font-size: 18px;
       <widget class="QPushButton" name="pbProfilePP">
        <property name="geometry">
         <rect>
-         <x>-50</x>
-         <y>220</y>
-         <width>241</width>
+         <x>-30</x>
+         <y>210</y>
+         <width>211</width>
          <height>51</height>
         </rect>
        </property>
@@ -1371,12 +1380,14 @@ font-weight: 500;
 border-radius: 25px;
 background:  white;
 font-size: 16px; 
+text-align:left;
+padding-left: 55px;
 }
 QPushButton:hover
 {
-font-size: 17px;
-
-}</string>
+background: rgba(248, 251, 255, 0.88);
+}
+</string>
        </property>
        <property name="text">
         <string>My Profile</string>
@@ -1385,9 +1396,9 @@ font-size: 17px;
       <widget class="QPushButton" name="pbContactPP">
        <property name="geometry">
         <rect>
-         <x>-40</x>
-         <y>310</y>
-         <width>231</width>
+         <x>-30</x>
+         <y>300</y>
+         <width>211</width>
          <height>51</height>
         </rect>
        </property>
@@ -1407,10 +1418,12 @@ border-radius: 25px;
 color:  rgba(248, 251, 255, 0.99);
 border-color: rgba(104, 160, 229, 0.33);
 font-size: 16px; 
+text-align: left;
+padding-left: 55px;
 }
 QPushButton:hover
 {
-font-size: 18px;
+background: rgba(248, 251, 255, 0.12);
 }</string>
        </property>
        <property name="text">
@@ -1826,6 +1839,11 @@ background: rgba(254, 206, 103, 0.00);
           <height>101</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Avenir Next</family>
+         </font>
+        </property>
         <property name="styleSheet">
          <string notr="true">background: rgba(248, 251, 255, 0.99);
 border-radius: 50px;</string>
@@ -2089,7 +2107,7 @@ color:#2B528C;
 </string>
         </property>
         <property name="text">
-         <string>Dose 2</string>
+         <string>#Batch</string>
         </property>
        </widget>
        <widget class="QLabel" name="showDose2NamePP">
@@ -2470,23 +2488,21 @@ background: rgba(254, 206, 103, 0.00);
         <font>
          <family>Avenir Next</family>
          <pointsize>-1</pointsize>
-         <weight>37</weight>
-         <bold>false</bold>
+         <weight>62</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
 background: #2B528C;
-font-weight: 300;
+font-weight: 500;
 border-radius: 15px;
 color:  rgba(248, 251, 255, 0.99);
 border-color: rgba(104, 160, 229, 0.33);
 font-size: 16px; 
 }
-QPushButton:hover
-{
-font-size: 11px;
-}</string>
+QPushButton:hover{
+background: rgba(104, 160, 229, 0.88);}</string>
        </property>
        <property name="text">
         <string>+</string>
@@ -2505,23 +2521,21 @@ font-size: 11px;
         <font>
          <family>Avenir Next</family>
          <pointsize>-1</pointsize>
-         <weight>37</weight>
-         <bold>false</bold>
+         <weight>62</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
 background: #2B528C;
-font-weight: 300;
+font-weight: 500;
 border-radius: 15px;
 color:  rgba(248, 251, 255, 0.99);
 border-color: rgba(104, 160, 229, 0.33);
 font-size: 16px; 
 }
-QPushButton:hover
-{
-font-size: 11px;
-}</string>
+QPushButton:hover{
+background: rgba(104, 160, 229, 0.88);}</string>
        </property>
        <property name="text">
         <string>+</string>
@@ -2540,23 +2554,21 @@ font-size: 11px;
         <font>
          <family>Avenir Next</family>
          <pointsize>-1</pointsize>
-         <weight>37</weight>
-         <bold>false</bold>
+         <weight>62</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
 background: #2B528C;
-font-weight: 300;
+font-weight: 500;
 border-radius: 15px;
 color:  rgba(248, 251, 255, 0.99);
 border-color: rgba(104, 160, 229, 0.33);
 font-size: 16px; 
 }
-QPushButton:hover
-{
-font-size: 11px;
-}</string>
+QPushButton:hover{
+background: rgba(104, 160, 229, 0.88);}</string>
        </property>
        <property name="text">
         <string>+</string>
@@ -2684,7 +2696,7 @@ color:#2B528C;
 </string>
         </property>
         <property name="text">
-         <string>Dose 1</string>
+         <string>#Batch</string>
         </property>
        </widget>
        <widget class="QLabel" name="showDose1NamePP">
@@ -2911,9 +2923,9 @@ border-radius: 105px;</string>
       <widget class="QPushButton" name="pbHomeCP">
        <property name="geometry">
         <rect>
-         <x>-81</x>
-         <y>133</y>
-         <width>271</width>
+         <x>-30</x>
+         <y>120</y>
+         <width>211</width>
          <height>51</height>
         </rect>
        </property>
@@ -2933,10 +2945,12 @@ border-radius: 25px;
 color:  rgba(248, 251, 255, 0.99);
 border-color: rgba(104, 160, 229, 0.33);
 font-size: 16px; 
+text-align: left;
+padding-left: 55px;
 }
 QPushButton:hover
 {
-font-size: 18px;
+background: rgba(248, 251, 255, 0.12);
 }</string>
        </property>
        <property name="text">
@@ -2946,9 +2960,9 @@ font-size: 18px;
       <widget class="QPushButton" name="pbProfileCP">
        <property name="geometry">
         <rect>
-         <x>-50</x>
-         <y>220</y>
-         <width>241</width>
+         <x>-30</x>
+         <y>210</y>
+         <width>211</width>
          <height>51</height>
         </rect>
        </property>
@@ -2968,10 +2982,12 @@ border-radius: 25px;
 color:  rgba(248, 251, 255, 0.99);
 border-color: rgba(104, 160, 229, 0.33);
 font-size: 16px; 
+text-align: left;
+padding-left: 55px;
 }
 QPushButton:hover
 {
-font-size: 18px;
+background: rgba(248, 251, 255, 0.12);
 }</string>
        </property>
        <property name="text">
@@ -2981,9 +2997,9 @@ font-size: 18px;
       <widget class="QPushButton" name="pbContactCP">
        <property name="geometry">
         <rect>
-         <x>-40</x>
-         <y>310</y>
-         <width>231</width>
+         <x>-30</x>
+         <y>300</y>
+         <width>211</width>
          <height>51</height>
         </rect>
        </property>
@@ -3002,12 +3018,14 @@ font-weight: 500;
 border-radius: 25px;
 background:  white;
 font-size: 16px; 
+text-align:left;
+padding-left: 55px;
 }
 QPushButton:hover
 {
-font-size: 17px;
-
-}</string>
+background: rgba(248, 251, 255, 0.88);
+}
+</string>
        </property>
        <property name="text">
         <string>Contact Us</string>
@@ -3523,10 +3541,8 @@ color:  rgba(248, 251, 255, 0.99);
 border-color: rgba(104, 160, 229, 0.33);
 font-size: 16px; 
 }
-QPushButton:hover
-{
-font-size: 18px;
-}</string>
+QPushButton:hover{
+background: rgba(104, 160, 229, 0.88);}</string>
         </property>
         <property name="text">
          <string>Send Message</string>
@@ -3578,7 +3594,7 @@ border-radius: 15;
 border-color: rgba(104, 160, 229, 0.33);
 color: #2B528C;
 font-size: 14px; 
-padding-left: 3px;}</string>
+padding-left: 8px;}</string>
          </property>
          <item>
           <property name="text">
@@ -3655,7 +3671,7 @@ color:#2B528C;
        </property>
        <property name="font">
         <font>
-         <family>Quicksand</family>
+         <family>Arial Rounded MT Bold</family>
          <pointsize>-1</pointsize>
          <weight>62</weight>
          <bold>true</bold>
@@ -3663,20 +3679,15 @@ color:#2B528C;
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
-color: #2B528C;
-font-weight: 500;
 background: #F2F8FC;
-border-radius: 30px;
+font-weight: 500;
+border-radius: 25px;
+color: #2B528C;
 border-color: rgba(104, 160, 229, 0.33);
 font-size: 16px; 
 }
-QPushButton:hover
-{
-background:  rgba(248, 251, 255, 0.55);
-border-color: rgba(104, 160, 229, 0.88);
-font-size: 14px;
-color: #2B528C;
-}</string>
+QPushButton:hover{
+background: rgba(254, 206, 103, 0.55);}</string>
        </property>
        <property name="text">
         <string>Get Vaccinated</string>
@@ -3721,7 +3732,7 @@ background: rgba(104, 160, 229, 0.00);
        </property>
        <property name="font">
         <font>
-         <family>Quicksand</family>
+         <family>Arial Rounded MT Bold</family>
          <pointsize>-1</pointsize>
          <weight>62</weight>
          <bold>true</bold>
@@ -3729,20 +3740,15 @@ background: rgba(104, 160, 229, 0.00);
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
-color: #2B528C;
-font-weight: 500;
 background: #F2F8FC;
-border-radius: 30px;
+font-weight: 500;
+border-radius: 25px;
+color: #2B528C;
 border-color: rgba(104, 160, 229, 0.33);
 font-size: 16px; 
 }
-QPushButton:hover
-{
-background:  rgba(248, 251, 255, 0.55);
-border-color: rgba(104, 160, 229, 0.88);
-font-size: 14px;
-color: #2B528C;
-}</string>
+QPushButton:hover{
+background: rgba(254, 206, 103, 0.55);}</string>
        </property>
        <property name="text">
         <string>Get Tested</string>
@@ -3759,7 +3765,7 @@ color: #2B528C;
        </property>
        <property name="font">
         <font>
-         <family>Quicksand</family>
+         <family>Arial Rounded MT Bold</family>
          <pointsize>-1</pointsize>
          <weight>62</weight>
          <bold>true</bold>
@@ -3767,20 +3773,15 @@ color: #2B528C;
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
-color: #2B528C;
-font-weight: 500;
 background: #F2F8FC;
-border-radius: 30px;
+font-weight: 500;
+border-radius: 25px;
+color: #2B528C;
 border-color: rgba(104, 160, 229, 0.33);
 font-size: 16px; 
 }
-QPushButton:hover
-{
-background:  rgba(248, 251, 255, 0.55);
-border-color: rgba(104, 160, 229, 0.88);
-font-size: 14px;
-color: #2B528C;
-}</string>
+QPushButton:hover{
+background: rgba(254, 206, 103, 0.55);}</string>
        </property>
        <property name="text">
         <string>Learn More</string>
@@ -4173,9 +4174,9 @@ border-radius: 105px;</string>
       <widget class="QPushButton" name="pbHomeFS">
        <property name="geometry">
         <rect>
-         <x>-81</x>
-         <y>133</y>
-         <width>271</width>
+         <x>-30</x>
+         <y>120</y>
+         <width>211</width>
          <height>51</height>
         </rect>
        </property>
@@ -4195,10 +4196,12 @@ border-radius: 25px;
 color:  rgba(248, 251, 255, 0.99);
 border-color: rgba(104, 160, 229, 0.33);
 font-size: 16px; 
+text-align: left;
+padding-left: 55px;
 }
 QPushButton:hover
 {
-font-size: 18px;
+background: rgba(248, 251, 255, 0.12);
 }</string>
        </property>
        <property name="text">
@@ -4208,9 +4211,9 @@ font-size: 18px;
       <widget class="QPushButton" name="pbProfileFS">
        <property name="geometry">
         <rect>
-         <x>-50</x>
-         <y>220</y>
-         <width>241</width>
+         <x>-30</x>
+         <y>200</y>
+         <width>211</width>
          <height>51</height>
         </rect>
        </property>
@@ -4229,12 +4232,14 @@ font-weight: 500;
 border-radius: 25px;
 background:  white;
 font-size: 16px; 
+text-align:left;
+padding-left: 55px;
 }
 QPushButton:hover
 {
-font-size: 17px;
-
-}</string>
+background: rgba(248, 251, 255, 0.88);
+}
+</string>
        </property>
        <property name="text">
         <string>My Profile</string>
@@ -4243,9 +4248,9 @@ font-size: 17px;
       <widget class="QPushButton" name="pbContactFS">
        <property name="geometry">
         <rect>
-         <x>-40</x>
-         <y>310</y>
-         <width>231</width>
+         <x>-30</x>
+         <y>290</y>
+         <width>211</width>
          <height>51</height>
         </rect>
        </property>
@@ -4265,10 +4270,12 @@ border-radius: 25px;
 color:  rgba(248, 251, 255, 0.99);
 border-color: rgba(104, 160, 229, 0.33);
 font-size: 16px; 
+text-align: left;
+padding-left: 55px;
 }
 QPushButton:hover
 {
-font-size: 18px;
+background: rgba(248, 251, 255, 0.12);
 }</string>
        </property>
        <property name="text">
@@ -5625,7 +5632,7 @@ border-radius: 25;}</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background: rgba(43, 82, 140, 0.77);
+         <string notr="true">background: rgba(43, 82, 140, 0.95);
 border: 0px;</string>
         </property>
         <property name="frameShape">
@@ -5657,13 +5664,10 @@ color: #2B528C;
 font-weight: 500;
 border-radius: 15px;
 background:  white;
-font-size: 12px; 
+font-size: 16px; 
 }
-QPushButton:hover
-{
-font-size: 13px;
-
-}</string>
+QPushButton:hover{
+background:  rgba(248, 251, 255, 0.55);}</string>
          </property>
          <property name="text">
           <string>X</string>
