@@ -133,8 +133,8 @@ void UserLogin::login()
     }
     else if(NHI != "NHIAdmin")
     {
-        QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
-        //QFile inputFile("Citizens.txt");
+        //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+        QFile inputFile("Citizens.txt");
         inputFile.open(QIODevice::ReadOnly | QIODevice::Text);
         QTextStream read(&inputFile);
 
@@ -223,12 +223,12 @@ void UserLogin::login()
                     // link icons
 
                     QPixmap pixmap4(":/res/images/iconLink.png");
-                    ui->labelLink1RP->setPixmap(pixmap4);
-                    ui->labelLink1RP->setScaledContents(true);
-                    ui->labelLink2RP->setPixmap(pixmap4);
-                    ui->labelLink2RP->setScaledContents(true);
-                    ui->labelLink3RP->setPixmap(pixmap4);
-                    ui->labelLink3RP->setScaledContents(true);
+                    ui->labelLink1CP->setPixmap(pixmap4);
+                    ui->labelLink1CP->setScaledContents(true);
+                    ui->labelLink2CP->setPixmap(pixmap4);
+                    ui->labelLink2CP->setScaledContents(true);
+                    ui->labelLink3CP->setPixmap(pixmap4);
+                    ui->labelLink3CP->setScaledContents(true);
 
 
 
@@ -364,9 +364,9 @@ void UserLogin::submitReport()
     {
         // Writing to file
         /// Windows File Path
-        //QFile outputFile("GeneralEnquiries.txt");
+        QFile outputFile("GeneralEnquiries.txt");
         /// Mac File Path
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/GeneralEnquiries.txt");
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/GeneralEnquiries.txt");
 
         addDetails.replace(QString("\n"), QString ("<br>"));
         QString paragraph(addDetails);
@@ -393,9 +393,9 @@ void UserLogin::submitReport()
     {
         // Writing to file
         /// Windows File Path
-        //QFile outputFile("COVID19Vaccine.txt");
+        QFile outputFile("COVID19Vaccine.txt");
         /// Mac File Path
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/COVID19Vaccine.txt");
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/COVID19Vaccine.txt");
 
         addDetails.replace(QString("\n"), QString ("<br>"));
         QString paragraph(addDetails);
@@ -421,9 +421,9 @@ void UserLogin::submitReport()
     {
         // Writing to file
         /// Windows File Path
-        //QFile outputFile("ChangePersonalDetails.txt");
+        QFile outputFile("ChangePersonalDetails.txt");
         /// Mac File Path
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/ChangePersonalDetails.txt");
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/ChangePersonalDetails.txt");
 
         addDetails.replace(QString("\n"), QString ("<br>"));
         QString paragraph(addDetails);
@@ -440,7 +440,6 @@ void UserLogin::submitReport()
         out << addSubject << "|";
         out << paragraph << Qt::endl; //Qt::endl;
 
-
         // Flushing file and then closing.
         out.flush();
         outputFile.close();
@@ -449,9 +448,9 @@ void UserLogin::submitReport()
     {
         // Writing to file
         /// Windows File Path
-        //QFile outputFile("COVIDRecordApp.txt");
+        QFile outputFile("COVIDRecordApp.txt");
         /// Mac File Path
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/COVIDRecordApp.txt");
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/COVIDRecordApp.txt");
 
         addDetails.replace(QString("\n"), QString ("<br>"));
         QString paragraph(addDetails);
@@ -476,9 +475,9 @@ void UserLogin::submitReport()
     {
         // Writing to file
         /// Windows File Path
-        //QFile outputFile("Other.txt");
+        QFile outputFile("Other.txt");
         /// Mac File Path
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Other.txt");
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Other.txt");
 
         addDetails.replace(QString("\n"), QString ("<br>"));
         QString paragraph(addDetails);
@@ -487,7 +486,6 @@ void UserLogin::submitReport()
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text);
-
 
         out << addName << "|";
         out << addContactDetails << "|";

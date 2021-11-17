@@ -49,91 +49,53 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->labelDeleteRP->hide();
     //**********************************
 
-    // Autoloading File information into the vector
-    // Open file for reading
-    QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
-    //QFile inputFile("Citizens.txt");
-    inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
-    QTextStream read(&inputFile);
-
-    // Clearing existing data from vector
-   for (int i = 0; i< userList.size(); i++)
-    {
-        delete userList.at(i);
-    }
-   // Clearing ui
-    userList.clear();
-    ui->listAllUsersAUP->clear();
-    ui->listAllUsersEP->clear();
-    ui->listAllUsersAP->clear();
-
-   while(!read.atEnd()) // Start while loop to read file and push info to vec
-   {
-       // Reading from file and seperating info at text.split()
-        QString text = read.readLine();
-        QStringList info = text.split("|");
-
-       // Add read information to ui
-       ui->listAllUsersAUP->addItem(info.at(4));
-       ui->listAllUsersEP->addItem(info.at(4));
-       ui->listAllUsersAP->addItem(info.at(4));
-
-       // Adding file information to vector
-       classCitizen* temp = new classCitizen(info.at(0), info.at(1), info.at(2), info.at(3), info.at(4), info.at(5), info.at(6), info.at(7), info.at(8), info.at(9),
-                                             info.at(10), info.at(11), info.at(12), info.at(13), info.at(14), info.at(15), info.at(16), info.at(17), info.at(18));
-       userList.push_back(temp);
-   } // End while
-
-   // Flushing file and then closing.
-   read.flush();
-   inputFile.close();
 
     // Constructing File Path Directories
-   //Mac Create Directory
-   QDir pathDir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files");
+    //Mac Create Directory
+    /*QDir pathDir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files");
        if(!pathDir.exists())
        {
            QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files");
-       }
+       }*/
 
        // File path for Vaccine Certificates
-       //QDir pathDir0("./VaccineCertificates");
-       QDir pathDir0("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates");
+       QDir pathDir0("./VaccineCertificates");
+       //QDir pathDir0("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates");
        if(!pathDir0.exists())
        {
            //create it!
-           //QDir().mkdir("./VaccineCertificates");
-           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates");
+           QDir().mkdir("./VaccineCertificates");
+           //QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates");
        }
 
        // File path for QRCodes
-       //QDir pathDir1("./QRCodes");
-       QDir pathDir1("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes");
+       QDir pathDir1("./QRCodes");
+       //QDir pathDir1("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes");
        if(!pathDir1.exists())
        {
            //create it!
-           //QDir().mkdir("./QRCodes");
-           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes");
+           QDir().mkdir("./QRCodes");
+           //QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes");
        }
 
        // File path for Test Results
-       //QDir pathDir2("./TestResults");
-       QDir pathDir2("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
+       QDir pathDir2("./TestResults");
+       //QDir pathDir2("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
        if(!pathDir2.exists())
        {
            //create it!
-           //QDir().mkdir("./TestResults");
-           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
+           QDir().mkdir("./TestResults");
+           //QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults");
        }
 
        // File path for User Profile Pictures
-       //QDir pathDir3("./userProfilePictures");
-       QDir pathDir3("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/userProfilePictures");
+       QDir pathDir3("./userProfilePictures");
+       //QDir pathDir3("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/userProfilePictures");
        if(!pathDir3.exists())
        {
            //create it!
-           //QDir().mkdir("./userProfilePictures");
-           QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/userProfilePictures");
+           QDir().mkdir("./userProfilePictures");
+           //QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/userProfilePictures");
        }
 
     //Constructing Admin Profile Picture
@@ -279,6 +241,45 @@ void MainWindow::addNewUser()
 {
     ui->stackedWidget->setCurrentIndex(2);
 
+    // Autoloading File information into the vector
+    // Open file for reading
+    //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+    QFile inputFile("Citizens.txt");
+    inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
+    QTextStream read(&inputFile);
+
+    // Clearing existing data from vector
+    for (int i = 0; i< userList.size(); i++)
+     {
+         delete userList.at(i);
+     }
+    // Clearing ui
+     userList.clear();
+     ui->listAllUsersAUP->clear();
+     ui->listAllUsersEP->clear();
+     ui->listAllUsersAP->clear();
+
+    while(!read.atEnd()) // Start while loop to read file and push info to vec
+    {
+        // Reading from file and seperating info at text.split()
+         QString text = read.readLine();
+         QStringList info = text.split("|");
+
+        // Add read information to ui
+        ui->listAllUsersAUP->addItem(info.at(4));
+        ui->listAllUsersEP->addItem(info.at(4));
+        ui->listAllUsersAP->addItem(info.at(4));
+
+        // Adding file information to vector
+        classCitizen* temp = new classCitizen(info.at(0), info.at(1), info.at(2), info.at(3), info.at(4), info.at(5), info.at(6), info.at(7), info.at(8), info.at(9),
+                                              info.at(10), info.at(11), info.at(12), info.at(13), info.at(14), info.at(15), info.at(16), info.at(17), info.at(18));
+        userList.push_back(temp);
+    } // End while
+
+    // Flushing file and then closing.
+    read.flush();
+    inputFile.close();
+
     classCitizen* newCitizen = nullptr;
 
     if (newCitizen != nullptr)
@@ -323,8 +324,8 @@ void MainWindow::addCertificateImage()
         ui->pbChangeCertificateAP->show();
 
         certificateImageSave = "./vaccineCertificates/" + shortName;
-        //QFile outputFile("vaxCertificates.txt");
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates/vaxCertificates.txt");
+        QFile outputFile("vaxCertificates.txt");
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/VaccineCertificates/vaxCertificates.txt");
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
         // Writing to file
@@ -360,8 +361,8 @@ void MainWindow::addQRCodeImage()
 
         qrCodeImageSave = "./qrCodes/" + shortName;
 
-        //QFile outputFile("issuedQRCodes.txt");
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes/issuedQRCodes.txt");
+        QFile outputFile("issuedQRCodes.txt");
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/QRCodes/issuedQRCodes.txt");
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
         // Writing to file
@@ -397,8 +398,8 @@ void MainWindow::addTestResultImage()
 
         testResultImageSave = "./testResults/" + shortName;
 
-        //QFile outputFile("issuedTestResults.txt");
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults/issuedTestResults.txt");
+        QFile outputFile("issuedTestResults.txt");
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/TestResults/issuedTestResults.txt");
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
         // Writing to file
@@ -433,8 +434,8 @@ void MainWindow::addUserPicture()
 
         userProfilePictureSave = "./userProfilePictures/" + shortName;
 
-        //QFile outputFile("ProfilePictures.txt");
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/userProfilePictures/ProfilePictures.txt");
+        QFile outputFile("ProfilePictures.txt");
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/userProfilePictures/ProfilePictures.txt");
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
         // Writing to file
@@ -479,11 +480,9 @@ void MainWindow::saveUser()
         ui->listAllUsersAP->addItem(ptrNewCitizen->getNHI());
         // Writing to file
         /// Windows File Path
-        //QFile outputFile("Citizens.txt");
+        QFile outputFile("Citizens.txt");
         /// Mac File Path
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
-
-
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -551,7 +550,7 @@ void MainWindow::saveUser()
             ui->pbAddUserPictureAP->show();
             ui->pbEditUserPictureEP->show();
 
-           // Clearing global variables
+            // Clearing global variables
             certificateImageSave = "";
             qrCodeImageSave = "";
             testResultImageSave = "";
@@ -565,7 +564,7 @@ void MainWindow::saveUser()
 
 } /// End of saveUser()
 
-
+// Function to cancel adding user details
 void MainWindow::pbCancelAdd()
 {
     // Clearing input from labels
@@ -588,8 +587,7 @@ void MainWindow::pbCancelAdd()
     ui->addTestResultsAP->clear();
     ui->addUserPictureAP->clear();
 
-    ui->stackedWidget->setCurrentIndex(1);
-}
+} /// End of pbCancelAdd()
 
 
 /// Display List of All Users & Info Functions
@@ -599,6 +597,45 @@ void MainWindow::pbCancelAdd()
 void MainWindow::pbAllUsers()
 {
     ui->stackedWidget->setCurrentIndex(1);
+
+    // Autoloading File information into the vector
+    // Open file for reading
+    //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+    QFile inputFile("Citizens.txt");
+    inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
+    QTextStream read(&inputFile);
+
+    // Clearing existing data from vector
+   for (int i = 0; i< userList.size(); i++)
+    {
+        delete userList.at(i);
+    }
+   // Clearing ui
+    userList.clear();
+    ui->listAllUsersAUP->clear();
+    ui->listAllUsersEP->clear();
+    ui->listAllUsersAP->clear();
+
+   while(!read.atEnd()) // Start while loop to read file and push info to vec
+   {
+       // Reading from file and seperating info at text.split()
+        QString text = read.readLine();
+        QStringList info = text.split("|");
+
+       // Add read information to ui
+       ui->listAllUsersAUP->addItem(info.at(4));
+       ui->listAllUsersEP->addItem(info.at(4));
+       ui->listAllUsersAP->addItem(info.at(4));
+
+       // Adding file information to vector
+       classCitizen* temp = new classCitizen(info.at(0), info.at(1), info.at(2), info.at(3), info.at(4), info.at(5), info.at(6), info.at(7), info.at(8), info.at(9),
+                                             info.at(10), info.at(11), info.at(12), info.at(13), info.at(14), info.at(15), info.at(16), info.at(17), info.at(18));
+       userList.push_back(temp);
+   } // End while
+
+   // Flushing file and then closing.
+   read.flush();
+   inputFile.close();
 
 } // End of pbAllUsers()
 
@@ -618,7 +655,6 @@ void MainWindow::selectUserDetails()
 
     if (index >= 0)
     {
-
         classCitizen *selectedUser = userList.at(index);
         ui->showUserNameAUP->setText(selectedUser->getName());
         ui->showUserPhoneAUP->setText(selectedUser->getContactNumber());
@@ -695,7 +731,7 @@ void MainWindow::searchUser()
             QListWidgetItem* user = list.at(i);
             user->setBackground(Qt::blue);
             user->setForeground(Qt::white);
-            ui->listAllUsersAP->item(i);
+            //ui->listAllUsersAP->item(i);
             ui->labelSearchUserAUP->clear();
         }
 
@@ -738,7 +774,6 @@ void MainWindow::searchUser()
             item->setBackground(Qt::transparent);
         }
     }
-
 } /// End of searchUser()
 
 // Function to show Enlarged Certificate Image
@@ -804,9 +839,9 @@ void MainWindow::pbRemoveUser()
 
             // Writing edit to file
             /// Windows File Path
-            //QFile outputFile("Citizens.txt");
+            QFile outputFile("Citizens.txt");
             /// Mac File Path
-            QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+            //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
 
             QTextStream out(&outputFile);
             outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -840,7 +875,6 @@ void MainWindow::pbRemoveUser()
             //remove from list widget in the UI
             delete ui->listAllUsersAUP->currentItem();
         }
-
     }
 
     // Clearing Ui labels
@@ -1082,9 +1116,9 @@ void MainWindow::saveEdit()
 
         // Writing edit to file
         /// Windows File Path
-        //QFile outputFile("Citizens.txt");
+        QFile outputFile("Citizens.txt");
         /// Mac File Path
-        QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+        //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -1199,6 +1233,7 @@ void MainWindow::saveEdit()
     }
 } /// End of saveEdit()
 
+// Function to cancel edit changes
 void MainWindow::pbCancelEdit()
 {
     // Clearing input from labels
@@ -1209,7 +1244,6 @@ void MainWindow::pbCancelEdit()
     ui->showUserNHIFS->clear();
     ui->editUserEmergencyEP->clear();
     ui->editUserNotesEP->clear();
-    ui->editUserVaccineSBEP->clear();
     ui->showUserCVNEP->clear();
     ui->edit1stDoseNameEP->clear();
     ui->edit1stDoseBatchEP->clear();
@@ -1223,7 +1257,7 @@ void MainWindow::pbCancelEdit()
     ui->editUserPictureEP->clear();
 
     ui->stackedWidget->setCurrentIndex(1);
-}
+} /// End of pbCancelEdit()
 
 /// Citizen Report Functions
 ///*********************************************************
@@ -1234,8 +1268,8 @@ void MainWindow::pbReports()
     ui->stackedWidget->setCurrentIndex(3);
 
     // Open file for reading
-    QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
-    //QFile inputFile("GeneralEnquiries.txt");
+    //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserReports.txt");
+    QFile inputFile("GeneralEnquiries.txt");
     inputFile.open(QIODevice::ReadOnly | QIODevice:: Text);
     QTextStream read(&inputFile);
 
@@ -1293,9 +1327,9 @@ void MainWindow::searchCategory()
     {
         // Writing to file
         /// Windows File Path
-        //QFile inputFile("GeneralEnquiries.txt");
+        QFile inputFile("GeneralEnquiries.txt");
         /// Mac File Path
-        QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/GeneralEnquiries.txt");
+        //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/GeneralEnquiries.txt");
         inputFile.open(QIODevice::ReadOnly |QIODevice::Text);
         QTextStream read(&inputFile);
 
@@ -1321,7 +1355,6 @@ void MainWindow::searchCategory()
             citizenReport* temp = new citizenReport(info.at(0), info.at(1), info.at(2), info.at(3), info.at(4), info.at(5));
             reportList.push_back(temp);
         } // End while
-
 
         // Flushing file and then closing.
         read.flush();
@@ -1331,12 +1364,11 @@ void MainWindow::searchCategory()
     {
         // Writing to file
         /// Windows File Path
-        //QFile inputFile("COVID19Vaccine.txt");
+        QFile inputFile("COVID19Vaccine.txt");
         /// Mac File Path
-        QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/COVID19Vaccine.txt");
+        //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/COVID19Vaccine.txt");
         inputFile.open(QIODevice::ReadOnly |QIODevice::Text);
         QTextStream read(&inputFile);
-
 
         // Clearing existing data from vector
        for (int i = 0; i< reportList.size(); i++)
@@ -1361,7 +1393,6 @@ void MainWindow::searchCategory()
             reportList.push_back(temp);
         } // End while
 
-
         // Flushing file and then closing.
         read.flush();
         inputFile.close();
@@ -1370,9 +1401,9 @@ void MainWindow::searchCategory()
     {
         // Writing to file
         /// Windows File Path
-        //QFile inputFile("ChangePersonalDetails.txt");
+        QFile inputFile("ChangePersonalDetails.txt");
         /// Mac File Path
-        QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/ChangePersonalDetails.txt");
+        //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/ChangePersonalDetails.txt");
         inputFile.open(QIODevice::ReadOnly |QIODevice::Text);
         QTextStream read(&inputFile);
 
@@ -1407,9 +1438,9 @@ void MainWindow::searchCategory()
     {
         // Writing to file
         /// Windows File Path
-        //QFile inputFile("COVIDRecordApp.txt");
+        QFile inputFile("COVIDRecordApp.txt");
         /// Mac File Path
-        QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/COVIDRecordApp.txt");
+        //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/COVIDRecordApp.txt");
         inputFile.open(QIODevice::ReadOnly |QIODevice::Text);
         QTextStream read(&inputFile);
 
@@ -1445,9 +1476,9 @@ void MainWindow::searchCategory()
     {
         // Writing to file
         /// Windows File Path
-        //QFile inputFile("Other.txt");
+        QFile inputFile("Other.txt");
         /// Mac File Path
-        QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Other.txt");
+        //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Other.txt");
         inputFile.open(QIODevice::ReadOnly |QIODevice::Text);
         QTextStream read(&inputFile);
 
@@ -1478,7 +1509,6 @@ void MainWindow::searchCategory()
         read.flush();
         inputFile.close();
     }
-
 } /// End of searchCategory()
 
 // Function to logout
@@ -1493,7 +1523,6 @@ void MainWindow::logout()
         login = new UserLogin(this);
         login->show();
     }
-
 } // End of logout()
 
 

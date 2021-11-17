@@ -37,7 +37,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="adminHomePage">
      <widget class="QFrame" name="userHomeHelloBarHP">
@@ -451,7 +451,7 @@ border-radius: 50px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="labelClickEnlargePP_11">
+       <widget class="QLabel" name="infoLabelHP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -481,7 +481,7 @@ background: rgba(254, 206, 103, 0.00);
 In the coming weeks, the Government will also announce &lt;br&gt;further information about how testing, contact tracing, care in the &lt;br&gt;community and social support will be provided for those who get&lt;br&gt; COVID-19. Detailed individual sector guidance for the new &lt;br&gt;traffic light system will also be released. </string>
         </property>
        </widget>
-       <widget class="QLabel" name="alerLevelUpdatesTitleHP_2">
+       <widget class="QLabel" name="trafficUpdatesTitleHP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -511,7 +511,7 @@ background: rgba(254, 206, 103, 0.00);
          <string>Introducing Traffic Light System</string>
         </property>
        </widget>
-       <widget class="QLabel" name="alerLevelUpdatesTitleHP_3">
+       <widget class="QLabel" name="alertLevelUpdatesTitleHP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -541,7 +541,7 @@ background: rgba(254, 206, 103, 0.00);
          <string>Changes to the Auckland Boundary</string>
         </property>
        </widget>
-       <widget class="QLabel" name="labelClickEnlargePP_12">
+       <widget class="QLabel" name="info2LabelHP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -572,7 +572,7 @@ Auckland boundary settings to change &lt;br&gt;from 15 December, ensuring travel
 The country is better&lt;br&gt; prepared.  82% of New Zealanders are fully vaccinated, &lt;br&gt;compared to 23% 3 months ago and projections of 90% fully &lt;br&gt;vaccinated by mid-December.</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pbGetVaccinatedLinkCP_2">
+       <widget class="QPushButton" name="pbLiveFeedHP">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -605,7 +605,7 @@ background: rgba(104, 160, 229, 0.88);}</string>
          <string>Watch the live update</string>
         </property>
        </widget>
-       <widget class="QLabel" name="labelLink2RP_2">
+       <widget class="QLabel" name="labelLinkHP">
         <property name="geometry">
          <rect>
           <x>350</x>
@@ -664,7 +664,7 @@ border-radius: 50px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QFrame" name="vaccineDose1FramePP_2">
+       <widget class="QFrame" name="commCasesFrameHP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -683,7 +683,7 @@ border-radius: 40px;</string>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QLabel" name="vaccineIcon1FramePP_3">
+        <widget class="QLabel" name="case1IconBorderHP">
          <property name="geometry">
           <rect>
            <x>11</x>
@@ -706,7 +706,7 @@ border-radius: 30px;</string>
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="imgVaccineIcon1PP_2">
+        <widget class="QLabel" name="case1IconHP">
          <property name="geometry">
           <rect>
            <x>20</x>
@@ -732,7 +732,7 @@ border-radius: 5px;</string>
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="communityCasesTitleHP_2">
+        <widget class="QLabel" name="communityCasesHP">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -760,7 +760,7 @@ background: rgba(254, 206, 103, 0.00);
           <string>88</string>
          </property>
         </widget>
-        <widget class="QLabel" name="labelClickEnlargePP_6">
+        <widget class="QLabel" name="labelCasesHP">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -790,7 +790,7 @@ background: rgba(254, 206, 103, 0.00);
          </property>
         </widget>
        </widget>
-       <widget class="QFrame" name="vaccineDose1FramePP_3">
+       <widget class="QFrame" name="newCasesFrameHP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -809,7 +809,7 @@ border-radius: 40px;</string>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QLabel" name="vaccineIcon1FramePP_4">
+        <widget class="QLabel" name="case2IconBorder">
          <property name="geometry">
           <rect>
            <x>11</x>
@@ -832,7 +832,7 @@ border-radius: 30px;</string>
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="imgVaccineIcon1PP_3">
+        <widget class="QLabel" name="case2IconHP">
          <property name="geometry">
           <rect>
            <x>20</x>
@@ -858,7 +858,7 @@ border-radius: 5px;</string>
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="communityCasesTitleHP_3">
+        <widget class="QLabel" name="newCasesHP">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -886,7 +886,7 @@ color:#2B528C;
           <string>194</string>
          </property>
         </widget>
-        <widget class="QLabel" name="labelClickEnlargePP_7">
+        <widget class="QLabel" name="labelNewCasesHP">
          <property name="geometry">
           <rect>
            <x>92</x>
@@ -916,7 +916,7 @@ background: rgba(254, 206, 103, 0.00);
          </property>
         </widget>
        </widget>
-       <widget class="QFrame" name="vaccineDose1FramePP_4">
+       <widget class="QFrame" name="totalCasesFrameHP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -935,7 +935,7 @@ border-radius: 40px;</string>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QLabel" name="vaccineIcon1FramePP_5">
+        <widget class="QLabel" name="case3IconBorderHP">
          <property name="geometry">
           <rect>
            <x>11</x>
@@ -958,7 +958,7 @@ border-radius: 30px;</string>
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="imgVaccineIcon1PP_4">
+        <widget class="QLabel" name="case3IconHP">
          <property name="geometry">
           <rect>
            <x>20</x>
@@ -984,7 +984,7 @@ border-radius: 5px;</string>
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="communityCasesTitleHP_4">
+        <widget class="QLabel" name="totalCasesHP">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -1012,7 +1012,7 @@ color:#2B528C;
           <string>6,167</string>
          </property>
         </widget>
-        <widget class="QLabel" name="labelClickEnlargePP_8">
+        <widget class="QLabel" name="labelTotalCasesHP">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -1062,7 +1062,7 @@ border-radius: 50px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QFrame" name="vaccineDose1FramePP_5">
+       <widget class="QFrame" name="vaccineDose1FrameHP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -1081,7 +1081,7 @@ border-radius: 40px;</string>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QLabel" name="vaccineIcon1FramePP_6">
+        <widget class="QLabel" name="dose1IconFrameHP">
          <property name="geometry">
           <rect>
            <x>11</x>
@@ -1104,7 +1104,7 @@ border-radius: 30px;</string>
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="imgVaccineIcon1PP_5">
+        <widget class="QLabel" name="dose1IconHP">
          <property name="geometry">
           <rect>
            <x>26</x>
@@ -1130,7 +1130,7 @@ border-radius: 5px;</string>
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="communityCasesTitleHP_5">
+        <widget class="QLabel" name="firstDoseStatHP">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -1158,7 +1158,7 @@ color:#2B528C;
           <string>3,812,895</string>
          </property>
         </widget>
-        <widget class="QLabel" name="labelClickEnlargePP_9">
+        <widget class="QLabel" name="labelDose1HP">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -1188,7 +1188,7 @@ background: rgba(254, 206, 103, 0.00);
          </property>
         </widget>
        </widget>
-       <widget class="QFrame" name="vaccineDose1FramePP_6">
+       <widget class="QFrame" name="vaccineDose2Frame">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -1207,7 +1207,7 @@ border-radius: 40px;</string>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QLabel" name="vaccineIcon1FramePP_7">
+        <widget class="QLabel" name="dose2IconBorderHP">
          <property name="geometry">
           <rect>
            <x>11</x>
@@ -1230,7 +1230,7 @@ border-radius: 30px;</string>
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="imgVaccineIcon1PP_6">
+        <widget class="QLabel" name="dose2IconHP">
          <property name="geometry">
           <rect>
            <x>26</x>
@@ -1256,7 +1256,7 @@ border-radius: 5px;</string>
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="communityCasesTitleHP_6">
+        <widget class="QLabel" name="secondDoseStatHPHP">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -1284,7 +1284,7 @@ color:#2B528C;
           <string>3,442,340</string>
          </property>
         </widget>
-        <widget class="QLabel" name="labelClickEnlargePP_10">
+        <widget class="QLabel" name="labelDose2HP">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -1315,7 +1315,7 @@ background: rgba(254, 206, 103, 0.00);
         </widget>
        </widget>
       </widget>
-      <widget class="QLabel" name="alerLevelUpdatesTitleHP">
+      <widget class="QLabel" name="updatesTitleHP">
        <property name="geometry">
         <rect>
          <x>25</x>
@@ -1400,7 +1400,7 @@ color:#2B528C;
         <string>Community Cases </string>
        </property>
       </widget>
-      <widget class="QLabel" name="labelClickEnlargePP_3">
+      <widget class="QLabel" name="labelCommCasesHP">
        <property name="geometry">
         <rect>
          <x>500</x>
@@ -1429,7 +1429,7 @@ background: rgba(254, 206, 103, 0.00);
         <string>All community cases currently in New Zealand.</string>
        </property>
       </widget>
-      <widget class="QLabel" name="labelClickEnlargePP_4">
+      <widget class="QLabel" name="labelVaccineStatHP">
        <property name="geometry">
         <rect>
          <x>500</x>
@@ -1458,7 +1458,7 @@ background: rgba(254, 206, 103, 0.00);
         <string>All current vaccine statistics in New Zealand.</string>
        </property>
       </widget>
-      <widget class="QLabel" name="labelClickEnlargePP_5">
+      <widget class="QLabel" name="labelUpdatesHP">
        <property name="geometry">
         <rect>
          <x>25</x>
@@ -1489,15 +1489,15 @@ background: rgba(254, 206, 103, 0.00);
       </widget>
       <zorder>homeSubHeadingHP</zorder>
       <zorder>homeTitleHP</zorder>
-      <zorder>alerLevelUpdatesTitleHP</zorder>
+      <zorder>updatesTitleHP</zorder>
       <zorder>alerLevelUpdatesFrameHP</zorder>
       <zorder>vaccineStatsTitleHP</zorder>
       <zorder>vaccineStatsFrameHP</zorder>
       <zorder>communityCasesTitleHP</zorder>
       <zorder>communityCasesFrameHP</zorder>
-      <zorder>labelClickEnlargePP_3</zorder>
-      <zorder>labelClickEnlargePP_4</zorder>
-      <zorder>labelClickEnlargePP_5</zorder>
+      <zorder>labelCommCasesHP</zorder>
+      <zorder>labelVaccineStatHP</zorder>
+      <zorder>labelUpdatesHP</zorder>
      </widget>
      <zorder>userHomeWhiteBackgroundHP</zorder>
      <zorder>homeBlueMenuBarHP</zorder>
@@ -1768,12 +1768,12 @@ padding-bottom: 80px;
 </string>
        </property>
       </widget>
-      <widget class="QLabel" name="showUserNameAUP_2">
+      <widget class="QLabel" name="searchAUP">
        <property name="geometry">
         <rect>
          <x>20</x>
          <y>108</y>
-         <width>331</width>
+         <width>191</width>
          <height>20</height>
         </rect>
        </property>
@@ -1799,7 +1799,7 @@ color:#2B528C;
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="labelConfidentialAUP_2">
+      <widget class="QLabel" name="labelExistingAUP">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -1827,7 +1827,7 @@ color:#2B528C;
         <string>Existing users will apear here.</string>
        </property>
       </widget>
-      <widget class="QFrame" name="frame_5">
+      <widget class="QFrame" name="removeFrame">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -1882,7 +1882,7 @@ background: rgba(104, 160, 229, 0.88);}
          <string>Remove</string>
         </property>
        </widget>
-       <widget class="QLabel" name="labelConfidentialAUP_12">
+       <widget class="QLabel" name="labelDeleteAUP">
         <property name="geometry">
          <rect>
           <x>14</x>
@@ -2048,7 +2048,7 @@ padding-left: 3px;}</string>
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="labelEmergencyAUP_4">
+       <widget class="QLabel" name="labelEmergencyAUP">
         <property name="geometry">
          <rect>
           <x>340</x>
@@ -2449,7 +2449,7 @@ border-radius: 20px;</string>
          </property>
         </widget>
        </widget>
-       <widget class="QFrame" name="vaccineDose2FrameAUP_3">
+       <widget class="QFrame" name="vaccineDose2FrameAUP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -2638,7 +2638,7 @@ background: rgba(104, 160, 229, 0.88);}</string>
          <string>Edit User</string>
         </property>
        </widget>
-       <widget class="QLabel" name="labelConfidentialAUP_4">
+       <widget class="QLabel" name="labelConfidentialAUP">
         <property name="geometry">
          <rect>
           <x>30</x>
@@ -2666,7 +2666,7 @@ color:#2B528C;
          <string>This information is confidential.</string>
         </property>
        </widget>
-       <widget class="QLabel" name="labelUnauthorisedAUP_3">
+       <widget class="QLabel" name="labelUnauthorisedAUP">
         <property name="geometry">
          <rect>
           <x>30</x>
@@ -2916,7 +2916,7 @@ background: rgba(254, 206, 103, 0.00);
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="labelQRCodeAUP_3">
+       <widget class="QLabel" name="labelQRCodeAUP">
         <property name="geometry">
          <rect>
           <x>531</x>
@@ -3088,7 +3088,7 @@ color:#2B528C;
          <string>Additional Notes</string>
         </property>
        </widget>
-       <widget class="QLabel" name="labelAlertConfidentialAP_4">
+       <widget class="QLabel" name="labelAttentionAUP">
         <property name="geometry">
          <rect>
           <x>30</x>
@@ -3220,7 +3220,7 @@ border-radius: 35px;</string>
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QLabel" name="labelEmergencyAUP">
+       <widget class="QLabel" name="labelVaccStatAUP">
         <property name="geometry">
          <rect>
           <x>26</x>
@@ -3253,7 +3253,7 @@ color:#2B528C;
        <zorder>labelNHIAUP</zorder>
        <zorder>showUserNHIAUP</zorder>
        <zorder>showUserEmergencyAUP</zorder>
-       <zorder>labelEmergencyAUP_4</zorder>
+       <zorder>labelEmergencyAUP</zorder>
        <zorder>showUserPictureAUP</zorder>
        <zorder>labelCVNAUP</zorder>
        <zorder>showUserCVNAUP</zorder>
@@ -3263,24 +3263,24 @@ color:#2B528C;
        <zorder>labelVaccineAUP</zorder>
        <zorder>labelDocumentationAUP</zorder>
        <zorder>vaccineDose1FrameAUP</zorder>
-       <zorder>vaccineDose2FrameAUP_3</zorder>
+       <zorder>vaccineDose2FrameAUP</zorder>
        <zorder>pbEditUserAUP</zorder>
-       <zorder>labelConfidentialAUP_4</zorder>
-       <zorder>labelUnauthorisedAUP_3</zorder>
+       <zorder>labelConfidentialAUP</zorder>
+       <zorder>labelUnauthorisedAUP</zorder>
        <zorder>certificateFrameAUP</zorder>
        <zorder>labelCertificateAUP</zorder>
        <zorder>testResultFrameAUP</zorder>
        <zorder>labelTestResultAUP</zorder>
-       <zorder>labelQRCodeAUP_3</zorder>
+       <zorder>labelQRCodeAUP</zorder>
        <zorder>labelClickEnlargeAUP</zorder>
        <zorder>labelVaccinesAUP</zorder>
        <zorder>showUserNotesAUP</zorder>
        <zorder>labelAdditionalNotesAUP</zorder>
-       <zorder>labelAlertConfidentialAP_4</zorder>
+       <zorder>labelAttentionAUP</zorder>
        <zorder>showUserVaccStatusAUP</zorder>
        <zorder>qrCodeTemplateAUP</zorder>
        <zorder>showQRCodeAUP</zorder>
-       <zorder>labelEmergencyAUP</zorder>
+       <zorder>labelVaccStatAUP</zorder>
        <zorder>pbLargeQRCodeAUP</zorder>
       </widget>
       <widget class="QPushButton" name="pbSearchAUP">
@@ -3362,11 +3362,11 @@ border: 3px solid rgba(104, 160, 229, 0.88);
        </property>
       </widget>
       <zorder>listAllUsersAUP</zorder>
-      <zorder>labelConfidentialAUP_2</zorder>
-      <zorder>showUserNameAUP_2</zorder>
+      <zorder>labelExistingAUP</zorder>
+      <zorder>searchAUP</zorder>
       <zorder>homeSubHeadingAUP</zorder>
       <zorder>homeTitleAUP</zorder>
-      <zorder>frame_5</zorder>
+      <zorder>removeFrame</zorder>
       <zorder>userInfoFrameAUP</zorder>
       <zorder>pbSearchAUP</zorder>
       <zorder>labelSearchUserAUP</zorder>
@@ -3935,7 +3935,7 @@ line-height: 3px;
 </string>
        </property>
       </widget>
-      <widget class="QLabel" name="alerLevelUpdatesTitle_2">
+      <widget class="QLabel" name="viewAllHeadingAP">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -3963,7 +3963,7 @@ color:#2B528C;
         <string>View All Users</string>
        </property>
       </widget>
-      <widget class="QLabel" name="labelSelectRP_2">
+      <widget class="QLabel" name="labelUsersAP">
        <property name="geometry">
         <rect>
          <x>22</x>
@@ -4044,7 +4044,7 @@ border-radius: 40px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="labelNHIAP_7">
+       <widget class="QLabel" name="labelNHIAP">
         <property name="geometry">
          <rect>
           <x>25</x>
@@ -5214,7 +5214,7 @@ background: rgba(104, 160, 229, 0.55);}</string>
          <string>Upload</string>
         </property>
        </widget>
-       <widget class="QLabel" name="addQRCodeAP">
+       <widget class="QLabel" name="addQRCodeBorderAP">
         <property name="geometry">
          <rect>
           <x>530</x>
@@ -5501,7 +5501,7 @@ background: rgba(254, 206, 103, 0.00);
          <string>*Attention Administrator.</string>
         </property>
        </widget>
-       <widget class="QLabel" name="addQRCodeAP_3">
+       <widget class="QLabel" name="addQRCodeAP">
         <property name="geometry">
          <rect>
           <x>557</x>
@@ -5519,9 +5519,9 @@ border-radius: 5;
          <string/>
         </property>
        </widget>
-       <zorder>addQRCodeAP</zorder>
+       <zorder>addQRCodeBorderAP</zorder>
        <zorder>addCertificateAP</zorder>
-       <zorder>labelNHIAP_7</zorder>
+       <zorder>labelNHIAP</zorder>
        <zorder>labelEmergencyAP</zorder>
        <zorder>labelAdditionalNotesAP</zorder>
        <zorder>addUserPictureAP</zorder>
@@ -5560,7 +5560,7 @@ border-radius: 5;
        <zorder>labelEmailAP</zorder>
        <zorder>labelAlertConfidentialAP</zorder>
        <zorder>pbChangeTestResultsAP</zorder>
-       <zorder>addQRCodeAP_3</zorder>
+       <zorder>addQRCodeAP</zorder>
        <zorder>pbAddQRCodeAP</zorder>
        <zorder>pbChangeQRCodeAP</zorder>
       </widget>
@@ -5594,10 +5594,10 @@ padding-bottom: 80px;
       </widget>
       <zorder>listAllUsersAP</zorder>
       <zorder>userInfoFrameAP</zorder>
-      <zorder>alerLevelUpdatesTitle_2</zorder>
+      <zorder>viewAllHeadingAP</zorder>
       <zorder>homeSubHeadingAP</zorder>
       <zorder>homeTitleAP</zorder>
-      <zorder>labelSelectRP_2</zorder>
+      <zorder>labelUsersAP</zorder>
       <zorder>pbCancelAP</zorder>
       <zorder>labelTransparentListAP</zorder>
      </widget>
@@ -6601,7 +6601,7 @@ color:#2B528C;
         </property>
        </widget>
       </widget>
-      <widget class="QLabel" name="labelSelectRP_4">
+      <widget class="QLabel" name="labelSelectDisplayRP">
        <property name="geometry">
         <rect>
          <x>300</x>
@@ -6640,7 +6640,7 @@ background: rgba(254, 206, 103, 0.00);
       <zorder>pbSearchCategoryRP</zorder>
       <zorder>cbReportCategoryRP</zorder>
       <zorder>frame_6</zorder>
-      <zorder>labelSelectRP_4</zorder>
+      <zorder>labelSelectDisplayRP</zorder>
      </widget>
     </widget>
     <widget class="QWidget" name="adminEditUserPage">
@@ -7045,7 +7045,7 @@ padding-bottom: 80px;
 </string>
        </property>
       </widget>
-      <widget class="QFrame" name="userInfoFrameAP_4">
+      <widget class="QFrame" name="userInfoFrameEP">
        <property name="geometry">
         <rect>
          <x>220</x>
@@ -7064,7 +7064,7 @@ border-radius: 40px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="labelNHIAP_12">
+       <widget class="QLabel" name="labelNHIEP">
         <property name="geometry">
          <rect>
           <x>25</x>
@@ -7092,7 +7092,7 @@ background: rgba(254, 206, 103, 0.00);
          <string>NHI Number</string>
         </property>
        </widget>
-       <widget class="QLabel" name="labelEmergencyAP_6">
+       <widget class="QLabel" name="labelEmergencyEP">
         <property name="geometry">
          <rect>
           <x>347</x>
@@ -7119,7 +7119,7 @@ background: rgba(254, 206, 103, 0.00);</string>
          <string>Emergency Contact</string>
         </property>
        </widget>
-       <widget class="QLabel" name="labelAdditionalNotesAP_4">
+       <widget class="QLabel" name="labelAdditionalNotesEP">
         <property name="geometry">
          <rect>
           <x>25</x>
@@ -7163,7 +7163,7 @@ border-radius: 40px;</string>
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="labelCVNAP_4">
+       <widget class="QLabel" name="labelCVNEP">
         <property name="geometry">
          <rect>
           <x>345</x>
@@ -7223,7 +7223,7 @@ background: rgba(104, 160, 229, 0.88);}</string>
          <string>Save Edit</string>
         </property>
        </widget>
-       <widget class="QLabel" name="labelConfidentialAP_6">
+       <widget class="QLabel" name="labelConfidentialEP">
         <property name="geometry">
          <rect>
           <x>30</x>
@@ -7252,7 +7252,7 @@ background: rgba(254, 206, 103, 0.00);
          <string>This information is confidential.</string>
         </property>
        </widget>
-       <widget class="QLabel" name="labelUnauthorisedAP_4">
+       <widget class="QLabel" name="labelUnauthorisedEP">
         <property name="geometry">
          <rect>
           <x>30</x>
@@ -7492,7 +7492,7 @@ padding-left: 3px;}</string>
          <string>example@email.com</string>
         </property>
        </widget>
-       <widget class="QLabel" name="labelEmergencyAP_7">
+       <widget class="QLabel" name="labelVaccStatusEP">
         <property name="geometry">
          <rect>
           <x>25</x>
@@ -7519,7 +7519,7 @@ background: rgba(254, 206, 103, 0.00);</string>
          <string>Vaccine Status (Select)</string>
         </property>
        </widget>
-       <widget class="QLabel" name="labelClickEditAP_4">
+       <widget class="QLabel" name="labelClickEditEP">
         <property name="geometry">
          <rect>
           <x>30</x>
@@ -7547,7 +7547,7 @@ background: rgba(254, 206, 103, 0.00);
          <string>Type in the white bubble to edit information.</string>
         </property>
        </widget>
-       <widget class="QLabel" name="labelVaccinesAP_4">
+       <widget class="QLabel" name="labelVaccinesEP">
         <property name="geometry">
          <rect>
           <x>28</x>
@@ -7577,7 +7577,7 @@ background: rgba(254, 206, 103, 0.00);</string>
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
        </widget>
-       <widget class="QFrame" name="vaccineDose1FrameAP_4">
+       <widget class="QFrame" name="vaccineDose1FrameEP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -7596,7 +7596,7 @@ border-radius: 30px;</string>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QLabel" name="vaccineIcon1FrameAP_4">
+        <widget class="QLabel" name="vaccineIcon1FrameEP">
          <property name="geometry">
           <rect>
            <x>5</x>
@@ -7616,7 +7616,7 @@ border-radius: 25px;</string>
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="imgVaccineIcon1AP_4">
+        <widget class="QLabel" name="imgVaccineIcon1EP">
          <property name="geometry">
           <rect>
            <x>19</x>
@@ -7742,7 +7742,7 @@ color:#2B528C;
          </property>
         </widget>
        </widget>
-       <widget class="QFrame" name="vaccineDose2FrameAP_4">
+       <widget class="QFrame" name="vaccineDose2FrameEP">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -7761,7 +7761,7 @@ border-radius: 30px;</string>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QLabel" name="vaccineIcon2FrameAP_4">
+        <widget class="QLabel" name="vaccineIcon2FrameEP">
          <property name="geometry">
           <rect>
            <x>5</x>
@@ -7781,7 +7781,7 @@ border-radius: 25px;</string>
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="imgVaccineIcon2AP_4">
+        <widget class="QLabel" name="imgVaccineIcon2EP">
          <property name="geometry">
           <rect>
            <x>19</x>
@@ -8032,7 +8032,7 @@ background: rgba(104, 160, 229, 0.55);}</string>
          <string>Upload</string>
         </property>
        </widget>
-       <widget class="QLabel" name="labelDocumentationAP_4">
+       <widget class="QLabel" name="labelDocumentationEP">
         <property name="geometry">
          <rect>
           <x>320</x>
@@ -8080,7 +8080,7 @@ border-radius: 45;
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="labelClickUploadAP_4">
+       <widget class="QLabel" name="labelClickUploadEP">
         <property name="geometry">
          <rect>
           <x>320</x>
@@ -8158,7 +8158,7 @@ background: rgba(104, 160, 229, 0.55);}</string>
          <string>Upload</string>
         </property>
        </widget>
-       <widget class="QLabel" name="editQRCodeEP">
+       <widget class="QLabel" name="editQRCodeBorderEP">
         <property name="geometry">
          <rect>
           <x>530</x>
@@ -8304,7 +8304,7 @@ background: rgba(104, 160, 229, 0.55);}</string>
          <string>Change</string>
         </property>
        </widget>
-       <widget class="QLabel" name="labelNHIAP_13">
+       <widget class="QLabel" name="labelDOBEP">
         <property name="geometry">
          <rect>
           <x>125</x>
@@ -8360,7 +8360,7 @@ background: rgba(254, 206, 103, 0.00);
          <string>Full Name </string>
         </property>
        </widget>
-       <widget class="QLabel" name="labelNHIAP_15">
+       <widget class="QLabel" name="labelNumberEP">
         <property name="geometry">
          <rect>
           <x>235</x>
@@ -8388,7 +8388,7 @@ background: rgba(254, 206, 103, 0.00);
          <string>Phone Number</string>
         </property>
        </widget>
-       <widget class="QLabel" name="labelNHIAP_16">
+       <widget class="QLabel" name="labelEmailEP">
         <property name="geometry">
          <rect>
           <x>350</x>
@@ -8416,7 +8416,7 @@ background: rgba(254, 206, 103, 0.00);
          <string>E-mail Address</string>
         </property>
        </widget>
-       <widget class="QLabel" name="labelConfidentialAP_7">
+       <widget class="QLabel" name="labelAttentionEP">
         <property name="geometry">
          <rect>
           <x>30</x>
@@ -8499,7 +8499,7 @@ padding-left: 3px;</string>
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="editQRCodeEP_2">
+       <widget class="QLabel" name="editQRCodeEP">
         <property name="geometry">
          <rect>
           <x>556</x>
@@ -8566,16 +8566,16 @@ padding-left: 3px;}
          </property>
         </item>
        </widget>
-       <zorder>editQRCodeEP</zorder>
+       <zorder>editQRCodeBorderEP</zorder>
        <zorder>editCertificateEP</zorder>
-       <zorder>labelNHIAP_12</zorder>
-       <zorder>labelEmergencyAP_6</zorder>
-       <zorder>labelAdditionalNotesAP_4</zorder>
+       <zorder>labelNHIEP</zorder>
+       <zorder>labelEmergencyEP</zorder>
+       <zorder>labelAdditionalNotesEP</zorder>
        <zorder>editUserPictureEP</zorder>
-       <zorder>labelCVNAP_4</zorder>
+       <zorder>labelCVNEP</zorder>
        <zorder>pbSaveEditEP</zorder>
-       <zorder>labelConfidentialAP_6</zorder>
-       <zorder>labelUnauthorisedAP_4</zorder>
+       <zorder>labelConfidentialEP</zorder>
+       <zorder>labelUnauthorisedEP</zorder>
        <zorder>editUserEmergencyEP</zorder>
        <zorder>editUserNotesEP</zorder>
        <zorder>editUserDOBEP</zorder>
@@ -8584,34 +8584,34 @@ padding-left: 3px;}
        <zorder>editUserNameEP</zorder>
        <zorder>pbChangeUserPictureEP</zorder>
        <zorder>editUserEmailEP</zorder>
-       <zorder>labelEmergencyAP_7</zorder>
-       <zorder>labelClickEditAP_4</zorder>
-       <zorder>labelVaccinesAP_4</zorder>
-       <zorder>vaccineDose1FrameAP_4</zorder>
-       <zorder>vaccineDose2FrameAP_4</zorder>
+       <zorder>labelVaccStatusEP</zorder>
+       <zorder>labelClickEditEP</zorder>
+       <zorder>labelVaccinesEP</zorder>
+       <zorder>vaccineDose1FrameEP</zorder>
+       <zorder>vaccineDose2FrameEP</zorder>
        <zorder>labelQRCodeEP</zorder>
        <zorder>pbEditCertificateEP</zorder>
-       <zorder>labelDocumentationAP_4</zorder>
+       <zorder>labelDocumentationEP</zorder>
        <zorder>editTestResultsEP</zorder>
-       <zorder>labelClickUploadAP_4</zorder>
+       <zorder>labelClickUploadEP</zorder>
        <zorder>pbEditTestResultsEP</zorder>
        <zorder>labelTestResultsEP</zorder>
        <zorder>labelCertificateEP</zorder>
        <zorder>pbChangeCertificateEP</zorder>
-       <zorder>labelNHIAP_13</zorder>
+       <zorder>labelDOBEP</zorder>
        <zorder>labelNameEP</zorder>
-       <zorder>labelNHIAP_15</zorder>
-       <zorder>labelNHIAP_16</zorder>
-       <zorder>labelConfidentialAP_7</zorder>
+       <zorder>labelNumberEP</zorder>
+       <zorder>labelEmailEP</zorder>
+       <zorder>labelAttentionEP</zorder>
        <zorder>showNHIEP</zorder>
        <zorder>showUserCVNEP</zorder>
        <zorder>pbChangeTestResultsEP</zorder>
-       <zorder>editQRCodeEP_2</zorder>
+       <zorder>editQRCodeEP</zorder>
        <zorder>pbEditQRCodeEP</zorder>
        <zorder>pbChangeQRCodeEP</zorder>
        <zorder>editUserVaccineSBEP</zorder>
       </widget>
-      <widget class="QLabel" name="alerLevelUpdatesTitle_3">
+      <widget class="QLabel" name="viewAllEP">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -8639,7 +8639,7 @@ color:#2B528C;
         <string>View All Users</string>
        </property>
       </widget>
-      <widget class="QLabel" name="labelSelectRP_3">
+      <widget class="QLabel" name="labelAllEP">
        <property name="geometry">
         <rect>
          <x>22</x>
@@ -9072,7 +9072,7 @@ background:  rgba(248, 251, 255, 0.12);
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QFrame" name="userHomeDisplayFrameAUP_2">
+      <widget class="QFrame" name="userHomeDisplayFramesFS">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -9090,7 +9090,7 @@ background:  rgba(248, 251, 255, 0.12);
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="homeSubHeadingAUP_2">
+       <widget class="QLabel" name="homeSubHeadingFS">
         <property name="geometry">
          <rect>
           <x>21</x>
@@ -9118,7 +9118,7 @@ background: rgba(104, 160, 229, 0.00);
          <string>View all users and their information.</string>
         </property>
        </widget>
-       <widget class="QLabel" name="homeTitleAUP_2">
+       <widget class="QLabel" name="homeTitleFS">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -9146,7 +9146,7 @@ background: rgba(104, 160, 229, 0.00);
          <string>All Users</string>
         </property>
        </widget>
-       <widget class="QListWidget" name="listAllUsersAUP_2">
+       <widget class="QListWidget" name="listAllUsersFS">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -9168,7 +9168,7 @@ padding-bottom: 80px;
 </string>
         </property>
        </widget>
-       <widget class="QLabel" name="showUserNameAUP_4">
+       <widget class="QLabel" name="showUserNamesFS">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -9199,7 +9199,7 @@ color:#2B528C;
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="labelConfidentialAUP_5">
+       <widget class="QLabel" name="labelViewFS">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -9227,7 +9227,7 @@ color:#2B528C;
          <string>Existing users will apear here.</string>
         </property>
        </widget>
-       <widget class="QFrame" name="frame_7">
+       <widget class="QFrame" name="framesFS">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -9247,7 +9247,7 @@ border-radius: 20px;
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QPushButton" name="pbQuickRemoveAUP_2">
+        <widget class="QPushButton" name="pbQuickRemoveFS">
          <property name="geometry">
           <rect>
            <x>18</x>
@@ -9282,7 +9282,7 @@ background: rgba(104, 160, 229, 0.88);}
           <string>Remove</string>
          </property>
         </widget>
-        <widget class="QLabel" name="labelConfidentialAUP_13">
+        <widget class="QLabel" name="labelConfidentialFS">
          <property name="geometry">
           <rect>
            <x>14</x>
@@ -9314,7 +9314,7 @@ color:#2B528C;
          </property>
         </widget>
        </widget>
-       <widget class="QFrame" name="userInfoFrameAUP_3">
+       <widget class="QFrame" name="userInfoFrameFS">
         <property name="geometry">
          <rect>
           <x>220</x>
@@ -9364,7 +9364,7 @@ color:#2B528C;
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="labelNHIAUP_3">
+        <widget class="QLabel" name="labelNHIFS">
          <property name="geometry">
           <rect>
            <x>24</x>
@@ -9448,7 +9448,7 @@ padding-left: 3px;}</string>
           <string/>
          </property>
         </widget>
-        <widget class="QLabel" name="labelEmergencyAUP_5">
+        <widget class="QLabel" name="labelEmergencyFS">
          <property name="geometry">
           <rect>
            <x>340</x>
@@ -9476,7 +9476,7 @@ color:#2B528C;
           <string>Emergency Contact</string>
          </property>
         </widget>
-        <widget class="QLabel" name="showUserPictureAUP_3">
+        <widget class="QLabel" name="showUserPictureFS">
          <property name="geometry">
           <rect>
            <x>26</x>
@@ -9496,7 +9496,7 @@ border-radius: 35px;</string>
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="labelCVNAUP_3">
+        <widget class="QLabel" name="labelCVNFS">
          <property name="geometry">
           <rect>
            <x>340</x>
@@ -9633,7 +9633,7 @@ color:#2B528C;
           <string>E-mail Address</string>
          </property>
         </widget>
-        <widget class="QLabel" name="labelVaccineAUP_3">
+        <widget class="QLabel" name="labelVaccineFS">
          <property name="geometry">
           <rect>
            <x>28</x>
@@ -9663,7 +9663,7 @@ background: rgba(254, 206, 103, 0.00);</string>
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="labelDocumentationAUP_3">
+        <widget class="QLabel" name="labelDocumentationFS">
          <property name="geometry">
           <rect>
            <x>314</x>
@@ -9712,7 +9712,7 @@ border-radius: 30px;</string>
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="vaccineIcon1FrameAUP_3">
+         <widget class="QLabel" name="vaccineIcon1FrameFS">
           <property name="geometry">
            <rect>
             <x>5</x>
@@ -9822,7 +9822,7 @@ color:#2B528C;
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
           </property>
          </widget>
-         <widget class="QLabel" name="imgVaccineIcon1AUP_3">
+         <widget class="QLabel" name="imgVaccineIcon1FS">
           <property name="geometry">
            <rect>
             <x>19</x>
@@ -9868,7 +9868,7 @@ border-radius: 30px;</string>
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="vaccineIcon2FrameAUP_3">
+         <widget class="QLabel" name="vaccineIcon2FrameFS">
           <property name="geometry">
            <rect>
             <x>5</x>
@@ -10005,40 +10005,7 @@ border-radius: 20px;</string>
           </property>
          </widget>
         </widget>
-        <widget class="QPushButton" name="pbEditUserFS">
-         <property name="geometry">
-          <rect>
-           <x>438</x>
-           <y>584</y>
-           <width>181</width>
-           <height>51</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Arial Rounded MT Bold</family>
-           <pointsize>-1</pointsize>
-           <weight>62</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton{
-background: #2B528C;
-font-weight: 500;
-border-radius: 25px;
-color:  rgba(248, 251, 255, 0.99);
-border-color: rgba(104, 160, 229, 0.33);
-font-size: 16px; 
-}
-QPushButton:hover{
-background: rgba(104, 160, 229, 0.88);}</string>
-         </property>
-         <property name="text">
-          <string>Edit User</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="labelConfidentialAUP_6">
+        <widget class="QLabel" name="labelConfFS">
          <property name="geometry">
           <rect>
            <x>30</x>
@@ -10066,7 +10033,7 @@ color:#2B528C;
           <string>This information is confidential.</string>
          </property>
         </widget>
-        <widget class="QLabel" name="labelUnauthorisedAUP_4">
+        <widget class="QLabel" name="labelUnauthorisedFS">
          <property name="geometry">
           <rect>
            <x>30</x>
@@ -10177,7 +10144,7 @@ font-size: 11px;
           </property>
          </widget>
         </widget>
-        <widget class="QLabel" name="labelCertificateAUP_3">
+        <widget class="QLabel" name="labelCertificateFS">
          <property name="geometry">
           <rect>
            <x>425</x>
@@ -10285,7 +10252,7 @@ font-size: 11px;
           </property>
          </widget>
         </widget>
-        <widget class="QLabel" name="labelTestResultAUP_3">
+        <widget class="QLabel" name="labelTestResultFS">
          <property name="geometry">
           <rect>
            <x>314</x>
@@ -10316,7 +10283,7 @@ background: rgba(254, 206, 103, 0.00);
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="labelQRCodeAUP_4">
+        <widget class="QLabel" name="labelQRCodeFS">
          <property name="geometry">
           <rect>
            <x>531</x>
@@ -10372,7 +10339,7 @@ border-radius: 45px;</string>
           <enum>QFrame::Raised</enum>
          </property>
         </widget>
-        <widget class="QLabel" name="labelClickEnlargeAUP_3">
+        <widget class="QLabel" name="labelClickEnlargeFS">
          <property name="geometry">
           <rect>
            <x>314</x>
@@ -10400,7 +10367,7 @@ color:#2B528C;
           <string>Click '+' to enlarge images.</string>
          </property>
         </widget>
-        <widget class="QLabel" name="labelVaccinesAUP_2">
+        <widget class="QLabel" name="labelVaccinesFS">
          <property name="geometry">
           <rect>
            <x>29</x>
@@ -10460,7 +10427,7 @@ padding-top: 5px;}</string>
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
          </property>
         </widget>
-        <widget class="QLabel" name="labelAdditionalNotesFs">
+        <widget class="QLabel" name="labelAdditionalNotesFS">
          <property name="geometry">
           <rect>
            <x>25</x>
@@ -10488,7 +10455,7 @@ color:#2B528C;
           <string>Additional Notes</string>
          </property>
         </widget>
-        <widget class="QLabel" name="labelAlertConfidentialAP_5">
+        <widget class="QLabel" name="labelAlertConfidentialFS">
          <property name="geometry">
           <rect>
            <x>30</x>
@@ -10620,7 +10587,7 @@ border-radius: 35px;</string>
           <bool>true</bool>
          </property>
         </widget>
-        <widget class="QLabel" name="labelEmergencyAUP_6">
+        <widget class="QLabel" name="labelVaccStatusFS">
          <property name="geometry">
           <rect>
            <x>26</x>
@@ -10650,40 +10617,39 @@ color:#2B528C;
         </widget>
         <zorder>userPictureFrameFS</zorder>
         <zorder>showUserNameFS</zorder>
-        <zorder>labelNHIAUP_3</zorder>
+        <zorder>labelNHIFS</zorder>
         <zorder>showUserNHIFS</zorder>
         <zorder>showUserEmergencyFS</zorder>
-        <zorder>labelEmergencyAUP_5</zorder>
-        <zorder>showUserPictureAUP_3</zorder>
-        <zorder>labelCVNAUP_3</zorder>
+        <zorder>labelEmergencyFS</zorder>
+        <zorder>showUserPictureFS</zorder>
+        <zorder>labelCVNFS</zorder>
         <zorder>showUserCVNFS</zorder>
         <zorder>showUserDOBFS</zorder>
         <zorder>showUserPhoneFS</zorder>
         <zorder>showUserEmailFS</zorder>
-        <zorder>labelVaccineAUP_3</zorder>
-        <zorder>labelDocumentationAUP_3</zorder>
+        <zorder>labelVaccineFS</zorder>
+        <zorder>labelDocumentationFS</zorder>
         <zorder>vaccineDose1FrameFS</zorder>
         <zorder>vaccineDose2FrameFS</zorder>
-        <zorder>pbEditUserFS</zorder>
-        <zorder>labelConfidentialAUP_6</zorder>
-        <zorder>labelUnauthorisedAUP_4</zorder>
+        <zorder>labelConfFS</zorder>
+        <zorder>labelUnauthorisedFS</zorder>
         <zorder>certificateFrameFS</zorder>
-        <zorder>labelCertificateAUP_3</zorder>
+        <zorder>labelCertificateFS</zorder>
         <zorder>testResultFrameFS</zorder>
-        <zorder>labelTestResultAUP_3</zorder>
-        <zorder>labelQRCodeAUP_4</zorder>
-        <zorder>labelClickEnlargeAUP_3</zorder>
-        <zorder>labelVaccinesAUP_2</zorder>
+        <zorder>labelTestResultFS</zorder>
+        <zorder>labelQRCodeFS</zorder>
+        <zorder>labelClickEnlargeFS</zorder>
+        <zorder>labelVaccinesFS</zorder>
         <zorder>showUserNotesFS</zorder>
-        <zorder>labelAdditionalNotesFs</zorder>
-        <zorder>labelAlertConfidentialAP_5</zorder>
+        <zorder>labelAdditionalNotesFS</zorder>
+        <zorder>labelAlertConfidentialFS</zorder>
         <zorder>showUserVaccStatusFS</zorder>
         <zorder>qrCodeTemplateFS</zorder>
         <zorder>showQRCodeFS</zorder>
-        <zorder>labelEmergencyAUP_6</zorder>
+        <zorder>labelVaccStatusFS</zorder>
         <zorder>pbLargeQRCodeFS</zorder>
        </widget>
-       <widget class="QPushButton" name="pbSearchAUP_2">
+       <widget class="QPushButton" name="pbSearchFS">
         <property name="geometry">
          <rect>
           <x>150</x>
@@ -10728,7 +10694,7 @@ background: rgba(104, 160, 229, 0.88);}
          </size>
         </property>
        </widget>
-       <widget class="QLineEdit" name="labelSearchUserAUP_2">
+       <widget class="QLineEdit" name="labelSearchUserFS">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -10765,7 +10731,7 @@ border: 3px solid rgba(104, 160, 229, 0.88);
          <string>Search NHI Number</string>
         </property>
        </widget>
-       <widget class="QFrame" name="frameFS_2">
+       <widget class="QFrame" name="frameFS">
         <property name="geometry">
          <rect>
           <x>0</x>
@@ -10917,16 +10883,16 @@ background:  rgba(248, 251, 255, 0.77);
         <zorder>showLargeTestsFS</zorder>
         <zorder>showLargeQRFS</zorder>
        </widget>
-       <zorder>labelConfidentialAUP_5</zorder>
-       <zorder>homeSubHeadingAUP_2</zorder>
-       <zorder>homeTitleAUP_2</zorder>
-       <zorder>listAllUsersAUP_2</zorder>
-       <zorder>showUserNameAUP_4</zorder>
-       <zorder>frame_7</zorder>
-       <zorder>userInfoFrameAUP_3</zorder>
-       <zorder>pbSearchAUP_2</zorder>
-       <zorder>labelSearchUserAUP_2</zorder>
-       <zorder>frameFS_2</zorder>
+       <zorder>labelViewFS</zorder>
+       <zorder>homeSubHeadingFS</zorder>
+       <zorder>homeTitleFS</zorder>
+       <zorder>listAllUsersFS</zorder>
+       <zorder>showUserNamesFS</zorder>
+       <zorder>framesFS</zorder>
+       <zorder>userInfoFrameFS</zorder>
+       <zorder>pbSearchFS</zorder>
+       <zorder>labelSearchUserFS</zorder>
+       <zorder>frameFS</zorder>
       </widget>
      </widget>
      <widget class="QLabel" name="userHomeWhiteBackgroundFS">
