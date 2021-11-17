@@ -221,13 +221,14 @@ void UserLogin::login()
 
 
                     // link icons
+
                     QPixmap pixmap4(":/res/images/iconLink.png");
-                    ui->labelLink1CP->setPixmap(pixmap4);
-                    ui->labelLink1CP->setScaledContents(true);
-                    ui->labelLink2CP->setPixmap(pixmap4);
-                    ui->labelLink2CP->setScaledContents(true);
-                    ui->labelLink3CP->setPixmap(pixmap4);
-                    ui->labelLink3CP->setScaledContents(true);
+                    ui->labelLink1RP->setPixmap(pixmap4);
+                    ui->labelLink1RP->setScaledContents(true);
+                    ui->labelLink2RP->setPixmap(pixmap4);
+                    ui->labelLink2RP->setScaledContents(true);
+                    ui->labelLink3RP->setPixmap(pixmap4);
+                    ui->labelLink3RP->setScaledContents(true);
 
 
 
