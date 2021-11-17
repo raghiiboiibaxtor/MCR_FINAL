@@ -216,6 +216,21 @@ void UserLogin::login()
                     ui->showUserPictureCP->setScaledContents(true);
                     ui->showUserPictureFS->setPixmap(pixmap3);
                     ui->showUserPictureFS->setScaledContents(true);
+                    ui->myUserPicturePP->setPixmap(pixmap3);
+                    ui->myUserPicturePP->setScaledContents(true);
+
+
+                    // link icons
+
+                    QPixmap pixmap4(":/res/images/iconLink.png");
+                    ui->labelLink1RP->setPixmap(pixmap4);
+                    ui->labelLink1RP->setScaledContents(true);
+                    ui->labelLink2RP->setPixmap(pixmap4);
+                    ui->labelLink2RP->setScaledContents(true);
+                    ui->labelLink3RP->setPixmap(pixmap4);
+                    ui->labelLink3RP->setScaledContents(true);
+
+
 
                     // Change page index to User Home Page
                     ui->stackedWidget->setCurrentIndex(1);

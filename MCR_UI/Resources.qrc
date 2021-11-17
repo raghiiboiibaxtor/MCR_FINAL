@@ -16,5 +16,8 @@
         <file>images/userProfile4.png</file>
         <file>images/userProfile5.png</file>
         <file>images/userProfile6.png</file>
+        <file>images/iconSearch.png</file>
+        <file>images/iconTrash.png</file>
+        <file>images/iconLink.png</file>
     </qresource>
 </RCC>

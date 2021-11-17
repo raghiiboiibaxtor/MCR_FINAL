@@ -32,7 +32,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="loginPage">
      <widget class="QLabel" name="loginWhiteBackgroundLP">
@@ -1934,7 +1934,7 @@ color:#2B528C;
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true"> background: #2B528C;
+         <string notr="true">background: rgba(248, 251, 255, 0.99);
 border-radius: 60px;</string>
         </property>
         <property name="text">
@@ -3620,7 +3620,7 @@ padding-left: 3px;}</string>
        <property name="geometry">
         <rect>
          <x>500</x>
-         <y>410</y>
+         <y>510</y>
          <width>410</width>
          <height>30</height>
         </rect>
@@ -3648,9 +3648,9 @@ color:#2B528C;
        <property name="geometry">
         <rect>
          <x>500</x>
-         <y>490</y>
+         <y>570</y>
          <width>351</width>
-         <height>81</height>
+         <height>61</height>
         </rect>
        </property>
        <property name="font">
@@ -3666,9 +3666,9 @@ color:#2B528C;
 color: #2B528C;
 font-weight: 500;
 background: #F2F8FC;
-border-radius: 35px;
+border-radius: 30px;
 border-color: rgba(104, 160, 229, 0.33);
-font-size: 14px; 
+font-size: 16px; 
 }
 QPushButton:hover
 {
@@ -3686,7 +3686,7 @@ color: #2B528C;
        <property name="geometry">
         <rect>
          <x>500</x>
-         <y>440</y>
+         <y>536</y>
          <width>300</width>
          <height>30</height>
         </rect>
@@ -3701,7 +3701,7 @@ color: #2B528C;
        </property>
        <property name="styleSheet">
         <string notr="true">font-weight: 200;
-font-size: 18px;
+font-size: 14px;
 color: #2B528C;
 background: rgba(104, 160, 229, 0.00);
 </string>
@@ -3714,9 +3714,9 @@ background: rgba(104, 160, 229, 0.00);
        <property name="geometry">
         <rect>
          <x>500</x>
-         <y>590</y>
+         <y>640</y>
          <width>351</width>
-         <height>81</height>
+         <height>61</height>
         </rect>
        </property>
        <property name="font">
@@ -3732,9 +3732,9 @@ background: rgba(104, 160, 229, 0.00);
 color: #2B528C;
 font-weight: 500;
 background: #F2F8FC;
-border-radius: 35px;
+border-radius: 30px;
 border-color: rgba(104, 160, 229, 0.33);
-font-size: 14px; 
+font-size: 16px; 
 }
 QPushButton:hover
 {
@@ -3752,9 +3752,9 @@ color: #2B528C;
        <property name="geometry">
         <rect>
          <x>500</x>
-         <y>690</y>
+         <y>710</y>
          <width>351</width>
-         <height>81</height>
+         <height>61</height>
         </rect>
        </property>
        <property name="font">
@@ -3770,9 +3770,9 @@ color: #2B528C;
 color: #2B528C;
 font-weight: 500;
 background: #F2F8FC;
-border-radius: 35px;
+border-radius: 30px;
 border-color: rgba(104, 160, 229, 0.33);
-font-size: 14px; 
+font-size: 16px; 
 }
 QPushButton:hover
 {
@@ -3784,6 +3784,99 @@ color: #2B528C;
        </property>
        <property name="text">
         <string>Learn More</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelLink1RP">
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>654</y>
+         <width>31</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Avenir Next</family>
+         <pointsize>-1</pointsize>
+         <weight>25</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-weight: 200;
+font-size: 10px;
+color: #2B528C;
+background: rgba(104, 160, 229, 0.00);
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelLink2RP">
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>585</y>
+         <width>31</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Avenir Next</family>
+         <pointsize>-1</pointsize>
+         <weight>25</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-weight: 200;
+font-size: 10px;
+color: #2B528C;
+background: rgba(104, 160, 229, 0.00);
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelLink3RP">
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>724</y>
+         <width>31</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Avenir Next</family>
+         <pointsize>-1</pointsize>
+         <weight>25</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-weight: 200;
+font-size: 10px;
+color: #2B528C;
+background: rgba(104, 160, 229, 0.00);
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
        </property>
       </widget>
      </widget>

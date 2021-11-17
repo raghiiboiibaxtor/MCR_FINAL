@@ -47,10 +47,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     //**********************************
     ui->pbQuickRemoveRP->hide();
     ui->labelDeleteRP->hide();
-    ui->pbQuickRemoveEP->hide();
-    ui->labelDeleteEP->hide();
-    ui->pbQuickRemoveAP->hide();
-    ui->labelDeleteAP->hide();
     //**********************************
 
     // Autoloading File information into the vector
@@ -468,9 +464,12 @@ void MainWindow::saveUser()
     QString add2BatchNum = ui->add2ndDoseBatchAP->text();
     QString add2Date = ui->add2ndDoseDateAP->text();
 
+    addNotes.replace(QString("\n"), QString ("<br>"));
+    QString paragraph(addNotes);
+
     if (addName.trimmed() != "" && addNhi.trimmed() != "" && addEmail.trimmed() != "")
     {
-        classCitizen *ptrNewCitizen = new classCitizen(addName, addPhone, addEmail, addDob, addNhi, addEmergencyContact, addNotes, addVaccStatus, addCvn,
+        classCitizen *ptrNewCitizen = new classCitizen(addName, addPhone, addEmail, addDob, addNhi, addEmergencyContact, paragraph, addVaccStatus, addCvn,
                                                        add1VaccName, add1BatchNum, add1Date, add2VaccName, add2BatchNum, add2Date, certificateImageSave, qrCodeImageSave, testResultImageSave, userProfilePictureSave);
         userList.push_back(ptrNewCitizen);
 
@@ -483,6 +482,8 @@ void MainWindow::saveUser()
         //QFile outputFile("Citizens.txt");
         /// Mac File Path
         QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
+
+
 
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Text);
@@ -1048,6 +1049,8 @@ void MainWindow::saveEdit()
     QString edit2BatchNum = ui->edit2ndDoseBatchEP->text();
     QString edit2Date = ui->edit2ndDoseDateEP->text();
 
+    editNotes.replace(QString("\n"), QString ("<br>"));
+    QString paragraph(editNotes);
 
     QPixmap pixmap(ptrCurrentCitizen->getCertificate());
     ui->editCertificateEP->setPixmap(pixmap);
@@ -1067,7 +1070,7 @@ void MainWindow::saveEdit()
         ptrCurrentCitizen->setEmailAddress(editEmail);
         ptrCurrentCitizen->setDateOfBirth(editDob);
         ptrCurrentCitizen->setEmergencyContact(editEmergencyContact);
-        ptrCurrentCitizen->setAdditionalNotes(editNotes);
+        ptrCurrentCitizen->setAdditionalNotes(paragraph);
         ptrCurrentCitizen->setVaccineStatus(editVaccStatus);
         ptrCurrentCitizen->setCVN(editCVNum);
         ptrCurrentCitizen->setVaccineName1(edit1VaccName);
@@ -1118,7 +1121,7 @@ void MainWindow::saveEdit()
             ui->editUserPhoneEP->clear();
             ui->editUserEmailEP->clear();
             ui->editUserDOBEP->clear();
-            ui->showUserNHIFS->clear();
+            ui->showNHIEP->clear();
             ui->editUserEmergencyEP->clear();
             ui->editUserNotesEP->clear();
             ui->editUserVaccineSBEP->setCurrentText("Select Vaccine Status");
