@@ -19,5 +19,10 @@
         <file>images/iconSearch.png</file>
         <file>images/iconTrash.png</file>
         <file>images/iconLink.png</file>
+        <file>images/iconCOVID.png</file>
+        <file>images/iconInjectVaccine.png</file>
+        <file>images/iconCOVIDOrange.png</file>
+        <file>images/iconCOVIDDarkOrange.png</file>
+        <file>images/iconWhiteLink.png</file>
     </qresource>
 </RCC>
