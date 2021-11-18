@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normalon>:/res/images/iconVaccine.png</normalon>
+    <normalon>:/res/images/iconMCRFinal.png</normalon>
    </iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -37,7 +37,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="adminHomePage">
      <widget class="QFrame" name="userHomeHelloBarHP">

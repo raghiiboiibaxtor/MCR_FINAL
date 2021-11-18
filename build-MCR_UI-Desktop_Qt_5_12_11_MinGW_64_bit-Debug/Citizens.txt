@@ -1,1 +1,0 @@
-Chux Harris|027 5621 569|user@testing.co.nz|01/05/1999|CGU4567|Glenn Morris, 021 5698 312||Fully Vaccinated|CV44596077|Pfizer|FC2354|09/10/21|Pfizer|FC5689|10/11/21|./vaccineCertificates/vaccineCertificate.png|./qrCodes/qrCode.png|./testResults/testResultPositive.png|./userProfilePictures/userProfile3.png

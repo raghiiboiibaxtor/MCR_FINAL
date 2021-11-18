@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normalon>:/res/images/iconVaccine.png</normalon>
+    <normalon>:/res/images/iconMCRFinal.png</normalon>
    </iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -1019,7 +1019,7 @@ border-radius: 50px;</string>
           <x>20</x>
           <y>50</y>
           <width>421</width>
-          <height>191</height>
+          <height>171</height>
          </rect>
         </property>
         <property name="font">
@@ -1109,7 +1109,7 @@ background: rgba(254, 206, 103, 0.00);
           <x>20</x>
           <y>270</y>
           <width>421</width>
-          <height>191</height>
+          <height>171</height>
          </rect>
         </property>
         <property name="font">

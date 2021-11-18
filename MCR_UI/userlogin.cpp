@@ -36,7 +36,6 @@ UserLogin::UserLogin(QWidget *parent):QMainWindow(parent), ui(new Ui::UserLogin)
     connect(ui->pbLoginLP, &QPushButton::clicked, this, &UserLogin::login);
     connect(ui->pbCircleLoginLP, &QPushButton::clicked, this, &UserLogin::login);
 
-
     // Home Buttons
     connect(ui->pbHomeHP, &QPushButton::clicked, this, &UserLogin::pbHome);
     connect(ui->pbHomePP, &QPushButton::clicked, this, &UserLogin::pbHome);
@@ -49,13 +48,11 @@ UserLogin::UserLogin(QWidget *parent):QMainWindow(parent), ui(new Ui::UserLogin)
     connect(ui->pbProfileCP, &QPushButton::clicked, this, &UserLogin::pbMyDetails);
     connect(ui->pbProfileFS, &QPushButton::clicked, this, &UserLogin::pbMyDetails);
 
-
     // Contact Buttons
     connect(ui->pbContactHP, &QPushButton::clicked, this, &UserLogin::pbContactUs);
     connect(ui->pbContactPP, &QPushButton::clicked, this, &UserLogin::pbContactUs);
     connect(ui->pbContactCP, &QPushButton::clicked, this, &UserLogin::pbContactUs);
     connect(ui->pbContactFS, &QPushButton::clicked, this, &UserLogin::pbContactUs);
-
 
     // Logout Buttons
     connect(ui->pbLogoutHP, &QPushButton::clicked, this, &UserLogin::logout);
@@ -134,7 +131,7 @@ void UserLogin::login()
     else if(NHI != "NHIAdmin")
     {
         //QFile inputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Citizens.txt");
-        QFile inputFile("Citizens.txt");
+        QFile inputFile("TextFiles/Citizens.txt");
         inputFile.open(QIODevice::ReadOnly | QIODevice::Text);
         QTextStream read(&inputFile);
 
@@ -219,9 +216,7 @@ void UserLogin::login()
                     ui->myUserPicturePP->setPixmap(pixmap3);
                     ui->myUserPicturePP->setScaledContents(true);
 
-
                     // link icons
-
                     QPixmap pixmap4(":/res/images/iconLink.png");
                     ui->labelLink1CP->setPixmap(pixmap4);
                     ui->labelLink1CP->setScaledContents(true);
@@ -229,8 +224,6 @@ void UserLogin::login()
                     ui->labelLink2CP->setScaledContents(true);
                     ui->labelLink3CP->setPixmap(pixmap4);
                     ui->labelLink3CP->setScaledContents(true);
-
-
 
                     // Change page index to User Home Page
                     ui->stackedWidget->setCurrentIndex(1);
@@ -364,7 +357,7 @@ void UserLogin::submitReport()
     {
         // Writing to file
         /// Windows File Path
-        QFile outputFile("GeneralEnquiries.txt");
+        QFile outputFile("TextFiles/GeneralEnquiries.txt");
         /// Mac File Path
         //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/GeneralEnquiries.txt");
 
@@ -381,19 +374,17 @@ void UserLogin::submitReport()
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << paragraph << Qt::endl; //Qt::endl;
+        out << paragraph << endl; //Qt::endl;
 
         // Flushing file and then closing.
         out.flush();
         outputFile.close();
-
-
     }
     else if (addCategory == "COVID-19 Vaccine")
     {
         // Writing to file
         /// Windows File Path
-        QFile outputFile("COVID19Vaccine.txt");
+        QFile outputFile("TextFiles/COVID19Vaccine.txt");
         /// Mac File Path
         //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/COVID19Vaccine.txt");
 
@@ -410,7 +401,7 @@ void UserLogin::submitReport()
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << paragraph << Qt::endl; //Qt::endl;
+        out << paragraph << endl; //Qt::endl;
 
 
         // Flushing file and then closing.
@@ -421,7 +412,7 @@ void UserLogin::submitReport()
     {
         // Writing to file
         /// Windows File Path
-        QFile outputFile("ChangePersonalDetails.txt");
+        QFile outputFile("TextFiles/ChangePersonalDetails.txt");
         /// Mac File Path
         //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/ChangePersonalDetails.txt");
 
@@ -438,7 +429,7 @@ void UserLogin::submitReport()
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << paragraph << Qt::endl; //Qt::endl;
+        out << paragraph << endl; //Qt::endl;
 
         // Flushing file and then closing.
         out.flush();
@@ -448,7 +439,7 @@ void UserLogin::submitReport()
     {
         // Writing to file
         /// Windows File Path
-        QFile outputFile("COVIDRecordApp.txt");
+        QFile outputFile("TextFiles/COVIDRecordApp.txt");
         /// Mac File Path
         //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/COVIDRecordApp.txt");
 
@@ -456,7 +447,6 @@ void UserLogin::submitReport()
         QString paragraph(addDetails);
 
         //inputFile.seek(0);
-
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text);
 
@@ -465,7 +455,7 @@ void UserLogin::submitReport()
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << paragraph << Qt::endl; //Qt::endl;
+        out << paragraph << endl; //Qt::endl;
 
         // Flushing file and then closing.
         out.flush();
@@ -475,7 +465,7 @@ void UserLogin::submitReport()
     {
         // Writing to file
         /// Windows File Path
-        QFile outputFile("Other.txt");
+        QFile outputFile("TextFiles/Other.txt");
         /// Mac File Path
         //QFile outputFile("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/Other.txt");
 
@@ -492,13 +482,12 @@ void UserLogin::submitReport()
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << paragraph << Qt::endl; //Qt::endl;
+        out << paragraph << endl; //Qt::endl;
 
         // Flushing file and then closing.
         out.flush();
         outputFile.close();
     }
-
     // Clear input from labels
     ui->editReportSubjectCP->clear();
     ui->editReportDetailsCP->clear();

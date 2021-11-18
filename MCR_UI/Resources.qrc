@@ -24,5 +24,6 @@
         <file>images/iconCOVIDOrange.png</file>
         <file>images/iconCOVIDDarkOrange.png</file>
         <file>images/iconWhiteLink.png</file>
+        <file>images/iconMCRFinal.png</file>
     </qresource>
 </RCC>

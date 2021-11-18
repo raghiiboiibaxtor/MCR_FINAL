@@ -1,0 +1,4 @@
+./qrCodes/qrCode.png
+./qrCodes/qrCode.png
+./qrCodes/qrCode.png
+./qrCodes/qrCode.png
