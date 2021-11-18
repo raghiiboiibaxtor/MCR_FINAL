@@ -15,6 +15,8 @@
 #include <QDir>
 #include <QPixmap>
 #include <QRandomGenerator>
+#include <QUrl>
+#include <QDesktopServices>
 
 
 // Admin Main Window
@@ -157,6 +159,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
      connect(ui->pbLogoutFS, &QPushButton::clicked, this, &MainWindow::logout);
 
     // In app buttons & connections.
+    connect(ui->pbLiveFeedHP, &QPushButton::clicked, this, &MainWindow::liveFeedLink);
     /// Add User connections
     connect(ui->pbAddCertificateAP, &QPushButton::clicked, this, &MainWindow::addCertificateImage);
     connect(ui->pbChangeCertificateAP, &QPushButton::clicked, this, &MainWindow::addCertificateImage);
@@ -232,6 +235,13 @@ void MainWindow::pbHome()
     ui->stackedWidget->setCurrentIndex(0);
 
 } // End of pbHome()
+
+// Function to direct user to Latest Updates
+void MainWindow::liveFeedLink()
+{
+    QString link = "https://covid19.govt.nz/alert-levels-and-updates/latest-updates/";
+    QDesktopServices::openUrl(QUrl(link));
+}/// End of liveFeedLink()
 
 /// Add New User Functions
 ///*********************************************************
@@ -330,7 +340,7 @@ void MainWindow::addCertificateImage()
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
         // Writing to file
-        out << certificateImageSave << endl;
+        out << certificateImageSave << Qt::endl;
 
     // Flushing file and then closing.
     out.flush();
@@ -367,7 +377,7 @@ void MainWindow::addQRCodeImage()
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
         // Writing to file
-        out << qrCodeImageSave << endl;
+        out << qrCodeImageSave << Qt::endl;
 
     // Flushing file and then closing.
     out.flush();
@@ -404,7 +414,7 @@ void MainWindow::addTestResultImage()
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
         // Writing to file
-        out << testResultImageSave << endl;
+        out << testResultImageSave << Qt::endl;
     // Flushing file and then closing.
     out.flush();
     outputFile.close();
@@ -440,7 +450,7 @@ void MainWindow::addUserPicture()
         QTextStream out(&outputFile);
         outputFile.open(QIODevice::WriteOnly | QIODevice:: Append| QIODevice::Text);
         // Writing to file
-        out << userProfilePictureSave << endl;
+        out << userProfilePictureSave << Qt::endl;
     // Flushing file and then closing.
     out.flush();
     outputFile.close();
@@ -508,7 +518,7 @@ void MainWindow::saveUser()
                 out << userList.at(i)->getCertificate() << "|";
                 out << userList.at(i)->getQRCode() << "|";
                 out << userList.at(i)->getTestResult() << "|";
-                out << userList.at(i)->getCitizenImage() << endl;
+                out << userList.at(i)->getCitizenImage() << Qt::endl;
                }
             // Flushing file and then closing.
             out.flush();
@@ -873,7 +883,7 @@ void MainWindow::pbRemoveUser()
                  out << userList.at(i)->getCertificate() << "|";
                  out << userList.at(i)->getQRCode() << "|";
                  out << userList.at(i)->getTestResult() << "|";
-                 out << userList.at(i)->getCitizenImage() << "|" << endl; //Qt::endl;
+                 out << userList.at(i)->getCitizenImage() << "|" << Qt::endl; //Qt::endl;
                 }
              // Flushing file and then closing.
              out.flush();
@@ -1150,7 +1160,7 @@ void MainWindow::saveEdit()
                 out << userList.at(i)->getCertificate() << "|";
                 out << userList.at(i)->getQRCode() << "|";
                 out << userList.at(i)->getTestResult() << "|";
-                out << userList.at(i)->getCitizenImage() << endl;
+                out << userList.at(i)->getCitizenImage() << Qt::endl;
                }
             // Flushing file and then closing.
             out.flush();

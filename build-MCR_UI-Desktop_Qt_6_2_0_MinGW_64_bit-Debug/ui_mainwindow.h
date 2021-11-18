@@ -431,7 +431,7 @@ public:
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(1101, 812);
         QIcon icon;
-        icon.addFile(QString::fromUtf8(":/res/images/iconVaccine.png"), QSize(), QIcon::Normal, QIcon::On);
+        icon.addFile(QString::fromUtf8(":/res/images/iconMCRFinal.png"), QSize(), QIcon::Normal, QIcon::On);
         MainWindow->setWindowIcon(icon);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
@@ -4562,7 +4562,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(5);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

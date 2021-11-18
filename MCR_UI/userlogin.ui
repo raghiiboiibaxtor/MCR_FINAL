@@ -37,7 +37,7 @@
      <string notr="true">background:white;</string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="loginPage">
      <widget class="QLabel" name="loginWhiteBackgroundLP">
@@ -404,6 +404,9 @@ border: 3px solid rgba(104, 160, 229, 0.88);
 color: #F8FBFF;
 padding-left: 3px;
 }</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
        </property>
        <property name="placeholderText">
         <string> My Access Code </string>

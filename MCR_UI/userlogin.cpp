@@ -71,7 +71,7 @@ UserLogin::UserLogin(QWidget *parent):QMainWindow(parent), ui(new Ui::UserLogin)
     connect(ui->pbGetTestedLinkCP, &QPushButton::clicked, this, &UserLogin::getTestedLink);
     connect(ui->pbLearnMoreLinkCP, &QPushButton::clicked, this, &UserLogin::learnMoreLink);
     connect(ui->pbMCRLinkLP, &QPushButton::clicked, this, &UserLogin::covidRecordLink);
-
+    connect(ui->pbLiveFeedHP, &QPushButton::clicked, this, &UserLogin::liveFeedLink);
 }
 
 // Second constructor passing single pointer for classCitizen ptrCurrentCitizen.
@@ -107,11 +107,11 @@ void UserLogin::login()
 
     // Check if login input matches, if not, an error message will be displayed
     // If correct, directed to Home Page
-    if (NHI == "1") // Admin Login Check Loop
+    if (NHI == "NHIAdmin") // Admin Login Check Loop
     {
-        if (email == "1")
+        if (email == "admin@mycovidrecord.co.nz")
         {
-            if (accessNumber == "1")
+            if (accessNumber == "5656")
             {
                 this->hide();
                 // Displays Admin Home Page
@@ -374,7 +374,7 @@ void UserLogin::submitReport()
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << paragraph << endl; //Qt::endl;
+        out << paragraph << Qt::endl;
 
         // Flushing file and then closing.
         out.flush();
@@ -401,7 +401,7 @@ void UserLogin::submitReport()
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << paragraph << endl; //Qt::endl;
+        out << paragraph << Qt::endl;
 
 
         // Flushing file and then closing.
@@ -429,7 +429,7 @@ void UserLogin::submitReport()
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << paragraph << endl; //Qt::endl;
+        out << paragraph << Qt::endl;
 
         // Flushing file and then closing.
         out.flush();
@@ -455,7 +455,7 @@ void UserLogin::submitReport()
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << paragraph << endl; //Qt::endl;
+        out << paragraph << Qt::endl;
 
         // Flushing file and then closing.
         out.flush();
@@ -482,7 +482,7 @@ void UserLogin::submitReport()
         out << addContact << "|";
         out << addCategory << "|";
         out << addSubject << "|";
-        out << paragraph << endl; //Qt::endl;
+        out << paragraph << Qt::endl;
 
         // Flushing file and then closing.
         out.flush();
@@ -519,8 +519,14 @@ void UserLogin::covidRecordLink()
 {
     QString link = "https://mycovidrecord.health.nz/";
     QDesktopServices::openUrl(QUrl(link));
-}
-/// End of covidRecordLink()
+}/// End of covidRecordLink()
+
+// Function to direct user to Latest Updates
+void UserLogin::liveFeedLink()
+{
+    QString link = "https://covid19.govt.nz/alert-levels-and-updates/latest-updates/";
+    QDesktopServices::openUrl(QUrl(link));
+}/// End of liveFeedLink()
 
 // Function to logout
 void UserLogin::logout()

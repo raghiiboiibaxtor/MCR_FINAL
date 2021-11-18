@@ -39,6 +39,7 @@ public:
     explicit MainWindow(citizenReport* ptrCurrentReport, QWidget *parent = nullptr);
     //explicit MainWindow(classCitizen* ptrReportDetails, QWidget *parent = nullptr);
     void pbHome();
+    void liveFeedLink();
 
     void addNewUser();
     void addCertificateImage();

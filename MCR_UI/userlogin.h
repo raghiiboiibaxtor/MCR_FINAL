@@ -53,6 +53,7 @@ public:
     void getTestedLink();
     void learnMoreLink();
     void covidRecordLink();
+    void liveFeedLink();
 
     void logout();
 };

@@ -284,7 +284,7 @@ public:
             UserLogin->setObjectName(QString::fromUtf8("UserLogin"));
         UserLogin->resize(1100, 811);
         QIcon icon;
-        icon.addFile(QString::fromUtf8(":/res/images/iconVaccine.png"), QSize(), QIcon::Normal, QIcon::On);
+        icon.addFile(QString::fromUtf8(":/res/images/iconMCRFinal.png"), QSize(), QIcon::Normal, QIcon::On);
         UserLogin->setWindowIcon(icon);
         centralwidget = new QWidget(UserLogin);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
@@ -465,6 +465,7 @@ public:
 "color: #F8FBFF;\n"
 "padding-left: 3px;\n"
 "}"));
+        editAccessNumberLP->setEchoMode(QLineEdit::Password);
         enterDetailsTextLP = new QLabel(accountLoginFrameLP);
         enterDetailsTextLP->setObjectName(QString::fromUtf8("enterDetailsTextLP"));
         enterDetailsTextLP->setGeometry(QRect(41, 80, 331, 31));
@@ -719,7 +720,7 @@ public:
         alerLevelUpdatesFrameHP->setFrameShadow(QFrame::Raised);
         infoLabelHP = new QLabel(alerLevelUpdatesFrameHP);
         infoLabelHP->setObjectName(QString::fromUtf8("infoLabelHP"));
-        infoLabelHP->setGeometry(QRect(20, 50, 421, 191));
+        infoLabelHP->setGeometry(QRect(20, 50, 421, 171));
         infoLabelHP->setFont(font10);
         infoLabelHP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 14px;\n"
@@ -753,7 +754,7 @@ public:
 ""));
         info2LabelHP = new QLabel(alerLevelUpdatesFrameHP);
         info2LabelHP->setObjectName(QString::fromUtf8("info2LabelHP"));
-        info2LabelHP->setGeometry(QRect(20, 270, 421, 191));
+        info2LabelHP->setGeometry(QRect(20, 270, 421, 171));
         info2LabelHP->setFont(font10);
         info2LabelHP->setStyleSheet(QString::fromUtf8("font-weight: 200;\n"
 "font-size: 14px;\n"
@@ -2791,7 +2792,7 @@ public:
 
         retranslateUi(UserLogin);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(0);
         pbLoginLP->setDefault(true);
 
 

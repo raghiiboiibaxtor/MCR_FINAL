@@ -133,6 +133,7 @@ debug/qrc_Resources.cpp: ../MCR_UI/Resources.qrc \
 		../MCR_UI/images/vaccineCertificate.png \
 		../MCR_UI/images/iconArrow.png \
 		../MCR_UI/images/userProfile1.png \
+		../MCR_UI/images/iconMCRFinal.png \
 		../MCR_UI/images/iconCOVIDDarkOrange.png \
 		../MCR_UI/images/iconCOVID.png \
 		../MCR_UI/images/testResultPositive.png \
@@ -1012,7 +1013,10 @@ debug/mainwindow.o: ../MCR_UI/mainwindow.cpp ../MCR_UI/mainwindow.h \
 		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/QDir \
 		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/QPixmap \
 		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/QRandomGenerator \
-		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qrandom.h
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/qrandom.h \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtCore/QUrl \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/QDesktopServices \
+		D:/Tess/Qt/6.2.0/mingw81_64/include/QtGui/qdesktopservices.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\MCR_UI\mainwindow.cpp
 
 debug/userlogin.o: ../MCR_UI/userlogin.cpp ../MCR_UI/userlogin.h \
