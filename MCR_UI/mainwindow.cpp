@@ -106,6 +106,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
            //QDir().mkdir("/Users/raghiiboiibaxtor/Documents/MCR_FINAL/MCR_UI/files/UserProfilePictures");
        }
 
+
     //Constructing Admin Profile Picture
        QPixmap pixmap1(":/res/images/adminProfilePicture.png");
        ui->displayPictureHP->setPixmap(pixmap1);

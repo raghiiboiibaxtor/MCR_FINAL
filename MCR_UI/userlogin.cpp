@@ -118,7 +118,7 @@ void UserLogin::login()
     {
         if (email == "admin@mycovidrecord.co.nz")
         {
-            if (accessNumber == "5656")
+            if (accessNumber == "4242")
             {
                 this->hide();
                 // Displays Admin Home Page
