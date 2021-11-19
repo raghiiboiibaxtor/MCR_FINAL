@@ -1,6 +1,16 @@
+// Welcome to My Covid Record!
+// An application that tracks the vaccine status of citizens.
+// Log in using these details: NHIAdmin, admin@mycovidrecord.co.nz , 4242
+// This application is designed for desktop and is entirely open source.
+// Enjoy it!
+// Designed and developed by Tess Williams & Raghiiboii Baxtor
+
+// Including classes
 #include "classcitizen.h"
+// Including libraries
 #include <QString>
-//
+
+// Initialising constructor
 classCitizen::classCitizen(QString name, QString contactNumber, QString emailAddress, QString dateOfBirth, QString nhi, QString emergencyContact, QString additionalNotes,
                            QString vaccineStatus, QString cvn, QString vaccineName1, QString batchNumber1, QString dateGiven1, QString vaccineName2, QString batchNumber2, QString dateGiven2,
                            QString certificateImage, QString qrCodeImage, QString testResultImage, QString citizenImage)
@@ -26,7 +36,8 @@ classCitizen::classCitizen(QString name, QString contactNumber, QString emailAdd
     this->testResultImage = testResultImage;
 }
 
-// Personal Info / Login Setters
+// Defining Setters & Getters
+// Login info setters
 void classCitizen::setName(QString name)
 {
     this->name = name;

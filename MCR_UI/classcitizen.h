@@ -1,11 +1,20 @@
+// Welcome to My Covid Record!
+// An application that tracks the vaccine status of citizens.
+// Log in using these details: NHIAdmin, admin@mycovidrecord.co.nz , 4242
+// This application is designed for desktop and is entirely open source.
+// Enjoy it!
+// Designed and developed by Tess Williams & Raghiiboii Baxtor
+
+// Initialising Header Guards
 #ifndef CLASSCITIZEN_H
 #define CLASSCITIZEN_H
 
-//
+// Including Qt Libraries
 #include <QString>
-
+// Initialising class classCitizen
 class classCitizen
 {
+// Declaring private attributes of class
 private:
 
     QString name;
@@ -29,6 +38,8 @@ private:
     QString certificateImage; //18
     QString testResultImage; //19
 
+
+// Declaring public attributes of class
 public:
     // Constructor
     explicit classCitizen(QString name, QString contactNumber, QString emailAddress, QString dateOfBirth, QString nhi, QString emergencyContact, QString additionalNotes,

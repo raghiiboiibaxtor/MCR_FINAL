@@ -1,6 +1,16 @@
+// Welcome to My Covid Record!
+// An application that tracks the vaccine status of citizens.
+// Log in using these details: NHIAdmin, admin@mycovidrecord.co.nz , 4242
+// This application is designed for desktop and is entirely open source.
+// Enjoy it!
+// Designed and developed by Tess Williams & Raghiiboii Baxtor
+
+// Including class files
 #include "citizenreport.h"
+// Including Qt libraries
 #include <QString>
 
+// Initialising constructor
 citizenReport::citizenReport(QString preferredName, QString preferredContact, QString contactDetails, QString reportCategory, QString reportSubject, QString reportDetails)
 {
     this->preferredName = preferredName;
@@ -11,6 +21,7 @@ citizenReport::citizenReport(QString preferredName, QString preferredContact, QS
     this->reportDetails = reportDetails;
 }
 
+// Defining Setters & Getters
 QString citizenReport::getName()
 {
     return preferredName;

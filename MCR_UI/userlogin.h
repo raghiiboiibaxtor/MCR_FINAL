@@ -1,7 +1,14 @@
+// Welcome to My Covid Record!
+// An application that tracks the vaccine status of citizens.
+// Log in using these details: NHIAdmin, admin@mycovidrecord.co.nz , 4242
+// This application is designed for desktop and is entirely open source.
+// Enjoy it!
+// Designed and developed by Tess Williams & Raghiiboii Baxtor
+
+// Initialising Header Guards
 #ifndef USERLOGIN_H
 #define USERLOGIN_H
-//
-
+// Including Qt Libraries
 #include <QVector>
 #include <QMainWindow>
 #include <QString>
@@ -10,15 +17,15 @@
 #include "citizenreport.h"
 #include "classcitizen.h"
 
-
+// Defining UI Type
 QT_BEGIN_NAMESPACE
 namespace Ui { class UserLogin; }
 QT_END_NAMESPACE
-
+// Initialising class UserLogin
 class UserLogin : public QMainWindow
 {
     Q_OBJECT
-
+// Declaring private attributes of class
 private:
     Ui::UserLogin *ui;
     QMainWindow *mainWindow;
@@ -28,10 +35,11 @@ private:
     QVector<citizenReport*> reportList;
     citizenReport **ptrNewReport;
 
-   protected:
+// Declaring protected attributes of class
+protected:
    void keyPressEvent(QKeyEvent* ptrPressEnter);
 
-
+// Declaring public attributes of class
 public:
     explicit UserLogin(QWidget *parent = nullptr);
     explicit UserLogin(classCitizen* ptrCurrentCitizen, QWidget *parent = nullptr);
@@ -58,4 +66,4 @@ public:
     void logout();
 };
 
-#endif // USERLOGIN_H
+#endif // Ending header guard: USERLOGIN_H

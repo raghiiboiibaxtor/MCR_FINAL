@@ -1,4 +1,10 @@
-//
+// Welcome to My Covid Record!
+// An application that tracks the vaccine status of citizens.
+// Log in using these details: NHIAdmin, admin@mycovidrecord.co.nz , 4242
+// This application is designed for desktop and is entirely open source.
+// Enjoy it!
+// Designed and developed by Tess Williams & Raghiiboii Baxtor
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "classcitizen.h"

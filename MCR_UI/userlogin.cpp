@@ -1,8 +1,15 @@
-//
+// Welcome to My Covid Record!
+// An application that tracks the vaccine status of citizens.
+// Log in using these details: NHIAdmin, admin@mycovidrecord.co.nz , 4242
+// This application is designed for desktop and is entirely open source.
+// Enjoy it!
+// Designed and developed by Tess Williams & Raghiiboii Baxtor
+
+// Including class files
 #include "userlogin.h"
 #include "ui_userlogin.h"
 #include "mainwindow.h"
-
+// Including libraries
 #include <QListWidgetItem>
 #include <QVector>
 #include <QFile>
@@ -12,11 +19,11 @@
 #include <QUrl>
 #include <QDesktopServices>
 
+/// Method functionality begins.
 // Login for Admin/User & User Main Window
 //*********************************************************
 
-// { Overloading constructors begins :
-
+// {Overloading constructors begins:
 UserLogin::UserLogin(QWidget *parent):QMainWindow(parent), ui(new Ui::UserLogin)
 {
     ui->setupUi(this);
@@ -32,40 +39,40 @@ UserLogin::UserLogin(QWidget *parent):QMainWindow(parent), ui(new Ui::UserLogin)
     ui->showLargeTestsFS->hide();
     ui->pbCloseImageFS->hide();
 
-    // Manual UI -> Function Connections
+    // Manual UI -> function() signals
+    /// These signals connect the ui event to its relevant function.
     connect(ui->pbLoginLP, &QPushButton::clicked, this, &UserLogin::login);
     connect(ui->pbCircleLoginLP, &QPushButton::clicked, this, &UserLogin::login);
 
-    // Home Buttons
+    // Home signals
     connect(ui->pbHomeHP, &QPushButton::clicked, this, &UserLogin::pbHome);
     connect(ui->pbHomePP, &QPushButton::clicked, this, &UserLogin::pbHome);
     connect(ui->pbHomeCP, &QPushButton::clicked, this, &UserLogin::pbHome);
     connect(ui->pbHomeFS, &QPushButton::clicked, this, &UserLogin::pbHome);
 
-    // Profile Buttons
+    // Profile signals
     connect(ui->pbProfileHP, &QPushButton::clicked, this, &UserLogin::pbMyDetails);
     connect(ui->pbProfilePP, &QPushButton::clicked, this, &UserLogin::pbMyDetails);
     connect(ui->pbProfileCP, &QPushButton::clicked, this, &UserLogin::pbMyDetails);
     connect(ui->pbProfileFS, &QPushButton::clicked, this, &UserLogin::pbMyDetails);
 
-    // Contact Buttons
+    // Contact signals
     connect(ui->pbContactHP, &QPushButton::clicked, this, &UserLogin::pbContactUs);
     connect(ui->pbContactPP, &QPushButton::clicked, this, &UserLogin::pbContactUs);
     connect(ui->pbContactCP, &QPushButton::clicked, this, &UserLogin::pbContactUs);
     connect(ui->pbContactFS, &QPushButton::clicked, this, &UserLogin::pbContactUs);
 
-    // Logout Buttons
+    // Logout signals
     connect(ui->pbLogoutHP, &QPushButton::clicked, this, &UserLogin::logout);
     connect(ui->pbLogoutPP, &QPushButton::clicked, this, &UserLogin::logout);
     connect(ui->pbLogoutCP, &QPushButton::clicked, this, &UserLogin::logout);
     connect(ui->pbLogoutFS, &QPushButton::clicked, this, &UserLogin::logout);
 
-    // In app connections
+    // In app signals
     connect(ui->pbEnlargeCertificatePP, &QPushButton::clicked, this, &UserLogin::pbShowCertificate);
     connect(ui->pbEnlargeQRPP, &QPushButton::clicked, this, &UserLogin::pbShowQRCode);
     connect(ui->pbEnlargeResultsPP, &QPushButton::clicked, this, &UserLogin::pbShowTestResult);
     connect(ui->pbCloseImageFS, &QPushButton::clicked, this, &UserLogin::pbClose);
-
     connect(ui->pbSendMessageCP, &QPushButton::clicked, this, &UserLogin::submitReport);
     connect(ui->pbGetVaccinatedLinkCP, &QPushButton::clicked, this, &UserLogin::getVaccinatedLink);
     connect(ui->pbGetTestedLinkCP, &QPushButton::clicked, this, &UserLogin::getTestedLink);
@@ -80,7 +87,7 @@ UserLogin::UserLogin(classCitizen* ptrCurrentCitizen, QWidget *parent) : QMainWi
     ui->setupUi(this);
     this->ptrCurrentCitizen = ptrCurrentCitizen;
 }
-
+// Third constructor passing douple pointer for citizenReport ptrNewReport
 UserLogin::UserLogin(citizenReport*& ptrNewReport, QWidget *parent) : QMainWindow(parent), ui(new Ui::UserLogin)
 {
     ui->setupUi(this);
